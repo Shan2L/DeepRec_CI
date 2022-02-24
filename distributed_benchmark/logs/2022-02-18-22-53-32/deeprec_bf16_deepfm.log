@@ -1,0 +1,432 @@
+-rw-r--r-- 1 root root 920 Feb 18 14:53 /tmp/.endpoint_map
+Using TensorFlow version 1.15.5
+{"cluster":{"ps":["trainer-ps-0.default.svc:2222","trainer-ps-1.default.svc:2222","trainer-ps-2.default.svc:2222","trainer-ps-3.default.svc:2222"],"worker":["trainer-worker-0.default.svc:2222","trainer-worker-1.default.svc:2222","trainer-worker-2.default.svc:2222","trainer-worker-3.default.svc:2222","trainer-worker-4.default.svc:2222","trainer-worker-5.default.svc:2222","trainer-worker-6.default.svc:2222","trainer-worker-7.default.svc:2222","trainer-worker-8.default.svc:2222","trainer-worker-9.default.svc:2222"]},"task":{"type":"worker","index":0},"environment":"cloud"}
+2022-02-18 14:53:35.255449: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3299995000 Hz
+2022-02-18 14:53:35.256228: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x1b5fa30 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-02-18 14:53:35.256246: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-02-18 14:53:35.258184: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:258] Initialize GrpcChannelCache for job ps -> {0 -> trainer-ps-0.default.svc:2222, 1 -> trainer-ps-1.default.svc:2222, 2 -> trainer-ps-2.default.svc:2222, 3 -> trainer-ps-3.default.svc:2222}
+2022-02-18 14:53:35.258197: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:258] Initialize GrpcChannelCache for job worker -> {0 -> localhost:2222, 1 -> trainer-worker-1.default.svc:2222, 2 -> trainer-worker-2.default.svc:2222, 3 -> trainer-worker-3.default.svc:2222, 4 -> trainer-worker-4.default.svc:2222, 5 -> trainer-worker-5.default.svc:2222, 6 -> trainer-worker-6.default.svc:2222, 7 -> trainer-worker-7.default.svc:2222, 8 -> trainer-worker-8.default.svc:2222, 9 -> trainer-worker-9.default.svc:2222}
+2022-02-18 14:53:35.261100: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:374] Started server with target: grpc://localhost:2222
+Checking dataset
+Numbers of training dataset is 2000000
+Numbers of test dataset is 2000000
+Saving model checkpoints to /pvc/model_DeepFM_1645196015
+INFO:tensorflow:Parsing ./data/train.csv
+INFO:tensorflow:Parsing ./data/eval.csv
+train steps : 39063
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Init incremental saver , incremental_save:False, incremental_path:/pvc/model_DeepFM_1645196015/.incremental_checkpoint/incremental_model.ckpt
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:run without loading checkpoint
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 0 into /pvc/model_DeepFM_1645196015/model.ckpt.
+INFO:tensorflow:Create incremental timer, incremental_save:False, incremental_save_secs:None
+INFO:tensorflow:loss = 0.25519687, steps = 3
+INFO:tensorflow:global_step/sec: 40.3167
+WARNING:tensorflow:It seems that global step (tf.train.get_global_step) has not been increased. Current value (could be stable): 2 vs previous value: 2. You could increase the global step by passing tf.train.get_global_step() to Optimizer.apply_gradients or Optimizer.minimize.
+INFO:tensorflow:global_step/sec: 7.00224
+INFO:tensorflow:loss = 0.17676295, steps = 409 (23.666 sec)
+INFO:tensorflow:global_step/sec: 97.4688
+INFO:tensorflow:global_step/sec: 95.6514
+INFO:tensorflow:loss = 0.17629418, steps = 633 (2.325 sec)
+INFO:tensorflow:global_step/sec: 112.384
+INFO:tensorflow:global_step/sec: 132.838
+INFO:tensorflow:global_step/sec: 130.355
+INFO:tensorflow:loss = 0.17811048, steps = 948 (2.488 sec)
+INFO:tensorflow:global_step/sec: 123.169
+INFO:tensorflow:global_step/sec: 109.186
+INFO:tensorflow:global_step/sec: 155.915
+INFO:tensorflow:global_step/sec: 184.84
+INFO:tensorflow:global_step/sec: 203.362
+INFO:tensorflow:loss = 0.16925465, steps = 1474 (3.510 sec)
+INFO:tensorflow:global_step/sec: 192.854
+INFO:tensorflow:global_step/sec: 190.93
+INFO:tensorflow:global_step/sec: 194.951
+INFO:tensorflow:global_step/sec: 199.104
+INFO:tensorflow:global_step/sec: 199.102
+INFO:tensorflow:global_step/sec: 201.225
+INFO:tensorflow:global_step/sec: 196.204
+INFO:tensorflow:loss = 0.16239472, steps = 2222 (3.811 sec)
+INFO:tensorflow:global_step/sec: 199.137
+INFO:tensorflow:global_step/sec: 190.816
+INFO:tensorflow:global_step/sec: 193.82
+INFO:tensorflow:global_step/sec: 185.018
+INFO:tensorflow:global_step/sec: 181.959
+INFO:tensorflow:global_step/sec: 180.539
+INFO:tensorflow:loss = 0.15803546, steps = 2945 (3.840 sec)
+INFO:tensorflow:global_step/sec: 186.207
+INFO:tensorflow:global_step/sec: 198.42
+INFO:tensorflow:global_step/sec: 194.62
+INFO:tensorflow:global_step/sec: 203.613
+INFO:tensorflow:global_step/sec: 197.88
+INFO:tensorflow:global_step/sec: 192.471
+INFO:tensorflow:global_step/sec: 197.817
+INFO:tensorflow:loss = 0.14013773, steps = 3705 (3.891 sec)
+INFO:tensorflow:global_step/sec: 186.034
+INFO:tensorflow:global_step/sec: 193.073
+INFO:tensorflow:global_step/sec: 195.592
+INFO:tensorflow:global_step/sec: 197.902
+INFO:tensorflow:global_step/sec: 198.653
+INFO:tensorflow:global_step/sec: 194.566
+INFO:tensorflow:global_step/sec: 181.522
+INFO:tensorflow:global_step/sec: 197.452
+INFO:tensorflow:loss = 0.16005835, steps = 4508 (4.140 sec)
+INFO:tensorflow:global_step/sec: 195.57
+INFO:tensorflow:global_step/sec: 194.154
+INFO:tensorflow:global_step/sec: 191.349
+INFO:tensorflow:global_step/sec: 187.427
+INFO:tensorflow:global_step/sec: 200.91
+INFO:tensorflow:global_step/sec: 201.79
+INFO:tensorflow:global_step/sec: 192.646
+INFO:tensorflow:loss = 0.17112474, steps = 5278 (3.954 sec)
+INFO:tensorflow:global_step/sec: 197.579
+INFO:tensorflow:global_step/sec: 192.504
+INFO:tensorflow:global_step/sec: 198.804
+INFO:tensorflow:global_step/sec: 179.777
+INFO:tensorflow:global_step/sec: 191.391
+INFO:tensorflow:global_step/sec: 192.233
+INFO:tensorflow:global_step/sec: 200.613
+INFO:tensorflow:loss = 0.1675106, steps = 6075 (4.124 sec)
+INFO:tensorflow:global_step/sec: 196.796
+INFO:tensorflow:global_step/sec: 196.009
+INFO:tensorflow:global_step/sec: 193.294
+INFO:tensorflow:global_step/sec: 196.233
+INFO:tensorflow:global_step/sec: 195.922
+INFO:tensorflow:global_step/sec: 205.03
+INFO:tensorflow:global_step/sec: 183.626
+INFO:tensorflow:loss = 0.16518034, steps = 6852 (4.003 sec)
+INFO:tensorflow:global_step/sec: 186.116
+INFO:tensorflow:global_step/sec: 199.482
+INFO:tensorflow:global_step/sec: 190.502
+INFO:tensorflow:global_step/sec: 197.485
+INFO:tensorflow:global_step/sec: 196.734
+INFO:tensorflow:global_step/sec: 196.143
+INFO:tensorflow:global_step/sec: 197.071
+INFO:tensorflow:loss = 0.13337654, steps = 7651 (4.106 sec)
+INFO:tensorflow:global_step/sec: 193.166
+INFO:tensorflow:global_step/sec: 189.863
+INFO:tensorflow:global_step/sec: 185.695
+INFO:tensorflow:global_step/sec: 207.248
+INFO:tensorflow:global_step/sec: 192.201
+INFO:tensorflow:global_step/sec: 203.655
+INFO:tensorflow:global_step/sec: 198.154
+INFO:tensorflow:loss = 0.17669205, steps = 8429 (3.970 sec)
+INFO:tensorflow:global_step/sec: 186.826
+INFO:tensorflow:global_step/sec: 196.594
+INFO:tensorflow:global_step/sec: 196.588
+INFO:tensorflow:global_step/sec: 189.762
+INFO:tensorflow:global_step/sec: 197.019
+INFO:tensorflow:global_step/sec: 188.345
+INFO:tensorflow:global_step/sec: 196.825
+INFO:tensorflow:loss = 0.15411834, steps = 9212 (4.070 sec)
+INFO:tensorflow:global_step/sec: 194.675
+INFO:tensorflow:global_step/sec: 195.532
+INFO:tensorflow:global_step/sec: 199.477
+INFO:tensorflow:global_step/sec: 185.409
+INFO:tensorflow:global_step/sec: 195.654
+INFO:tensorflow:global_step/sec: 196.356
+INFO:tensorflow:global_step/sec: 199.82
+INFO:tensorflow:global_step/sec: 197.361
+INFO:tensorflow:loss = 0.18780345, steps = 10037 (4.186 sec)
+INFO:tensorflow:global_step/sec: 196.997
+INFO:tensorflow:global_step/sec: 199.614
+INFO:tensorflow:global_step/sec: 197.527
+INFO:tensorflow:global_step/sec: 194.245
+INFO:tensorflow:global_step/sec: 189.655
+INFO:tensorflow:global_step/sec: 194.095
+INFO:tensorflow:global_step/sec: 193.572
+INFO:tensorflow:loss = 0.1731523, steps = 10821 (4.032 sec)
+INFO:tensorflow:global_step/sec: 191.295
+INFO:tensorflow:global_step/sec: 208.591
+INFO:tensorflow:global_step/sec: 191.961
+INFO:tensorflow:global_step/sec: 195.302
+INFO:tensorflow:global_step/sec: 194.01
+INFO:tensorflow:global_step/sec: 199.312
+INFO:tensorflow:global_step/sec: 189.835
+INFO:tensorflow:loss = 0.17091791, steps = 11598 (3.971 sec)
+INFO:tensorflow:global_step/sec: 192.822
+INFO:tensorflow:global_step/sec: 197.199
+INFO:tensorflow:global_step/sec: 201.256
+INFO:tensorflow:global_step/sec: 194.461
+INFO:tensorflow:global_step/sec: 191.755
+INFO:tensorflow:global_step/sec: 198.128
+INFO:tensorflow:global_step/sec: 193.447
+INFO:tensorflow:loss = 0.18396932, steps = 12381 (3.992 sec)
+INFO:tensorflow:global_step/sec: 200.561
+INFO:tensorflow:global_step/sec: 191.707
+INFO:tensorflow:global_step/sec: 184.294
+INFO:tensorflow:global_step/sec: 194.254
+INFO:tensorflow:global_step/sec: 194.65
+INFO:tensorflow:global_step/sec: 188.534
+INFO:tensorflow:global_step/sec: 190.584
+INFO:tensorflow:loss = 0.15606642, steps = 13166 (4.097 sec)
+INFO:tensorflow:global_step/sec: 193.203
+INFO:tensorflow:global_step/sec: 204.511
+INFO:tensorflow:global_step/sec: 190.275
+INFO:tensorflow:global_step/sec: 192.802
+INFO:tensorflow:global_step/sec: 190.91
+INFO:tensorflow:global_step/sec: 194.784
+INFO:tensorflow:global_step/sec: 199.725
+INFO:tensorflow:loss = 0.16008723, steps = 13941 (3.976 sec)
+INFO:tensorflow:global_step/sec: 195.242
+INFO:tensorflow:global_step/sec: 183.589
+INFO:tensorflow:global_step/sec: 193.033
+INFO:tensorflow:global_step/sec: 193.274
+INFO:tensorflow:global_step/sec: 188.191
+INFO:tensorflow:global_step/sec: 204.038
+INFO:tensorflow:global_step/sec: 188.224
+INFO:tensorflow:loss = 0.19103774, steps = 14725 (4.059 sec)
+INFO:tensorflow:global_step/sec: 194.964
+INFO:tensorflow:global_step/sec: 193.432
+INFO:tensorflow:global_step/sec: 174.764
+INFO:tensorflow:global_step/sec: 197.392
+INFO:tensorflow:global_step/sec: 196.4
+INFO:tensorflow:global_step/sec: 196.302
+INFO:tensorflow:global_step/sec: 194.211
+INFO:tensorflow:global_step/sec: 191.906
+INFO:tensorflow:loss = 0.17477995, steps = 15526 (4.215 sec)
+INFO:tensorflow:global_step/sec: 190.71
+INFO:tensorflow:global_step/sec: 191.435
+INFO:tensorflow:global_step/sec: 193.369
+INFO:tensorflow:global_step/sec: 197.71
+INFO:tensorflow:global_step/sec: 190.745
+INFO:tensorflow:global_step/sec: 195.486
+INFO:tensorflow:global_step/sec: 194.125
+INFO:tensorflow:loss = 0.1563564, steps = 16329 (4.122 sec)
+INFO:tensorflow:global_step/sec: 180.886
+INFO:tensorflow:global_step/sec: 187.276
+INFO:tensorflow:global_step/sec: 170.895
+INFO:tensorflow:global_step/sec: 195.202
+INFO:tensorflow:global_step/sec: 192.545
+INFO:tensorflow:global_step/sec: 191.789
+INFO:tensorflow:global_step/sec: 195.228
+INFO:tensorflow:loss = 0.17017877, steps = 17142 (4.342 sec)
+INFO:tensorflow:global_step/sec: 195.28
+INFO:tensorflow:global_step/sec: 194.605
+INFO:tensorflow:global_step/sec: 191.603
+INFO:tensorflow:global_step/sec: 195.771
+INFO:tensorflow:global_step/sec: 192.15
+INFO:tensorflow:global_step/sec: 196.296
+INFO:tensorflow:global_step/sec: 184.139
+INFO:tensorflow:global_step/sec: 198.863
+INFO:tensorflow:loss = 0.16480452, steps = 17923 (4.031 sec)
+INFO:tensorflow:global_step/sec: 196.976
+INFO:tensorflow:global_step/sec: 195.317
+INFO:tensorflow:global_step/sec: 198.345
+INFO:tensorflow:global_step/sec: 189.375
+INFO:tensorflow:global_step/sec: 193.149
+INFO:tensorflow:global_step/sec: 183.149
+INFO:tensorflow:global_step/sec: 199.058
+INFO:tensorflow:loss = 0.1649183, steps = 18696 (4.011 sec)
+INFO:tensorflow:global_step/sec: 185.819
+INFO:tensorflow:global_step/sec: 202.418
+INFO:tensorflow:global_step/sec: 194.836
+INFO:tensorflow:global_step/sec: 196.724
+INFO:tensorflow:global_step/sec: 189.487
+INFO:tensorflow:global_step/sec: 188.523
+INFO:tensorflow:global_step/sec: 182.071
+INFO:tensorflow:loss = 0.14788565, steps = 19471 (4.050 sec)
+INFO:tensorflow:global_step/sec: 201.731
+INFO:tensorflow:global_step/sec: 178.486
+INFO:tensorflow:global_step/sec: 195.642
+INFO:tensorflow:global_step/sec: 196.278
+INFO:tensorflow:global_step/sec: 198.499
+INFO:tensorflow:global_step/sec: 190.721
+INFO:tensorflow:global_step/sec: 200.364
+INFO:tensorflow:loss = 0.166709, steps = 20255 (4.039 sec)
+INFO:tensorflow:global_step/sec: 189.059
+INFO:tensorflow:global_step/sec: 176.655
+INFO:tensorflow:global_step/sec: 195.131
+INFO:tensorflow:global_step/sec: 192.549
+INFO:tensorflow:global_step/sec: 196.717
+INFO:tensorflow:global_step/sec: 197.278
+INFO:tensorflow:global_step/sec: 197.694
+INFO:tensorflow:loss = 0.18369171, steps = 21034 (4.053 sec)
+INFO:tensorflow:global_step/sec: 196.104
+INFO:tensorflow:global_step/sec: 191.105
+INFO:tensorflow:global_step/sec: 155.028
+INFO:tensorflow:global_step/sec: 200.304
+INFO:tensorflow:global_step/sec: 194.14
+INFO:tensorflow:global_step/sec: 194.94
+INFO:tensorflow:global_step/sec: 190.909
+INFO:tensorflow:loss = 0.159977, steps = 21816 (4.161 sec)
+INFO:tensorflow:global_step/sec: 198.022
+INFO:tensorflow:global_step/sec: 201.617
+INFO:tensorflow:global_step/sec: 193.582
+INFO:tensorflow:global_step/sec: 195.201
+INFO:tensorflow:global_step/sec: 185.345
+INFO:tensorflow:global_step/sec: 194.225
+INFO:tensorflow:global_step/sec: 195.298
+INFO:tensorflow:global_step/sec: 195.897
+INFO:tensorflow:loss = 0.19126558, steps = 22619 (4.111 sec)
+INFO:tensorflow:global_step/sec: 198.648
+INFO:tensorflow:global_step/sec: 190.479
+INFO:tensorflow:global_step/sec: 201.491
+INFO:tensorflow:global_step/sec: 188.887
+INFO:tensorflow:global_step/sec: 190.964
+INFO:tensorflow:global_step/sec: 192.9
+INFO:tensorflow:global_step/sec: 198.925
+INFO:tensorflow:loss = 0.16818464, steps = 23415 (4.125 sec)
+INFO:tensorflow:global_step/sec: 196.473
+INFO:tensorflow:global_step/sec: 196.012
+INFO:tensorflow:global_step/sec: 196.783
+INFO:tensorflow:global_step/sec: 196.142
+INFO:tensorflow:global_step/sec: 204.631
+INFO:tensorflow:global_step/sec: 197.139
+INFO:tensorflow:global_step/sec: 187.348
+INFO:tensorflow:loss = 0.15629217, steps = 24205 (3.987 sec)
+INFO:tensorflow:global_step/sec: 194.11
+INFO:tensorflow:global_step/sec: 197.008
+INFO:tensorflow:global_step/sec: 193.922
+INFO:tensorflow:global_step/sec: 192.803
+INFO:tensorflow:global_step/sec: 197.486
+INFO:tensorflow:global_step/sec: 201.812
+INFO:tensorflow:global_step/sec: 191.147
+INFO:tensorflow:loss = 0.16758853, steps = 25010 (4.153 sec)
+INFO:tensorflow:global_step/sec: 187.975
+INFO:tensorflow:global_step/sec: 195.126
+INFO:tensorflow:global_step/sec: 192.811
+INFO:tensorflow:global_step/sec: 200.061
+INFO:tensorflow:global_step/sec: 201.17
+INFO:tensorflow:global_step/sec: 182.051
+INFO:tensorflow:global_step/sec: 201.008
+INFO:tensorflow:loss = 0.16070175, steps = 25797 (4.030 sec)
+INFO:tensorflow:global_step/sec: 193.922
+INFO:tensorflow:global_step/sec: 192.409
+INFO:tensorflow:global_step/sec: 200.112
+INFO:tensorflow:global_step/sec: 187.114
+INFO:tensorflow:global_step/sec: 198.778
+INFO:tensorflow:global_step/sec: 195.887
+INFO:tensorflow:global_step/sec: 175.872
+INFO:tensorflow:loss = 0.14029634, steps = 26569 (4.040 sec)
+INFO:tensorflow:global_step/sec: 193.199
+INFO:tensorflow:global_step/sec: 179.435
+INFO:tensorflow:global_step/sec: 195.834
+INFO:tensorflow:global_step/sec: 189.526
+INFO:tensorflow:global_step/sec: 189.688
+INFO:tensorflow:global_step/sec: 200.208
+INFO:tensorflow:global_step/sec: 194.519
+INFO:tensorflow:global_step/sec: 192.095
+INFO:tensorflow:loss = 0.16209431, steps = 27363 (4.128 sec)
+INFO:tensorflow:global_step/sec: 196.831
+INFO:tensorflow:global_step/sec: 198.387
+INFO:tensorflow:global_step/sec: 191.761
+INFO:tensorflow:global_step/sec: 205.478
+INFO:tensorflow:global_step/sec: 199.822
+INFO:tensorflow:global_step/sec: 188.023
+INFO:tensorflow:global_step/sec: 194.189
+INFO:tensorflow:loss = 0.17435364, steps = 28160 (4.075 sec)
+INFO:tensorflow:global_step/sec: 194.295
+INFO:tensorflow:global_step/sec: 202.088
+INFO:tensorflow:global_step/sec: 190.418
+INFO:tensorflow:global_step/sec: 198.042
+INFO:tensorflow:global_step/sec: 199.36
+INFO:tensorflow:global_step/sec: 198.465
+INFO:tensorflow:global_step/sec: 191.502
+INFO:tensorflow:loss = 0.17978874, steps = 28946 (4.024 sec)
+INFO:tensorflow:global_step/sec: 190.301
+INFO:tensorflow:global_step/sec: 197.013
+INFO:tensorflow:global_step/sec: 196.097
+INFO:tensorflow:global_step/sec: 201.184
+INFO:tensorflow:global_step/sec: 191.303
+INFO:tensorflow:global_step/sec: 198.709
+INFO:tensorflow:global_step/sec: 192.223
+INFO:tensorflow:loss = 0.13864975, steps = 29726 (3.966 sec)
+INFO:tensorflow:global_step/sec: 197.531
+INFO:tensorflow:global_step/sec: 194.168
+INFO:tensorflow:global_step/sec: 187.485
+INFO:tensorflow:global_step/sec: 191.339
+INFO:tensorflow:global_step/sec: 191.683
+INFO:tensorflow:global_step/sec: 195.337
+INFO:tensorflow:global_step/sec: 183.261
+INFO:tensorflow:loss = 0.132539, steps = 30520 (4.160 sec)
+INFO:tensorflow:global_step/sec: 195.575
+INFO:tensorflow:global_step/sec: 206.574
+INFO:tensorflow:global_step/sec: 189.042
+INFO:tensorflow:global_step/sec: 191.637
+INFO:tensorflow:global_step/sec: 193.341
+INFO:tensorflow:global_step/sec: 194.368
+INFO:tensorflow:global_step/sec: 201.181
+INFO:tensorflow:loss = 0.14780892, steps = 31310 (4.044 sec)
+INFO:tensorflow:global_step/sec: 193.078
+INFO:tensorflow:global_step/sec: 195.207
+INFO:tensorflow:global_step/sec: 183.443
+INFO:tensorflow:global_step/sec: 195.402
+INFO:tensorflow:global_step/sec: 191.065
+INFO:tensorflow:global_step/sec: 200.206
+INFO:tensorflow:global_step/sec: 190.591
+INFO:tensorflow:global_step/sec: 197.916
+INFO:tensorflow:loss = 0.10882845, steps = 32091 (4.040 sec)
+INFO:tensorflow:global_step/sec: 190.624
+INFO:tensorflow:global_step/sec: 193.093
+INFO:tensorflow:global_step/sec: 194.353
+INFO:tensorflow:global_step/sec: 194.249
+INFO:tensorflow:global_step/sec: 176.324
+INFO:tensorflow:global_step/sec: 191.598
+INFO:tensorflow:global_step/sec: 206.624
+INFO:tensorflow:loss = 0.09798354, steps = 32875 (4.088 sec)
+INFO:tensorflow:global_step/sec: 196.696
+INFO:tensorflow:global_step/sec: 195.546
+INFO:tensorflow:global_step/sec: 192.78
+INFO:tensorflow:global_step/sec: 197.933
+INFO:tensorflow:global_step/sec: 197.4
+INFO:tensorflow:global_step/sec: 196.716
+INFO:tensorflow:global_step/sec: 193.379
+INFO:tensorflow:loss = 0.12042877, steps = 33650 (3.971 sec)
+INFO:tensorflow:global_step/sec: 194.359
+INFO:tensorflow:global_step/sec: 192.476
+INFO:tensorflow:global_step/sec: 191.211
+INFO:tensorflow:global_step/sec: 196.477
+INFO:tensorflow:global_step/sec: 200.408
+INFO:tensorflow:global_step/sec: 179.378
+INFO:tensorflow:global_step/sec: 194.287
+INFO:tensorflow:loss = 0.107801296, steps = 34416 (3.968 sec)
+INFO:tensorflow:global_step/sec: 191.178
+INFO:tensorflow:global_step/sec: 184.78
+INFO:tensorflow:global_step/sec: 189.995
+INFO:tensorflow:global_step/sec: 190.457
+INFO:tensorflow:global_step/sec: 201.733
+INFO:tensorflow:global_step/sec: 195.418
+INFO:tensorflow:global_step/sec: 197.56
+INFO:tensorflow:loss = 0.098561555, steps = 35215 (4.149 sec)
+INFO:tensorflow:global_step/sec: 197.368
+INFO:tensorflow:global_step/sec: 189.357
+INFO:tensorflow:global_step/sec: 195.347
+INFO:tensorflow:global_step/sec: 201.358
+INFO:tensorflow:global_step/sec: 192.888
+INFO:tensorflow:global_step/sec: 194.508
+INFO:tensorflow:global_step/sec: 191.676
+INFO:tensorflow:loss = 0.09753492, steps = 35981 (3.925 sec)
+INFO:tensorflow:global_step/sec: 195.072
+INFO:tensorflow:global_step/sec: 200.926
+INFO:tensorflow:global_step/sec: 188.677
+INFO:tensorflow:global_step/sec: 201.482
+INFO:tensorflow:global_step/sec: 196.481
+INFO:tensorflow:global_step/sec: 190.542
+INFO:tensorflow:global_step/sec: 190.584
+INFO:tensorflow:loss = 0.100321546, steps = 36762 (4.020 sec)
+INFO:tensorflow:global_step/sec: 190.836
+INFO:tensorflow:global_step/sec: 189.091
+INFO:tensorflow:global_step/sec: 193.416
+INFO:tensorflow:global_step/sec: 198.818
+INFO:tensorflow:global_step/sec: 196.094
+INFO:tensorflow:global_step/sec: 191.383
+INFO:tensorflow:global_step/sec: 195.175
+INFO:tensorflow:loss = 0.10718797, steps = 37555 (4.090 sec)
+INFO:tensorflow:global_step/sec: 194.128
+INFO:tensorflow:global_step/sec: 192.88
+INFO:tensorflow:global_step/sec: 191.921
+INFO:tensorflow:global_step/sec: 201.545
+INFO:tensorflow:global_step/sec: 174.774
+INFO:tensorflow:global_step/sec: 191.346
+INFO:tensorflow:global_step/sec: 193.232
+INFO:tensorflow:global_step/sec: 193.028
+INFO:tensorflow:loss = 0.08348553, steps = 38329 (4.052 sec)
+INFO:tensorflow:global_step/sec: 188.751
+INFO:tensorflow:global_step/sec: 180.712
+INFO:tensorflow:global_step/sec: 190.97
+INFO:tensorflow:global_step/sec: 199.688
+INFO:tensorflow:global_step/sec: 190.596
+INFO:tensorflow:global_step/sec: 209.147
+INFO:tensorflow:Saving checkpoints for 39074 into /pvc/model_DeepFM_1645196015/model.ckpt.

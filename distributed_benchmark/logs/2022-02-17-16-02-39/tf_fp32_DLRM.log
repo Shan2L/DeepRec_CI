@@ -1,0 +1,504 @@
+-rw-r--r-- 1 root root 920 Feb 17 08:56 /tmp/.endpoint_map
+WARNING:tensorflow:From train.py:14: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From train.py:14: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+Using TensorFlow version 1.15.5
+{"cluster":{"ps":["trainer-ps-0.default.svc:2222","trainer-ps-1.default.svc:2222","trainer-ps-2.default.svc:2222","trainer-ps-3.default.svc:2222"],"worker":["trainer-worker-0.default.svc:2222","trainer-worker-1.default.svc:2222","trainer-worker-2.default.svc:2222","trainer-worker-3.default.svc:2222","trainer-worker-4.default.svc:2222","trainer-worker-5.default.svc:2222","trainer-worker-6.default.svc:2222","trainer-worker-7.default.svc:2222","trainer-worker-8.default.svc:2222","trainer-worker-9.default.svc:2222"]},"task":{"type":"worker","index":0},"environment":"cloud"}
+2022-02-17 08:56:43.808075: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2022-02-17 08:56:43.817734: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2499985000 Hz
+2022-02-17 08:56:43.822615: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x31f6000 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-02-17 08:56:43.822651: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-02-17 08:56:43.825806: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:258] Initialize GrpcChannelCache for job ps -> {0 -> trainer-ps-0.default.svc:2222, 1 -> trainer-ps-1.default.svc:2222, 2 -> trainer-ps-2.default.svc:2222, 3 -> trainer-ps-3.default.svc:2222}
+2022-02-17 08:56:43.825827: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:258] Initialize GrpcChannelCache for job worker -> {0 -> localhost:2222, 1 -> trainer-worker-1.default.svc:2222, 2 -> trainer-worker-2.default.svc:2222, 3 -> trainer-worker-3.default.svc:2222, 4 -> trainer-worker-4.default.svc:2222, 5 -> trainer-worker-5.default.svc:2222, 6 -> trainer-worker-6.default.svc:2222, 7 -> trainer-worker-7.default.svc:2222, 8 -> trainer-worker-8.default.svc:2222, 9 -> trainer-worker-9.default.svc:2222}
+2022-02-17 08:56:43.834038: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:365] Started server with target: grpc://localhost:2222
+WARNING:tensorflow:From train.py:619: The name tf.train.replica_device_setter is deprecated. Please use tf.compat.v1.train.replica_device_setter instead.
+
+Checking dataset
+Numbers of training dataset is 2000000
+Numbers of test dataset is 2000000
+WARNING:tensorflow:From train.py:418: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+Saving model checkpoints to /pvc/model_DLRM_1645088204
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/data/util/random_seed.py:58: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+INFO:tensorflow:Parsing ./data/train.csv
+INFO:tensorflow:Parsing ./data/eval.csv
+WARNING:tensorflow:From train.py:431: The name tf.data.Iterator is deprecated. Please use tf.compat.v1.data.Iterator instead.
+
+WARNING:tensorflow:From train.py:431: DatasetV1.output_types (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.data.get_output_types(dataset)`.
+WARNING:tensorflow:From train.py:432: DatasetV1.output_shapes (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.data.get_output_shapes(dataset)`.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/data/ops/iterator_ops.py:347: Iterator.output_types (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.data.get_output_types(iterator)`.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/data/ops/iterator_ops.py:348: Iterator.output_shapes (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.data.get_output_shapes(iterator)`.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/data/ops/iterator_ops.py:350: Iterator.output_classes (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.data.get_output_classes(iterator)`.
+WARNING:tensorflow:From train.py:167: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From train.py:167: The name tf.AUTO_REUSE is deprecated. Please use tf.compat.v1.AUTO_REUSE instead.
+
+WARNING:tensorflow:From train.py:171: The name tf.feature_column.input_layer is deprecated. Please use tf.compat.v1.feature_column.input_layer instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/feature_column/feature_column.py:206: NumericColumn._get_dense_tensor (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/feature_column/feature_column.py:2158: NumericColumn._transform_feature (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/feature_column/feature_column.py:207: NumericColumn._variable_shape (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/feature_column/feature_column.py:206: EmbeddingColumn._get_dense_tensor (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/feature_column/feature_column_v2.py:3182: HashedCategoricalColumn._get_sparse_tensors (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/feature_column/feature_column.py:2158: HashedCategoricalColumn._transform_feature (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/feature_column/feature_column_v2.py:3122: HashedCategoricalColumn._num_buckets (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/feature_column/feature_column.py:207: EmbeddingColumn._variable_shape (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From train.py:214: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.Dense instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/layers/core.py:187: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+WARNING:tensorflow:From train.py:218: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.BatchNormalization instead.  In particular, `tf.control_dependencies(tf.GraphKeys.UPDATE_OPS)` should not be used (consult the `tf.keras.layers.batch_normalization` documentation).
+WARNING:tensorflow:From train.py:53: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From train.py:55: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+WARNING:tensorflow:From train.py:299: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+WARNING:tensorflow:From train.py:300: The name tf.train.GradientDescentOptimizer is deprecated. Please use tf.compat.v1.train.GradientDescentOptimizer instead.
+
+WARNING:tensorflow:From train.py:143: The name tf.metrics.accuracy is deprecated. Please use tf.compat.v1.metrics.accuracy instead.
+
+WARNING:tensorflow:From train.py:146: The name tf.metrics.auc is deprecated. Please use tf.compat.v1.metrics.auc instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/metrics_impl.py:808: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From train.py:459: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From train.py:467: The name tf.train.StopAtStepHook is deprecated. Please use tf.estimator.StopAtStepHook instead.
+
+WARNING:tensorflow:From train.py:469: The name tf.train.LoggingTensorHook is deprecated. Please use tf.estimator.LoggingTensorHook instead.
+
+WARNING:tensorflow:From train.py:476: The name tf.train.Scaffold is deprecated. Please use tf.compat.v1.train.Scaffold instead.
+
+WARNING:tensorflow:From train.py:477: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From train.py:478: The name tf.local_variables_initializer is deprecated. Please use tf.compat.v1.local_variables_initializer instead.
+
+WARNING:tensorflow:From train.py:480: The name tf.train.MonitoredTrainingSession is deprecated. Please use tf.compat.v1.train.MonitoredTrainingSession instead.
+
+INFO:tensorflow:Create CheckpointSaverHook.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 0 into /pvc/model_DLRM_1645088204/model.ckpt.
+INFO:tensorflow:loss = 0.70397437, steps = 0
+INFO:tensorflow:global_step/sec: 38.2434
+INFO:tensorflow:loss = 0.52524036, steps = 100 (2.615 sec)
+INFO:tensorflow:global_step/sec: 71.8026
+INFO:tensorflow:loss = 0.50848854, steps = 200 (1.393 sec)
+INFO:tensorflow:global_step/sec: 71.6002
+INFO:tensorflow:loss = 0.5374164, steps = 300 (1.396 sec)
+INFO:tensorflow:global_step/sec: 72.1143
+INFO:tensorflow:loss = 0.51154304, steps = 400 (1.387 sec)
+INFO:tensorflow:global_step/sec: 70.5329
+INFO:tensorflow:loss = 0.49535286, steps = 500 (1.418 sec)
+INFO:tensorflow:global_step/sec: 68.5056
+INFO:tensorflow:loss = 0.5117906, steps = 600 (1.460 sec)
+INFO:tensorflow:global_step/sec: 71.7402
+INFO:tensorflow:loss = 0.47249776, steps = 700 (1.394 sec)
+INFO:tensorflow:global_step/sec: 71.5001
+INFO:tensorflow:loss = 0.4914855, steps = 800 (1.399 sec)
+INFO:tensorflow:global_step/sec: 70.053
+INFO:tensorflow:loss = 0.4763395, steps = 900 (1.428 sec)
+INFO:tensorflow:global_step/sec: 71.57
+INFO:tensorflow:loss = 0.54155767, steps = 1000 (1.397 sec)
+INFO:tensorflow:global_step/sec: 71.7873
+INFO:tensorflow:loss = 0.5130178, steps = 1100 (1.393 sec)
+INFO:tensorflow:global_step/sec: 72.0816
+INFO:tensorflow:loss = 0.49789613, steps = 1200 (1.387 sec)
+INFO:tensorflow:loss = 0.58194846, steps = 3 (2.657 sec)
+INFO:tensorflow:loss = 0.54958165, steps = 100 (1.558 sec)
+INFO:tensorflow:loss = 0.5541087, steps = 154 (1.605 sec)
+INFO:tensorflow:loss = 0.4971358, steps = 1039 (1.692 sec)
+INFO:tensorflow:global_step/sec: 111.476
+INFO:tensorflow:global_step/sec: 629.491
+INFO:tensorflow:global_step/sec: 632.98
+INFO:tensorflow:global_step/sec: 635.897
+INFO:tensorflow:global_step/sec: 628.241
+INFO:tensorflow:global_step/sec: 637.983
+INFO:tensorflow:global_step/sec: 608.045
+INFO:tensorflow:global_step/sec: 631.754
+INFO:tensorflow:loss = 0.48250133, steps = 3142 (3.602 sec)
+INFO:tensorflow:global_step/sec: 648.279
+INFO:tensorflow:global_step/sec: 628.967
+INFO:tensorflow:global_step/sec: 640.746
+INFO:tensorflow:global_step/sec: 611.772
+INFO:tensorflow:global_step/sec: 634.718
+INFO:tensorflow:global_step/sec: 620.788
+INFO:tensorflow:global_step/sec: 646.241
+INFO:tensorflow:global_step/sec: 627.111
+INFO:tensorflow:global_step/sec: 619.577
+INFO:tensorflow:global_step/sec: 632.934
+INFO:tensorflow:loss = 0.5420681, steps = 4307 (1.852 sec)
+INFO:tensorflow:global_step/sec: 612.673
+INFO:tensorflow:global_step/sec: 631.311
+INFO:tensorflow:global_step/sec: 617.519
+INFO:tensorflow:global_step/sec: 644.069
+INFO:tensorflow:global_step/sec: 590.26
+INFO:tensorflow:global_step/sec: 625.405
+INFO:tensorflow:global_step/sec: 607.566
+INFO:tensorflow:global_step/sec: 625.657
+INFO:tensorflow:global_step/sec: 613.647
+INFO:tensorflow:global_step/sec: 608.205
+INFO:tensorflow:loss = 0.46332857, steps = 5477 (1.897 sec)
+INFO:tensorflow:global_step/sec: 612.496
+INFO:tensorflow:global_step/sec: 615.058
+INFO:tensorflow:global_step/sec: 630.126
+INFO:tensorflow:global_step/sec: 626.307
+INFO:tensorflow:global_step/sec: 628.311
+INFO:tensorflow:global_step/sec: 615.574
+INFO:tensorflow:global_step/sec: 619.67
+INFO:tensorflow:global_step/sec: 623.11
+INFO:tensorflow:global_step/sec: 642.863
+INFO:tensorflow:global_step/sec: 618.967
+INFO:tensorflow:global_step/sec: 639.954
+INFO:tensorflow:loss = 0.4835503, steps = 6641 (1.865 sec)
+INFO:tensorflow:global_step/sec: 597.342
+INFO:tensorflow:global_step/sec: 642.273
+INFO:tensorflow:global_step/sec: 633.47
+INFO:tensorflow:global_step/sec: 638.551
+INFO:tensorflow:global_step/sec: 636.124
+INFO:tensorflow:global_step/sec: 615.942
+INFO:tensorflow:global_step/sec: 620.777
+INFO:tensorflow:global_step/sec: 646.065
+INFO:tensorflow:global_step/sec: 623.145
+INFO:tensorflow:global_step/sec: 620.964
+INFO:tensorflow:loss = 0.5512058, steps = 7820 (1.876 sec)
+INFO:tensorflow:global_step/sec: 631.316
+INFO:tensorflow:global_step/sec: 651.467
+INFO:tensorflow:global_step/sec: 620.728
+INFO:tensorflow:global_step/sec: 628.375
+INFO:tensorflow:global_step/sec: 614.944
+INFO:tensorflow:global_step/sec: 621.856
+INFO:tensorflow:global_step/sec: 633.188
+INFO:tensorflow:global_step/sec: 622.475
+INFO:tensorflow:global_step/sec: 625.996
+INFO:tensorflow:global_step/sec: 628.106
+INFO:tensorflow:loss = 0.50731504, steps = 8993 (1.871 sec)
+INFO:tensorflow:global_step/sec: 647.787
+INFO:tensorflow:global_step/sec: 602.079
+INFO:tensorflow:global_step/sec: 632.26
+INFO:tensorflow:global_step/sec: 629.328
+INFO:tensorflow:global_step/sec: 624.099
+INFO:tensorflow:global_step/sec: 644.298
+INFO:tensorflow:global_step/sec: 607.492
+INFO:tensorflow:global_step/sec: 606.849
+INFO:tensorflow:global_step/sec: 650.567
+INFO:tensorflow:global_step/sec: 636.582
+INFO:tensorflow:loss = 0.47764435, steps = 10165 (1.869 sec)
+INFO:tensorflow:global_step/sec: 619.861
+INFO:tensorflow:global_step/sec: 614.806
+INFO:tensorflow:global_step/sec: 606.144
+INFO:tensorflow:global_step/sec: 638.53
+INFO:tensorflow:global_step/sec: 647.692
+INFO:tensorflow:global_step/sec: 597.154
+INFO:tensorflow:global_step/sec: 617.075
+INFO:tensorflow:global_step/sec: 606.494
+INFO:tensorflow:global_step/sec: 630.21
+INFO:tensorflow:global_step/sec: 636.113
+INFO:tensorflow:loss = 0.51870793, steps = 11309 (1.842 sec)
+INFO:tensorflow:global_step/sec: 614.839
+INFO:tensorflow:global_step/sec: 616.852
+INFO:tensorflow:global_step/sec: 623.691
+INFO:tensorflow:global_step/sec: 615.055
+INFO:tensorflow:global_step/sec: 641.524
+INFO:tensorflow:global_step/sec: 620.052
+INFO:tensorflow:global_step/sec: 625.269
+INFO:tensorflow:global_step/sec: 625.094
+INFO:tensorflow:global_step/sec: 624.616
+INFO:tensorflow:global_step/sec: 600.94
+INFO:tensorflow:loss = 0.4406852, steps = 12479 (1.887 sec)
+INFO:tensorflow:global_step/sec: 633.439
+INFO:tensorflow:global_step/sec: 646.312
+INFO:tensorflow:global_step/sec: 635.092
+INFO:tensorflow:global_step/sec: 633.21
+INFO:tensorflow:global_step/sec: 608.034
+INFO:tensorflow:global_step/sec: 630.799
+INFO:tensorflow:global_step/sec: 638.57
+INFO:tensorflow:global_step/sec: 629.477
+INFO:tensorflow:global_step/sec: 614.364
+INFO:tensorflow:global_step/sec: 634.72
+INFO:tensorflow:loss = 0.47303608, steps = 13657 (1.867 sec)
+INFO:tensorflow:global_step/sec: 613.897
+INFO:tensorflow:global_step/sec: 637.11
+INFO:tensorflow:global_step/sec: 643.746
+INFO:tensorflow:global_step/sec: 628.225
+INFO:tensorflow:global_step/sec: 636.868
+INFO:tensorflow:global_step/sec: 613.478
+INFO:tensorflow:global_step/sec: 634.194
+INFO:tensorflow:global_step/sec: 632.295
+INFO:tensorflow:global_step/sec: 626.281
+INFO:tensorflow:global_step/sec: 631.683
+INFO:tensorflow:loss = 0.46225145, steps = 14807 (1.824 sec)
+INFO:tensorflow:global_step/sec: 632.364
+INFO:tensorflow:global_step/sec: 622.314
+INFO:tensorflow:global_step/sec: 630.725
+INFO:tensorflow:global_step/sec: 624.915
+INFO:tensorflow:global_step/sec: 639.046
+INFO:tensorflow:global_step/sec: 635.173
+INFO:tensorflow:global_step/sec: 609.588
+INFO:tensorflow:global_step/sec: 630.018
+INFO:tensorflow:global_step/sec: 635.531
+INFO:tensorflow:global_step/sec: 624.637
+INFO:tensorflow:global_step/sec: 634.974
+INFO:tensorflow:loss = 0.45300227, steps = 15985 (1.874 sec)
+INFO:tensorflow:global_step/sec: 620.226
+INFO:tensorflow:global_step/sec: 632.147
+INFO:tensorflow:global_step/sec: 599.613
+INFO:tensorflow:global_step/sec: 624.837
+INFO:tensorflow:global_step/sec: 634.997
+INFO:tensorflow:global_step/sec: 603.323
+INFO:tensorflow:global_step/sec: 621.635
+INFO:tensorflow:global_step/sec: 616.702
+INFO:tensorflow:global_step/sec: 621.109
+INFO:tensorflow:global_step/sec: 606.972
+INFO:tensorflow:loss = 0.4982917, steps = 17151 (1.885 sec)
+INFO:tensorflow:global_step/sec: 623.819
+INFO:tensorflow:global_step/sec: 626.248
+INFO:tensorflow:global_step/sec: 631.31
+INFO:tensorflow:global_step/sec: 628.896
+INFO:tensorflow:global_step/sec: 598.142
+INFO:tensorflow:global_step/sec: 629.197
+INFO:tensorflow:global_step/sec: 629.576
+INFO:tensorflow:global_step/sec: 590.941
+INFO:tensorflow:global_step/sec: 621.226
+INFO:tensorflow:global_step/sec: 625.158
+INFO:tensorflow:loss = 0.5229554, steps = 18322 (1.892 sec)
+INFO:tensorflow:global_step/sec: 626.733
+INFO:tensorflow:global_step/sec: 619.841
+INFO:tensorflow:global_step/sec: 613.76
+INFO:tensorflow:global_step/sec: 625.342
+INFO:tensorflow:global_step/sec: 622.943
+INFO:tensorflow:global_step/sec: 635.576
+INFO:tensorflow:global_step/sec: 643.302
+INFO:tensorflow:global_step/sec: 618.009
+INFO:tensorflow:global_step/sec: 610.102
+INFO:tensorflow:global_step/sec: 634.548
+INFO:tensorflow:loss = 0.49398422, steps = 19476 (1.841 sec)
+INFO:tensorflow:global_step/sec: 627.698
+INFO:tensorflow:global_step/sec: 641.63
+INFO:tensorflow:global_step/sec: 621.456
+INFO:tensorflow:global_step/sec: 619.563
+INFO:tensorflow:global_step/sec: 641.41
+INFO:tensorflow:global_step/sec: 619.804
+INFO:tensorflow:global_step/sec: 634.048
+INFO:tensorflow:global_step/sec: 621.273
+INFO:tensorflow:global_step/sec: 625.508
+INFO:tensorflow:global_step/sec: 628.705
+INFO:tensorflow:loss = 0.4836111, steps = 20635 (1.846 sec)
+INFO:tensorflow:global_step/sec: 628.048
+INFO:tensorflow:global_step/sec: 616.723
+INFO:tensorflow:global_step/sec: 631.667
+INFO:tensorflow:global_step/sec: 623.068
+INFO:tensorflow:global_step/sec: 627.255
+INFO:tensorflow:global_step/sec: 630.134
+INFO:tensorflow:global_step/sec: 641.566
+INFO:tensorflow:global_step/sec: 618.448
+INFO:tensorflow:global_step/sec: 630.005
+INFO:tensorflow:global_step/sec: 621.643
+INFO:tensorflow:loss = 0.4948983, steps = 21810 (1.875 sec)
+INFO:tensorflow:global_step/sec: 625.932
+INFO:tensorflow:global_step/sec: 633.048
+INFO:tensorflow:global_step/sec: 620.135
+INFO:tensorflow:global_step/sec: 635.965
+INFO:tensorflow:global_step/sec: 618.91
+INFO:tensorflow:global_step/sec: 646.751
+INFO:tensorflow:global_step/sec: 608.558
+INFO:tensorflow:global_step/sec: 591.436
+INFO:tensorflow:global_step/sec: 583.261
+INFO:tensorflow:global_step/sec: 607.303
+INFO:tensorflow:loss = 0.4840682, steps = 22952 (1.851 sec)
+INFO:tensorflow:global_step/sec: 617.66
+INFO:tensorflow:global_step/sec: 619.822
+INFO:tensorflow:global_step/sec: 633.212
+INFO:tensorflow:global_step/sec: 612.495
+INFO:tensorflow:global_step/sec: 620.743
+INFO:tensorflow:global_step/sec: 616.565
+INFO:tensorflow:global_step/sec: 607.347
+INFO:tensorflow:global_step/sec: 614.25
+INFO:tensorflow:global_step/sec: 618.273
+INFO:tensorflow:global_step/sec: 610.388
+INFO:tensorflow:global_step/sec: 616.438
+INFO:tensorflow:loss = 0.47902036, steps = 24135 (1.926 sec)
+INFO:tensorflow:global_step/sec: 624.037
+INFO:tensorflow:global_step/sec: 634.657
+INFO:tensorflow:global_step/sec: 638.741
+INFO:tensorflow:global_step/sec: 630.204
+INFO:tensorflow:global_step/sec: 613.475
+INFO:tensorflow:global_step/sec: 621.014
+INFO:tensorflow:global_step/sec: 613.375
+INFO:tensorflow:global_step/sec: 620.557
+INFO:tensorflow:global_step/sec: 643.36
+INFO:tensorflow:global_step/sec: 611.018
+INFO:tensorflow:loss = 0.43383506, steps = 25296 (1.848 sec)
+INFO:tensorflow:global_step/sec: 620.652
+INFO:tensorflow:global_step/sec: 619.061
+INFO:tensorflow:global_step/sec: 597.199
+INFO:tensorflow:global_step/sec: 635.909
+INFO:tensorflow:global_step/sec: 617.35
+INFO:tensorflow:global_step/sec: 632.187
+INFO:tensorflow:global_step/sec: 622.571
+INFO:tensorflow:global_step/sec: 602.705
+INFO:tensorflow:global_step/sec: 617.435
+INFO:tensorflow:global_step/sec: 637.903
+INFO:tensorflow:loss = 0.496, steps = 26464 (1.880 sec)
+INFO:tensorflow:global_step/sec: 624.862
+INFO:tensorflow:global_step/sec: 625.54
+INFO:tensorflow:global_step/sec: 628.907
+INFO:tensorflow:global_step/sec: 633.932
+INFO:tensorflow:global_step/sec: 632.243
+INFO:tensorflow:global_step/sec: 612.787
+INFO:tensorflow:global_step/sec: 627.753
+INFO:tensorflow:global_step/sec: 620.291
+INFO:tensorflow:global_step/sec: 630.448
+INFO:tensorflow:global_step/sec: 616.63
+INFO:tensorflow:loss = 0.48410547, steps = 27609 (1.833 sec)
+INFO:tensorflow:global_step/sec: 643.447
+INFO:tensorflow:global_step/sec: 629.721
+INFO:tensorflow:global_step/sec: 640.903
+INFO:tensorflow:global_step/sec: 613.4
+INFO:tensorflow:global_step/sec: 629.44
+INFO:tensorflow:global_step/sec: 628.659
+INFO:tensorflow:global_step/sec: 631.727
+INFO:tensorflow:global_step/sec: 596.385
+INFO:tensorflow:global_step/sec: 620.739
+INFO:tensorflow:global_step/sec: 630.945
+INFO:tensorflow:loss = 0.51867974, steps = 28780 (1.874 sec)
+INFO:tensorflow:global_step/sec: 622.281
+INFO:tensorflow:global_step/sec: 616.198
+INFO:tensorflow:global_step/sec: 625.196
+INFO:tensorflow:global_step/sec: 612.364
+INFO:tensorflow:global_step/sec: 629.154
+INFO:tensorflow:global_step/sec: 623.308
+INFO:tensorflow:global_step/sec: 608.172
+INFO:tensorflow:global_step/sec: 605.959
+INFO:tensorflow:global_step/sec: 622.785
+INFO:tensorflow:global_step/sec: 627.977
+INFO:tensorflow:loss = 0.4172609, steps = 29930 (1.853 sec)
+INFO:tensorflow:global_step/sec: 608.893
+INFO:tensorflow:global_step/sec: 618.745
+INFO:tensorflow:global_step/sec: 620.759
+INFO:tensorflow:global_step/sec: 632.626
+INFO:tensorflow:global_step/sec: 621.474
+INFO:tensorflow:global_step/sec: 623.867
+INFO:tensorflow:global_step/sec: 623.603
+INFO:tensorflow:global_step/sec: 629.401
+INFO:tensorflow:global_step/sec: 609.025
+INFO:tensorflow:global_step/sec: 621.488
+INFO:tensorflow:loss = 0.47112304, steps = 31067 (1.839 sec)
+INFO:tensorflow:global_step/sec: 601.023
+INFO:tensorflow:global_step/sec: 612.356
+INFO:tensorflow:global_step/sec: 637.333
+INFO:tensorflow:global_step/sec: 630.993
+INFO:tensorflow:global_step/sec: 630.442
+INFO:tensorflow:global_step/sec: 618.674
+INFO:tensorflow:global_step/sec: 626.443
+INFO:tensorflow:global_step/sec: 605.767
+INFO:tensorflow:global_step/sec: 633.331
+INFO:tensorflow:global_step/sec: 620.872
+INFO:tensorflow:loss = 0.5176956, steps = 32218 (1.851 sec)
+INFO:tensorflow:global_step/sec: 602.128
+INFO:tensorflow:global_step/sec: 631.687
+INFO:tensorflow:global_step/sec: 626.075
+INFO:tensorflow:global_step/sec: 628.726
+INFO:tensorflow:global_step/sec: 616.81
+INFO:tensorflow:global_step/sec: 641.886
+INFO:tensorflow:global_step/sec: 617.272
+INFO:tensorflow:global_step/sec: 617.23
+INFO:tensorflow:global_step/sec: 623.791
+INFO:tensorflow:global_step/sec: 536.531
+INFO:tensorflow:loss = 0.46120268, steps = 33391 (1.908 sec)
+INFO:tensorflow:global_step/sec: 626.318
+INFO:tensorflow:global_step/sec: 587.531
+INFO:tensorflow:global_step/sec: 636.9
+INFO:tensorflow:global_step/sec: 594.947
+INFO:tensorflow:global_step/sec: 639.171
+INFO:tensorflow:global_step/sec: 644.624
+INFO:tensorflow:global_step/sec: 625.457
+INFO:tensorflow:global_step/sec: 627.166
+INFO:tensorflow:global_step/sec: 619.583
+INFO:tensorflow:global_step/sec: 643.106
+INFO:tensorflow:global_step/sec: 626.705
+INFO:tensorflow:loss = 0.45548856, steps = 34576 (1.897 sec)
+INFO:tensorflow:global_step/sec: 634.586
+INFO:tensorflow:global_step/sec: 620.355
+INFO:tensorflow:global_step/sec: 623.852
+INFO:tensorflow:global_step/sec: 619.826
+INFO:tensorflow:global_step/sec: 607.361
+INFO:tensorflow:global_step/sec: 644.127
+INFO:tensorflow:global_step/sec: 599.065
+INFO:tensorflow:global_step/sec: 632.552
+INFO:tensorflow:global_step/sec: 612.461
+INFO:tensorflow:global_step/sec: 601.52
+INFO:tensorflow:loss = 0.5249953, steps = 35739 (1.877 sec)
+INFO:tensorflow:global_step/sec: 622.976
+INFO:tensorflow:global_step/sec: 606.792
+INFO:tensorflow:global_step/sec: 621.41
+INFO:tensorflow:global_step/sec: 601.807
+INFO:tensorflow:global_step/sec: 622.505
+INFO:tensorflow:global_step/sec: 611.436
+INFO:tensorflow:global_step/sec: 612.581
+INFO:tensorflow:global_step/sec: 614.502
+INFO:tensorflow:global_step/sec: 613.055
+INFO:tensorflow:global_step/sec: 626.744
+INFO:tensorflow:loss = 0.49687633, steps = 36887 (1.869 sec)
+INFO:tensorflow:global_step/sec: 625.696
+INFO:tensorflow:global_step/sec: 603.971
+INFO:tensorflow:global_step/sec: 639.078
+INFO:tensorflow:global_step/sec: 619.293
+INFO:tensorflow:global_step/sec: 638.731
+INFO:tensorflow:global_step/sec: 620.402
+INFO:tensorflow:global_step/sec: 617.675
+INFO:tensorflow:global_step/sec: 636.713
+INFO:tensorflow:global_step/sec: 617.063
+INFO:tensorflow:global_step/sec: 621.926
+INFO:tensorflow:loss = 0.46286857, steps = 38059 (1.877 sec)
+INFO:tensorflow:global_step/sec: 621.52
+INFO:tensorflow:global_step/sec: 619.551
+INFO:tensorflow:global_step/sec: 620.837
+INFO:tensorflow:global_step/sec: 620.654
+INFO:tensorflow:global_step/sec: 628.083
+INFO:tensorflow:global_step/sec: 634.311
+INFO:tensorflow:global_step/sec: 604.854
+INFO:tensorflow:global_step/sec: 639.228
+INFO:tensorflow:global_step/sec: 622.049
+INFO:tensorflow:Saving checkpoints for 39076 into /pvc/model_DLRM_1645088204/model.ckpt.
