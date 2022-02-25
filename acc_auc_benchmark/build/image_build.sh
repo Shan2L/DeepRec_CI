@@ -41,7 +41,6 @@ function runDockerContrainer(){
     container_name=$2
     command=$3
     host_path=$(cd ./whl_build && pwd)
-    cd -
 
     sudo docker run -it  \
     -v $host_path:/whl_build \
@@ -59,10 +58,12 @@ function runDockerContrainer(){
 function codeReview()
 {
     current_path=$(pwd)
-    cd ./whl_build/repo/ali_DeepRec/
-    if [[ ! -d $ali_repo_dir ]];then
-	    git clone https://github.com/alibaba/DeepRec.git
+    if [[ -d $ali_repo_dir ]];then
+        sudo rm -rf $ali_repo_dir
     fi
+    cd ./whl_build/repo/ali_DeepRec/
+    git clone https://github.com/alibaba/DeepRec.git
+
     cd $current_path
     cd $ali_repo_dir
 
@@ -115,9 +116,9 @@ function oss_upload()
     seg2=$(echo $whl_file | awk -F "-" '{print $3"-"$4"-"$5}')
     final_name=$seg1$bd_tag$seg2
 
-    sudo cp $whl_dir$whl_file $whl_dir$final_name
+    sudo cp $whl_dir$currentTime/$whl_file $whl_dir/$final_name
 
-    ./ossutil64 cp $whl_dir$final_name oss://deeprec-whl/ --proxy-host http://child-prc.intel.com:913
+    ./ossutil64 cp $whl_dir/$final_name oss://deeprec-whl/ --proxy-host http://child-prc.intel.com:913
 }
 
 # 通过编好的包来build镜像并push到镜像仓库
@@ -171,8 +172,9 @@ function run()
     codeReview
     # 运行容器 编译whl包
     runDockerContrainer $build_image_repo whl_build /whl_build/build_whl.sh
+    sudo rm -rf $ali_repo_dir
     checkResult \
-    oss_upload\
+    && oss_upload\
     && build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh \
     && build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh \
     
@@ -197,6 +199,7 @@ echoColor green "the modelzoo base image repo id is :$base_image_modelzoo_repo"
 
 # 阿里git code地址
 ali_repo_dir="./whl_build/repo/ali_DeepRec/DeepRec/"
+
 # ali_repo_dir="./build/whl_build/repo/changqing1_DeepRec/DeepRec"
 
 # 存放whl的地址
