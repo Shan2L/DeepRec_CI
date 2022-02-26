@@ -84,8 +84,7 @@ function runSingleContainer()
     image_repo=$1
     script_name=$2
     container_name=$(echo $2 | awk -F "." '{print $1}')
-    host_path=$(cd benchmark_result && pwd)
-    cd .. 
+    host_path=$(cd benchmark_result && pwd) 
     sudo docker run -it --name $container_name\
         $cpu_set\
 	--rm \
@@ -149,7 +148,7 @@ pointcheck_dir=$(cat $config_file | grep pointcheck_dir | awk -F " " '{print $2}
 # 测试命令脚本存放的位置
 deeprec_fp32_script="./benchmark_result/record/script/$currentTime/deeprec_fp32.sh"
 deeprec_bf16_script="./benchmark_result/record/script/$currentTime/deeprec_bf16.sh"
-tf_fp32_script=".//benchmark_result/record/script/$currentTime/tf_fp32.sh"
+tf_fp32_script="./benchmark_result/record/script/$currentTime/tf_fp32.sh"
 
 
 # 从配置文件中读测试镜像的名称
