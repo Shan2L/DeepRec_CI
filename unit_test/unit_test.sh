@@ -27,7 +27,7 @@ function runContainer()
     -it \
     -v $host_path1:/DeepRec/ \
     -v $host_path2:/about_ut/ \
-    --mount source=ut_cache,target/root/.cache/ \
+    --mount source=ut_cache,target=/root/.cache/ \
     --rm \
     --name ut_et $test_image_repo /bin/bash /about_ut/script/run.sh $currentTime
 }
