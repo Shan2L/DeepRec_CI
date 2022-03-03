@@ -47,3 +47,4 @@ fi
 
 codeReview \
 && runContainer
+sudo docker rm -rf ./cache
