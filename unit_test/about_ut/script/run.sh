@@ -11,4 +11,5 @@ cd /DeepRec \
 && bash -x /about_ut/script/ut.sh | tee /about_ut/log/$currentTime/ut_res.log\
 && bazel clean\
 && pip install -r /about_ut/script/requirements.txt \
+&& cd /about_ut/script/ \
 && python /about_ut/script/ExeclWriter.py BM /about_ut/log/$currentTime/ut_res.log
