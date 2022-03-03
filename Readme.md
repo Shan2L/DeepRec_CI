@@ -11,6 +11,8 @@ The directory named "auto_benchmark" has  four modules ,they are:
 
 - `distrib_benchmark`：this module is used to benchmark the Global steps/seconds of specified deepRec package in a distributed environment ,the deepRec package should has ben installed in a docker image using the build module already.
 
+- `unit_test`: this module is used to do unit test base on specified branch_name and commit_id 
+
 ## How to use
 
 First of all you should clone the code to the host which you want  to run you code at.
@@ -71,3 +73,16 @@ First of all you should clone the code to the host which you want  to run you co
 	bash gstep_benchmark.sh
 ```
 4. check the log files in the directory "./DeepRec_CI/distrib_benchmark/logs/$currentTime"
+
+
+### Hot to do UT ?
+1. cd to the directory "./DeepRec/unit_test"
+```bash
+	cd DeepRec_CI/unit_test
+```
+2. modify the config.properties files to specify the parameters you want .including the branch_name and commit_id
+3. run the script "unit_test.sh"
+```bash
+	bash unit_test.sh
+```
+4. check the ut_res.log and ut_res.xls files in the directory **"DeepRec_CI/unit_test/about_ut/log/$currentTime"**
