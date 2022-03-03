@@ -20,14 +20,14 @@ function runContainer()
 {
     host_path1=$(cd "$ali_repo_dir/DeepRec" && pwd)
     host_path2=$(cd ./about_ut && pwd)
-    mkdir ./cache
-    host_path3=$(cd cache && pwd)
+
+    sudo docker volume create ut_cache
     sudo docker pull $test_image_repo \
     && sudo docker run \
     -it \
     -v $host_path1:/DeepRec/ \
     -v $host_path2:/about_ut/ \
-    -v $host_path3:/root/.cache/ \
+    --mount source=ut_cache,target/root/.cache/ \
     --rm \
     --name ut_et $test_image_repo /bin/bash /about_ut/script/run.sh $currentTime
 }
@@ -47,4 +47,4 @@ fi
 
 codeReview \
 && runContainer
-sudo docker rm -rf ./cache
+sudo docker volume rm ut_cache
