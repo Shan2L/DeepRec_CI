@@ -45,6 +45,9 @@ if [[ ! -d $log_dir ]];then
     mkdir -p $log_dir
 fi
 
+file_path=$(cd ./about_ut/log/$currentTime && pwd)
+
 codeReview \
-&& runContainer
+&& runContainer\
+&& echo "the files generated is in the directory : $file_path"
 sudo docker volume rm ut_cache
