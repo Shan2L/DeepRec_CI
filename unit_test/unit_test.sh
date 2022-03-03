@@ -9,9 +9,10 @@ function codeReview()
     cd $ali_repo_dir/DeepRec\
     &&git checkout $branch_name\
     &&git checkout --progress --force $commit_id\
-    &&bazel clean\
     &&cd $current_path
-
+    if [[ -d ./cache ]];then
+        sudo rm -rf ./cache
+    fi
 }
 
 
