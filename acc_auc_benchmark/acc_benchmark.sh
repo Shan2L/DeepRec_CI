@@ -45,7 +45,7 @@ function make_script()
         echo $newline >> $deeprec_fp32_script
     done;
 
-    for line in $(cat $config_file | grep CMD | grep deeprec_fp32 )
+    for line in $(cat $config_file | grep CMD | grep tf_fp32 )
     do
         command=$(echo "$line" | awk -F ":" '{print $2}')
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
