@@ -220,9 +220,6 @@ cpus=$(cat $config_file | grep cpus | awk -F " " '{print $2}')
 env_var=$(cat $config_file |grep export)
 
 
-
-
-
 # 创建目录
 if [ ! -d $gol_dir$currentTime ];then
     sudo mkdir -p "$gol_dir$currentTime" 

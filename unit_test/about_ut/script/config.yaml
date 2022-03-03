@@ -1,0 +1,95 @@
+Patterns:
+  suffix_items: " {:^}{:d} {:>} {data}M {unit_per_sec:.5}/s"
+  suffix_bytes: " {:^}{:d} {:>} {data}{unit_per_sec:.2}/s"
+
+  start: "Configuration finished"
+  end: "There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are."
+
+  single_row:
+      patterns:
+      - "//{dir}:{target}        [0m[32m{Status}[0m in {time}s"
+
+
+  double_row:
+
+  mkl_matmul_op_test:
+    target: "//tensorflow/core/kernels:mkl_matmul_op_test"
+    patterns:
+      - "BM_{test_case}_{kind}_{M}_{K}_{N}_{TA}_{TB}_{T}_{device}_{num_threads:^}{:d} {:>} {data}M {unit_per_sec:.5}/s"
+    docs:
+      test_case: "test case name"
+      kind: "op type (e.g. default, MKL)"
+      M: "outer dimension of LHS"
+      K: "inner dimensions of LHS and RHS"
+      N: "outer dimension of RHS"
+      TA: "boolean indicating whether to transpose matrix."
+      TB: "boolean indicating whether to Transpose matrix."
+      T: "C++ type of scalars (e.g. float, std::complex)"
+      device: "Device (e.g. cpu, gpu)"
+      num_threads: "number of thread when BM running"
+
+  mkl_batch_matmul_op_test:
+    target: "//tensorflow/core/kernels:mkl_batch_matmul_op_test"
+    with_suffix: suffix_items
+    patterns:
+      - "BM_{test_case}_{kind}_{B}_{M}_{K}_{N}_{TA}_{TB}_{T}_{device}_{num_threads}"
+    docs:
+      test_case: "test case name"
+      kind: "op type (e.g. default, MKL)"
+      B: "batch size of LHS"
+      M: "outer dimension of LHS"
+      K: "inner dimensions of LHS and RHS"
+      N: "outer dimension of RHS"
+      TA: "boolean indicating whether to transpose matrix."
+      TB: "boolean indicating whether to Transpose matrix."
+      T: "C++ type of scalars (e.g. float, std::complex)"
+      device: "Device (e.g. cpu, gpu)"
+      num_threads: "number of thread when BM running"
+
+  mkl_relu_op_test:
+    target: "//tensorflow/core/kernels:mkl_relu_op_test"
+    with_suffix: suffix_items
+    patterns:
+      - "BM_{test_case}_{kind}_{T}_{A}_{B}_{C}_{D}_{device}_{num_threads}"
+
+  mkl_reshape_op_test:
+    target: "//tensorflow/core/kernels:mkl_reshape_op_test"
+    with_suffix: suffix_items
+    patterns:
+      - "BM_{test_case}_{kind}_{T}_{dims}_{orig}_To_{Target}_{device}_{num_threads}"
+
+  mkl_slice_op_test:
+    target: "//tensorflow/core/kernels:mkl_slice_op_test"
+    with_suffix: suffix_bytes
+    patterns:
+      - "BM_{test_case}_{kind}_{size}_{T}_{DT}_{device:.3}_{num_threads:.1}"
+
+  mkl_softmax_op_test:
+    target: "//tensorflow/core/kernels:mkl_softmax_op_test"
+    with_suffix: suffix_items
+    patterns:
+      - "BM_{test_case}_{T}_{kind}_{dims}_{sizes}_{num_threads}"
+
+  mkl_transpose_op_test:
+    target: "//tensorflow/core/kernels:mkl_transpose_op_test"
+    with_suffix: suffix_bytes
+    patterns:
+      - "BM_{test_case}_{T}_{kind}_{dims}_{sizes}_{num_threads}"
+
+  mkl_concat_op_test:
+    target: "//tensorflow/core/kernels:mkl_concat_op_test"
+    with_suffix: suffix_items
+    patterns:
+      - "BM_{test_case}_{kind}_{num_inputs}_{dims}x{}x{sizes}_{T}_{concat_dims}_{device}_{num_threads}"
+
+  mkl_aggregate_ops_test:
+    target: "//tensorflow/core/kernels:mkl_aggregate_ops_test"
+    with_suffix: suffix_bytes
+    patterns:
+      - "BM_{test_case}_{kind}_{T}_{nums}_{dims}_{sizes}_{device}_{num_threads}"
+
+  mkl_cwise_ops_test:
+    target: "//tensorflow/core/kernels:mkl_cwise_ops_test"
+    with_suffix: suffix_items
+    patterns:
+      - "BM_{kind}_{test_case}_{device}_{size1}*{size2}_{T}_{num_threads}"
