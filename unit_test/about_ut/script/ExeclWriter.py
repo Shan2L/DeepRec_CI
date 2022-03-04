@@ -52,9 +52,7 @@ class Executor:
                     _parse_flag = False
                     # store data to excel
                     if len(_all_excel_data) > 0:
-                        _curr_target_name_sheet = _curr_target_name if len(
-                            _curr_target_name) < 31 else _curr_target_name[:30]
-                        self.ws = self.wb.add_sheet(_curr_target_name_sheet)
+                        self.ws = self.wb.add_sheet("UT_result")
                         _all_excel_data.insert(0, _title)
                         for i, j in [(i, j) for i in range(len(_all_excel_data)) for j in
                                      range(len(_all_excel_data[0]))]:
@@ -72,20 +70,19 @@ class Executor:
                     if not _test_case:
                         continue
                     _target_patterns = _test_case["patterns"]
-                    # print(_target_patterns)
+                    # print(_target_pattern)
 
-                    for _pattern in _target_patterns:
-                        print("{}".format(_pattern))
-                        print("{}".format(_line))
-                        # if "with_suffix" in _test_case.keys() and _test_case["with_suffix"]:
-                        #     _pattern = _pattern + config[_test_case["with_suffix"]]
-                        _search = parse.search(_pattern, _line)
-                        print(_search)
-                        if _search:
-                            print(1)
-                            _title = [_item for _item in _search.named.keys()]
-                            _all_excel_data.append([_item for _item in _search.named.values()])
-                            break
+                    _pattern1 = _target_patterns[0]
+                    print(_pattern1)
+                    _pattern2 = _target_patterns[1]
+                    print(_pattern2)
+                    _search = parse.search(_pattern1, _line) or parse.search(_pattern2, _line)
+                    print(_search)
+                    if _search:
+                        print(1)
+                        _title = [_item for _item in _search.named.keys()]
+                        _all_excel_data.append([_item for _item in _search.named.values()])
+                        #break
 
         pass
 
