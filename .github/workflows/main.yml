@@ -30,8 +30,8 @@ jobs:
           if [[ ! -d DeepRec_CI ]];then
               sudo git clone https://github.com/GosTraight2020/DeepRec_CI.git
           fi
-          sudo sed '3c commit_id ${{github.event.inputs.commit_id}}' /home/shanlin/DeepRec_CI/acc_benchmark/config.properties
-          sudo sed '4c branch_name ${{github.event.inputs.branch_name}}' /home/shanlin/DeepRec_CI/acc_benchmark/config.properties
-          sudo cat /home/shanlin/DeepRec_CI/acc_benchmark/config.properties
-          sudo cd DeepRec_CI/acc_benchmark/build
-          sudo bash image_build.sh
+          sed -i '3c commit_id ${{github.event.inputs.commit_id}}' /home/shanlin/DeepRec_CI/acc_benchmark/config.properties
+          sed -i '4c branch_name ${{github.event.inputs.branch_name}}' /home/shanlin/DeepRec_CI/acc_benchmark/config.properties
+          cat /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
+          cd DeepRec_CI/acc_benchmark/build
+          bash image_build.sh
