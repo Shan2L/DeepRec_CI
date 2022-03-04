@@ -7,8 +7,8 @@ Patterns:
 
   single_row:
       patterns:
-      - "//{dir}:{target}        [0m[32m{Status}[0m in {time}s"
-      - "//{dir}:{target}[0m[31m[1m{Status}[0m {}"
+      - "//{dir}:{target}[0m[32m{Status}[0m{}"
+      - "//{dir}:{target}[0m[31m[1m{Status}[0m{}"
 
   mkl_matmul_op_test:
     target: "//tensorflow/core/kernels:mkl_matmul_op_test"
