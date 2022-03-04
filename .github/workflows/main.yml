@@ -1,0 +1,37 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      branch_name:
+        description: 'branch_name'
+        default: 'main'
+      commit_id:
+        description: 'commit id'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ACC_BM
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+
+      # Runs a set of commands using the runners shell
+      - name: modify the config file by inputs params
+        run: |
+          cd /home/shanlin/
+          if [[ ! -d DeepRec_CI ]];then
+              git clone https://github.com/GosTraight2020/DeepRec_CI.git
+          fi
+          sed '3c commit_id ${{github.event.inputs.commit_id}}' /home/shanlin/DeepRec_CI/acc_benchmark/config.properties
+          sed '4c branch_name ${{github.event.inputs.branch_name}}' /home/shanlin/DeepRec_CI/acc_benchmark/config.properties
+          cat /home/shanlin/DeepRec_CI/acc_benchmark/config.properties
+          cd DeepRec_CI/acc_benchmark/build
+          bash image_build.sh
