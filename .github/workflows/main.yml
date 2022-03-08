@@ -42,4 +42,4 @@ jobs:
           sed -i '19c code_repo ${{github.event.inputs.code_repo}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
           cat /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
           cd DeepRec_CI/acc_auc_benchmark/build
-          bash image_build.sh
+          bash image_build-action.sh
