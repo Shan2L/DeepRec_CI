@@ -12,6 +12,12 @@ on:
         default: 'main'
       commit_id:
         description: 'commit id'
+      base_image:
+        description: 'the image you want to build based on'
+        default: 'cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:tf'
+      code_repo:
+        description: 'the repo you wanna to build'
+        default: 'https://github.com/alibaba/DeepRec.git'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -32,6 +38,8 @@ jobs:
           fi
           sed -i '3c commit_id ${{github.event.inputs.commit_id}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
           sed -i '4c branch_name ${{github.event.inputs.branch_name}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
+          sed -i '9c base_image_modelzoo ${{github.event.inputs.base_image}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
+          sed -i '19c code_repo ${{github.event.inputs.code_repo}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
           cat /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
           cd DeepRec_CI/acc_auc_benchmark/build
           bash image_build.sh
