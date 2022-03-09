@@ -38,4 +38,10 @@ jobs:
         run: |
           currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
           echo ${{github.event.inputs.latest}}
+          
+          if [[ ${{github.event.inputs.latest}} == true ]];then
+              echo 123123123123123123123123
+          else 
+              echo ########################
+          fi
 
