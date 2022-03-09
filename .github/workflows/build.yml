@@ -19,9 +19,9 @@ on:
         description: 'the repo you wanna to build'
         default: 'https://github.com/alibaba/DeepRec.git'
       latest:
-        description: 'weather tag as the latest'
+        description: 'Tag as the latest'
         type: boolean
-        default: false
+        default: 'false'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -36,6 +36,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: modify the config file by inputs params
         run: |
+          currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
           echo ${{github.event.inputs.latest}}
           cd /home/shanlin/
           if [[ ! -d DeepRec_CI ]];then
@@ -48,7 +49,7 @@ jobs:
           cat /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
           cd DeepRec_CI/acc_auc_benchmark/build
           if [[ ${{github.event.inputs.latest}} == true ]];then
-              bash image_build-action.sh -l
+              bash image_build-action.sh -l | tee /home/shanlin/githubCI.log
           else 
               bash image_build-action.sh
           fi
