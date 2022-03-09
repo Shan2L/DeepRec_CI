@@ -21,7 +21,7 @@ on:
       latest:
         description: 'weather tag as the latest'
         type: boolean
-        default: 'no'
+        default: false
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -47,8 +47,8 @@ jobs:
           sed -i '19c code_repo ${{github.event.inputs.code_repo}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
           cat /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
           cd DeepRec_CI/acc_auc_benchmark/build
-          if [[ ${{github.event.inputs.latest}} == yes ]];then
+          if [[ ${{github.event.inputs.latest}} == true ]];then
               bash image_build-action.sh -l
           else 
-              bash iamge_build-action.sh
+              bash image_build-action.sh
           fi
