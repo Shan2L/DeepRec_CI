@@ -38,10 +38,18 @@ jobs:
         run: |
           currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
           echo ${{github.event.inputs.latest}}
-          
-          if [[ ${{github.event.inputs.latest}} == true ]];then
-              echo 123123123123123123123123
-          else 
-              echo ########################
+          cd /home/shanlin/
+          if [[ ! -d DeepRec_CI ]];then
+              sudo git clone https://github.com/GosTraight2020/DeepRec_CI.git
           fi
-
+          sed -i '3c commit_id ${{github.event.inputs.commit_id}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
+          sed -i '4c branch_name ${{github.event.inputs.branch_name}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
+          sed -i '9c base_image_modelzoo ${{github.event.inputs.base_image}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
+          sed -i '19c code_repo ${{github.event.inputs.code_repo}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
+          cat /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
+          cd DeepRec_CI/acc_auc_benchmark/build
+          if [[ ${{github.event.inputs.latest}} == true ]];then
+              bash image_build-action.sh -l | tee /home/shanlin/githubCI.log
+          else 
+              bash image_build-action.sh
+          fi
