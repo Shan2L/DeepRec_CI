@@ -18,6 +18,10 @@ on:
       code_repo:
         description: 'the repo you wanna to build'
         default: 'https://github.com/alibaba/DeepRec.git'
+      latest:
+        description: 'weather tag as the latest'
+        type: boolean
+        default: 'yes'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
