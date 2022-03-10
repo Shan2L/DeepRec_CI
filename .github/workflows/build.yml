@@ -42,7 +42,7 @@ jobs:
           echo ${{github.event.inputs.latest}}
           cd /home/shanlin/
           if [[ -d image_build_temp_dir ]];then
-            rm -rf image_build_temp_dir
+            sudo rm -rf image_build_temp_dir
           fi 
           mkdir image_build_temp_dir && cd image_build_temp_dir
           git clone https://github.com/GosTraight2020/DeepRec_CI.git
