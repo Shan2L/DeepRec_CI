@@ -45,7 +45,7 @@ jobs:
             rm -rf image_build_temp_dir
           fi 
           mkdir image_build_temp_dir && cd image_build_temp_dir
-          sudo git clone https://github.com/GosTraight2020/DeepRec_CI.git
+          git clone https://github.com/GosTraight2020/DeepRec_CI.git
           config_file='/home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/config.properties'
           
           sed -i '3c commit_id ${{github.event.inputs.commit_id}}' $config_file
