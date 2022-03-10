@@ -42,7 +42,7 @@ function runDockerContrainer(){
     command=$3
     host_path=$(cd ./whl_build && pwd)
 
-    sudo docker run -it  \
+    sudo docker run \
     -v $host_path:/whl_build \
     --name $container_name \
     $image_repo \
