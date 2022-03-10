@@ -18,6 +18,8 @@ on:
       code_repo:
         description: 'the repo you wanna to build'
         default: 'https://github.com/alibaba/DeepRec.git'
+      image_tag:
+        description: 'the image tag of the image built just now:'
       latest:
         description: 'Tag as the latest'
         type: boolean
@@ -46,6 +48,7 @@ jobs:
           sed -i '4c branch_name ${{github.event.inputs.branch_name}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
           sed -i '9c base_image_modelzoo ${{github.event.inputs.base_image}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
           sed -i '19c code_repo ${{github.event.inputs.code_repo}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
+          sed -i '11c image_TAG ${{github.event.inputs.image_tag}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
           cat /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
           cd DeepRec_CI/acc_auc_benchmark/build
           if [[ ${{github.event.inputs.latest}} == true ]];then
