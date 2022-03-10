@@ -41,6 +41,9 @@ jobs:
           currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
           echo ${{github.event.inputs.latest}}
           cd /home/shanlin/
+          if [[ -d image_build_temp_dir ]];then
+            rm -rf image_build_temp_dir
+          fi 
           mkdir image_build_temp_dir && cd image_build_temp_dir
           sudo git clone https://github.com/GosTraight2020/DeepRec_CI.git
           config_file='/home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/config.properties'
