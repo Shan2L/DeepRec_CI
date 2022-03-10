@@ -107,7 +107,6 @@ function oss_upload()
     if [[ ! -f ossutil64 ]];then
         wget https://deeprec-whl.oss-cn-beijing.aliyuncs.com/ossutil64
         chmod 755 ossutil64
-        ./ossutil64 config
     fi
     
     bd_tag=-$part_date+$part_commit_id-
@@ -118,7 +117,7 @@ function oss_upload()
 
     sudo cp $whl_dir$currentTime/$whl_file $whl_dir/$final_name
 
-    ./ossutil64 cp $whl_dir/$final_name oss://deeprec-whl/ --proxy-host http://child-prc.intel.com:913
+    ./ossutil64 cp $whl_dir/$final_name oss://deeprec-whl/ --proxy-host http://child-prc.intel.com:913 --config_file ~/.ossutilconfig
 }
 
 # 通过编好的包来build镜像并push到镜像仓库
