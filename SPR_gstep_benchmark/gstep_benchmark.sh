@@ -157,8 +157,8 @@ deeprec_test_image=$(cat $config_file |grep deeprec_test_image | awk -F " " '{pr
 tf_test_image=$(cat $config_file |grep tf_test_image | awk -F " " '{print$2}' )
 
 # 拉取最新的测试镜像
-sudo docker pull $deeprec_test_image
-sudo docker pull $tf_test_image
+#sudo docker pull $deeprec_test_image
+#sudo docker pull $tf_test_image
 
 
 # 从配置文件读取测试的命令
