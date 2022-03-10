@@ -117,7 +117,7 @@ function oss_upload()
 
     sudo cp $whl_dir$currentTime/$whl_file $whl_dir/$final_name
 
-    ./ossutil64 cp $whl_dir/$final_name oss://deeprec-whl/ --proxy-host http://child-prc.intel.com:913 --config_file ~/.ossutilconfig
+    ./ossutil64 cp $whl_dir/$final_name oss://deeprec-whl/ --proxy-host http://child-prc.intel.com:913 --config-file ~/.ossutilconfig
 }
 
 # 通过编好的包来build镜像并push到镜像仓库
