@@ -41,18 +41,27 @@ jobs:
           currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
           echo ${{github.event.inputs.latest}}
           cd /home/shanlin/
-          if [[ ! -d DeepRec_CI ]];then
-              sudo git clone https://github.com/GosTraight2020/DeepRec_CI.git
-          fi
-          sed -i '3c commit_id ${{github.event.inputs.commit_id}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
-          sed -i '4c branch_name ${{github.event.inputs.branch_name}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
-          sed -i '9c base_image_modelzoo ${{github.event.inputs.base_image}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
-          sed -i '19c code_repo ${{github.event.inputs.code_repo}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
-          sed -i '11c image_TAG ${{github.event.inputs.image_tag}}' /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
-          cat /home/shanlin/DeepRec_CI/acc_auc_benchmark/config.properties
+          mkdir image_build_temp_dir && cd image_build_temp_dir
+          sudo git clone https://github.com/GosTraight2020/DeepRec_CI.git
+          config_file='/home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/config.properties'
+          
+          sed -i '3c commit_id ${{github.event.inputs.commit_id}}' $config_file
+          sed -i '4c branch_name ${{github.event.inputs.branch_name}}' $config_file
+          sed -i '9c base_image_modelzoo ${{github.event.inputs.base_image}}' $config_file
+          sed -i '19c code_repo ${{github.event.inputs.code_repo}}' $config_file
+          sed -i '11c image_TAG ${{github.event.inputs.image_tag}}' $config_file
+          echo ----------------------------------------------------------------------------------------------
+          cat $config_file
+          echo ------------------------------------------------------------------------------------------------
           cd DeepRec_CI/acc_auc_benchmark/build
           if [[ ${{github.event.inputs.latest}} == true ]];then
               bash image_build-action.sh -l | tee /home/shanlin/githubCI.log
           else 
               bash image_build-action.sh | tee /home/shanlin/githubCI.log
           fi
+          
+          cd ~ && rm -rf /home/shanlin/image_build_temp_dir/
+          
+          echo "the build process has been executed successfully"
+          echo "the image name is :cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:${{github.event.inputs.image_tag}}"
+          echo "the image name is :cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec:${{github.event.inputs.image_tag}}"
