@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "train.py", line 3, in <module>
+    import tensorflow as tf
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow/__init__.py", line 101, in <module>
+    from tensorflow_core import *
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/__init__.py", line 28, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "<frozen importlib._bootstrap>", line 1007, in _handle_fromlist
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow/__init__.py", line 50, in __getattr__
+    module = self._load()
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow/__init__.py", line 44, in _load
+    module = _importlib.import_module(self.__name__)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/python/__init__.py", line 47, in <module>
+    import numpy as np
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/numpy/__init__.py", line 145, in <module>
+    from . import lib
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/numpy/lib/__init__.py", line 40, in <module>
+    from .financial import *
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/numpy/lib/financial.py", line 16, in <module>
+    from decimal import Decimal
+  File "/usr/lib64/python3.6/decimal.py", line 3, in <module>
+    from _decimal import *
+  File "/usr/lib64/python3.6/abc.py", line 158, in register
+    if issubclass(subclass, cls):
+  File "/usr/lib64/python3.6/abc.py", line 228, in __subclasscheck__
+    if issubclass(subclass, scls):
+  File "/usr/lib64/python3.6/abc.py", line 222, in __subclasscheck__
+    for rcls in cls._abc_registry:
+  File "/usr/lib64/python3.6/_weakrefset.py", line 59, in __iter__
+    with _IterationGuard(self):
+  File "/usr/lib64/python3.6/_weakrefset.py", line 18, in __init__
+    self.weakcontainer = ref(weakcontainer)
+KeyboardInterrupt

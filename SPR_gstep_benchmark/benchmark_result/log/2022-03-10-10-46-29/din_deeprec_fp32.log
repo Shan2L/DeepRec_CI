@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "train.py", line 3, in <module>
+    import tensorflow as tf
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow/__init__.py", line 101, in <module>
+    from tensorflow_core import *
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/__init__.py", line 28, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "<frozen importlib._bootstrap>", line 1007, in _handle_fromlist
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow/__init__.py", line 50, in __getattr__
+    module = self._load()
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow/__init__.py", line 44, in _load
+    module = _importlib.import_module(self.__name__)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/python/__init__.py", line 64, in <module>
+    from tensorflow.python.framework.framework_lib import *  # pylint: disable=redefined-builtin
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/python/framework/framework_lib.py", line 52, in <module>
+    from tensorflow.python.framework.importer import import_graph_def
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/python/framework/importer.py", line 28, in <module>
+    from tensorflow.python.framework import function
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/python/framework/function.py", line 37, in <module>
+    from tensorflow.python.ops import resource_variable_ops
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py", line 40, in <module>
+    from tensorflow.python.ops import math_ops
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/python/ops/math_ops.py", line 88, in <module>
+    from tensorflow.python.ops import gen_nn_ops
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/python/ops/gen_nn_ops.py", line 11934, in <module>
+    _softmax_cross_entropy_with_logits_outputs)
+  File "/usr/lib64/python3.6/collections/__init__.py", line 429, in namedtuple
+    exec(class_definition, namespace)
+  File "<string>", line 1, in <module>
+KeyboardInterrupt

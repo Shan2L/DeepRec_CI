@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "train.py", line 3, in <module>
+    from numpy import dtype
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/numpy/__init__.py", line 151, in <module>
+    from . import polynomial
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/numpy/polynomial/__init__.py", line 18, in <module>
+    from .polynomial import Polynomial
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/numpy/polynomial/polynomial.py", line 73, in <module>
+    from ._polybase import ABCPolyBase
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/numpy/polynomial/_polybase.py", line 19, in <module>
+    class ABCPolyBase(abc.ABC):
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/numpy/polynomial/_polybase.py", line 73, in ABCPolyBase
+    @abc.abstractmethod
+  File "/usr/lib64/python3.6/abc.py", line 9, in abstractmethod
+    def abstractmethod(funcobj):
+KeyboardInterrupt

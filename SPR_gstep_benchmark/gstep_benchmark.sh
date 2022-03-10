@@ -142,6 +142,9 @@ checkpoint_dir=$(cat $config_file | grep checkpoint_dir | awk -F " " '{print $2}
 
 # 主机上的存放位置
 gol_dir=$(cat $config_file |grep gol_dir | awk -F " " '{print $2}')
+if [[ !-d $gol_dir ]];then
+	mkdir -p $gol_dir
+fi
 gol_dir=$(cd $gol_dir && pwd)
 pointcheck_dir=$(cat $config_file | grep pointcheck_dir | awk -F " " '{print $2}')
 pointcheck_dir=$(cd $pointcheck_dir && pwd)
