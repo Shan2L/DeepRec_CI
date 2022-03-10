@@ -207,7 +207,7 @@ source /home/shanlin/deeprec/bin/activate\
 &&deactivate\
 &&source /home/shanlin/stock_tf/bin/activate\
 &&bash $tf_fp32_script\
-&&python3 ./gstep_count.py --log_dir=$gol_dir$currentTime
+&&python3 ./gstep_count.py --log_dir=$gol_dir/$currentTime
 
 
 
