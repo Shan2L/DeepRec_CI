@@ -1,0 +1,24 @@
+INFO:tensorflow:Parsing ./data/taobao_train_data
+INFO:tensorflow:Parsing ./data/taobao_test_data
+2022-03-10 11:11:44.229274: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1900000000 Hz
+2022-03-10 11:11:44.232022: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fa84d82b980 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-03-10 11:11:44.232043: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Using TensorFlow version 1.15.5
+Checking dataset
+Numbers of training dataset is 50000
+Numbers of test dataset is 10000
+Saving model checkpoints to /2022-03-10-11-11-33/dssm_deeprec_fp32
+Traceback (most recent call last):
+  File "train.py", line 611, in <module>
+    main()
+  File "train.py", line 530, in main
+    writer = tf.summary.FileWriter(checkpoint_dir, sess.graph)
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/python/summary/writer/writer.py", line 367, in __init__
+    filename_suffix)
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/python/summary/writer/event_file_writer.py", line 67, in __init__
+    gfile.MakeDirs(self._logdir)
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/python/lib/io/file_io.py", line 438, in recursive_create_dir
+    recursive_create_dir_v2(dirname)
+  File "/home/shanlin/deeprec/lib64/python3.6/site-packages/tensorflow_core/python/lib/io/file_io.py", line 453, in recursive_create_dir_v2
+    pywrap_tensorflow.RecursivelyCreateDir(compat.as_bytes(path))
+tensorflow.python.framework.errors_impl.PermissionDeniedError: /2022-03-10-11-11-33; Permission denied
