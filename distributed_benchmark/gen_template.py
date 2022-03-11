@@ -25,8 +25,8 @@ def run(tempdir, tf_temp, deeprec_temp, outdir):
     env.rstrip_blocks = True
     deeprec_template = env.get_template(deeprec_temp)
 
-    model_list = ["wdl", "dssm", "deepfm", "dlrm"]
-    model_name_list = ["WDL", "DSSM", "DeepFM", "DLRM"]
+    model_list = ["wdl", "dssm", "deepfm", "dlrm", "dien", "din"]
+    model_name_list = ["WDL", "DSSM", "DeepFM", "DLRM", "DIEN", "DIN"]
     package_list = ["deeprec_bf16", "deeprec_fp32", "tf_fp32"]
     for package in package_list:          
         for (model, model_name) in zip(model_list, model_name_list):
@@ -47,3 +47,4 @@ def run(tempdir, tf_temp, deeprec_temp, outdir):
 
 
 run()
+

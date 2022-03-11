@@ -63,7 +63,7 @@ jobs:
               bash image_build-action.sh | tee /home/shanlin/githubCI.log
           fi
           
-          cd ~ && rm -rf /home/shanlin/image_build_temp_dir/
+          cd ~ && sudo rm  -rf /home/shanlin/image_build_temp_dir/
           
           echo "the build process has been executed successfully"
           echo "the image name is :cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:${{github.event.inputs.image_tag}}"

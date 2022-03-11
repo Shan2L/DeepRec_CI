@@ -67,7 +67,7 @@ if __name__ == "__main__":
         keys.append(key)
 
 
-    for model_name in ["dlrm", "dssm", "deepfm", "wdl"]:
+    for model_name in ["dlrm", "dssm", "deepfm", "wdl", "dien", "din"]:
         tf_name = "tf_fp32_"+model_name
         dp16_name = "deeprec_bf16_"+model_name
         dp32_name ="deeprec_fp32_"+model_name
@@ -125,32 +125,33 @@ if __name__ == "__main__":
 
     with open(log_dir+"/gstep_result.csv",'w')as f:
         writer = csv.writer(f)
-        head1 = ["Gstep", " ", "WDL", "WDL", "DLRM", "DLRM", "Deep FM", "Deep FM", "DSSM",  "DSSM"]
+        head1 = ["Gstep", " ", "WDL", "WDL", "DLRM", "DLRM", "Deep FM", "Deep FM", "DSSM",  "DSSM", "DIEN", "DIEN", "DIN", "DIN"]
         print(head1)
         writer.writerow(head1)
-        head2 = ["Gstep", " ", "value", "percent", "value", "percent", "value", "percent", "value", "percent"]
+        head2 = ["Gstep", " ", "value", "percent", "value", "percent", "value", "percent", "value", "percent", "value", "percent", "value", "percent"]
         print(head2)
         writer.writerow(head2)
 
         data = ["Commuty TF", " "]
-        for model_name in ["wdl", "dlrm", "deepfm", "dssm"]:
+        for model_name in ["wdl", "dlrm", "deepfm", "dssm", "dien", "din"]:
             data.append(result["tf_fp32_"+model_name])
             data.append(result[model_name + "_tf_fp32_ratio"])
         writer.writerow(data)
         
         data = ["DeepRec FP32", " "]
-        for model_name in ["wdl", "dlrm", "deepfm", "dssm"]:
+        for model_name in ["wdl", "dlrm", "deepfm", "dssm", "dien", "din"]:
             data.append(result["deeprec_fp32_"+model_name])
             data.append(result[model_name + "_deeprec_fp32_ratio"])
         print(data)
         writer.writerow(data)
 
         data = ["DeepRec BF16", " "]
-        for model_name in ["wdl", "dlrm", "deepfm", "dssm"]:
+        for model_name in ["wdl", "dlrm", "deepfm", "dssm", "dien", "din"]:
             data.append(result["deeprec_bf16_"+model_name])
             data.append(result[model_name + "_deeprec_bf16_ratio"])
         print(data)
         writer.writerow(data)
+
 
 
 
