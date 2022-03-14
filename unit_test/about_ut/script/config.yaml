@@ -3,7 +3,7 @@ Patterns:
   suffix_bytes: " {:^}{:d} {:>} {data}{unit_per_sec:.2}/s"
 
   start: "Configuration finished"
-  end: "There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are."
+  end: "------------------"
 
   single_row:
       patterns:
