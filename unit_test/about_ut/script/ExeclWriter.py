@@ -76,7 +76,9 @@ class Executor:
                     print(_pattern1)
                     _pattern2 = _target_patterns[1]
                     print(_pattern2)
-                    _search = parse.search(_pattern1, _line) or parse.search(_pattern2, _line)
+                    _pattern3 = _target_patterns[1]
+                    print(_pattern3)
+                    _search = parse.search(_pattern1, _line) or parse.search(_pattern2, _line) or parse.search(_pattern3, _line)
                     print(_search)
                     if _search:
                         print(1)
