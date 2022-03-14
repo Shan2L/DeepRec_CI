@@ -40,10 +40,15 @@ function runDockerContrainer(){
     image_repo=$1
     container_name=$2
     command=$3
+    optional=
     host_path=$(cd ./whl_build && pwd)
-
+    
+    if [[ $container_name == "whl_build" ]];then
+    	optional="--rm"
+    fi
+    
     sudo docker run \
-    -v $host_path:/whl_build \
+    -v $host_path:/whl_build $optional \
     --name $container_name \
     $image_repo \
     /bin/bash $command $currentTime
