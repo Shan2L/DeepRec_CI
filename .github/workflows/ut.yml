@@ -1,0 +1,56 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      code_repo:
+        description: 'the repo you wanna to do UT'
+        default: 'https://github.com/alibaba/DeepRec.git'
+      branch_name:
+        description: 'branch name'
+        default: 'main'
+      commit_id:
+        description: 'commit id'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: acc
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+
+      # Runs a set of commands using the runners shell
+      - name: modify the config file by inputs params
+        run: |
+          currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
+          cd /home/shanlin/
+          if [[ ! -d DeepRec_CI ]];then
+              git clone https://github.com/GosTraight2020/DeepRec_CI.git
+          then
+          cd DeepRec_CI
+          
+          config_file='/home/shanlin/DeepRec_CI/unit_test/config.properties'
+          
+          sed -i '1c branch ${{github.event.inputs.branch_name}}' $config_file
+          sed -i '2c commit ${{github.event.inputs.commit_id}}' $config_file
+          sed -i '3c code_repo ${{github.event.inputs.code_repo}}' $config_file
+          echo ----------------------------------------------------------------------------------------------
+          cat $config_file
+          echo ------------------------------------------------------------------------------------------------
+        
+          bash unit_test.sh
+          if [[ $? == 1 ]];then
+            echo "The UT has not been finished"
+            exit 1
+          fi
+          
+          echo "the UT  has been executed successfully"
+          echo "the output xls file will be put in the directory /home/shanlin/DeepRec_CI/unit_test/about_ut/log/$currentTime/ut_res.xls"
+
