@@ -47,7 +47,7 @@ jobs:
           echo ------------------------------------------------------------------------------------------------
           
           cd /home/shanlin/DeepRec_CI/unit_test/ \
-          && bash unit_test.sh
+          && bash unit_test-action.sh
           if [[ $? == 1 ]];then
             echo "The UT has not been finished"
             exit 1
