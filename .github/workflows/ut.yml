@@ -35,6 +35,8 @@ jobs:
               git clone https://github.com/GosTraight2020/DeepRec_CI.git
           fi
           
+          cd DeepRec_CI/ \
+          &&git pull
           config_file='/home/shanlin/DeepRec_CI/unit_test/config.properties'
           
           sed -i '1c branch ${{github.event.inputs.branch_name}}' $config_file \
