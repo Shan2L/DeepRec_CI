@@ -12,5 +12,5 @@ cd /DeepRec \
 && bazel clean\
 && pip install -r /about_ut/script/requirements.txt \
 && cd /about_ut/script/ \
-&& echo ------------------ >> /about_ut/log/$currentiTime/ut_res.log
+&& echo ------------------ >> /about_ut/log/$currentiTime/ut_res.log\
 && python /about_ut/script/ExeclWriter.py BM /about_ut/log/$currentTime/ut_res.log
