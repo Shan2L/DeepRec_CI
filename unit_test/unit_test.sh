@@ -9,7 +9,7 @@ function codeReview()
     fi
     cd $ali_repo_dir \
     && git clone $code_repo \
-    cd $ali_repo_dir/DeepRec\
+    && cd $ali_repo_dir/DeepRec\
     &&git checkout $branch_name\
     &&git checkout --progress --force $commit_id\
     &&cd $current_path
