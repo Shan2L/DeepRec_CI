@@ -7,9 +7,9 @@ function codeReview()
         cd $repo_dir \
         && sudo rm -rf DeepRec
     fi
-    cd $ali_repo_dir \
+    cd $repo_dir \
     && git clone $code_repo \
-    && cd $ali_repo_dir/DeepRec\
+    && cd $repo_dir/DeepRec\
     &&git checkout $branch_name\
     &&git checkout --progress --force $commit_id\
     &&cd $current_path
@@ -18,7 +18,7 @@ function codeReview()
 
 function runContainer()
 {
-    host_path1=$(cd "$ali_repo_dir/DeepRec" && pwd)
+    host_path1=$(cd "$repo_dir/DeepRec" && pwd)
     host_path2=$(cd ./about_ut && pwd)
 
     sudo docker volume create ut_cache
