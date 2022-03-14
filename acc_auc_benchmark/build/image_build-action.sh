@@ -69,8 +69,8 @@ function codeReview()
 
     git checkout "$branch_name"\
     && git checkout --progress --force "$commit_id"
-    git_info=$(git log --oneline --graph --decorate)
-    echoColor red $git_info | grep HEAD
+    git_info=$(git rev-parse --short HEAD)
+    echoColor red "the current commit is :$git_info"
     cd "$current_path"\
     &&echoColor red "current directory is $current"
 }
