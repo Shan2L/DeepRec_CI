@@ -45,7 +45,7 @@ jobs:
           cat $config_file
           echo ------------------------------------------------------------------------------------------------
         
-          bash unit_test.sh
+          bash unit_test/unit_test.sh
           if [[ $? == 1 ]];then
             echo "The UT has not been finished"
             exit 1
