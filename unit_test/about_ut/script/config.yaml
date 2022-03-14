@@ -9,6 +9,7 @@ Patterns:
       patterns:
       - "//{dir}:{target}[0m[32m{Status}[0m{}"
       - "//{dir}:{target}[0m[31m[1m{Status}[0m{}"
+      - "//{dir}:{target}{:s}{Status}{:s}"
 
   mkl_matmul_op_test:
     target: "//tensorflow/core/kernels:mkl_matmul_op_test"
