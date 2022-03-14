@@ -34,18 +34,18 @@ jobs:
           if [[ ! -d DeepRec_CI ]];then
               git clone https://github.com/GosTraight2020/DeepRec_CI.git
           fi
-          cd DeepRec_CI
           
           config_file='/home/shanlin/DeepRec_CI/unit_test/config.properties'
           
-          sed -i '1c branch ${{github.event.inputs.branch_name}}' $config_file
-          sed -i '2c commit ${{github.event.inputs.commit_id}}' $config_file
-          sed -i '4c code_repo ${{github.event.inputs.code_repo}}' $config_file
+          sed -i '1c branch ${{github.event.inputs.branch_name}}' $config_file \
+          &&sed -i '2c commit ${{github.event.inputs.commit_id}}' $config_file\
+          &&sed -i '4c code_repo ${{github.event.inputs.code_repo}}' $config_file
           echo ----------------------------------------------------------------------------------------------
           cat $config_file
           echo ------------------------------------------------------------------------------------------------
-        
-          bash unit_test/unit_test.sh
+          
+          cd /home/shanlin/DeepRec_CI/unit_test/ \
+          && bash unit_test.sh
           if [[ $? == 1 ]];then
             echo "The UT has not been finished"
             exit 1
