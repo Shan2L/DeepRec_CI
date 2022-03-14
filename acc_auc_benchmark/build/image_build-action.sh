@@ -67,8 +67,10 @@ function codeReview()
     cd $current_path
     cd $ali_repo_dir
 
-    git checkout "$branch_name"
-    git checkout --progress --force "$commit_id"
+    git checkout "$branch_name"\
+    && git checkout --progress --force "$commit_id"
+    git_info=$(git log --oneline --graph --decorate)
+    echoColor red $git_info | grep HEAD
     cd "$current_path"\
     &&echoColor red "current directory is $current"
 }
