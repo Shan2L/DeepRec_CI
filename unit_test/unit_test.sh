@@ -4,7 +4,7 @@ function codeReview()
 {
     current_path=$(pwd)
     if [[ ! -d $ali_repo_dir/DeepRec ]];then
-        cd $ali_repo_dir && git clone https://github.com/alibaba/DeepRec.git && cd $current_path
+        cd $ali_repo_dir && git clone $code_repo && cd $current_path
     fi
     cd $ali_repo_dir/DeepRec\
     &&git checkout $branch_name\
@@ -37,6 +37,7 @@ set -x
 # 获取当前时间戳
 currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
 ali_repo_dir="./repo/ali_repo"
+code_repo=$(cat ./config.properties | grep code_repo | awk -F " " '{print$2}')
 branch_name=$(cat ./config.properties | grep branch| awk -F " " '{print $2}' )
 commit_id=$(cat ./config.properties | grep commit| awk -F " " '{print $2}' )
 test_image_repo=$(cat ./config.properties | grep test_image| awk -F " " '{print $2}' )
