@@ -15,6 +15,16 @@ function codeReview()
     &&cd $current_path
 }
 
+function checkEnv()
+{
+    container_id=$(sudo docker ps -a | grep ut_et | awk -F " " '{print $1}')
+    if [[ -n $container_id ]];then
+        echo "the container ut_et has already exist"
+        echo "killing ut_et container"
+        sudo docker rm -f $container_di
+    fi
+}
+
 
 function runContainer()
 {
