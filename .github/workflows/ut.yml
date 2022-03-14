@@ -40,7 +40,7 @@ jobs:
           
           sed -i '1c branch ${{github.event.inputs.branch_name}}' $config_file
           sed -i '2c commit ${{github.event.inputs.commit_id}}' $config_file
-          sed -i '3c code_repo ${{github.event.inputs.code_repo}}' $config_file
+          sed -i '4c code_repo ${{github.event.inputs.code_repo}}' $config_file
           echo ----------------------------------------------------------------------------------------------
           cat $config_file
           echo ------------------------------------------------------------------------------------------------
