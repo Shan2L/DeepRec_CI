@@ -3,16 +3,16 @@
 function codeReview()
 {
     current_path=$(pwd)
-    if [[ ! -d $ali_repo_dir/DeepRec ]];then
-        cd $ali_repo_dir && git clone $code_repo && cd $current_path
+    if [[ -d $repo_dir/DeepRec ]];then
+        cd $repo_dir \
+        && sudo rm -rf DeepRec\
     fi
+    cd $ali_repo_dir \
+    && git clone $code_repo \
     cd $ali_repo_dir/DeepRec\
     &&git checkout $branch_name\
     &&git checkout --progress --force $commit_id\
     &&cd $current_path
-    if [[ -d ./cache ]];then
-        sudo rm -rf ./cache
-    fi
 }
 
 
@@ -36,7 +36,8 @@ function runContainer()
 set -x
 # 获取当前时间戳
 currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
-ali_repo_dir="./repo/ali_repo"
+repo_dir="./repo/ali_repo"
+repo_dir=$(cd $repo_dir && pwd)
 code_repo=$(cat ./config.properties | grep code_repo | awk -F " " '{print$2}')
 branch_name=$(cat ./config.properties | grep branch| awk -F " " '{print $2}' )
 commit_id=$(cat ./config.properties | grep commit| awk -F " " '{print $2}' )
