@@ -80,6 +80,5 @@ export TF_TOTAL_BAZEL_TARGET="$TF_ALL_TARGETS "\
                     --test_timeout 3600 \
                     --test_size_filters=small,medium,large,enormous \
                     --keep_going \
-                    --test_output errors\
                     -- $TF_TOTAL_BAZEL_TARGET
 
