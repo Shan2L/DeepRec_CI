@@ -5,7 +5,7 @@ function codeReview()
     current_path=$(pwd)
     if [[ -d $repo_dir/DeepRec ]];then
         cd $repo_dir \
-        && sudo rm -rf DeepRec\
+        && sudo rm -rf DeepRec
     fi
     cd $ali_repo_dir \
     && git clone $code_repo \
