@@ -200,7 +200,7 @@ echoColor green "the modelzoo base image repo id is :$base_image_modelzoo_repo"
 
 
 # 阿里git code地址
-#ali_repo_dir="./whl_build/repo/ali_DeepRec/DeepRec/"
+ali_repo_dir="./whl_build/repo/ali_DeepRec/DeepRec/"
 code_repo=$(cat $config_file | grep code_repo | awk -F " " '{print $2}')
 if [[ -z $code_repo ]];then
 	exit 1
