@@ -33,7 +33,7 @@ jobs:
           cd /home/shanlin/
           if [[ ! -d DeepRec_CI ]];then
               git clone https://github.com/GosTraight2020/DeepRec_CI.git
-          then
+          fi
           cd DeepRec_CI
           
           config_file='/home/shanlin/DeepRec_CI/unit_test/config.properties'
