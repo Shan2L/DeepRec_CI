@@ -39,7 +39,7 @@ if __name__ == "__main__":
         gstep = [float(i) for i in output[-11:-1]]
         avg = sum(gstep) / len(gstep)
         filename = os.path.splitext(os.path.split(file)[1])[0]
-        # print('%f\t' % avg + filename)
+        print('%f\t' % avg + filename)
         result[filename]=round(avg,6)
     for (key, value) in result.items():
         print("key:"+key)
