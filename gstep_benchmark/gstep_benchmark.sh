@@ -16,7 +16,7 @@ function make_script()
     for line in $(cat $config_file | grep CMD | grep deeprec_bf16 )
     do
         command=$(echo "$line" | awk -F ":" '{print $2}'| awk -F "|" '{print $1}')
-	paras=$(echo $command | awk -F " " '{print $2}' | awl -F "|" '{print $2}')
+	paras=$(echo $command | awk -F " " '{print $2}' | awk -F "|" '{print $2}')
 	log_tag=$(echo $paras| sed 's/ /_/g')
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
         echo "echo 'testing $model_name of deeprec_bf16.......'" >> $deeprec_bf16_script
@@ -33,7 +33,7 @@ function make_script()
     for line in $(cat $config_file | grep CMD | grep deeprec_fp32 )
     do
         command=$(echo "$line" | awk -F ":" '{print $2}'| awk -F "|" '{print $1}')
-	paras=$(echo $command | awk -F " " '{print $2}' | awl -F "|" '{print $2}')
+	paras=$(echo $command | awk -F " " '{print $2}' | awk -F "|" '{print $2}')
 	log_tag=$(echo $paras| sed 's/ /_/g')
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
         echo "echo 'testing $model_name of deeprec_fp32.......'" >> $deeprec_fp32_script
@@ -51,7 +51,7 @@ function make_script()
     for line in $(cat $config_file | grep CMD | grep tf_fp32 )
     do
         command=$(echo "$line" | awk -F ":" '{print $2}'| awk -F "|" '{print $1}')
-	paras=$(echo $command | awk -F " " '{print $2}' | awl -F "|" '{print $2}')
+	paras=$(echo $command | awk -F " " '{print $2}' | awk -F "|" '{print $2}')
 	log_tag=$(echo $paras| sed 's/ /_/g')
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
         echo "echo 'testing $model_name of tf_fp32.......'" >> $tf_fp32_script
