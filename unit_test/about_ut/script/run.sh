@@ -7,9 +7,8 @@ export http_proxy=$proxy_address
 export https_proxy=$proxy_address
 
 commit_id=$(cat ../../config.properties|grep commit| awk -F " " '{print $2}')
-part_id=$(echo $commit_id| cut -c 1-7)
-part_date=$(echo $currentTime | cut -c 3-8)
-log_title=$part_date-$part_id
+part_id=$(echo $commit_id | cut -c 1-7)
+log_title=$currentTime-$part_id
 
 cd /DeepRec \
 && bash -x /about_ut/script/ut.sh | tee /about_ut/log/$currentTime/ut_res.log\
