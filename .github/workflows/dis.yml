@@ -54,7 +54,7 @@ jobs:
           &&sed -i '40c\              image: ${{github.event.inputs.TF_test_image}}'  $tf_template\
           &&sed -i '83c\              image: ${{github.event.inputs.TF_test_image}}'  $tf_template\
           && echo "---------------------------------------------DeepRec_template.yaml--------------------------------------------"\
-          &&cat $deeprec_tempalte\
+          &&cat $deeprec_template\
           &&echo "----------------------------------------------------end-------------------------------------------------------"\
           &&echo "------------------------------------------------tf_template.yaml----------------------------------------------"\
           &&cat $tf_template\
@@ -68,9 +68,9 @@ jobs:
           for model in ${{github.event.inputs.model_list}}
           do
             if [[ $iter == $model_num-1 ]];then
-                model_list[iter]=\"$model\"
+                model_list[$iter]=\"$model\"
             fi
-            model_list[iter]="\"$model\", "
+            model_list[$iter]="\"$model\", "
             echo $iter
             echo ${model_list[@]}
             iter=$iter+1
