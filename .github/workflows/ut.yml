@@ -45,13 +45,17 @@ jobs:
           echo ----------------------------------------------------------------------------------------------
           cat $config_file
           echo ------------------------------------------------------------------------------------------------
-          
+      
+      - name: run unit test
+        run: |
           cd /home/shanlin/DeepRec_CI/unit_test/ \
           && bash unit_test-action.sh
           if [[ $? == 1 ]];then
             echo "The UT has not been finished"
             exit 1
           fi
-          
+      
+      - name: check the result
+        run: |
           echo "the UT  has been executed successfully"
           echo "the output xls file will be put in the directory /home/shanlin/DeepRec_CI/unit_test/about_ut/log/$currentTime/ut_res.xls"
