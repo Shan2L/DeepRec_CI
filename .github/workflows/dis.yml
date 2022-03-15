@@ -71,8 +71,10 @@ jobs:
                   [ $i -ne $(( $model_num -1 ))  ] && model_list[$i]="\"${model_array[$i],,}\","
           done
           echo ${model_list[@]}
-          sed -i "28c\    model_list = [ '${model_list[@],,}' ]" ./distributed_benchmark/gen_template.py \
-          &&sed -i "29c\    model_name_list = [ '${model_list[@]}' ]" ./distributed_benchmark/gen_template.py\
+          upper_model_list=${model_list[@],,}
+          lower_model_list=${model_list[@]^^}
+          sed -i "28c\    model_list = [$upper_model_list]" ./distributed_benchmark/gen_template.py \
+          &&sed -i "29c\    model_name_list = [$lower_model_list]" ./distributed_benchmark/gen_template.py\
           &&echo "------------------------------------------------gen_template.py----------------------------------------------"\
           &&cat ./distributed_benchmark/gen_template.py\
           &&echo "----------------------------------------------------end-------------------------------------------------------"\
