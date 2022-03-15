@@ -167,7 +167,7 @@ sudo docker pull $tf_test_image
 # 从配置文件读取测试的命令
 deeprec_bf16_CMD=$(cat $config_file | grep CMD | grep deeprec_bf16 | awk -F ":" '{print$2}')
 deeprec_fp32_CMD=$(cat $config_file | grep CMD | grep deeprec_fp32 | awk -F ":" '{print$2}')
-tf_fp32_CMD=$(cat $config_file | grep CMD | grep deeprec_fp32 | awk -F ":" '{print$2}')
+tf_fp32_CMD=$(cat $config_file | grep CMD | grep tf_fp32 | awk -F ":" '{print$2}')
 
 
 # 从配置文件读取cpu限制
