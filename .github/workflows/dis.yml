@@ -14,8 +14,8 @@ on:
         description: 'the image used to benchmark Stock TF'
         default: 'cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:tf'
       model_list:
-        description: 'Model list(use , to seperate)'
-        default: '"WDL", "DSSM", "DeepFM", "DLRM", "DIEN", "DIN"'
+        description: 'Model list(use whitespace to seperate)'
+        default: 'WDL DSSM DeepFM DLRM DIEN DIN'
       log_tag:
         description: 'Log Tag (used to tag you log file)'
 
@@ -60,12 +60,28 @@ jobs:
           &&cat $tf_template\
           &&echo "----------------------------------------------------end-------------------------------------------------------"     
           # produce the new template
-          model_list=(${{github.event.inputs.model_list}})
-          echo "-++++++++++++++++++++$model_list++++++++++++++++++++++++"
+          model_array=(${{github.event.inputs.model_list}})
           declare -i model_num=${#model_array[@]}
-          echo "the number of model is $model_num"        
-          lower_model_list=${model_list[@],,}
-          upper_model_list=${model_list[@]}
+          echo "the number of model is $model_num" 
+          
+          lower_model_list=()
+          upper_model_list=()
+          model_list=()
+          for (( i=0; i<$model_num; i++ ))
+          do
+                  [ $i -eq $(( $model_num - 1 )) ] && lower_model_list[$i]="\"${model_array[$i],,}\""
+                  [ $i -ne $(( $model_num -1 ))  ] && lower_model_list[$i]="\"${model_array[$i],,}\","                  
+                  
+                  [ $i -eq $(( $model_num - 1 )) ] && upper_model_list[$i]="\"${model_array[$i]}\""
+                  [ $i -ne $(( $model_num -1 ))  ] && upper_model_list[$i]="\"${model_array[$i]}\","
+          done
+          
+          lower_model_list=${lower_model_list[@]}
+          upper_model_list=${lower_model_list[@]}
+          
+          echo $upper_model_list
+          echo $lower_model_list
+          
           sed -i "28c\    model_list = [$upper_model_list]" ./distributed_benchmark/gen_template.py \
           &&sed -i "29c\    model_name_list = [$lower_model_list]" ./distributed_benchmark/gen_template.py\
           &&echo "------------------------------------------------gen_template.py----------------------------------------------"\
