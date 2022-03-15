@@ -75,8 +75,6 @@ jobs:
                   [ $i -eq $(( $model_num - 1 )) ] && upper_model_list[$i]="\"${model_array[$i]}\""
                   [ $i -ne $(( $model_num - 1 ))  ] && upper_model_list[$i]="\"${model_array[$i]}\","
                   echo  $i
-                  echo ${lower_model_list[@]}
-                  echo ${lower_model_list[@]}
           done
           
           lower_list=${lower_model_list[@]}
@@ -91,11 +89,11 @@ jobs:
           &&cat ./distributed_benchmark/gen_template.py\
           &&echo "----------------------------------------------------end-------------------------------------------------------"\
           &&sudo rm -f ./distributed_benchmark/yaml_file/* \
-          &&python3 ./distributed_benchmark/gen_template.py         
+          && cd ./distributed_benchmark/\
+          &&python3 ./gen_template.py         
       - name: run the distributed test
         run: |          
-          cd ./distributed_benchmark/ \
-          && bash -x distributed_test.sh
+          bash -x distributed_test.sh
           
           if [[ $? == 1 ]];then
             echo "The UT has not been finished"
