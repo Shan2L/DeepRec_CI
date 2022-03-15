@@ -89,5 +89,6 @@ jobs:
             exit 1
           fi
       - name: output infomation
+        run: |
           echo "the distributed benchmark has been finished"
           echo "the output log file will be put in the directory /home/shanlin/DeepRec_CI/distributed_benchmark/logs/$currentTime/"
