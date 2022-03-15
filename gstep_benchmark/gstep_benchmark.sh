@@ -15,16 +15,13 @@ function make_script()
     IFS=$'\n';
     for line in $(cat $config_file | grep CMD | grep deeprec_bf16 )
     do
-        command=$(echo "$line" | awk -F ":" '{print $2}')
+        command=$(echo "$line" | awk -F ":" '{print $2}'| awk -F "|" '{print $1}')
+	paras=$(echo $command | awk -F " " '{print $2}' | awl -F "|" '{print $2}')
+	log_tag=$(echo $paras| sed 's/ /_/g')
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
         echo "echo 'testing $model_name of deeprec_bf16.......'" >> $deeprec_bf16_script
         echo "cd /root/modelzoo/$model_name/" >> $deeprec_bf16_script
-
-        if [[ $model_name == "DIN" || $model_name == "DIEN" ]];then
-            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command  --bf16 >$log_dir$currentTime/${model_name,,}_deeprec_bf16.log 2>&1"
-        else
-            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command --checkpoint $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16 --bf16 >$log_dir$currentTime/${model_name,,}_deeprec_bf16.log 2>&1"
-        fi
+        newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command $paras --checkpoint $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag --bf16 >$log_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag.log 2>&1"
         echo $newline >> $deeprec_bf16_script
     done;
 
@@ -32,32 +29,30 @@ function make_script()
     echo " " >> $deeprec_fp32_script
     for line in $(cat $config_file | grep CMD | grep deeprec_fp32 )
     do
-        command=$(echo "$line" | awk -F ":" '{print $2}')
+        command=$(echo "$line" | awk -F ":" '{print $2}'| awk -F "|" '{print $1}')
+	paras=$(echo $command | awk -F " " '{print $2}' | awl -F "|" '{print $2}')
+	log_tag=$(echo $paras| sed 's/ /_/g')
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
         echo "echo 'testing $model_name of deeprec_fp32.......'" >> $deeprec_fp32_script
         echo "cd /root/modelzoo/$model_name/" >> $deeprec_fp32_script
 
-        if [[ $model_name == "DIN" || $model_name == "DIEN" ]];then
-            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command  >$log_dir$currentTime/${model_name,,}_deeprec_fp32.log 2>&1"
-        else
-            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command --checkpoint $checkpoint_dir$currentTime/${model_name,,}_deeprec_fp32 >$log_dir$currentTime/${model_name,,}_deeprec_fp32.log 2>&1"
-        fi
+        newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command --checkpoint $checkpoint_dir$currentTime/${model_name,,}_deeprec_fp32_$log_tag >$log_dir$currentTime/${model_name,,}_deeprec_fp32_$log_tag.log 2>&1"
+        
 
         echo $newline >> $deeprec_fp32_script
     done;
 
     for line in $(cat $config_file | grep CMD | grep tf_fp32 )
     do
-        command=$(echo "$line" | awk -F ":" '{print $2}')
+        command=$(echo "$line" | awk -F ":" '{print $2}'| awk -F "|" '{print $1}')
+	paras=$(echo $command | awk -F " " '{print $2}' | awl -F "|" '{print $2}')
+	log_tag=$(echo $paras| sed 's/ /_/g')
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
         echo "echo 'testing $model_name of tf_fp32.......'" >> $tf_fp32_script
         echo "cd /root/modelzoo/$model_name/" >> $tf_fp32_script
 
-        if [[ $model_name == "DIN" || $model_name == "DIEN" ]];then
-            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command  >$log_dir$currentTime/${model_name,,}_tf_fp32.log 2>&1"
-        else
-            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command --checkpoint $checkpoint_dir$currentTime/${model_name,,}_tf_fp32 >$log_dir$currentTime/${model_name,,}_tf_fp32.log 2>&1"
-        fi
+        newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command --checkpoint $checkpoint_dir$currentTime/${model_name,,}_tf_fp32_$log_tag >$log_dir$currentTime/${model_name,,}_tf_fp32_$log_tag.log 2>&1"
+        
         echo $newline >> $tf_fp32_script
     done;
     IFS=$IFS_old
