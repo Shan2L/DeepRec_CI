@@ -61,6 +61,7 @@ jobs:
           &&echo "----------------------------------------------------end-------------------------------------------------------"     
           # produce the new template
           model_list=(${{github.event.inputs.model_list}})
+          echo "-++++++++++++++++++++$model_list++++++++++++++++++++++++"
           declare -i model_num=${#model_array[@]}
           echo "the number of model is $model_num"        
           lower_model_list=${model_list[@],,}
