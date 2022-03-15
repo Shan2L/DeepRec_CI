@@ -57,7 +57,12 @@ file_path=$(cd ./about_ut/log/$log_title && pwd)
 codeReview \
 && runContainer
 
-git add ./about_ut/log/$log_title\
+current_path=$(pwd)
+cd ./repo/ali_repo/ \
+&&sudo rm -rf ./*
+cd $current_path
+
+git add ./about_ut/log/$log_title/*\
 && git commit -m "add new log file: $log_title"\
 && git push\
 && echo "the files generated is in the directory : $file_path"
