@@ -35,20 +35,30 @@ function runContainer()
 set -x
 # 获取当前时间戳
 currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
+
+
 repo_dir="./repo/ali_repo"
 repo_dir=$(cd $repo_dir && pwd)
 code_repo=$(cat ./config.properties | grep code_repo | awk -F " " '{print$2}')
 branch_name=$(cat ./config.properties | grep branch| awk -F " " '{print $2}' )
 commit_id=$(cat ./config.properties | grep commit| awk -F " " '{print $2}' )
+
+part_Time=$(echo $currentTime | cut -c 3-8)
+part_commit=$(echo $commit_id | cut -c 1-7)
+log_title=$part_Time-$part_commit
+
 test_image_repo=$(cat ./config.properties | grep test_image| awk -F " " '{print $2}' )
 log_dir="./about_ut/log/$currentTime"
 if [[ ! -d $log_dir ]];then
     mkdir -p $log_dir
 fi
 
-file_path=$(cd ./about_ut/log/$currentTime && pwd)
+file_path=$(cd ./about_ut/log/$log_title && pwd)
 
 codeReview \
 && runContainer\
+&& git add ./about_ut/log/$log_title\
+&& git commit -m "add new log file: $log_title"\
+&& git push\
 && echo "the files generated is in the directory : $file_path"
 sudo docker volume rm ut_cache
