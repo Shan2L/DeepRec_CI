@@ -1,0 +1,2205 @@
+You have bazel 0.26.1 installed.
+Do you wish to build TensorFlow with STAR support? [Y/n]: STAR support will be enabled for TensorFlow.
+
+Do you wish to build TensorFlow with PMEM support? [y/N]: No PMEM support will be enabled for TensorFlow.
+
+Please specify optimization flags to use during compilation when bazel option "--config=opt" is specified [Default is -march=native -Wno-sign-compare]: 
+
+Preconfigured Bazel build configs. You can use any of the below by adding "--config=<>" to your build command. See .bazelrc for more details.
+	--config=mkl         	# Build with MKL support.
+	--config=monolithic  	# Config for mostly static monolithic build.
+	--config=gdr         	# Build with GDR support.
+	--config=verbs       	# Build with libverbs support.
+	--config=ngraph      	# Build with Intel nGraph support.
+	--config=numa        	# Build with NUMA support.
+	--config=dynamic_kernels	# (Experimental) Build kernels into separate shared objects.
+	--config=v2          	# Build TensorFlow 2.x instead of 1.x.
+Preconfigured Bazel build configs to DISABLE default on features:
+	--config=noaws       	# Disable AWS S3 filesystem support.
+	--config=nogcp       	# Disable GCP support.
+	--config=nohdfs      	# Disable HDFS support.
+	--config=noignite    	# Disable Apache Ignite support.
+	--config=nokafka     	# Disable Apache Kafka support.
+	--config=nonccl      	# Disable NVIDIA NCCL support.
+Configuration finished
+//tensorflow/c:ops_test                                                  PASSED in 1.3s
+//tensorflow/c:tf_status_helper_test                                     PASSED in 0.1s
+//tensorflow/c/kernels:bitcast_op_test                                   PASSED in 0.2s
+//tensorflow/cc:cc_op_gen_test                                           PASSED in 0.2s
+//tensorflow/cc:client_client_session_test                               PASSED in 0.5s
+//tensorflow/cc:coordinator_test                                         PASSED in 2.4s
+//tensorflow/cc:framework_cc_ops_test                                    PASSED in 0.5s
+//tensorflow/cc:framework_gradient_checker_test                          PASSED in 0.6s
+//tensorflow/cc:framework_gradients_test                                 PASSED in 0.5s
+//tensorflow/cc:framework_scope_test                                     PASSED in 0.5s
+//tensorflow/cc:framework_while_gradients_test                           PASSED in 0.6s
+//tensorflow/cc:gradients_array_grad_test                                PASSED in 0.6s
+//tensorflow/cc:gradients_data_flow_grad_test                            PASSED in 0.6s
+//tensorflow/cc:gradients_image_grad_test                                PASSED in 1.8s
+//tensorflow/cc:gradients_math_grad_test                                 PASSED in 1.3s
+//tensorflow/cc:gradients_nn_grad_test                                   PASSED in 0.7s
+//tensorflow/cc:ops_const_op_test                                        PASSED in 0.2s
+//tensorflow/cc:ops_while_loop_test                                      PASSED in 0.4s
+//tensorflow/cc:queue_runner_test                                        PASSED in 10.8s
+//tensorflow/cc/saved_model:loader_test                                  PASSED in 2.1s
+//tensorflow/cc/saved_model:reader_test                                  PASSED in 0.3s
+//tensorflow/cc/tools:freeze_saved_model_test                            PASSED in 1.0s
+//tensorflow/contrib/bayesflow:monte_carlo_test                          PASSED in 6.6s
+//tensorflow/contrib/bigtable:bigtable_range_helpers_test                PASSED in 0.1s
+//tensorflow/contrib/boosted_trees:gbdt_batch_test                       PASSED in 14.4s
+//tensorflow/contrib/boosted_trees:losses_test                           PASSED in 2.4s
+//tensorflow/contrib/boosted_trees:model_ops_test                        PASSED in 3.0s
+//tensorflow/contrib/boosted_trees:prediction_ops_test                   PASSED in 3.7s
+//tensorflow/contrib/boosted_trees:split_handler_ops_test                PASSED in 5.4s
+//tensorflow/contrib/boosted_trees:stats_accumulator_ops_test            PASSED in 3.4s
+//tensorflow/contrib/boosted_trees:training_ops_test                     PASSED in 3.8s
+//tensorflow/contrib/boosted_trees/estimator_batch:custom_export_strategy_test PASSED in 5.6s
+//tensorflow/contrib/boosted_trees/estimator_batch:dnn_tree_combined_estimator_test PASSED in 23.6s
+//tensorflow/contrib/boosted_trees/estimator_batch:trainer_hooks_test    PASSED in 5.0s
+//tensorflow/contrib/boosted_trees/lib:batch_features_test               PASSED in 0.4s
+//tensorflow/contrib/boosted_trees/lib:categorical_split_handler_test    PASSED in 3.8s
+//tensorflow/contrib/boosted_trees/lib:dropout_utils_test                PASSED in 0.2s
+//tensorflow/contrib/boosted_trees/lib:example_partitioner_test          PASSED in 0.1s
+//tensorflow/contrib/boosted_trees/lib:example_test                      PASSED in 0.3s
+//tensorflow/contrib/boosted_trees/lib:examples_iterable_test            PASSED in 0.1s
+//tensorflow/contrib/boosted_trees/lib:feature-stats-accumulator_test    PASSED in 0.1s
+//tensorflow/contrib/boosted_trees/lib:multiple_additive_trees_test      PASSED in 0.1s
+//tensorflow/contrib/boosted_trees/lib:node-stats_test                   PASSED in 0.1s
+//tensorflow/contrib/boosted_trees/lib:ordinal_split_handler_test        PASSED in 5.8s
+//tensorflow/contrib/boosted_trees/lib:sparse_column_iterable_test       PASSED in 0.1s
+//tensorflow/contrib/boosted_trees/lib:trees_test                        PASSED in 1.7s
+//tensorflow/contrib/boosted_trees/lib:weighted_quantiles_buffer_test    PASSED in 0.5s
+//tensorflow/contrib/boosted_trees/lib:weighted_quantiles_stream_test    PASSED in 1.1s
+//tensorflow/contrib/boosted_trees/lib:weighted_quantiles_summary_test   PASSED in 0.1s
+//tensorflow/contrib/checkpoint/python:containers_test                   PASSED in 3.3s
+//tensorflow/contrib/checkpoint/python:python_state_test                 PASSED in 3.7s
+//tensorflow/contrib/checkpoint/python:split_dependency_test             PASSED in 3.9s
+//tensorflow/contrib/checkpoint/python:visualize_test                    PASSED in 4.4s
+//tensorflow/contrib/cloud/kernels:bigquery_table_accessor_test          PASSED in 0.1s
+//tensorflow/contrib/cluster_resolver:cluster_resolver_initialization_test PASSED in 3.3s
+//tensorflow/contrib/compiler:xla_test                                   PASSED in 4.9s
+//tensorflow/contrib/compiler/tests:adamax_test_cpu                      PASSED in 5.8s
+//tensorflow/contrib/compiler/tests:powersign_test_cpu                   PASSED in 6.6s
+//tensorflow/contrib/constrained_optimization:candidates_test            PASSED in 3.5s
+//tensorflow/contrib/constrained_optimization:external_regret_optimizer_test PASSED in 3.3s
+//tensorflow/contrib/constrained_optimization:swap_regret_optimizer_test PASSED in 4.8s
+//tensorflow/contrib/copy_graph:copy_test                                PASSED in 2.7s
+//tensorflow/contrib/cudnn_rnn:cudnn_rnn_ops_benchmark                   PASSED in 4.7s
+//tensorflow/contrib/data/python/kernel_tests:assert_element_shape_test  PASSED in 4.1s
+//tensorflow/contrib/data/python/kernel_tests:lmdb_dataset_op_test       PASSED in 2.3s
+//tensorflow/contrib/data/python/kernel_tests:reduce_dataset_test        PASSED in 2.7s
+//tensorflow/contrib/data/python/kernel_tests:restructured_dataset_test  PASSED in 3.2s
+//tensorflow/contrib/data/python/kernel_tests:slide_dataset_op_test      PASSED in 5.1s
+//tensorflow/contrib/deprecated:summaries_test                           PASSED in 3.6s
+//tensorflow/contrib/distribute/python:collective_all_reduce_strategy_test PASSED in 7.9s
+//tensorflow/contrib/distribute/python:contrib_mirrored_strategy_test    PASSED in 3.3s
+//tensorflow/contrib/distribute/python:monitor_test                      PASSED in 4.0s
+//tensorflow/contrib/distribute/python:optimizer_v2_test                 PASSED in 4.0s
+//tensorflow/contrib/distributions:absolute_value_test                   PASSED in 6.0s
+//tensorflow/contrib/distributions:affine_linear_operator_test           PASSED in 8.3s
+//tensorflow/contrib/distributions:affine_scalar_test                    PASSED in 6.0s
+//tensorflow/contrib/distributions:autoregressive_test                   PASSED in 6.2s
+//tensorflow/contrib/distributions:batch_reshape_test                    PASSED in 9.3s
+//tensorflow/contrib/distributions:binomial_test                         PASSED in 6.9s
+//tensorflow/contrib/distributions:cauchy_test                           PASSED in 7.4s
+//tensorflow/contrib/distributions:chain_test                            PASSED in 6.2s
+//tensorflow/contrib/distributions:chi2_test                             PASSED in 5.3s
+//tensorflow/contrib/distributions:cholesky_outer_product_test           PASSED in 5.9s
+//tensorflow/contrib/distributions:conditional_bijector_test             PASSED in 5.4s
+//tensorflow/contrib/distributions:conditional_distribution_test         PASSED in 9.2s
+//tensorflow/contrib/distributions:conditional_transformed_distribution_test PASSED in 10.4s
+//tensorflow/contrib/distributions:deterministic_test                    PASSED in 6.4s
+//tensorflow/contrib/distributions:distribution_test                     PASSED in 9.5s
+//tensorflow/contrib/distributions:distribution_util_test                PASSED in 5.9s
+//tensorflow/contrib/distributions:estimator_test                        PASSED in 5.5s
+//tensorflow/contrib/distributions:exp_test                              PASSED in 7.1s
+//tensorflow/contrib/distributions:fill_triangular_test                  PASSED in 5.4s
+//tensorflow/contrib/distributions:geometric_test                        PASSED in 6.5s
+//tensorflow/contrib/distributions:gumbel_test                           PASSED in 6.0s
+//tensorflow/contrib/distributions:half_normal_test                      PASSED in 7.9s
+//tensorflow/contrib/distributions:independent_test                      PASSED in 6.6s
+//tensorflow/contrib/distributions:inverse_gamma_test                    PASSED in 15.4s
+//tensorflow/contrib/distributions:invert_test                           PASSED in 8.0s
+//tensorflow/contrib/distributions:kumaraswamy_bijector_test             PASSED in 6.6s
+//tensorflow/contrib/distributions:kumaraswamy_test                      PASSED in 7.7s
+//tensorflow/contrib/distributions:logistic_test                         PASSED in 5.6s
+//tensorflow/contrib/distributions:masked_autoregressive_test            PASSED in 8.2s
+//tensorflow/contrib/distributions:matrix_inverse_tril_test              PASSED in 7.5s
+//tensorflow/contrib/distributions:mixture_same_family_test              PASSED in 6.8s
+//tensorflow/contrib/distributions:moving_stats_test                     PASSED in 8.0s
+//tensorflow/contrib/distributions:mvn_diag_plus_low_rank_test           PASSED in 7.0s
+//tensorflow/contrib/distributions:mvn_diag_test                         PASSED in 7.7s
+//tensorflow/contrib/distributions:mvn_full_covariance_test              PASSED in 6.5s
+//tensorflow/contrib/distributions:mvn_tril_test                         PASSED in 10.5s
+//tensorflow/contrib/distributions:negative_binomial_test                PASSED in 5.2s
+//tensorflow/contrib/distributions:normal_conjugate_posteriors_test      PASSED in 5.0s
+//tensorflow/contrib/distributions:onehot_categorical_test               PASSED in 7.6s
+//tensorflow/contrib/distributions:permute_test                          PASSED in 5.5s
+//tensorflow/contrib/distributions:poisson_lognormal_test                PASSED in 10.0s
+//tensorflow/contrib/distributions:poisson_test                          PASSED in 7.3s
+//tensorflow/contrib/distributions:power_transform_test                  PASSED in 6.3s
+//tensorflow/contrib/distributions:quantized_distribution_test           PASSED in 10.1s
+//tensorflow/contrib/distributions:real_nvp_test                         PASSED in 7.0s
+//tensorflow/contrib/distributions:relaxed_bernoulli_test                PASSED in 5.7s
+//tensorflow/contrib/distributions:relaxed_onehot_categorical_test       PASSED in 6.3s
+//tensorflow/contrib/distributions:reshape_test                          PASSED in 9.1s
+//tensorflow/contrib/distributions:sample_stats_test                     PASSED in 15.7s
+//tensorflow/contrib/distributions:scale_tril_test                       PASSED in 6.3s
+//tensorflow/contrib/distributions:seed_stream_test                      PASSED in 5.4s
+//tensorflow/contrib/distributions:shape_test                            PASSED in 14.2s
+//tensorflow/contrib/distributions:sigmoid_test                          PASSED in 6.5s
+//tensorflow/contrib/distributions:sinh_arcsinh_bijector_test            PASSED in 7.0s
+//tensorflow/contrib/distributions:sinh_arcsinh_test                     PASSED in 8.8s
+//tensorflow/contrib/distributions:softmax_centered_test                 PASSED in 6.2s
+//tensorflow/contrib/distributions:softplus_test                         PASSED in 5.9s
+//tensorflow/contrib/distributions:softsign_test                         PASSED in 6.1s
+//tensorflow/contrib/distributions:square_test                           PASSED in 6.7s
+//tensorflow/contrib/distributions:transform_diagonal_test               PASSED in 6.1s
+//tensorflow/contrib/distributions:transformed_distribution_test         PASSED in 10.5s
+//tensorflow/contrib/distributions:vector_exponential_diag_test          PASSED in 6.3s
+//tensorflow/contrib/distributions:vector_laplace_diag_test              PASSED in 9.5s
+//tensorflow/contrib/distributions:vector_sinh_arcsinh_diag_test         PASSED in 10.4s
+//tensorflow/contrib/distributions:vector_student_t_test                 PASSED in 7.6s
+//tensorflow/contrib/distributions:weibull_test                          PASSED in 6.4s
+//tensorflow/contrib/eager/python:datasets_test                          PASSED in 4.1s
+//tensorflow/contrib/eager/python:evaluator_test                         PASSED in 3.3s
+//tensorflow/contrib/eager/python:metrics_test                           PASSED in 4.6s
+//tensorflow/contrib/eager/python:network_test                           PASSED in 16.2s
+//tensorflow/contrib/eager/python:remote_test                            PASSED in 11.3s
+//tensorflow/contrib/eager/python:tfe_test                               PASSED in 4.7s
+//tensorflow/contrib/eager/python/examples/gan:mnist_graph_test          PASSED in 5.8s
+//tensorflow/contrib/eager/python/examples/gan:mnist_test                PASSED in 10.0s
+//tensorflow/contrib/eager/python/examples/linear_regression:linear_regression_graph_test PASSED in 6.2s
+//tensorflow/contrib/eager/python/examples/linear_regression:linear_regression_test PASSED in 7.3s
+//tensorflow/contrib/eager/python/examples/rnn_colorbot:rnn_colorbot_test PASSED in 6.5s
+//tensorflow/contrib/eager/python/examples/rnn_ptb:rnn_ptb_graph_test    PASSED in 15.7s
+//tensorflow/contrib/eager/python/examples/rnn_ptb:rnn_ptb_test          PASSED in 9.4s
+//tensorflow/contrib/eager/python/examples/spinn:data_test               PASSED in 6.1s
+//tensorflow/contrib/eager/python/examples/spinn:spinn_test              PASSED in 13.8s
+//tensorflow/contrib/factorization:clustering_ops_test                   PASSED in 10.8s
+//tensorflow/contrib/factorization:gmm_ops_test                          PASSED in 6.8s
+//tensorflow/contrib/factorization:masked_matmul_benchmark               PASSED in 5.1s
+//tensorflow/contrib/factorization:masked_matmul_ops_test                PASSED in 5.3s
+//tensorflow/contrib/factorization:wals_solver_ops_test                  PASSED in 6.2s
+//tensorflow/contrib/factorization/examples:mnist                        PASSED in 12.4s
+//tensorflow/contrib/feature_column:sequence_feature_column_integration_test PASSED in 4.7s
+//tensorflow/contrib/feature_column:sequence_feature_column_test         PASSED in 11.3s
+//tensorflow/contrib/ffmpeg/default:ffmpeg_lib_utility_test              PASSED in 18.0s
+//tensorflow/contrib/framework:arg_scope_test                            PASSED in 2.7s
+//tensorflow/contrib/framework:checkpoint_ops_test                       PASSED in 2.9s
+//tensorflow/contrib/framework:experimental_test                         PASSED in 3.0s
+//tensorflow/contrib/framework:graph_util_test                           PASSED in 3.0s
+//tensorflow/contrib/framework:ops_test                                  PASSED in 2.5s
+//tensorflow/contrib/framework:prettyprint_ops_test                      PASSED in 2.7s
+//tensorflow/contrib/framework:tensor_util_test                          PASSED in 4.8s
+//tensorflow/contrib/graph_editor:edit_test                              PASSED in 2.4s
+//tensorflow/contrib/graph_editor:match_test                             PASSED in 3.0s
+//tensorflow/contrib/graph_editor:reroute_test                           PASSED in 3.5s
+//tensorflow/contrib/graph_editor:select_test                            PASSED in 2.5s
+//tensorflow/contrib/graph_editor:subgraph_test                          PASSED in 2.6s
+//tensorflow/contrib/graph_editor:transform_test                         PASSED in 3.7s
+//tensorflow/contrib/graph_editor:util_test                              PASSED in 2.5s
+//tensorflow/contrib/hadoop:hadoop_test                                  PASSED in 3.8s
+//tensorflow/contrib/image:adjust_hsv_in_yiq_op_test                     PASSED in 0.1s
+//tensorflow/contrib/image:dense_image_warp_test                         PASSED in 12.1s
+//tensorflow/contrib/image:distort_image_ops_test                        PASSED in 6.4s
+//tensorflow/contrib/image:image_ops_test                                PASSED in 19.4s
+//tensorflow/contrib/image:interpolate_spline_test                       PASSED in 6.4s
+//tensorflow/contrib/image:segmentation_test                             PASSED in 6.0s
+//tensorflow/contrib/image:single_image_random_dot_stereograms_ops_test  PASSED in 4.2s
+//tensorflow/contrib/image:sparse_image_warp_test                        PASSED in 18.1s
+//tensorflow/contrib/input_pipeline:input_pipeline_ops_test              PASSED in 2.5s
+//tensorflow/contrib/input_pipeline:ops_input_pipeline_ops_test          PASSED in 0.2s
+//tensorflow/contrib/integrate:odes_test                                 PASSED in 15.1s
+//tensorflow/contrib/kernel_methods:kernel_estimators_test               PASSED in 20.9s
+//tensorflow/contrib/kernel_methods:losses_test                          PASSED in 6.0s
+//tensorflow/contrib/kernel_methods:random_fourier_features_test         PASSED in 9.3s
+//tensorflow/contrib/labeled_tensor:core_test                            PASSED in 8.9s
+//tensorflow/contrib/labeled_tensor:io_ops_test                          PASSED in 3.0s
+//tensorflow/contrib/labeled_tensor:nn_test                              PASSED in 2.5s
+//tensorflow/contrib/labeled_tensor:ops_test                             PASSED in 5.5s
+//tensorflow/contrib/labeled_tensor:sugar_test                           PASSED in 2.5s
+//tensorflow/contrib/layers:embedding_ops_test                           PASSED in 18.0s
+//tensorflow/contrib/layers:encoders_test                                PASSED in 4.9s
+//tensorflow/contrib/layers:feature_column_ops_test                      PASSED in 10.8s
+//tensorflow/contrib/layers:feature_column_test                          PASSED in 5.9s
+//tensorflow/contrib/layers:initializers_test                            PASSED in 6.5s
+//tensorflow/contrib/layers:layers_test                                  PASSED in 16.5s
+//tensorflow/contrib/layers:normalization_test                           PASSED in 9.2s
+//tensorflow/contrib/layers:optimizers_test                              PASSED in 7.7s
+//tensorflow/contrib/layers:regularizers_test                            PASSED in 4.2s
+//tensorflow/contrib/layers:rev_block_lib_test                           PASSED in 11.3s
+//tensorflow/contrib/layers:sparse_feature_cross_op_test                 PASSED in 5.6s
+//tensorflow/contrib/layers:sparse_ops_test                              PASSED in 6.0s
+//tensorflow/contrib/layers:summaries_test                               PASSED in 4.0s
+//tensorflow/contrib/layers:target_column_test                           PASSED in 4.9s
+//tensorflow/contrib/layers:utils_test                                   PASSED in 4.7s
+//tensorflow/contrib/learn:categorical_test                              PASSED in 6.7s
+//tensorflow/contrib/learn:categorical_vocabulary_test                   PASSED in 5.0s
+//tensorflow/contrib/learn:composable_model_test                         PASSED in 19.2s
+//tensorflow/contrib/learn:data_feeder_test                              PASSED in 6.0s
+//tensorflow/contrib/learn:estimator_input_test                          PASSED in 17.4s
+//tensorflow/contrib/learn:estimators_test                               PASSED in 8.9s
+//tensorflow/contrib/learn:experiment_test                               PASSED in 11.9s
+//tensorflow/contrib/learn:export_strategy_test                          PASSED in 5.2s
+//tensorflow/contrib/learn:gc_test                                       PASSED in 5.5s
+//tensorflow/contrib/learn:graph_actions_test                            PASSED in 7.3s
+//tensorflow/contrib/learn:graph_io_test                                 PASSED in 9.3s
+//tensorflow/contrib/learn:grid_search_test                              PASSED in 5.7s
+//tensorflow/contrib/learn:input_fn_utils_test                           PASSED in 5.3s
+//tensorflow/contrib/learn:io_test                                       PASSED in 7.3s
+//tensorflow/contrib/learn:learn_runner_test                             PASSED in 6.6s
+//tensorflow/contrib/learn:logistic_regressor_test                       PASSED in 7.2s
+//tensorflow/contrib/learn:metric_spec_test                              PASSED in 5.1s
+//tensorflow/contrib/learn:model_fn_test                                 PASSED in 5.6s
+//tensorflow/contrib/learn:monitors_test                                 PASSED in 7.1s
+//tensorflow/contrib/learn:multioutput_test                              PASSED in 8.2s
+//tensorflow/contrib/learn:nonlinear_test                                PASSED in 12.3s
+//tensorflow/contrib/learn:ops_test                                      PASSED in 6.9s
+//tensorflow/contrib/learn:pandas_io_test                                PASSED in 7.0s
+//tensorflow/contrib/learn:regression_test                               PASSED in 7.0s
+//tensorflow/contrib/learn:rnn_common_test                               PASSED in 5.6s
+//tensorflow/contrib/learn:run_config_test                               PASSED in 5.3s
+//tensorflow/contrib/learn:saved_model_export_utils_test                 PASSED in 27.1s
+//tensorflow/contrib/learn:seq2seq_ops_test                              PASSED in 5.6s
+//tensorflow/contrib/learn:stability_test                                PASSED in 7.7s
+//tensorflow/contrib/learn:svm_test                                      PASSED in 14.6s
+//tensorflow/contrib/learn:text_test                                     PASSED in 5.1s
+//tensorflow/contrib/learn/python/learn/datasets:base_test               PASSED in 2.6s
+//tensorflow/contrib/learn/python/learn/datasets:load_csv_test           PASSED in 3.6s
+//tensorflow/contrib/learn/python/learn/datasets:synthetic_test          PASSED in 2.6s
+//tensorflow/contrib/libsvm:decode_libsvm_op_test                        PASSED in 4.4s
+//tensorflow/contrib/linear_optimizer:sdca_ops_test                      PASSED in 20.0s
+//tensorflow/contrib/linear_optimizer:sharded_mutable_dense_hashtable_test PASSED in 3.5s
+//tensorflow/contrib/linear_optimizer:sparse_feature_column_test         PASSED in 3.0s
+//tensorflow/contrib/lookup:lookup_ops_test                              PASSED in 4.4s
+//tensorflow/contrib/losses:loss_ops_test                                PASSED in 6.7s
+//tensorflow/contrib/memory_stats:memory_stats_ops_test                  PASSED in 3.1s
+//tensorflow/contrib/meta_graph_transform:meta_graph_transform_test      PASSED in 3.0s
+//tensorflow/contrib/metrics:classification_test                         PASSED in 4.1s
+//tensorflow/contrib/metrics:histogram_ops_test                          PASSED in 6.2s
+//tensorflow/contrib/metrics:metric_ops_large_test                       PASSED in 13.5s
+//tensorflow/contrib/mixed_precision/python:loss_scale_manager_test      PASSED in 3.6s
+//tensorflow/contrib/mixed_precision/python:loss_scale_optimizer_test    PASSED in 3.2s
+//tensorflow/contrib/model_pruning:layers_test                           PASSED in 3.9s
+//tensorflow/contrib/model_pruning:pruning_test                          PASSED in 6.1s
+//tensorflow/contrib/model_pruning:pruning_utils_test                    PASSED in 5.3s
+//tensorflow/contrib/model_pruning:rnn_cells_test                        PASSED in 5.9s
+//tensorflow/contrib/model_pruning:strip_pruning_vars_test               PASSED in 6.8s
+//tensorflow/contrib/nearest_neighbor:heap_test                          PASSED in 0.1s
+//tensorflow/contrib/nearest_neighbor:hyperplane_lsh_probes_test         PASSED in 3.3s
+//tensorflow/contrib/nearest_neighbor:hyperplane_lsh_probes_test_cc      PASSED in 0.2s
+//tensorflow/contrib/nn:alpha_dropout_test                               PASSED in 2.5s
+//tensorflow/contrib/nn:fwd_gradients_test                               PASSED in 2.6s
+//tensorflow/contrib/nn:sampling_ops_test                                PASSED in 5.2s
+//tensorflow/contrib/nn:scaled_softplus_test                             PASSED in 2.7s
+//tensorflow/contrib/opt:adam_gs_optimizer_test                          PASSED in 5.3s
+//tensorflow/contrib/opt:adamax_test                                     PASSED in 4.9s
+//tensorflow/contrib/opt:addsign_test                                    PASSED in 8.2s
+//tensorflow/contrib/opt:agn_optimizer_test                              PASSED in 5.9s
+//tensorflow/contrib/opt:drop_stale_gradient_optimizer_test              PASSED in 9.3s
+//tensorflow/contrib/opt:elastic_average_optimizer_test                  PASSED in 5.5s
+//tensorflow/contrib/opt:external_optimizer_test                         PASSED in 6.6s
+//tensorflow/contrib/opt:ggt_test                                        PASSED in 3.3s
+//tensorflow/contrib/opt:lars_optimizer_test                             PASSED in 8.0s
+//tensorflow/contrib/opt:lazy_adam_gs_optimizer_test                     PASSED in 7.2s
+//tensorflow/contrib/opt:lazy_adam_optimizer_test                        PASSED in 5.7s
+//tensorflow/contrib/opt:matrix_functions_test                           PASSED in 3.2s
+//tensorflow/contrib/opt:model_average_optimizer_test                    PASSED in 4.3s
+//tensorflow/contrib/opt:moving_average_optimizer_test                   PASSED in 15.6s
+//tensorflow/contrib/opt:multitask_optimizer_wrapper_test                PASSED in 3.4s
+//tensorflow/contrib/opt:nadam_optimizer_test                            PASSED in 4.6s
+//tensorflow/contrib/opt:powersign_test                                  PASSED in 8.8s
+//tensorflow/contrib/opt:reg_adagrad_optimizer_test                      PASSED in 6.1s
+//tensorflow/contrib/opt:sign_decay_test                                 PASSED in 4.1s
+//tensorflow/contrib/opt:weight_decay_optimizers_test                    PASSED in 6.6s
+//tensorflow/contrib/optimizer_v2:adadelta_test                          PASSED in 8.1s
+//tensorflow/contrib/optimizer_v2:adagrad_test                           PASSED in 5.0s
+//tensorflow/contrib/optimizer_v2:adam_test                              PASSED in 6.3s
+//tensorflow/contrib/optimizer_v2:checkpointable_utils_test              PASSED in 11.3s
+//tensorflow/contrib/optimizer_v2:gradient_descent_test                  PASSED in 4.2s
+//tensorflow/contrib/optimizer_v2:momentum_test                          PASSED in 5.1s
+//tensorflow/contrib/optimizer_v2:optimizer_v2_test                      PASSED in 4.6s
+//tensorflow/contrib/optimizer_v2:rmsprop_test                           PASSED in 6.6s
+//tensorflow/contrib/periodic_resample:periodic_resample_op_cc_test      PASSED in 0.2s
+//tensorflow/contrib/periodic_resample:periodic_resample_op_test         PASSED in 3.2s
+//tensorflow/contrib/predictor:contrib_estimator_predictor_test          PASSED in 6.1s
+//tensorflow/contrib/predictor:core_estimator_predictor_test             PASSED in 5.3s
+//tensorflow/contrib/predictor:predictor_factories_test                  PASSED in 5.0s
+//tensorflow/contrib/predictor:saved_model_predictor_test                PASSED in 3.6s
+//tensorflow/contrib/proto:import_test                                   PASSED in 3.3s
+//tensorflow/contrib/quantize:common_test                                PASSED in 5.8s
+//tensorflow/contrib/quantize:graph_matcher_test                         PASSED in 3.8s
+//tensorflow/contrib/quantize:input_to_ops_test                          PASSED in 2.3s
+//tensorflow/contrib/quantize:quant_ops_test                             PASSED in 2.9s
+//tensorflow/contrib/quantize:quantize_graph_test                        PASSED in 7.4s
+//tensorflow/contrib/quantize:quantize_test                              PASSED in 7.6s
+//tensorflow/contrib/receptive_field:graph_compute_order_test            PASSED in 5.2s
+//tensorflow/contrib/receptive_field:parse_layer_parameters_test         PASSED in 5.6s
+//tensorflow/contrib/receptive_field:receptive_field_test                PASSED in 6.2s
+//tensorflow/contrib/reduce_slice_ops:reduce_slice_ops_test              PASSED in 3.2s
+//tensorflow/contrib/reduce_slice_ops:reduce_slice_ops_test_cc           PASSED in 0.2s
+//tensorflow/contrib/remote_fused_graph/pylib:remote_fused_graph_ops_test PASSED in 2.6s
+//tensorflow/contrib/resampler:resampler_ops_test                        PASSED in 4.7s
+//tensorflow/contrib/rnn:checkpoint_convert_test                         PASSED in 3.6s
+//tensorflow/contrib/rnn:fused_rnn_cell_test                             PASSED in 8.5s
+//tensorflow/contrib/rnn:gru_ops_test                                    PASSED in 7.3s
+//tensorflow/contrib/rnn:lstm_ops_test                                   PASSED in 11.1s
+//tensorflow/contrib/rnn:rnn_cell_test                                   PASSED in 14.0s
+//tensorflow/contrib/rnn:rnn_test                                        PASSED in 29.2s
+//tensorflow/contrib/saved_model:reader_test                             PASSED in 3.8s
+//tensorflow/contrib/saved_model/cc/saved_model:signature_def_utils_test PASSED in 0.1s
+//tensorflow/contrib/seq2seq:attention_wrapper_test                      PASSED in 14.9s
+//tensorflow/contrib/seq2seq:basic_decoder_test                          PASSED in 6.5s
+//tensorflow/contrib/seq2seq:basic_decoder_v2_test                       PASSED in 6.9s
+//tensorflow/contrib/seq2seq:beam_search_decoder_test                    PASSED in 9.8s
+//tensorflow/contrib/seq2seq:beam_search_ops_test                        PASSED in 4.7s
+//tensorflow/contrib/seq2seq:decoder_test                                PASSED in 5.5s
+//tensorflow/contrib/seq2seq:decoder_v2_test                             PASSED in 6.0s
+//tensorflow/contrib/seq2seq:loss_test                                   PASSED in 6.4s
+//tensorflow/contrib/session_bundle:bundle_shim_py_test                  PASSED in 2.6s
+//tensorflow/contrib/session_bundle:bundle_shim_test                     PASSED in 0.2s
+//tensorflow/contrib/session_bundle:exporter_test                        PASSED in 3.3s
+//tensorflow/contrib/session_bundle:gc_test                              PASSED in 2.8s
+//tensorflow/contrib/session_bundle:session_bundle_py_test               PASSED in 3.0s
+//tensorflow/contrib/session_bundle:session_bundle_test                  PASSED in 2.9s
+//tensorflow/contrib/session_bundle:signature_test                       PASSED in 0.5s
+//tensorflow/contrib/slim:evaluation_test                                PASSED in 7.7s
+//tensorflow/contrib/slim:summaries_test                                 PASSED in 2.8s
+//tensorflow/contrib/slim/python/slim/data:dataset_data_provider_test    PASSED in 3.5s
+//tensorflow/contrib/slim/python/slim/data:parallel_reader_test          PASSED in 6.4s
+//tensorflow/contrib/slim/python/slim/data:prefetch_queue_test           PASSED in 2.9s
+//tensorflow/contrib/slim/python/slim/data:tfexample_decoder_test        PASSED in 6.0s
+//tensorflow/contrib/slim/python/slim/nets:alexnet_test                  PASSED in 4.9s
+//tensorflow/contrib/slim/python/slim/nets:overfeat_test                 PASSED in 5.6s
+//tensorflow/contrib/slim/python/slim/nets:vgg_test                      PASSED in 11.9s
+//tensorflow/contrib/solvers:util_test                                   PASSED in 3.5s
+//tensorflow/contrib/specs:specs_test                                    PASSED in 4.5s
+//tensorflow/contrib/specs:summaries_test                                PASSED in 4.3s
+//tensorflow/contrib/stat_summarizer:stat_summarizer_test                PASSED in 3.3s
+//tensorflow/contrib/stateless:stateless_random_ops_test                 PASSED in 3.2s
+//tensorflow/contrib/structured_model:core_test                          PASSED in 2.7s
+//tensorflow/contrib/structured_model:utils_test                         PASSED in 4.4s
+//tensorflow/contrib/summary:summary_ops_graph_test                      PASSED in 5.1s
+//tensorflow/contrib/summary:summary_ops_test                            PASSED in 6.0s
+//tensorflow/contrib/tensor_forest:eval_metrics_test                     PASSED in 3.6s
+//tensorflow/contrib/tensor_forest:model_ops_test                        PASSED in 0.2s
+//tensorflow/contrib/tensor_forest:scatter_add_ndim_op_test              PASSED in 2.8s
+//tensorflow/contrib/tensor_forest:stats_ops_test                        PASSED in 0.2s
+//tensorflow/contrib/tensor_forest:tensor_forest_ops_test                PASSED in 0.3s
+//tensorflow/contrib/tensor_forest:tensor_forest_test                    PASSED in 3.0s
+//tensorflow/contrib/tensor_forest/hybrid:decisions_to_data_test         PASSED in 2.9s
+//tensorflow/contrib/tensor_forest/hybrid:decisions_to_data_then_nn_test PASSED in 4.5s
+//tensorflow/contrib/tensor_forest/hybrid:forest_to_data_then_nn_test    PASSED in 5.8s
+//tensorflow/contrib/tensor_forest/hybrid:hybrid_layer_test              PASSED in 3.9s
+//tensorflow/contrib/tensor_forest/hybrid:k_feature_decisions_to_data_then_nn_test PASSED in 4.3s
+//tensorflow/contrib/tensor_forest/kernels/v4:decision_node_evaluator_test PASSED in 0.2s
+//tensorflow/contrib/tensor_forest/kernels/v4:grow_stats_test            PASSED in 0.2s
+//tensorflow/contrib/tensor_forest/kernels/v4:leaf_model_operators_test  PASSED in 0.2s
+//tensorflow/contrib/tensor_forest/kernels/v4:params_test                PASSED in 0.1s
+//tensorflow/contrib/tensorboard:projector_api_test                      PASSED in 2.4s
+//tensorflow/contrib/text:skip_gram_ops_test                             PASSED in 4.3s
+//tensorflow/contrib/timeseries/examples:known_anomaly_test              PASSED in 34.1s
+//tensorflow/contrib/timeseries/examples:lstm_test                       PASSED in 13.0s
+//tensorflow/contrib/timeseries/examples:multivariate_test               PASSED in 33.9s
+//tensorflow/contrib/timeseries/examples:predict_test                    PASSED in 28.9s
+//tensorflow/contrib/timeseries/python/timeseries:ar_model_test          PASSED in 34.7s
+//tensorflow/contrib/timeseries/python/timeseries:input_pipeline_test    PASSED in 9.3s
+//tensorflow/contrib/timeseries/python/timeseries:math_utils_test        PASSED in 12.9s
+//tensorflow/contrib/timeseries/python/timeseries:model_utils_test       PASSED in 3.1s
+//tensorflow/contrib/timeseries/python/timeseries:state_management_test  PASSED in 9.3s
+//tensorflow/contrib/timeseries/python/timeseries/state_space_models:filtering_postprocessor_test PASSED in 4.3s
+//tensorflow/contrib/timeseries/python/timeseries/state_space_models:kalman_filter_test PASSED in 11.8s
+//tensorflow/contrib/timeseries/python/timeseries/state_space_models:level_trend_test PASSED in 5.5s
+//tensorflow/contrib/timeseries/python/timeseries/state_space_models:periodic_test PASSED in 6.6s
+//tensorflow/contrib/timeseries/python/timeseries/state_space_models:state_space_model_test PASSED in 41.4s
+//tensorflow/contrib/timeseries/python/timeseries/state_space_models:varma_test PASSED in 9.6s
+//tensorflow/contrib/training:device_setter_test                         PASSED in 4.6s
+//tensorflow/contrib/training:feeding_queue_runner_test                  PASSED in 7.3s
+//tensorflow/contrib/training:hparam_test                                PASSED in 5.3s
+//tensorflow/contrib/training:resample_test                              PASSED in 6.0s
+//tensorflow/contrib/training:sampling_ops_test                          PASSED in 6.7s
+//tensorflow/contrib/training:sequence_queueing_state_saver_test         PASSED in 16.6s
+//tensorflow/contrib/util:convert_graphdef_memmapped_format_test         PASSED in 0.8s
+//tensorflow/core:__tensorflow_core_lib_gtl_legacy_lib_gtl_tests         PASSED in 0.1s
+//tensorflow/core:__tensorflow_core_lib_math_math_util_test              PASSED in 0.1s
+//tensorflow/core:__tensorflow_core_lib_random_legacy_lib_random_tests   PASSED in 22.3s
+//tensorflow/core:__tensorflow_core_lib_strings_legacy_low_level_library_tests PASSED in 0.1s
+//tensorflow/core:__tensorflow_core_platform_fingerprint_test            PASSED in 0.1s
+//tensorflow/core:__tensorflow_core_platform_integral_types_test         PASSED in 0.1s
+//tensorflow/core:__tensorflow_core_platform_logging_test                PASSED in 1.6s
+//tensorflow/core:__tensorflow_core_platform_mutex_test                  PASSED in 0.1s
+//tensorflow/core:__tensorflow_core_platform_net_test                    PASSED in 0.1s
+//tensorflow/core:__tensorflow_core_platform_port_test                   PASSED in 8.1s
+//tensorflow/core:__tensorflow_core_platform_profile_utils_cpu_utils_test PASSED in 0.1s
+//tensorflow/core:__tensorflow_core_platform_stacktrace_handler_test     PASSED in 0.4s
+//tensorflow/core:__tensorflow_core_platform_str_util_test               PASSED in 0.3s
+//tensorflow/core:__tensorflow_core_platform_stringpiece_test            PASSED in 0.1s
+//tensorflow/core:__tensorflow_core_platform_stringprintf_test           PASSED in 0.1s
+//tensorflow/core:__tensorflow_core_platform_subprocess_test             PASSED in 0.1s
+//tensorflow/core:__tensorflow_core_platform_vmodule_benchmark_test      PASSED in 0.1s
+//tensorflow/core:common_runtime_buf_rendezvous_test                     PASSED in 0.2s
+//tensorflow/core:common_runtime_collective_executor_mgr_test            PASSED in 0.2s
+//tensorflow/core:common_runtime_collective_param_resolver_local_test    PASSED in 0.5s
+//tensorflow/core:common_runtime_collective_rma_local_test               PASSED in 0.2s
+//tensorflow/core:common_runtime_device_resolver_local_test              PASSED in 0.2s
+//tensorflow/core:common_runtime_device_set_test                         PASSED in 0.3s
+//tensorflow/core:common_runtime_direct_session_with_debug_test          PASSED in 0.7s
+//tensorflow/core:common_runtime_direct_session_with_tracking_alloc_test PASSED in 0.2s
+//tensorflow/core:common_runtime_executor_test                           PASSED in 0.6s
+//tensorflow/core:common_runtime_function_threadpool_test                PASSED in 0.2s
+//tensorflow/core:common_runtime_gpu_gpu_device_on_non_gpu_machine_test  PASSED in 0.2s
+//tensorflow/core:common_runtime_graph_runner_test                       PASSED in 0.2s
+//tensorflow/core:common_runtime_hierarchical_tree_broadcaster_test      PASSED in 1.8s
+//tensorflow/core:common_runtime_input_colocation_exemption_registry_test PASSED in 0.1s
+//tensorflow/core:common_runtime_isolate_placer_inspection_required_ops_pass_test PASSED in 0.2s
+//tensorflow/core:common_runtime_lower_case_op_test                      PASSED in 0.6s
+//tensorflow/core:common_runtime_lower_function_call_op_test             PASSED in 0.5s
+//tensorflow/core:common_runtime_lower_functional_ops_test               PASSED in 0.5s
+//tensorflow/core:common_runtime_lower_if_op_test                        PASSED in 0.5s
+//tensorflow/core:common_runtime_lower_while_op_test                     PASSED in 0.4s
+//tensorflow/core:common_runtime_mkl_cpu_allocator_test                  PASSED in 0.1s
+//tensorflow/core:common_runtime_mkl_threadpool_device_test              PASSED in 0.1s
+//tensorflow/core:common_runtime_optimization_registry_test              PASSED in 0.2s
+//tensorflow/core:common_runtime_partitioning_utils_test                 PASSED in 0.3s
+//tensorflow/core:common_runtime_pending_counts_test                     PASSED in 0.2s
+//tensorflow/core:common_runtime_placer_inspection_required_ops_utils_test PASSED in 0.3s
+//tensorflow/core:common_runtime_placer_test                             PASSED in 0.2s
+//tensorflow/core:common_runtime_process_util_test                       PASSED in 0.2s
+//tensorflow/core:common_runtime_rendezvous_util_test                    PASSED in 0.1s
+//tensorflow/core:common_runtime_ring_gatherer_test                      PASSED in 0.8s
+//tensorflow/core:common_runtime_ring_reducer_test                       PASSED in 3.5s
+//tensorflow/core:common_runtime_scoped_allocator_mgr_test               PASSED in 0.4s
+//tensorflow/core:common_runtime_session_test                            PASSED in 0.2s
+//tensorflow/core:common_runtime_shape_refiner_test                      PASSED in 0.2s
+//tensorflow/core:common_runtime_threadpool_device_test                  PASSED in 0.2s
+//tensorflow/core:cudnn_rnn_ops_test_cc                                  PASSED in 0.2s
+//tensorflow/core:ev_allocator_tests                                     PASSED in 38.3s
+//tensorflow/core:example_example_parser_configuration_test              PASSED in 0.2s
+//tensorflow/core:example_feature_util_test                              PASSED in 0.2s
+//tensorflow/core:exec_on_stall_test                                     PASSED in 2.1s
+//tensorflow/core:framework_allocator_test                               PASSED in 0.5s
+//tensorflow/core:framework_attr_value_util_test                         PASSED in 0.2s
+//tensorflow/core:framework_bfloat16_test                                PASSED in 0.2s
+//tensorflow/core:framework_cancellation_test                            PASSED in 1.2s
+//tensorflow/core:framework_common_shape_fns_test                        PASSED in 0.2s
+//tensorflow/core:framework_device_base_test                             PASSED in 0.2s
+//tensorflow/core:framework_function_test                                PASSED in 0.5s
+//tensorflow/core:framework_graph_def_util_test                          PASSED in 0.2s
+//tensorflow/core:framework_graph_to_functiondef_test                    PASSED in 0.2s
+//tensorflow/core:framework_kernel_def_builder_test                      PASSED in 0.1s
+//tensorflow/core:framework_kernel_def_util_test                         PASSED in 0.2s
+//tensorflow/core:framework_memory_types_test                            PASSED in 0.3s
+//tensorflow/core:framework_model_test                                   PASSED in 0.2s
+//tensorflow/core:framework_node_def_builder_test                        PASSED in 0.2s
+//tensorflow/core:framework_node_def_util_test                           PASSED in 0.2s
+//tensorflow/core:framework_op_compatibility_test                        PASSED in 0.2s
+//tensorflow/core:framework_op_def_builder_test                          PASSED in 0.6s
+//tensorflow/core:framework_op_def_util_test                             PASSED in 0.2s
+//tensorflow/core:framework_op_gen_lib_test                              PASSED in 0.1s
+//tensorflow/core:framework_op_kernel_test                               PASSED in 0.2s
+//tensorflow/core:framework_op_registration_test                         PASSED in 0.1s
+//tensorflow/core:framework_op_segment_test                              PASSED in 0.2s
+//tensorflow/core:framework_partial_tensor_shape_test                    PASSED in 0.2s
+//tensorflow/core:framework_rendezvous_test                              PASSED in 2.6s
+//tensorflow/core:framework_resource_mgr_test                            PASSED in 1.2s
+//tensorflow/core:framework_resource_op_kernel_test                      PASSED in 0.4s
+//tensorflow/core:framework_run_handler_test                             PASSED in 0.1s
+//tensorflow/core:framework_run_handler_util_test                        PASSED in 1.1s
+//tensorflow/core:framework_shape_inference_test                         PASSED in 0.2s
+//tensorflow/core:framework_shape_inference_testutil_test                PASSED in 0.4s
+//tensorflow/core:framework_tensor_shape_test                            PASSED in 0.4s
+//tensorflow/core:framework_tensor_slice_test                            PASSED in 0.2s
+//tensorflow/core:framework_tensor_test                                  PASSED in 1.5s
+//tensorflow/core:framework_tensor_testutil_test                         PASSED in 0.7s
+//tensorflow/core:framework_tensor_util_test                             PASSED in 0.2s
+//tensorflow/core:framework_tracking_allocator_test                      PASSED in 0.2s
+//tensorflow/core:framework_types_test                                   PASSED in 0.1s
+//tensorflow/core:framework_unique_tensor_references_test                PASSED in 0.1s
+//tensorflow/core:framework_variant_op_registry_test                     PASSED in 1.0s
+//tensorflow/core:framework_variant_test                                 PASSED in 0.2s
+//tensorflow/core:graph_algorithm_test                                   PASSED in 0.3s
+//tensorflow/core:graph_collective_order_test                            PASSED in 0.1s
+//tensorflow/core:graph_control_flow_test                                PASSED in 0.2s
+//tensorflow/core:graph_edgeset_test                                     PASSED in 0.2s
+//tensorflow/core:graph_graph_constructor_test                           PASSED in 0.4s
+//tensorflow/core:graph_graph_def_builder_test                           PASSED in 0.2s
+//tensorflow/core:graph_graph_partition_test                             PASSED in 0.4s
+//tensorflow/core:graph_graph_test                                       PASSED in 0.2s
+//tensorflow/core:graph_mkl_layout_pass_test                             PASSED in 0.1s
+//tensorflow/core:graph_mkl_tfconversion_pass_test                       PASSED in 0.1s
+//tensorflow/core:graph_node_builder_test                                PASSED in 0.2s
+//tensorflow/core:graph_optimizer_cse_test                               PASSED in 0.2s
+//tensorflow/core:graph_star_server_graph_partition_test                 PASSED in 0.2s
+//tensorflow/core:graph_subgraph_test                                    PASSED in 0.2s
+//tensorflow/core:graph_tensor_id_test                                   PASSED in 0.2s
+//tensorflow/core:graph_validate_test                                    PASSED in 0.2s
+//tensorflow/core:hash_table_bloom_filter_strategy_test                  PASSED in 0.3s
+//tensorflow/core:hash_table_hash_table_test                             PASSED in 0.1s
+//tensorflow/core:hash_table_tensible_variable_test                      PASSED in 0.2s
+//tensorflow/core:hash_table_tensor_generator_test                       PASSED in 0.1s
+//tensorflow/core:lib_core_arena_test                                    PASSED in 0.1s
+//tensorflow/core:lib_core_bitmap_test                                   PASSED in 0.2s
+//tensorflow/core:lib_core_blocking_counter_test                         PASSED in 0.1s
+//tensorflow/core:lib_core_coding_test                                   PASSED in 0.1s
+//tensorflow/core:lib_core_notification_test                             PASSED in 1.5s
+//tensorflow/core:lib_core_refcount_test                                 PASSED in 0.1s
+//tensorflow/core:lib_core_status_test                                   PASSED in 0.2s
+//tensorflow/core:lib_core_threadpool_test                               PASSED in 1.6s
+//tensorflow/core:lib_hash_crc32c_test                                   PASSED in 0.1s
+//tensorflow/core:lib_hash_hash_test                                     PASSED in 0.1s
+//tensorflow/core:lib_histogram_histogram_test                           PASSED in 0.1s
+//tensorflow/core:lib_io_buffered_inputstream_test                       PASSED in 0.1s
+//tensorflow/core:lib_io_inputbuffer_test                                PASSED in 0.4s
+//tensorflow/core:lib_io_inputstream_interface_test                      PASSED in 0.2s
+//tensorflow/core:lib_io_path_test                                       PASSED in 0.1s
+//tensorflow/core:lib_io_random_inputstream_test                         PASSED in 0.1s
+//tensorflow/core:lib_io_record_reader_writer_test                       PASSED in 1.0s
+//tensorflow/core:lib_io_recordio_test                                   PASSED in 0.1s
+//tensorflow/core:lib_io_snappy_snappy_buffers_test                      PASSED in 0.1s
+//tensorflow/core:lib_io_table_test                                      PASSED in 1.2s
+//tensorflow/core:lib_io_zlib_buffers_test                               PASSED in 1.2s
+//tensorflow/core:lib_jpeg_jpeg_mem_unittest                             PASSED in 0.2s
+//tensorflow/core:lib_monitoring_collection_registry_test                PASSED in 0.1s
+//tensorflow/core:lib_monitoring_counter_test                            PASSED in 0.1s
+//tensorflow/core:lib_monitoring_gauge_test                              PASSED in 0.1s
+//tensorflow/core:lib_monitoring_metric_def_test                         PASSED in 0.1s
+//tensorflow/core:lib_monitoring_sampler_test                            PASSED in 0.3s
+//tensorflow/core:lib_random_random_distributions_test                   PASSED in 15.5s
+//tensorflow/core:lib_random_weighted_picker_test                        PASSED in 4.9s
+//tensorflow/core:lib_strings_ordered_code_test                          PASSED in 0.8s
+//tensorflow/core:lib_strings_proto_serialization_test                   PASSED in 0.1s
+//tensorflow/core:lib_wav_wav_io_test                                    PASSED in 0.1s
+//tensorflow/core:ops_array_grad_test                                    PASSED in 0.4s
+//tensorflow/core:ops_array_ops_test                                     PASSED in 0.2s
+//tensorflow/core:ops_candidate_sampling_ops_test                        PASSED in 0.2s
+//tensorflow/core:ops_control_flow_ops_test                              PASSED in 0.3s
+//tensorflow/core:ops_ctc_ops_test                                       PASSED in 0.2s
+//tensorflow/core:ops_data_flow_ops_test                                 PASSED in 0.2s
+//tensorflow/core:ops_functional_ops_test                                PASSED in 0.2s
+//tensorflow/core:ops_image_ops_test                                     PASSED in 0.2s
+//tensorflow/core:ops_io_ops_test                                        PASSED in 0.2s
+//tensorflow/core:ops_linalg_ops_test                                    PASSED in 0.2s
+//tensorflow/core:ops_math_grad_test                                     PASSED in 1.2s
+//tensorflow/core:ops_math_ops_test                                      PASSED in 0.1s
+//tensorflow/core:ops_nn_ops_test                                        PASSED in 0.2s
+//tensorflow/core:ops_parsing_ops_test                                   PASSED in 0.2s
+//tensorflow/core:ops_random_ops_test                                    PASSED in 0.1s
+//tensorflow/core:ops_remote_fused_graph_ops_test                        PASSED in 0.2s
+//tensorflow/core:ops_rnn_ops_test                                       PASSED in 0.2s
+//tensorflow/core:ops_set_ops_test                                       PASSED in 0.2s
+//tensorflow/core:ops_shape_function_test                                PASSED in 0.2s
+//tensorflow/core:ops_sparse_ops_test                                    PASSED in 0.1s
+//tensorflow/core:ops_spectral_ops_test                                  PASSED in 0.2s
+//tensorflow/core:ops_state_ops_test                                     PASSED in 0.2s
+//tensorflow/core:ops_string_ops_test                                    PASSED in 0.2s
+//tensorflow/core:ops_training_ops_test                                  PASSED in 0.2s
+//tensorflow/core:platform_abi_test                                      PASSED in 0.1s
+//tensorflow/core:platform_env_test                                      PASSED in 3.3s
+//tensorflow/core:platform_fake_python_env_test                          PASSED in 0.1s
+//tensorflow/core:platform_file_system_test                              PASSED in 0.1s
+//tensorflow/core:platform_setround_test                                 PASSED in 0.1s
+//tensorflow/core:platform_strings_test                                  PASSED in 0.1s
+//tensorflow/core:platform_unbounded_work_queue_test                     PASSED in 0.1s
+//tensorflow/core:quantize_training_test                                 PASSED in 0.6s
+//tensorflow/core:ragged_to_dense_util_test                              PASSED in 0.1s
+//tensorflow/core:stats_calculator_test                                  PASSED in 0.2s
+//tensorflow/core:tensorpool_allocator_test                              PASSED in 4.2s
+//tensorflow/core:util_bcast_test                                        PASSED in 0.2s
+//tensorflow/core:util_command_line_flags_test                           PASSED in 0.2s
+//tensorflow/core:util_device_name_utils_test                            PASSED in 0.3s
+//tensorflow/core:util_dump_graph_test                                   PASSED in 0.2s
+//tensorflow/core:util_equal_graph_def_test                              PASSED in 0.2s
+//tensorflow/core:util_events_writer_test                                PASSED in 2.2s
+//tensorflow/core:util_example_proto_fast_parsing_test                   PASSED in 0.4s
+//tensorflow/core:util_example_proto_helper_test                         PASSED in 0.2s
+//tensorflow/core:util_matmul_bcast_test                                 PASSED in 0.3s
+//tensorflow/core:util_memmapped_file_system_test                        PASSED in 0.2s
+//tensorflow/core:util_mkl_util_test                                     PASSED in 0.1s
+//tensorflow/core:util_overflow_test                                     PASSED in 0.8s
+//tensorflow/core:util_presized_cuckoo_map_test                          PASSED in 1.3s
+//tensorflow/core:util_reffed_status_callback_test                       PASSED in 0.1s
+//tensorflow/core:util_reporter_test                                     PASSED in 0.1s
+//tensorflow/core:util_saved_tensor_slice_util_test                      PASSED in 0.2s
+//tensorflow/core:util_semver_test                                       PASSED in 0.1s
+//tensorflow/core:util_sorter_test                                       PASSED in 0.6s
+//tensorflow/core:util_sparse_sparse_tensor_test                         PASSED in 0.1s
+//tensorflow/core:util_stat_summarizer_test                              PASSED in 0.2s
+//tensorflow/core:util_tensor_format_test                                PASSED in 0.2s
+//tensorflow/core:util_tensor_slice_reader_test                          PASSED in 0.3s
+//tensorflow/core:util_tensor_slice_set_test                             PASSED in 0.2s
+//tensorflow/core:util_tensor_slice_util_test                            PASSED in 0.2s
+//tensorflow/core:util_tensor_slice_writer_test                          PASSED in 1.3s
+//tensorflow/core:util_work_sharder_test                                 PASSED in 0.3s
+//tensorflow/core:vmodule_test                                           PASSED in 0.2s
+//tensorflow/core/api_def:api_test                                       PASSED in 0.5s
+//tensorflow/core/api_def:update_api_def_test                            PASSED in 0.2s
+//tensorflow/core/common_runtime/data:standalone_test                    PASSED in 0.6s
+//tensorflow/core/common_runtime/eager:attr_builder_test                 PASSED in 1.4s
+//tensorflow/core/common_runtime/eager:kernel_and_device_test            PASSED in 0.2s
+//tensorflow/core/debug:debug_graph_utils_test                           PASSED in 0.2s
+//tensorflow/core/debug:debug_grpc_io_utils_test                         PASSED in 3.5s
+//tensorflow/core/debug:debug_io_utils_test                              PASSED in 0.3s
+//tensorflow/core/distributed_runtime:call_options_test                  PASSED in 0.1s
+//tensorflow/core/distributed_runtime:collective_param_resolver_distributed_test PASSED in 0.5s
+//tensorflow/core/distributed_runtime:collective_rma_distributed_test    PASSED in 0.2s
+//tensorflow/core/distributed_runtime:device_resolver_distributed_test   PASSED in 0.2s
+//tensorflow/core/distributed_runtime:message_wrappers_test              PASSED in 0.1s
+//tensorflow/core/distributed_runtime:partial_run_mgr_test               PASSED in 0.1s
+//tensorflow/core/distributed_runtime:recent_request_ids_test            PASSED in 0.1s
+//tensorflow/core/distributed_runtime:request_id_test                    PASSED in 0.2s
+//tensorflow/core/distributed_runtime:rpc_collective_executor_mgr_test   PASSED in 0.1s
+//tensorflow/core/distributed_runtime:server_lib_test                    PASSED in 0.3s
+//tensorflow/core/distributed_runtime:tensor_coding_test                 PASSED in 0.1s
+//tensorflow/core/distributed_runtime/rpc:grpc_tensor_coding_test        PASSED in 0.5s
+//tensorflow/core/distributed_runtime/rpc:grpc_util_test                 PASSED in 0.3s
+//tensorflow/core/grappler:graph_topology_view_test                      PASSED in 0.1s
+//tensorflow/core/grappler:graph_view_test                               PASSED in 0.4s
+//tensorflow/core/grappler:grappler_item_builder_test                    PASSED in 0.4s
+//tensorflow/core/grappler:grappler_item_test                            PASSED in 0.4s
+//tensorflow/core/grappler:mutable_graph_view_test                       PASSED in 0.4s
+//tensorflow/core/grappler:utils_test                                    PASSED in 1.4s
+//tensorflow/core/grappler/clusters:single_machine_test                  PASSED in 21.8s
+//tensorflow/core/grappler/clusters:virtual_cluster_test                 PASSED in 0.6s
+//tensorflow/core/grappler/costs:analytical_cost_estimator_test          PASSED in 0.3s
+//tensorflow/core/grappler/costs:cost_estimator_test                     PASSED in 0.1s
+//tensorflow/core/grappler/costs:graph_memory_test                       PASSED in 0.4s
+//tensorflow/core/grappler/costs:graph_properties_test                   PASSED in 1.0s
+//tensorflow/core/grappler/costs:op_level_cost_estimator_test            PASSED in 0.2s
+//tensorflow/core/grappler/costs:robust_stats_test                       PASSED in 0.1s
+//tensorflow/core/grappler/costs:utils_test                              PASSED in 0.6s
+//tensorflow/core/grappler/costs:virtual_placer_test                     PASSED in 0.2s
+//tensorflow/core/grappler/costs:virtual_scheduler_test                  PASSED in 0.4s
+//tensorflow/core/grappler/graph_analyzer:gen_node_test                  PASSED in 0.4s
+//tensorflow/core/grappler/graph_analyzer:graph_analyzer_test            PASSED in 0.4s
+//tensorflow/core/grappler/graph_analyzer:hash_tools_test                PASSED in 0.4s
+//tensorflow/core/grappler/graph_analyzer:sig_node_test                  PASSED in 0.9s
+//tensorflow/core/grappler/graph_analyzer:subgraph_test                  PASSED in 0.3s
+//tensorflow/core/grappler/inputs:utils_test                             PASSED in 0.1s
+//tensorflow/core/grappler/optimizers:evaluation_utils_test              PASSED in 0.2s
+//tensorflow/core/grappler/optimizers:function_api_info_test             PASSED in 0.1s
+//tensorflow/core/grappler/optimizers:generic_layout_optimizer_transposer_factory_test PASSED in 0.2s
+//tensorflow/core/grappler/optimizers:implementation_selector_test       PASSED in 0.5s
+//tensorflow/core/grappler/optimizers:mkl_remapper_test                  PASSED in 0.5s
+//tensorflow/core/grappler/optimizers:scoped_allocator_optimizer_test    PASSED in 0.6s
+//tensorflow/core/grappler/optimizers/data:filter_fusion_test            PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:filter_with_random_uniform_fusion_test PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:function_utils_test           PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:fusion_utils_test             PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:graph_utils_test              PASSED in 0.3s
+//tensorflow/core/grappler/optimizers/data:hoist_random_uniform_test     PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:inject_prefetch_test          PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:latency_all_edges_test        PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:make_sloppy_test              PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:make_stateless_test           PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:map_and_batch_fusion_test     PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:map_and_filter_fusion_test    PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:map_fusion_test               PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:map_parallelization_test      PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:map_vectorization_test        PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:noop_elimination_test         PASSED in 0.1s
+//tensorflow/core/grappler/optimizers/data:parallel_batch_test           PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:shuffle_and_repeat_fusion_test PASSED in 0.3s
+//tensorflow/core/grappler/optimizers/data:slack_test                    PASSED in 0.2s
+//tensorflow/core/grappler/optimizers/data:vectorization_utils_test      PASSED in 0.4s
+//tensorflow/core/grappler/optimizers/data/vectorization:vectorizer_registry_test PASSED in 0.3s
+//tensorflow/core/grappler/utils:canonicalizer_test                      PASSED in 0.4s
+//tensorflow/core/grappler/utils:colocation_test                         PASSED in 0.3s
+//tensorflow/core/grappler/utils:frame_test                              PASSED in 0.1s
+//tensorflow/core/grappler/utils:functions_test                          PASSED in 0.4s
+//tensorflow/core/grappler/utils:graph_view_internal_test                PASSED in 0.2s
+//tensorflow/core/grappler/utils:graph_view_test                         PASSED in 0.5s
+//tensorflow/core/grappler/utils:grappler_test_test                      PASSED in 1.3s
+//tensorflow/core/grappler/utils:pattern_utils_test                      PASSED in 0.2s
+//tensorflow/core/grappler/utils:scc_test                                PASSED in 0.6s
+//tensorflow/core/grappler/utils:symbolic_shapes_test                    PASSED in 0.1s
+//tensorflow/core/grappler/utils:topological_sort_test                   PASSED in 0.2s
+//tensorflow/core/grappler/utils:tpu_test                                PASSED in 0.1s
+//tensorflow/core/grappler/utils:traversal_test                          PASSED in 0.2s
+//tensorflow/core/grappler/verifiers:structure_verifier_test             PASSED in 0.4s
+//tensorflow/core/kernels:adjust_contrast_op_test                        PASSED in 0.2s
+//tensorflow/core/kernels:as_string_op_test                              PASSED in 0.2s
+//tensorflow/core/kernels:basic_ops_benchmark_test                       PASSED in 0.1s
+//tensorflow/core/kernels:batch_norm_op_test                             PASSED in 0.1s
+//tensorflow/core/kernels:bias_grad_ali_op_test                          PASSED in 0.2s
+//tensorflow/core/kernels:bias_op_test                                   PASSED in 0.2s
+//tensorflow/core/kernels:clustering_ops_test                            PASSED in 0.2s
+//tensorflow/core/kernels:colorspace_op_test                             PASSED in 0.2s
+//tensorflow/core/kernels:concat_op_test                                 PASSED in 0.1s
+//tensorflow/core/kernels:control_flow_ops_test                          PASSED in 0.5s
+//tensorflow/core/kernels:crop_and_resize_op_test                        PASSED in 0.5s
+//tensorflow/core/kernels:cross_op_test                                  PASSED in 0.3s
+//tensorflow/core/kernels:debug_ops_test                                 PASSED in 0.2s
+//tensorflow/core/kernels:decode_wav_op_test                             PASSED in 0.7s
+//tensorflow/core/kernels:deep_conv2d_test                               PASSED in 0.1s
+//tensorflow/core/kernels:dequantize_op_test                             PASSED in 0.2s
+//tensorflow/core/kernels:eigen_activations_test                         PASSED in 0.1s
+//tensorflow/core/kernels:eigen_attention_test                           PASSED in 0.2s
+//tensorflow/core/kernels:eigen_backward_spatial_convolutions_test       PASSED in 0.7s
+//tensorflow/core/kernels:eigen_benchmark_cpu_test                       PASSED in 0.3s
+//tensorflow/core/kernels:eigen_mkldnn_contraction_kernel_test           PASSED in 0.3s
+//tensorflow/core/kernels:eigen_pooling_test                             PASSED in 0.2s
+//tensorflow/core/kernels:eigen_spatial_convolutions_test                PASSED in 0.2s
+//tensorflow/core/kernels:embedding_variable_ops_test                    PASSED in 83.5s
+//tensorflow/core/kernels:encode_wav_op_test                             PASSED in 0.5s
+//tensorflow/core/kernels:fake_quant_ops_test                            PASSED in 0.8s
+//tensorflow/core/kernels:fingerprint_op_test                            PASSED in 0.2s
+//tensorflow/core/kernels:fused_batch_norm_op_test                       PASSED in 0.2s
+//tensorflow/core/kernels:guarantee_const_op_test                        PASSED in 0.3s
+//tensorflow/core/kernels:identity_n_op_test                             PASSED in 0.2s
+//tensorflow/core/kernels:identity_op_test                               PASSED in 0.1s
+//tensorflow/core/kernels:immutable_constant_op_test                     PASSED in 0.3s
+//tensorflow/core/kernels:in_topk_op_test                                PASSED in 0.2s
+//tensorflow/core/kernels:incr_save_restore_ops_test                     PASSED in 0.2s
+//tensorflow/core/kernels:logging_ops_test                               PASSED in 1.3s
+//tensorflow/core/kernels:loss_test                                      PASSED in 0.1s
+//tensorflow/core/kernels:merge_v2_checkpoints_op_test                   PASSED in 0.3s
+//tensorflow/core/kernels:mfcc_dct_test                                  PASSED in 0.1s
+//tensorflow/core/kernels:mfcc_mel_filterbank_test                       PASSED in 0.1s
+//tensorflow/core/kernels:mfcc_test                                      PASSED in 0.1s
+//tensorflow/core/kernels:mirror_pad_op_test                             PASSED in 0.5s
+//tensorflow/core/kernels:mkl_aggregate_ops_test                         PASSED in 0.5s
+//tensorflow/core/kernels:mkl_concat_op_test                             PASSED in 0.4s
+//tensorflow/core/kernels:mkl_conv_ops_test                              PASSED in 0.1s
+//tensorflow/core/kernels:mkl_cwise_ops_test                             PASSED in 0.1s
+//tensorflow/core/kernels:mkl_fused_batch_norm_op_test                   PASSED in 0.1s
+//tensorflow/core/kernels:mkl_fused_ops_test                             PASSED in 0.1s
+//tensorflow/core/kernels:mkl_identity_op_test                           PASSED in 0.5s
+//tensorflow/core/kernels:mkl_lrn_op_test                                PASSED in 0.4s
+//tensorflow/core/kernels:mkl_matmul_op_test                             PASSED in 0.6s
+//tensorflow/core/kernels:mkl_qmatmul_op_test                            PASSED in 0.1s
+//tensorflow/core/kernels:mkl_quantize_op_test                           PASSED in 0.1s
+//tensorflow/core/kernels:mkl_quantized_concat_op_test                   PASSED in 0.2s
+//tensorflow/core/kernels:mkl_quantized_conv_ops_perchannel_test         PASSED in 0.2s
+//tensorflow/core/kernels:mkl_quantized_conv_ops_test                    PASSED in 0.5s
+//tensorflow/core/kernels:mkl_quantized_pooling_ops_test                 PASSED in 0.2s
+//tensorflow/core/kernels:mkl_relu_op_test                               PASSED in 0.1s
+//tensorflow/core/kernels:mkl_requantize_ops_test                        PASSED in 0.1s
+//tensorflow/core/kernels:mkl_reshape_op_test                            PASSED in 0.5s
+//tensorflow/core/kernels:mkl_slice_op_test                              PASSED in 0.4s
+//tensorflow/core/kernels:mkl_softmax_op_test                            PASSED in 0.5s
+//tensorflow/core/kernels:mkl_transpose_op_test                          PASSED in 0.4s
+//tensorflow/core/kernels:non_max_suppression_op_benchmark_test          PASSED in 0.2s
+//tensorflow/core/kernels:non_max_suppression_op_test                    PASSED in 0.5s
+//tensorflow/core/kernels:ops_testutil_test                              PASSED in 0.2s
+//tensorflow/core/kernels:ops_util_test                                  PASSED in 0.1s
+//tensorflow/core/kernels:parse_tensor_test                              PASSED in 0.2s
+//tensorflow/core/kernels:quantization_utils_test                        PASSED in 0.2s
+//tensorflow/core/kernels:quantize_down_and_shrink_range_op_test         PASSED in 0.3s
+//tensorflow/core/kernels:quantize_op_test                               PASSED in 0.3s
+//tensorflow/core/kernels:quantized_activation_ops_test                  PASSED in 0.2s
+//tensorflow/core/kernels:quantized_add_op_test                          PASSED in 0.2s
+//tensorflow/core/kernels:quantized_batch_norm_op_test                   PASSED in 0.2s
+//tensorflow/core/kernels:quantized_bias_add_op_test                     PASSED in 0.2s
+//tensorflow/core/kernels:quantized_concat_op_test                       PASSED in 0.2s
+//tensorflow/core/kernels:quantized_conv_ops_test                        PASSED in 0.2s
+//tensorflow/core/kernels:quantized_instance_norm_test                   PASSED in 0.2s
+//tensorflow/core/kernels:quantized_matmul_op_test                       PASSED in 0.2s
+//tensorflow/core/kernels:quantized_mul_op_test                          PASSED in 0.3s
+//tensorflow/core/kernels:quantized_pooling_ops_test                     PASSED in 0.5s
+//tensorflow/core/kernels:quantized_reshape_op_test                      PASSED in 0.2s
+//tensorflow/core/kernels:quantized_resize_bilinear_op_test              PASSED in 0.7s
+//tensorflow/core/kernels:ragged_gather_op_test                          PASSED in 0.2s
+//tensorflow/core/kernels:ragged_range_op_test                           PASSED in 0.2s
+//tensorflow/core/kernels:ragged_tensor_from_variant_op_test             PASSED in 0.5s
+//tensorflow/core/kernels:ragged_tensor_to_sparse_kernel_test            PASSED in 0.1s
+//tensorflow/core/kernels:ragged_tensor_to_tensor_op_test                PASSED in 0.2s
+//tensorflow/core/kernels:ragged_tensor_to_variant_op_test               PASSED in 0.2s
+//tensorflow/core/kernels:range_sampler_test                             PASSED in 0.1s
+//tensorflow/core/kernels:regex_replace_op_test                          PASSED in 0.3s
+//tensorflow/core/kernels:remote_fused_graph_execute_utils_test          PASSED in 0.3s
+//tensorflow/core/kernels:remote_fused_graph_ops_test                    PASSED in 0.4s
+//tensorflow/core/kernels:remote_fused_graph_rewriter_transform_test     PASSED in 0.5s
+//tensorflow/core/kernels:requantization_range_op_test                   PASSED in 0.2s
+//tensorflow/core/kernels:requantize_op_test                             PASSED in 0.1s
+//tensorflow/core/kernels:resize_area_op_test                            PASSED in 0.3s
+//tensorflow/core/kernels:resize_bicubic_op_test                         PASSED in 1.4s
+//tensorflow/core/kernels:resize_nearest_neighbor_op_test                PASSED in 0.2s
+//tensorflow/core/kernels:restore_op_test                                PASSED in 0.4s
+//tensorflow/core/kernels:restore_v2_op_test                             PASSED in 0.3s
+//tensorflow/core/kernels:reverse_op_test                                PASSED in 0.2s
+//tensorflow/core/kernels:roll_op_test                                   PASSED in 0.2s
+//tensorflow/core/kernels:sampling_kernels_test                          PASSED in 0.1s
+//tensorflow/core/kernels:save_op_test                                   PASSED in 0.3s
+//tensorflow/core/kernels:save_v2_op_test                                PASSED in 0.2s
+//tensorflow/core/kernels:scale_and_translate_op_test                    PASSED in 0.5s
+//tensorflow/core/kernels:scatter_op_test                                PASSED in 0.2s
+//tensorflow/core/kernels:sdca_ops_test                                  PASSED in 0.5s
+//tensorflow/core/kernels:segment_reduction_ops_test                     PASSED in 0.3s
+//tensorflow/core/kernels:sendrecv_ops_test                              PASSED in 0.2s
+//tensorflow/core/kernels:sequence_ops_test                              PASSED in 0.2s
+//tensorflow/core/kernels:slice_op_test                                  PASSED in 0.3s
+//tensorflow/core/kernels:sparse_add_op_test                             PASSED in 0.4s
+//tensorflow/core/kernels:sparse_concat_ali_op_test                      PASSED in 0.2s
+//tensorflow/core/kernels:sparse_dense_binary_op_shared_test             PASSED in 0.2s
+//tensorflow/core/kernels:sparse_reduce_sum_op_test                      PASSED in 0.3s
+//tensorflow/core/kernels:sparse_utils_test                              PASSED in 0.1s
+//tensorflow/core/kernels:spectrogram_test                               PASSED in 0.1s
+//tensorflow/core/kernels:strided_slice_op_test                          PASSED in 0.1s
+//tensorflow/core/kernels:string_format_op_test                          PASSED in 0.2s
+//tensorflow/core/kernels:string_ngrams_op_test                          PASSED in 0.2s
+//tensorflow/core/kernels:string_split_op_test                           PASSED in 0.2s
+//tensorflow/core/kernels:substr_op_test                                 PASSED in 0.2s
+//tensorflow/core/kernels:summary_audio_op_test                          PASSED in 0.1s
+//tensorflow/core/kernels:summary_image_op_test                          PASSED in 0.2s
+//tensorflow/core/kernels:summary_op_test                                PASSED in 0.2s
+//tensorflow/core/kernels:summary_tensor_op_test                         PASSED in 0.2s
+//tensorflow/core/kernels:tensor_flag_utils_test                         PASSED in 0.1s
+//tensorflow/core/kernels:training_ops_test                              PASSED in 0.1s
+//tensorflow/core/kernels:trans_csv_ali_ops_test                         PASSED in 0.2s
+//tensorflow/core/kernels:transpose_util_test                            PASSED in 0.1s
+//tensorflow/core/kernels:unique_op_test                                 PASSED in 0.2s
+//tensorflow/core/kernels:variable_ops_test                              PASSED in 0.4s
+//tensorflow/core/kernels:xsmm_conv2d_test                               PASSED in 0.3s
+//tensorflow/core/kernels/batching_util:basic_batch_scheduler_test       PASSED in 0.1s
+//tensorflow/core/kernels/batching_util:batch_scheduler_test             PASSED in 0.1s
+//tensorflow/core/kernels/batching_util:periodic_function_test           PASSED in 0.9s
+//tensorflow/core/kernels/batching_util:serial_device_batch_scheduler_test PASSED in 0.5s
+//tensorflow/core/kernels/batching_util:shared_batch_scheduler_test      PASSED in 0.7s
+//tensorflow/core/kernels/boosted_trees:tree_helper_test                 PASSED in 0.2s
+//tensorflow/core/kernels/boosted_trees/quantiles:weighted_quantiles_buffer_test PASSED in 0.6s
+//tensorflow/core/kernels/boosted_trees/quantiles:weighted_quantiles_stream_test PASSED in 0.7s
+//tensorflow/core/kernels/boosted_trees/quantiles:weighted_quantiles_summary_test PASSED in 0.1s
+//tensorflow/core/kernels/data:batch_dataset_op_test                     PASSED in 0.5s
+//tensorflow/core/kernels/data:cache_dataset_ops_test                    PASSED in 0.3s
+//tensorflow/core/kernels/data:concatenate_dataset_op_test               PASSED in 0.4s
+//tensorflow/core/kernels/data:dataset_utils_test                        PASSED in 0.7s
+//tensorflow/core/kernels/data:filter_dataset_op_test                    PASSED in 0.2s
+//tensorflow/core/kernels/data:fixed_length_record_dataset_op_test       PASSED in 0.2s
+//tensorflow/core/kernels/data:flat_map_dataset_op_test                  PASSED in 0.3s
+//tensorflow/core/kernels/data:interleave_dataset_op_test                PASSED in 0.5s
+//tensorflow/core/kernels/data:map_dataset_op_test                       PASSED in 0.2s
+//tensorflow/core/kernels/data:map_defun_op_test                         PASSED in 0.7s
+//tensorflow/core/kernels/data:name_utils_test                           PASSED in 0.1s
+//tensorflow/core/kernels/data:optimize_dataset_op_test                  PASSED in 0.2s
+//tensorflow/core/kernels/data:padded_batch_dataset_op_test              PASSED in 0.3s
+//tensorflow/core/kernels/data:parallel_interleave_dataset_op_test       PASSED in 0.4s
+//tensorflow/core/kernels/data:parallel_map_dataset_op_test              PASSED in 0.4s
+//tensorflow/core/kernels/data:prefetch_autotuner_test                   PASSED in 0.1s
+//tensorflow/core/kernels/data:prefetch_dataset_op_test                  PASSED in 1.0s
+//tensorflow/core/kernels/data:range_dataset_op_test                     PASSED in 0.6s
+//tensorflow/core/kernels/data:reduce_dataset_op_test                    PASSED in 0.3s
+//tensorflow/core/kernels/data:repeat_dataset_op_test                    PASSED in 0.3s
+//tensorflow/core/kernels/data:shard_dataset_op_test                     PASSED in 0.3s
+//tensorflow/core/kernels/data:shuffle_dataset_op_test                   PASSED in 0.3s
+//tensorflow/core/kernels/data:single_threaded_executor_test             PASSED in 0.3s
+//tensorflow/core/kernels/data:skip_dataset_op_test                      PASSED in 0.2s
+//tensorflow/core/kernels/data:sparse_tensor_slice_dataset_op_test       PASSED in 0.3s
+//tensorflow/core/kernels/data:take_dataset_op_test                      PASSED in 1.0s
+//tensorflow/core/kernels/data:tensor_dataset_op_test                    PASSED in 0.2s
+//tensorflow/core/kernels/data:tensor_slice_dataset_op_test              PASSED in 0.2s
+//tensorflow/core/kernels/data:text_line_dataset_op_test                 PASSED in 0.2s
+//tensorflow/core/kernels/data:tf_record_dataset_op_test                 PASSED in 0.3s
+//tensorflow/core/kernels/data:unbounded_thread_pool_test                PASSED in 0.2s
+//tensorflow/core/kernels/data:window_dataset_op_test                    PASSED in 0.3s
+//tensorflow/core/kernels/data:zip_dataset_op_test                       PASSED in 0.2s
+//tensorflow/core/kernels/data/experimental:assert_next_dataset_op_test  PASSED in 0.3s
+//tensorflow/core/kernels/data/experimental:auto_shard_dataset_op_test   PASSED in 0.3s
+//tensorflow/core/kernels/data/experimental:parallel_interleave_dataset_op_test PASSED in 0.8s
+//tensorflow/core/kernels/hexagon:graph_transferer_test                  PASSED in 0.4s
+//tensorflow/core/kernels/hexagon:hexagon_remote_fused_graph_executor_build_test PASSED in 0.2s
+//tensorflow/core/kernels/hexagon:hexagon_rewriter_transform_test        PASSED in 0.6s
+//tensorflow/core/lib/db:sqlite_test                                     PASSED in 0.1s
+//tensorflow/core/ops/compat:backwards_compatibility_test                PASSED in 0.3s
+//tensorflow/core/platform/cloud:compute_engine_metadata_client_test     PASSED in 0.1s
+//tensorflow/core/platform/cloud:compute_engine_zone_provider_test       PASSED in 0.1s
+//tensorflow/core/platform/cloud:curl_http_request_test                  PASSED in 0.6s
+//tensorflow/core/platform/cloud:expiring_lru_cache_test                 PASSED in 0.1s
+//tensorflow/core/platform/cloud:gcs_dns_cache_test                      PASSED in 0.1s
+//tensorflow/core/platform/cloud:gcs_file_system_test                    PASSED in 5.4s
+//tensorflow/core/platform/cloud:gcs_throttle_test                       PASSED in 0.3s
+//tensorflow/core/platform/cloud:google_auth_provider_test               PASSED in 0.1s
+//tensorflow/core/platform/cloud:oauth_client_test                       PASSED in 0.1s
+//tensorflow/core/platform/cloud:ram_file_block_cache_test               PASSED in 2.2s
+//tensorflow/core/platform/cloud:retrying_file_system_test               PASSED in 0.1s
+//tensorflow/core/platform/cloud:retrying_utils_test                     PASSED in 0.2s
+//tensorflow/core/platform/cloud:time_util_test                          PASSED in 0.1s
+//tensorflow/core/profiler/internal:scoped_annotation_test               PASSED in 0.2s
+//tensorflow/core/profiler/internal:tfprof_show_test                     PASSED in 1.3s
+//tensorflow/core/profiler/internal:tfprof_stats_test                    PASSED in 1.5s
+//tensorflow/core/profiler/internal:tfprof_tensor_test                   PASSED in 1.4s
+//tensorflow/core/profiler/internal:tfprof_timeline_test                 PASSED in 1.3s
+//tensorflow/core/profiler/internal/advisor:tfprof_advisor_test          PASSED in 1.1s
+//tensorflow/core/profiler/rpc/client:trace_events_to_json_test          PASSED in 0.2s
+//tensorflow/core/summary:schema_test                                    PASSED in 0.1s
+//tensorflow/core/summary:summary_db_writer_test                         PASSED in 0.1s
+//tensorflow/core/summary:summary_file_writer_test                       PASSED in 0.1s
+//tensorflow/core/util/ctc:ctc_beam_search_test                          PASSED in 0.1s
+//tensorflow/core/util/proto:descriptor_pool_registry_test               PASSED in 0.2s
+//tensorflow/core/util/proto:proto_utils_test                            PASSED in 0.2s
+//tensorflow/core/util/rpc:rpc_factory_registry_test                     PASSED in 0.3s
+//tensorflow/core/util/tensor_bundle:tensor_bundle_test                  PASSED in 18.1s
+//tensorflow/examples/adding_an_op:fact_test                             PASSED in 5.1s
+//tensorflow/examples/adding_an_op:zero_out_1_test                       PASSED in 4.3s
+//tensorflow/examples/adding_an_op:zero_out_2_test                       PASSED in 4.4s
+//tensorflow/examples/adding_an_op:zero_out_3_test                       PASSED in 5.1s
+//tensorflow/examples/speech_commands:accuracy_utils_test                PASSED in 0.4s
+//tensorflow/examples/speech_commands:freeze_test                        PASSED in 6.7s
+//tensorflow/examples/speech_commands:generate_streaming_test_wav_test   PASSED in 6.4s
+//tensorflow/examples/speech_commands:input_data_test                    PASSED in 8.0s
+//tensorflow/examples/speech_commands:label_wav_test                     PASSED in 6.6s
+//tensorflow/examples/speech_commands:models_test                        PASSED in 4.4s
+//tensorflow/examples/speech_commands:recognize_commands_test            PASSED in 0.5s
+//tensorflow/examples/speech_commands:train_test                         PASSED in 8.8s
+//tensorflow/examples/speech_commands:wav_to_features_test               PASSED in 7.0s
+//tensorflow/examples/tutorials/mnist:fully_connected_feed_test          PASSED in 8.9s
+//tensorflow/examples/tutorials/mnist:mnist_with_summaries_test          PASSED in 6.9s
+//tensorflow/examples/wav_to_spectrogram:wav_to_spectrogram_test         PASSED in 0.7s
+//tensorflow/java:ConstantTest                                           PASSED in 0.4s
+//tensorflow/java:EagerOperationBuilderTest                              PASSED in 1.1s
+//tensorflow/java:EagerOperationTest                                     PASSED in 0.5s
+//tensorflow/java:EagerSessionTest                                       PASSED in 0.8s
+//tensorflow/java:GeneratedOperationsTest                                PASSED in 0.4s
+//tensorflow/java:GradientsTest                                          PASSED in 0.6s
+//tensorflow/java:GraphOperationBuilderTest                              PASSED in 0.5s
+//tensorflow/java:GraphOperationTest                                     PASSED in 0.3s
+//tensorflow/java:GraphTest                                              PASSED in 0.6s
+//tensorflow/java:OperandsTest                                           PASSED in 0.3s
+//tensorflow/java:PrimitiveOpTest                                        PASSED in 0.5s
+//tensorflow/java:SavedModelBundleTest                                   PASSED in 0.4s
+//tensorflow/java:ScopeTest                                              PASSED in 0.5s
+//tensorflow/java:SessionTest                                            PASSED in 0.4s
+//tensorflow/java:ShapeTest                                              PASSED in 0.3s
+//tensorflow/java:TensorFlowTest                                         PASSED in 0.5s
+//tensorflow/java:TensorTest                                             PASSED in 0.5s
+//tensorflow/java:ZerosTest                                              PASSED in 0.4s
+//tensorflow/java:source_writer_test                                     PASSED in 0.1s
+//tensorflow/js:ts_op_gen_test                                           PASSED in 0.1s
+//tensorflow/python:adagrad_decay_test                                   PASSED in 12.0s
+//tensorflow/python:adagrad_decay_v2_test                                PASSED in 15.4s
+//tensorflow/python:adam_async_test                                      PASSED in 6.0s
+//tensorflow/python:adam_sparse_test                                     PASSED in 4.0s
+//tensorflow/python:adam_test                                            PASSED in 5.6s
+//tensorflow/python:admit_strategy_test                                  PASSED in 4.8s
+//tensorflow/python:app_test                                             PASSED in 0.2s
+//tensorflow/python:auto_control_deps_test                               PASSED in 7.9s
+//tensorflow/python:auto_mixed_precision_test                            PASSED in 3.8s
+//tensorflow/python:basic_session_run_hooks_test                         PASSED in 7.1s
+//tensorflow/python:batch_norm_benchmark                                 PASSED in 2.9s
+//tensorflow/python:benchmark_test                                       PASSED in 3.6s
+//tensorflow/python:bfloat16_test                                        PASSED in 3.1s
+//tensorflow/python:bitwise_ops_test                                     PASSED in 4.0s
+//tensorflow/python:build_info_test                                      PASSED in 3.3s
+//tensorflow/python:c_api_util_test                                      PASSED in 3.7s
+//tensorflow/python:checkpoint_management_test                           PASSED in 4.5s
+//tensorflow/python:checkpoint_ops_test                                  PASSED in 3.8s
+//tensorflow/python:clip_ops_test                                        PASSED in 3.7s
+//tensorflow/python:clustering_ops_test                                  PASSED in 10.0s
+//tensorflow/python:collective_ops_benchmark                             PASSED in 4.2s
+//tensorflow/python:collective_ops_gpu_test                              PASSED in 2.8s
+//tensorflow/python:collective_ops_test                                  PASSED in 4.0s
+//tensorflow/python:concat_benchmark                                     PASSED in 3.3s
+//tensorflow/python:config_test                                          PASSED in 3.7s
+//tensorflow/python:constant_folding_test                                PASSED in 3.1s
+//tensorflow/python:contrib_test                                         PASSED in 6.1s
+//tensorflow/python:control_flow_ops_benchmark                           PASSED in 3.6s
+//tensorflow/python:control_flow_v2_disable_test                         PASSED in 3.1s
+//tensorflow/python:control_flow_v2_enable_test                          PASSED in 3.4s
+//tensorflow/python:control_flow_v2_toggles_test                         PASSED in 3.3s
+//tensorflow/python:conv2d_benchmark                                     PASSED in 3.0s
+//tensorflow/python:convert_to_constants_test                            PASSED in 3.7s
+//tensorflow/python:cost_analyzer_test                                   PASSED in 4.1s
+//tensorflow/python:datasets_test                                        PASSED in 4.5s
+//tensorflow/python:decorator_utils_test                                 PASSED in 3.7s
+//tensorflow/python:dequantize_op_test                                   PASSED in 3.9s
+//tensorflow/python:dispatch_test                                        PASSED in 3.3s
+//tensorflow/python:embedding_variable_ops_test                          PASSED in 12.2s
+//tensorflow/python:events_writer_test                                   PASSED in 2.9s
+//tensorflow/python:file_io_test                                         PASSED in 5.4s
+//tensorflow/python:file_system_test                                     PASSED in 3.2s
+//tensorflow/python:flags_test                                           PASSED in 3.6s
+//tensorflow/python:framework_common_shapes_test                         PASSED in 3.6s
+//tensorflow/python:framework_composite_tensor_test                      PASSED in 3.5s
+//tensorflow/python:framework_composite_tensor_utils_test                PASSED in 3.4s
+//tensorflow/python:framework_constant_op_test                           PASSED in 3.4s
+//tensorflow/python:framework_device_spec_test                           PASSED in 3.5s
+//tensorflow/python:framework_device_test                                PASSED in 3.5s
+//tensorflow/python:framework_dtypes_test                                PASSED in 5.1s
+//tensorflow/python:framework_error_interpolation_test                   PASSED in 3.4s
+//tensorflow/python:framework_errors_test                                PASSED in 3.0s
+//tensorflow/python:framework_importer_test                              PASSED in 8.2s
+//tensorflow/python:framework_kernels_test                               PASSED in 3.7s
+//tensorflow/python:framework_meta_graph_test                            PASSED in 4.1s
+//tensorflow/python:framework_ops_enable_eager_test                      PASSED in 1.0s
+//tensorflow/python:framework_ops_test                                   PASSED in 5.5s
+//tensorflow/python:framework_random_seed_test                           PASSED in 3.5s
+//tensorflow/python:framework_registry_test                              PASSED in 3.8s
+//tensorflow/python:framework_sparse_tensor_test                         PASSED in 4.0s
+//tensorflow/python:framework_subscribe_test                             PASSED in 3.4s
+//tensorflow/python:framework_tensor_shape_div_test                      PASSED in 3.2s
+//tensorflow/python:framework_tensor_shape_test                          PASSED in 3.6s
+//tensorflow/python:framework_tensor_spec_test                           PASSED in 4.5s
+//tensorflow/python:framework_tensor_util_test                           PASSED in 3.5s
+//tensorflow/python:framework_test_util_test                             PASSED in 5.6s
+//tensorflow/python:framework_traceable_stack_test                       PASSED in 3.5s
+//tensorflow/python:framework_type_spec_test                             PASSED in 3.1s
+//tensorflow/python:framework_versions_test                              PASSED in 3.6s
+//tensorflow/python:function_def_to_graph_test                           PASSED in 4.0s
+//tensorflow/python:function_utils_test                                  PASSED in 3.6s
+//tensorflow/python:gradient_checker_test                                PASSED in 4.6s
+//tensorflow/python:gradient_checker_v2_test                             PASSED in 6.0s
+//tensorflow/python:gradients_test                                       PASSED in 11.1s
+//tensorflow/python:graph_placer_test                                    PASSED in 46.3s
+//tensorflow/python:graph_util_test                                      PASSED in 5.0s
+//tensorflow/python:hash_table_test                                      PASSED in 7.1s
+//tensorflow/python:histogram_ops_test                                   PASSED in 3.7s
+//tensorflow/python:image_grad_deterministic_test                        PASSED in 55.6s
+//tensorflow/python:image_grad_test                                      PASSED in 72.7s
+//tensorflow/python:incr_ckpt_test                                       PASSED in 7.6s
+//tensorflow/python:init_ops_test                                        PASSED in 3.2s
+//tensorflow/python:init_ops_v2_test                                     PASSED in 4.2s
+//tensorflow/python:input_test                                           PASSED in 11.2s
+//tensorflow/python:item_test                                            PASSED in 3.5s
+//tensorflow/python:keyword_args_test                                    PASSED in 3.4s
+//tensorflow/python:layers_base_test                                     PASSED in 5.1s
+//tensorflow/python:layers_convolutional_test                            PASSED in 5.8s
+//tensorflow/python:layers_core_test                                     PASSED in 4.7s
+//tensorflow/python:layers_pooling_test                                  PASSED in 3.2s
+//tensorflow/python:layers_utils_test                                    PASSED in 3.4s
+//tensorflow/python:localhost_cluster_performance_test                   PASSED in 3.9s
+//tensorflow/python:lock_util_test                                       PASSED in 4.8s
+//tensorflow/python:loss_scale_optimizer_test                            PASSED in 4.7s
+//tensorflow/python:loss_scale_test                                      PASSED in 6.6s
+//tensorflow/python:math_grad_test                                       PASSED in 5.0s
+//tensorflow/python:math_ops_test                                        PASSED in 4.8s
+//tensorflow/python:matmul_benchmark                                     PASSED in 3.7s
+//tensorflow/python:matmul_benchmark_test                                PASSED in 3.3s
+//tensorflow/python:memory_optimizer_test                                PASSED in 5.4s
+//tensorflow/python:mixed_precision_test                                 PASSED in 4.1s
+//tensorflow/python:model_analyzer_test                                  PASSED in 3.8s
+//tensorflow/python:module_wrapper_test                                  PASSED in 4.1s
+//tensorflow/python:monitored_session_test                               PASSED in 11.2s
+//tensorflow/python:moving_averages_test                                 PASSED in 5.0s
+//tensorflow/python:nn_grad_test                                         PASSED in 3.9s
+//tensorflow/python:nn_loss_scaling_utilities_test                       PASSED in 3.9s
+//tensorflow/python:nn_test                                              PASSED in 13.9s
+//tensorflow/python:nn_xent_test                                         PASSED in 3.7s
+//tensorflow/python:object_identity_test                                 PASSED in 4.4s
+//tensorflow/python:op_callbacks_test                                    PASSED in 5.7s
+//tensorflow/python:op_def_library_test                                  PASSED in 4.0s
+//tensorflow/python:op_selector_test                                     PASSED in 2.8s
+//tensorflow/python:plugin_asset_test                                    PASSED in 3.2s
+//tensorflow/python:prefetch_test                                        PASSED in 9.1s
+//tensorflow/python:proto_test                                           PASSED in 3.5s
+//tensorflow/python:protobuf_compare_test                                PASSED in 1.2s
+//tensorflow/python:quantized_conv_ops_test                              PASSED in 3.4s
+//tensorflow/python:quantized_ops_test                                   PASSED in 4.0s
+//tensorflow/python:raw_ops_test                                         PASSED in 3.6s
+//tensorflow/python:resource_loader_test                                 PASSED in 0.8s
+//tensorflow/python:rnn_grad_test                                        PASSED in 3.1s
+//tensorflow/python:saver_large_partitioned_variable_test                PASSED in 19.3s
+//tensorflow/python:saver_test                                           PASSED in 14.9s
+//tensorflow/python:server_lib_multiple_containers_test                  PASSED in 3.3s
+//tensorflow/python:server_lib_same_variables_clear_container_test       PASSED in 3.8s
+//tensorflow/python:server_lib_same_variables_clear_test                 PASSED in 3.4s
+//tensorflow/python:server_lib_same_variables_no_clear_test              PASSED in 3.6s
+//tensorflow/python:server_lib_sparse_job_test                           PASSED in 3.4s
+//tensorflow/python:session_benchmark                                    PASSED in 3.2s
+//tensorflow/python:session_clusterspec_prop_test                        PASSED in 9.6s
+//tensorflow/python:session_list_devices_test                            PASSED in 3.9s
+//tensorflow/python:session_manager_test                                 PASSED in 69.8s
+//tensorflow/python:session_partial_run_test                             PASSED in 5.4s
+//tensorflow/python:session_test                                         PASSED in 25.8s
+//tensorflow/python:smart_cond_test                                      PASSED in 3.2s
+//tensorflow/python:sort_ops_test                                        PASSED in 4.9s
+//tensorflow/python:sparse_ops_test                                      PASSED in 6.6s
+//tensorflow/python:special_math_ops_test                                PASSED in 6.4s
+//tensorflow/python:split_benchmark                                      PASSED in 3.2s
+//tensorflow/python:stacktrace_handler_test                              PASSED in 5.3s
+//tensorflow/python:stateful_random_ops_test                             PASSED in 3.7s
+//tensorflow/python:summary_test                                         PASSED in 3.2s
+//tensorflow/python:supervisor_test                                      PASSED in 12.1s
+//tensorflow/python:sync_replicas_optimizer_test                         PASSED in 7.5s
+//tensorflow/python:test_combinations_test                               PASSED in 2.8s
+//tensorflow/python:tf2_test                                             PASSED in 3.0s
+//tensorflow/python:tf_contextlib_test                                   PASSED in 4.3s
+//tensorflow/python:tf_decorator_test                                    PASSED in 3.0s
+//tensorflow/python:tf_export_test                                       PASSED in 3.3s
+//tensorflow/python:tf_inspect_test                                      PASSED in 3.7s
+//tensorflow/python:tf_optimizer_test                                    PASSED in 4.3s
+//tensorflow/python:tf_record_multiprocessing_test                       PASSED in 3.1s
+//tensorflow/python:tf_record_test                                       PASSED in 4.3s
+//tensorflow/python:tf_should_use_test                                   PASSED in 3.7s
+//tensorflow/python:tf_stack_test                                        PASSED in 3.5s
+//tensorflow/python:timeline_test                                        PASSED in 3.8s
+//tensorflow/python:training_util_test                                   PASSED in 3.4s
+//tensorflow/python:transpose_benchmark                                  PASSED in 3.3s
+//tensorflow/python:util_example_parser_configuration_test               PASSED in 3.8s
+//tensorflow/python:util_nest_test                                       PASSED in 3.5s
+//tensorflow/python:util_serialization_test                              PASSED in 3.3s
+//tensorflow/python:virtual_gpu_test                                     PASSED in 3.1s
+//tensorflow/python:warm_starting_util_test                              PASSED in 11.3s
+//tensorflow/python:writer_test                                          PASSED in 13.3s
+//tensorflow/python/autograph/converters:arg_defaults_test               PASSED in 2.6s
+//tensorflow/python/autograph/converters:asserts_test                    PASSED in 2.3s
+//tensorflow/python/autograph/converters:break_statements_test           PASSED in 2.7s
+//tensorflow/python/autograph/converters:call_trees_test                 PASSED in 3.2s
+//tensorflow/python/autograph/converters:conditional_expressions_test    PASSED in 2.7s
+//tensorflow/python/autograph/converters:continue_statements_test        PASSED in 3.4s
+//tensorflow/python/autograph/converters:control_flow_test               PASSED in 3.9s
+//tensorflow/python/autograph/converters:directives_test                 PASSED in 3.0s
+//tensorflow/python/autograph/converters:function_scopes_test            PASSED in 2.9s
+//tensorflow/python/autograph/converters:list_comprehensions_test        PASSED in 2.8s
+//tensorflow/python/autograph/converters:lists_test                      PASSED in 3.1s
+//tensorflow/python/autograph/converters:logical_expressions_test        PASSED in 2.8s
+//tensorflow/python/autograph/converters:return_statements_test          PASSED in 3.9s
+//tensorflow/python/autograph/converters:slices_test                     PASSED in 2.6s
+//tensorflow/python/autograph/core:converter_test                        PASSED in 3.3s
+//tensorflow/python/autograph/core:function_wrappers_test                PASSED in 2.7s
+//tensorflow/python/autograph/core:naming_test                           PASSED in 2.6s
+//tensorflow/python/autograph/impl:api_py3_test                          PASSED in 2.6s
+//tensorflow/python/autograph/impl:api_test                              PASSED in 9.9s
+//tensorflow/python/autograph/impl:conversion_test                       PASSED in 4.5s
+//tensorflow/python/autograph/lang:special_functions_test                PASSED in 2.8s
+//tensorflow/python/autograph/operators:control_flow_test                PASSED in 3.5s
+//tensorflow/python/autograph/operators:data_structures_test             PASSED in 3.8s
+//tensorflow/python/autograph/operators:exceptions_test                  PASSED in 2.8s
+//tensorflow/python/autograph/operators:logical_test                     PASSED in 3.1s
+//tensorflow/python/autograph/operators:py_builtins_py3_test             PASSED in 2.7s
+//tensorflow/python/autograph/operators:py_builtins_test                 PASSED in 2.7s
+//tensorflow/python/autograph/operators:slices_test                      PASSED in 2.7s
+//tensorflow/python/autograph/operators:special_values_test              PASSED in 2.8s
+//tensorflow/python/autograph/operators:symbols_test                     PASSED in 2.7s
+//tensorflow/python/autograph/pyct:anno_test                             PASSED in 2.3s
+//tensorflow/python/autograph/pyct:errors_test                           PASSED in 2.5s
+//tensorflow/python/autograph/pyct:inspect_utils_test                    PASSED in 2.6s
+//tensorflow/python/autograph/pyct:origin_info_test                      PASSED in 3.0s
+//tensorflow/python/autograph/pyct:parser_test                           PASSED in 2.8s
+//tensorflow/python/autograph/pyct:pretty_printer_test                   PASSED in 3.4s
+//tensorflow/python/autograph/pyct:qual_names_test                       PASSED in 2.5s
+//tensorflow/python/autograph/pyct:templates_test                        PASSED in 2.6s
+//tensorflow/python/autograph/pyct:transformer_test                      PASSED in 2.9s
+//tensorflow/python/autograph/pyct/common_transformers:anf_test          PASSED in 3.3s
+//tensorflow/python/autograph/pyct/static_analysis:activity_py3_test     PASSED in 2.8s
+//tensorflow/python/autograph/pyct/static_analysis:activity_test         PASSED in 2.7s
+//tensorflow/python/autograph/pyct/static_analysis:liveness_py3_test     PASSED in 2.5s
+//tensorflow/python/autograph/pyct/static_analysis:liveness_test         PASSED in 2.8s
+//tensorflow/python/autograph/pyct/static_analysis:reaching_definitions_py3_test PASSED in 3.4s
+//tensorflow/python/autograph/pyct/static_analysis:reaching_definitions_test PASSED in 2.7s
+//tensorflow/python/autograph/utils:context_managers_test                PASSED in 2.5s
+//tensorflow/python/autograph/utils:misc_test                            PASSED in 5.1s
+//tensorflow/python/autograph/utils:py_func_test                         PASSED in 3.2s
+//tensorflow/python/autograph/utils:tensor_list_test                     PASSED in 2.6s
+//tensorflow/python/autograph/utils:tensors_test                         PASSED in 2.7s
+//tensorflow/python/autograph/utils:type_check_test                      PASSED in 2.9s
+//tensorflow/python/compat:compat_test                                   PASSED in 4.3s
+//tensorflow/python/compat:disable_v2_behavior_test                      PASSED in 3.5s
+//tensorflow/python/compiler/tensorrt:quantization_mnist_test            PASSED in 5.8s
+//tensorflow/python/compiler/tensorrt:trt_convert_test                   PASSED in 4.8s
+//tensorflow/python/compiler/xla:jit_test                                PASSED in 8.2s
+//tensorflow/python/compiler/xla:xla_test                                PASSED in 7.7s
+//tensorflow/python/data/benchmarks:batch_benchmark                      PASSED in 2.5s
+//tensorflow/python/data/benchmarks:filter_benchmark                     PASSED in 2.9s
+//tensorflow/python/data/benchmarks:from_tensor_slices_benchmark         PASSED in 2.9s
+//tensorflow/python/data/benchmarks:list_files_benchmark                 PASSED in 2.5s
+//tensorflow/python/data/benchmarks:map_benchmark                        PASSED in 2.8s
+//tensorflow/python/data/benchmarks:meta_benchmark                       PASSED in 2.4s
+//tensorflow/python/data/benchmarks:range_benchmark                      PASSED in 2.4s
+//tensorflow/python/data/experimental/benchmarks:autotune_benchmark      PASSED in 2.6s
+//tensorflow/python/data/experimental/benchmarks:choose_fastest_benchmark PASSED in 2.5s
+//tensorflow/python/data/experimental/benchmarks:choose_fastest_branch_benchmark PASSED in 2.4s
+//tensorflow/python/data/experimental/benchmarks:csv_dataset_benchmark   PASSED in 2.4s
+//tensorflow/python/data/experimental/benchmarks:map_and_batch_benchmark PASSED in 2.7s
+//tensorflow/python/data/experimental/benchmarks:map_defun_benchmark     PASSED in 2.8s
+//tensorflow/python/data/experimental/benchmarks:map_vectorization_benchmark PASSED in 3.0s
+//tensorflow/python/data/experimental/benchmarks:matching_files_benchmark PASSED in 2.7s
+//tensorflow/python/data/experimental/benchmarks:optimize_benchmark      PASSED in 2.6s
+//tensorflow/python/data/experimental/benchmarks:parallel_interleave_benchmark PASSED in 2.9s
+//tensorflow/python/data/experimental/benchmarks:rejection_resample_benchmark PASSED in 2.7s
+//tensorflow/python/data/experimental/benchmarks:snapshot_dataset_benchmark PASSED in 2.9s
+//tensorflow/python/data/experimental/benchmarks:unbatch_benchmark       PASSED in 2.7s
+//tensorflow/python/data/experimental/kernel_tests:auto_shard_dataset_test PASSED in 6.5s
+//tensorflow/python/data/experimental/kernel_tests:bucket_by_sequence_length_test PASSED in 4.6s
+//tensorflow/python/data/experimental/kernel_tests:cardinality_test      PASSED in 3.8s
+//tensorflow/python/data/experimental/kernel_tests:copy_to_device_test   PASSED in 4.8s
+//tensorflow/python/data/experimental/kernel_tests:counter_test          PASSED in 2.5s
+//tensorflow/python/data/experimental/kernel_tests:csv_dataset_test      PASSED in 14.8s
+//tensorflow/python/data/experimental/kernel_tests:dense_to_sparse_batch_test PASSED in 2.8s
+//tensorflow/python/data/experimental/kernel_tests:directed_interleave_dataset_test PASSED in 14.7s
+//tensorflow/python/data/experimental/kernel_tests:get_single_element_test PASSED in 4.4s
+//tensorflow/python/data/experimental/kernel_tests:group_by_reducer_test PASSED in 9.3s
+//tensorflow/python/data/experimental/kernel_tests:group_by_window_test  PASSED in 6.9s
+//tensorflow/python/data/experimental/kernel_tests:ignore_errors_test    PASSED in 3.0s
+//tensorflow/python/data/experimental/kernel_tests:make_batched_features_dataset_test PASSED in 18.1s
+//tensorflow/python/data/experimental/kernel_tests:make_csv_dataset_test PASSED in 6.4s
+//tensorflow/python/data/experimental/kernel_tests:make_tf_record_dataset_test PASSED in 14.3s
+//tensorflow/python/data/experimental/kernel_tests:map_and_batch_test    PASSED in 13.7s
+//tensorflow/python/data/experimental/kernel_tests:map_defun_op_test     PASSED in 4.3s
+//tensorflow/python/data/experimental/kernel_tests:matching_files_test   PASSED in 3.0s
+//tensorflow/python/data/experimental/kernel_tests:override_threadpool_test PASSED in 5.5s
+//tensorflow/python/data/experimental/kernel_tests:parallel_interleave_test PASSED in 4.4s
+//tensorflow/python/data/experimental/kernel_tests:parse_example_dataset_test PASSED in 6.8s
+//tensorflow/python/data/experimental/kernel_tests:prefetch_to_device_test PASSED in 3.6s
+//tensorflow/python/data/experimental/kernel_tests:rebatch_dataset_test  PASSED in 7.6s
+//tensorflow/python/data/experimental/kernel_tests:replicate_cluster_test PASSED in 5.8s
+//tensorflow/python/data/experimental/kernel_tests:replicate_test        PASSED in 6.1s
+//tensorflow/python/data/experimental/kernel_tests:scan_test             PASSED in 6.7s
+//tensorflow/python/data/experimental/kernel_tests:shuffle_and_repeat_test PASSED in 3.8s
+//tensorflow/python/data/experimental/kernel_tests:sleep_test            PASSED in 2.6s
+//tensorflow/python/data/experimental/kernel_tests:sql_dataset_test      PASSED in 5.8s
+//tensorflow/python/data/experimental/kernel_tests:stats_dataset_ops_test PASSED in 16.5s
+//tensorflow/python/data/experimental/kernel_tests:take_while_test       PASSED in 4.0s
+//tensorflow/python/data/experimental/kernel_tests:tf_record_writer_test PASSED in 4.2s
+//tensorflow/python/data/experimental/kernel_tests:unique_test           PASSED in 3.6s
+//tensorflow/python/data/experimental/kernel_tests:variant_test          PASSED in 2.5s
+//tensorflow/python/data/experimental/kernel_tests:wrap_unwrap_test      PASSED in 3.1s
+//tensorflow/python/data/experimental/kernel_tests/optimization:assert_next_dataset_test PASSED in 3.2s
+//tensorflow/python/data/experimental/kernel_tests/optimization:choose_fastest_branch_dataset_test PASSED in 4.5s
+//tensorflow/python/data/experimental/kernel_tests/optimization:choose_fastest_dataset_test PASSED in 2.8s
+//tensorflow/python/data/experimental/kernel_tests/optimization:filter_fusion_test PASSED in 8.7s
+//tensorflow/python/data/experimental/kernel_tests/optimization:hoist_random_uniform_test PASSED in 3.8s
+//tensorflow/python/data/experimental/kernel_tests/optimization:inject_prefetch_test PASSED in 3.4s
+//tensorflow/python/data/experimental/kernel_tests/optimization:latency_all_edges_test PASSED in 3.0s
+//tensorflow/python/data/experimental/kernel_tests/optimization:map_and_batch_fusion_test PASSED in 2.8s
+//tensorflow/python/data/experimental/kernel_tests/optimization:map_and_filter_fusion_test PASSED in 6.5s
+//tensorflow/python/data/experimental/kernel_tests/optimization:map_fusion_test PASSED in 5.7s
+//tensorflow/python/data/experimental/kernel_tests/optimization:map_parallelization_test PASSED in 3.0s
+//tensorflow/python/data/experimental/kernel_tests/optimization:model_dataset_test PASSED in 2.6s
+//tensorflow/python/data/experimental/kernel_tests/optimization:noop_elimination_test PASSED in 2.6s
+//tensorflow/python/data/experimental/kernel_tests/optimization:optimize_dataset_test PASSED in 6.4s
+//tensorflow/python/data/experimental/kernel_tests/optimization:shuffle_and_repeat_fusion_test PASSED in 3.6s
+//tensorflow/python/data/experimental/kernel_tests/serialization:auto_shard_dataset_serialization_test PASSED in 5.5s
+//tensorflow/python/data/experimental/kernel_tests/serialization:batch_dataset_serialization_test PASSED in 8.7s
+//tensorflow/python/data/experimental/kernel_tests/serialization:cache_dataset_serialization_test PASSED in 5.4s
+//tensorflow/python/data/experimental/kernel_tests/serialization:checkpoint_input_pipeline_hook_test PASSED in 7.8s
+//tensorflow/python/data/experimental/kernel_tests/serialization:choose_fastest_branch_dataset_serialization_test PASSED in 20.3s
+//tensorflow/python/data/experimental/kernel_tests/serialization:choose_fastest_dataset_serialization_test PASSED in 6.3s
+//tensorflow/python/data/experimental/kernel_tests/serialization:concatenate_dataset_serialization_test PASSED in 3.6s
+//tensorflow/python/data/experimental/kernel_tests/serialization:csv_dataset_serialization_test PASSED in 5.8s
+//tensorflow/python/data/experimental/kernel_tests/serialization:dataset_constructor_serialization_test PASSED in 6.7s
+//tensorflow/python/data/experimental/kernel_tests/serialization:filter_dataset_serialization_test PASSED in 9.8s
+//tensorflow/python/data/experimental/kernel_tests/serialization:flat_map_dataset_serialization_test PASSED in 11.6s
+//tensorflow/python/data/experimental/kernel_tests/serialization:group_by_reducer_serialization_test PASSED in 4.5s
+//tensorflow/python/data/experimental/kernel_tests/serialization:group_by_window_serialization_test PASSED in 6.1s
+//tensorflow/python/data/experimental/kernel_tests/serialization:ignore_errors_serialization_test PASSED in 4.4s
+//tensorflow/python/data/experimental/kernel_tests/serialization:interleave_dataset_serialization_test PASSED in 19.0s
+//tensorflow/python/data/experimental/kernel_tests/serialization:map_and_batch_dataset_serialization_test PASSED in 11.2s
+//tensorflow/python/data/experimental/kernel_tests/serialization:map_dataset_serialization_test PASSED in 12.1s
+//tensorflow/python/data/experimental/kernel_tests/serialization:matching_files_dataset_serialization_test PASSED in 4.2s
+//tensorflow/python/data/experimental/kernel_tests/serialization:optimize_dataset_serialization_test PASSED in 8.1s
+//tensorflow/python/data/experimental/kernel_tests/serialization:padded_batch_dataset_serialization_test PASSED in 6.9s
+//tensorflow/python/data/experimental/kernel_tests/serialization:parallel_interleave_dataset_serialization_test PASSED in 14.4s
+//tensorflow/python/data/experimental/kernel_tests/serialization:parallel_map_dataset_serialization_test PASSED in 16.3s
+//tensorflow/python/data/experimental/kernel_tests/serialization:parse_example_dataset_serialization_test PASSED in 6.0s
+//tensorflow/python/data/experimental/kernel_tests/serialization:prefetch_dataset_serialization_test PASSED in 4.2s
+//tensorflow/python/data/experimental/kernel_tests/serialization:range_dataset_serialization_test PASSED in 3.6s
+//tensorflow/python/data/experimental/kernel_tests/serialization:rebatch_dataset_serialization_test PASSED in 4.7s
+//tensorflow/python/data/experimental/kernel_tests/serialization:sample_from_datasets_serialization_test PASSED in 5.5s
+//tensorflow/python/data/experimental/kernel_tests/serialization:scan_dataset_serialization_test PASSED in 8.5s
+//tensorflow/python/data/experimental/kernel_tests/serialization:sequence_dataset_serialization_test PASSED in 18.2s
+//tensorflow/python/data/experimental/kernel_tests/serialization:serialization_integration_test PASSED in 5.8s
+//tensorflow/python/data/experimental/kernel_tests/serialization:shard_dataset_serialization_test PASSED in 7.0s
+//tensorflow/python/data/experimental/kernel_tests/serialization:shuffle_and_repeat_dataset_serialization_test PASSED in 4.3s
+//tensorflow/python/data/experimental/kernel_tests/serialization:shuffle_dataset_serialization_test PASSED in 17.8s
+//tensorflow/python/data/experimental/kernel_tests/serialization:sql_dataset_serialization_test PASSED in 3.6s
+//tensorflow/python/data/experimental/kernel_tests/serialization:stats_dataset_serialization_test PASSED in 7.7s
+//tensorflow/python/data/experimental/kernel_tests/serialization:take_while_dataset_serialization_test PASSED in 6.6s
+//tensorflow/python/data/experimental/kernel_tests/serialization:unbatch_dataset_serialization_test PASSED in 4.2s
+//tensorflow/python/data/experimental/kernel_tests/serialization:unique_dataset_serialization_test PASSED in 4.7s
+//tensorflow/python/data/experimental/kernel_tests/serialization:zip_dataset_serialization_test PASSED in 5.0s
+//tensorflow/python/data/kernel_tests:batch_test                         PASSED in 5.4s
+//tensorflow/python/data/kernel_tests:cache_test                         PASSED in 4.5s
+//tensorflow/python/data/kernel_tests:checkpoint_test                    PASSED in 4.0s
+//tensorflow/python/data/kernel_tests:concatenate_test                   PASSED in 3.5s
+//tensorflow/python/data/kernel_tests:dataset_test                       PASSED in 5.5s
+//tensorflow/python/data/kernel_tests:enumerate_test                     PASSED in 3.2s
+//tensorflow/python/data/kernel_tests:filter_test                        PASSED in 6.9s
+//tensorflow/python/data/kernel_tests:fixed_length_record_dataset_test   PASSED in 5.2s
+//tensorflow/python/data/kernel_tests:flat_map_test                      PASSED in 5.7s
+//tensorflow/python/data/kernel_tests:from_generator_test                PASSED in 16.8s
+//tensorflow/python/data/kernel_tests:from_sparse_tensor_slices_test     PASSED in 4.1s
+//tensorflow/python/data/kernel_tests:from_tensor_slices_test            PASSED in 4.7s
+//tensorflow/python/data/kernel_tests:from_tensors_test                  PASSED in 4.7s
+//tensorflow/python/data/kernel_tests:interleave_test                    PASSED in 7.7s
+//tensorflow/python/data/kernel_tests:iterator_cluster_test              PASSED in 5.4s
+//tensorflow/python/data/kernel_tests:iterator_test                      PASSED in 6.0s
+//tensorflow/python/data/kernel_tests:list_files_test                    PASSED in 4.4s
+//tensorflow/python/data/kernel_tests:map_test                           PASSED in 17.3s
+//tensorflow/python/data/kernel_tests:memory_cleanup_test                PASSED in 3.8s
+//tensorflow/python/data/kernel_tests:multi_device_iterator_test         PASSED in 12.9s
+//tensorflow/python/data/kernel_tests:optional_test                      PASSED in 4.3s
+//tensorflow/python/data/kernel_tests:options_test                       PASSED in 3.3s
+//tensorflow/python/data/kernel_tests:padded_batch_test                  PASSED in 4.6s
+//tensorflow/python/data/kernel_tests:prefetch_test                      PASSED in 5.0s
+//tensorflow/python/data/kernel_tests:range_test                         PASSED in 3.4s
+//tensorflow/python/data/kernel_tests:reduce_test                        PASSED in 7.9s
+//tensorflow/python/data/kernel_tests:repeat_test                        PASSED in 4.4s
+//tensorflow/python/data/kernel_tests:shard_test                         PASSED in 3.7s
+//tensorflow/python/data/kernel_tests:shuffle_test                       PASSED in 4.7s
+//tensorflow/python/data/kernel_tests:skip_test                          PASSED in 3.6s
+//tensorflow/python/data/kernel_tests:take_test                          PASSED in 3.4s
+//tensorflow/python/data/kernel_tests:text_line_dataset_test             PASSED in 5.0s
+//tensorflow/python/data/kernel_tests:tf_record_dataset_test             PASSED in 3.8s
+//tensorflow/python/data/kernel_tests:unbatch_test                       PASSED in 4.3s
+//tensorflow/python/data/kernel_tests:window_test                        PASSED in 10.0s
+//tensorflow/python/data/kernel_tests:zip_test                           PASSED in 4.0s
+//tensorflow/python/data/util:convert_test                               PASSED in 3.6s
+//tensorflow/python/data/util:nest_test                                  PASSED in 2.5s
+//tensorflow/python/data/util:options_test                               PASSED in 3.0s
+//tensorflow/python/data/util:random_seed_test                           PASSED in 2.9s
+//tensorflow/python/data/util:sparse_test                                PASSED in 3.0s
+//tensorflow/python/data/util:structure_test                             PASSED in 3.4s
+//tensorflow/python/data/util:traverse_test                              PASSED in 4.3s
+//tensorflow/python/debug:analyzer_cli_test                              PASSED in 6.5s
+//tensorflow/python/debug:cli_config_test                                PASSED in 2.7s
+//tensorflow/python/debug:cli_shared_test                                PASSED in 2.9s
+//tensorflow/python/debug:command_parser_test                            PASSED in 2.9s
+//tensorflow/python/debug:common_test                                    PASSED in 2.8s
+//tensorflow/python/debug:curses_ui_test                                 PASSED in 2.5s
+//tensorflow/python/debug:debug_data_test                                PASSED in 2.9s
+//tensorflow/python/debug:debug_gradients_test                           PASSED in 3.9s
+//tensorflow/python/debug:debug_graph_reconstruction_test                PASSED in 3.8s
+//tensorflow/python/debug:debug_graphs_test                              PASSED in 2.7s
+//tensorflow/python/debug:debug_grappler_test                            PASSED in 3.4s
+//tensorflow/python/debug:debug_utils_test                               PASSED in 2.4s
+//tensorflow/python/debug:disk_usage_test                                PASSED in 2.6s
+//tensorflow/python/debug:dumping_wrapper_test                           PASSED in 3.2s
+//tensorflow/python/debug:evaluator_test                                 PASSED in 2.9s
+//tensorflow/python/debug:examples_test                                  PASSED in 27.5s
+//tensorflow/python/debug:framework_test                                 PASSED in 2.7s
+//tensorflow/python/debug:grpc_large_data_test                           PASSED in 25.8s
+//tensorflow/python/debug:local_cli_wrapper_test                         PASSED in 7.9s
+//tensorflow/python/debug:profile_analyzer_cli_test                      PASSED in 3.4s
+//tensorflow/python/debug:profiling_test                                 PASSED in 3.2s
+//tensorflow/python/debug:readline_ui_test                               PASSED in 2.6s
+//tensorflow/python/debug:session_debug_file_test                        PASSED in 6.8s
+//tensorflow/python/debug:session_debug_grpc_test                        PASSED in 14.0s
+//tensorflow/python/debug:session_debug_multi_gpu_test                   PASSED in 2.9s
+//tensorflow/python/debug:source_remote_test                             PASSED in 5.5s
+//tensorflow/python/debug:source_utils_test                              PASSED in 4.2s
+//tensorflow/python/debug:tensor_format_test                             PASSED in 3.3s
+//tensorflow/python/distribute:all_reduce_test                           PASSED in 21.8s
+//tensorflow/python/distribute:checkpoint_utils_test                     PASSED in 4.0s
+//tensorflow/python/distribute:collective_all_reduce_strategy_test       PASSED in 6.5s
+//tensorflow/python/distribute:cross_device_ops_test                     PASSED in 15.6s
+//tensorflow/python/distribute:cross_device_utils_test                   PASSED in 3.5s
+//tensorflow/python/distribute:ctl_correctness_test                      PASSED in 43.1s
+//tensorflow/python/distribute:custom_training_loop_test                 PASSED in 7.6s
+//tensorflow/python/distribute:device_util_test                          PASSED in 3.9s
+//tensorflow/python/distribute:distribute_coordinator_test               PASSED in 13.8s
+//tensorflow/python/distribute:distribute_lib_test                       PASSED in 2.9s
+//tensorflow/python/distribute:input_lib_test                            PASSED in 18.9s
+//tensorflow/python/distribute:input_ops_test                            PASSED in 5.2s
+//tensorflow/python/distribute:keras_metrics_test                        PASSED in 4.3s
+//tensorflow/python/distribute:metrics_v1_test                           PASSED in 8.7s
+//tensorflow/python/distribute:minimize_loss_test                        PASSED in 20.9s
+//tensorflow/python/distribute:mirrored_function_strategy_test           PASSED in 4.0s
+//tensorflow/python/distribute:mirrored_variable_test                    PASSED in 9.3s
+//tensorflow/python/distribute:moving_averages_test                      PASSED in 4.0s
+//tensorflow/python/distribute:multi_worker_util_test                    PASSED in 2.2s
+//tensorflow/python/distribute:numpy_dataset_test                        PASSED in 3.1s
+//tensorflow/python/distribute:one_device_strategy_test                  PASSED in 5.9s
+//tensorflow/python/distribute:shared_variable_creator_test              PASSED in 2.2s
+//tensorflow/python/distribute:step_fn_test                              PASSED in 5.1s
+//tensorflow/python/distribute:strategy_combinations_test                PASSED in 3.3s
+//tensorflow/python/distribute:warm_starting_util_test                   PASSED in 3.7s
+//tensorflow/python/distribute:zero_batch_test                           PASSED in 6.6s
+//tensorflow/python/distribute/cluster_resolver:base_cluster_resolver_py_test PASSED in 3.5s
+//tensorflow/python/distribute/cluster_resolver:gce_cluster_resolver_py_test PASSED in 3.4s
+//tensorflow/python/distribute/cluster_resolver:kubernetes_cluster_resolver_py_test PASSED in 4.6s
+//tensorflow/python/distribute/cluster_resolver:slurm_cluster_resolver_py_test PASSED in 4.1s
+//tensorflow/python/distribute/cluster_resolver:tfconfig_cluster_resolver_py_test PASSED in 3.5s
+//tensorflow/python/distribute/cluster_resolver:tpu_cluster_resolver_py_test PASSED in 5.2s
+//tensorflow/python/eager:backprop_test                                  PASSED in 18.9s
+//tensorflow/python/eager:benchmarks_test                                PASSED in 3.1s
+//tensorflow/python/eager:cancellation_test                              PASSED in 3.1s
+//tensorflow/python/eager:context_test                                   PASSED in 3.6s
+//tensorflow/python/eager:core_test                                      PASSED in 4.9s
+//tensorflow/python/eager:def_function_test                              PASSED in 7.9s
+//tensorflow/python/eager:def_function_xla_jit_test                      PASSED in 4.2s
+//tensorflow/python/eager:def_function_xla_test_cpu                      PASSED in 5.2s
+//tensorflow/python/eager:device_placement_test                          PASSED in 4.8s
+//tensorflow/python/eager:execution_callbacks_test                       PASSED in 3.7s
+//tensorflow/python/eager:function_argument_naming_test                  PASSED in 5.3s
+//tensorflow/python/eager:function_defun_collection_test                 PASSED in 3.5s
+//tensorflow/python/eager:graph_only_ops_test                            PASSED in 3.2s
+//tensorflow/python/eager:lift_to_graph_test                             PASSED in 3.9s
+//tensorflow/python/eager:monitoring_test                                PASSED in 2.9s
+//tensorflow/python/eager:ops_test                                       PASSED in 4.4s
+//tensorflow/python/eager:profiler_client_test                           PASSED in 2.8s
+//tensorflow/python/eager:profiler_test                                  PASSED in 4.7s
+//tensorflow/python/eager:pywrap_tfe_test                                PASSED in 7.9s
+//tensorflow/python/eager:tape_test                                      PASSED in 3.6s
+//tensorflow/python/eager:tensor_test                                    PASSED in 4.0s
+//tensorflow/python/eager:wrap_function_test                             PASSED in 4.3s
+//tensorflow/python/eager/memory_tests:memory_test                       PASSED in 3.2s
+//tensorflow/python/eager/memory_tests:remote_memory_test                PASSED in 3.1s
+//tensorflow/python/feature_column:dense_features_test                   PASSED in 5.2s
+//tensorflow/python/feature_column:dense_features_v2_test                PASSED in 5.2s
+//tensorflow/python/feature_column:feature_column_test                   PASSED in 16.6s
+//tensorflow/python/feature_column:hash_table_column_test                PASSED in 12.5s
+//tensorflow/python/feature_column:sequence_feature_column_integration_test PASSED in 4.3s
+//tensorflow/python/feature_column:sequence_feature_column_test          PASSED in 7.7s
+//tensorflow/python/feature_column:serialization_test                    PASSED in 3.5s
+//tensorflow/python/keras:activations_test                               PASSED in 5.4s
+//tensorflow/python/keras:advanced_activations_test                      PASSED in 11.4s
+//tensorflow/python/keras:backend_config_test                            PASSED in 4.0s
+//tensorflow/python/keras:base_preprocessing_layer_test                  PASSED in 6.6s
+//tensorflow/python/keras:callbacks_v1_test                              PASSED in 9.3s
+//tensorflow/python/keras:constraints_test                               PASSED in 4.7s
+//tensorflow/python/keras:conv_utils_test                                PASSED in 3.3s
+//tensorflow/python/keras:convolutional_transpose_test                   PASSED in 3.5s
+//tensorflow/python/keras:data_adapter_test                              PASSED in 7.6s
+//tensorflow/python/keras:dense_attention_test                           PASSED in 3.9s
+//tensorflow/python/keras:embeddings_test                                PASSED in 9.0s
+//tensorflow/python/keras:feature_columns_integration_test               PASSED in 20.1s
+//tensorflow/python/keras:generic_utils_test                             PASSED in 3.1s
+//tensorflow/python/keras:image_test                                     PASSED in 8.4s
+//tensorflow/python/keras:initializers_test                              PASSED in 4.6s
+//tensorflow/python/keras:input_spec_test                                PASSED in 3.7s
+//tensorflow/python/keras:io_utils_test                                  PASSED in 5.1s
+//tensorflow/python/keras:keras_parameterized_test                       PASSED in 3.6s
+//tensorflow/python/keras:kernelized_test                                PASSED in 5.1s
+//tensorflow/python/keras:kernelized_utils_test                          PASSED in 3.2s
+//tensorflow/python/keras:losses_test                                    PASSED in 6.8s
+//tensorflow/python/keras:merge_test                                     PASSED in 4.3s
+//tensorflow/python/keras:metrics_functional_test                        PASSED in 3.5s
+//tensorflow/python/keras:metrics_utils_test                             PASSED in 3.6s
+//tensorflow/python/keras:multi_gpu_utils_test                           PASSED in 3.7s
+//tensorflow/python/keras:noise_test                                     PASSED in 5.3s
+//tensorflow/python/keras:np_utils_test                                  PASSED in 3.3s
+//tensorflow/python/keras:preprocessing_normalization_test               PASSED in 5.2s
+//tensorflow/python/keras:regularizers_test                              PASSED in 13.5s
+//tensorflow/python/keras:save_test                                      PASSED in 7.3s
+//tensorflow/python/keras:saving_utils_test                              PASSED in 10.5s
+//tensorflow/python/keras:scikit_learn_test                              PASSED in 4.9s
+//tensorflow/python/keras:separable_convolutional_test                   PASSED in 3.3s
+//tensorflow/python/keras:sequence_test                                  PASSED in 3.0s
+//tensorflow/python/keras:sequential_test                                PASSED in 19.9s
+//tensorflow/python/keras:serialization_test                             PASSED in 4.6s
+//tensorflow/python/keras:text_test                                      PASSED in 3.4s
+//tensorflow/python/keras:tf_utils_test                                  PASSED in 3.7s
+//tensorflow/python/keras:time_distributed_learning_phase_test           PASSED in 3.9s
+//tensorflow/python/keras:training_arrays_test                           PASSED in 11.2s
+//tensorflow/python/keras:training_eager_test                            PASSED in 24.4s
+//tensorflow/python/keras:training_gpu_test                              PASSED in 4.5s
+//tensorflow/python/keras:training_utils_test                            PASSED in 4.9s
+//tensorflow/python/keras:vis_utils_test                                 PASSED in 4.0s
+//tensorflow/python/keras/distribute:distributed_training_utils_test     PASSED in 5.5s
+//tensorflow/python/keras/distribute:multi_worker_optimizer_comparison_test PASSED in 9.7s
+//tensorflow/python/keras/mixed_precision/experimental:autocast_variable_test PASSED in 4.3s
+//tensorflow/python/keras/mixed_precision/experimental:loss_scale_optimizer_test PASSED in 9.3s
+//tensorflow/python/keras/mixed_precision/experimental:policy_test       PASSED in 3.5s
+//tensorflow/python/kernel_tests:accumulate_n_eager_test                 PASSED in 3.5s
+//tensorflow/python/kernel_tests:accumulate_n_test                       PASSED in 4.2s
+//tensorflow/python/kernel_tests:ackermann_test                          PASSED in 3.1s
+//tensorflow/python/kernel_tests:aggregate_ops_test                      PASSED in 6.2s
+//tensorflow/python/kernel_tests:argmax_op_test                          PASSED in 4.8s
+//tensorflow/python/kernel_tests:as_string_op_test                       PASSED in 3.6s
+//tensorflow/python/kernel_tests:attention_ops_test                      PASSED in 3.3s
+//tensorflow/python/kernel_tests:base64_ops_test                         PASSED in 6.1s
+//tensorflow/python/kernel_tests:batch_gather_op_test                    PASSED in 4.5s
+//tensorflow/python/kernel_tests:batch_scatter_ops_test                  PASSED in 5.7s
+//tensorflow/python/kernel_tests:batchtospace_op_test                    PASSED in 5.0s
+//tensorflow/python/kernel_tests:bcast_ops_test                          PASSED in 5.0s
+//tensorflow/python/kernel_tests:benchmark_test                          PASSED in 4.4s
+//tensorflow/python/kernel_tests:betainc_op_test                         PASSED in 4.5s
+//tensorflow/python/kernel_tests:bias_op_deterministic_test              PASSED in 16.6s
+//tensorflow/python/kernel_tests:bias_op_test                            PASSED in 19.0s
+//tensorflow/python/kernel_tests:bincount_op_test                        PASSED in 3.8s
+//tensorflow/python/kernel_tests:bitcast_op_test                         PASSED in 4.5s
+//tensorflow/python/kernel_tests:broadcast_to_ops_test                   PASSED in 6.6s
+//tensorflow/python/kernel_tests:bucketize_op_test                       PASSED in 3.3s
+//tensorflow/python/kernel_tests:candidate_sampler_ops_test              PASSED in 3.3s
+//tensorflow/python/kernel_tests:cast_op_test                            PASSED in 5.7s
+//tensorflow/python/kernel_tests:check_ops_test                          PASSED in 6.2s
+//tensorflow/python/kernel_tests:checkpoint_ops_test                     PASSED in 4.0s
+//tensorflow/python/kernel_tests:clip_ops_test                           PASSED in 3.7s
+//tensorflow/python/kernel_tests:compare_and_bitpack_op_test             PASSED in 5.0s
+//tensorflow/python/kernel_tests:concat_op_test                          PASSED in 13.3s
+//tensorflow/python/kernel_tests:cond_v2_test                            PASSED in 15.7s
+//tensorflow/python/kernel_tests:conditional_accumulator_test            PASSED in 16.8s
+//tensorflow/python/kernel_tests:confusion_matrix_test                   PASSED in 4.4s
+//tensorflow/python/kernel_tests:constant_op_eager_test                  PASSED in 4.0s
+//tensorflow/python/kernel_tests:constant_op_test                        PASSED in 3.8s
+//tensorflow/python/kernel_tests:control_flow_util_test                  PASSED in 3.5s
+//tensorflow/python/kernel_tests:control_flow_util_v2_test               PASSED in 3.9s
+//tensorflow/python/kernel_tests:conv1d_test                             PASSED in 3.2s
+//tensorflow/python/kernel_tests:conv1d_transpose_test                   PASSED in 3.8s
+//tensorflow/python/kernel_tests:conv2d_transpose_test                   PASSED in 3.5s
+//tensorflow/python/kernel_tests:conv3d_backprop_filter_v2_grad_test     PASSED in 4.9s
+//tensorflow/python/kernel_tests:conv3d_transpose_test                   PASSED in 6.6s
+//tensorflow/python/kernel_tests:critical_section_test                   PASSED in 17.6s
+//tensorflow/python/kernel_tests:cross_grad_test                         PASSED in 3.7s
+//tensorflow/python/kernel_tests:ctc_decoder_ops_test                    PASSED in 3.4s
+//tensorflow/python/kernel_tests:ctc_loss_op_test                        PASSED in 8.4s
+//tensorflow/python/kernel_tests:cudnn_deterministic_ops_test            PASSED in 3.0s
+//tensorflow/python/kernel_tests:cudnn_deterministic_test                PASSED in 3.7s
+//tensorflow/python/kernel_tests:cumulative_logsumexp_test               PASSED in 6.1s
+//tensorflow/python/kernel_tests:decode_bmp_op_test                      PASSED in 4.0s
+//tensorflow/python/kernel_tests:decode_compressed_op_test               PASSED in 3.4s
+//tensorflow/python/kernel_tests:decode_csv_op_test                      PASSED in 4.6s
+//tensorflow/python/kernel_tests:decode_image_op_test                    PASSED in 4.5s
+//tensorflow/python/kernel_tests:decode_jpeg_op_test                     PASSED in 3.7s
+//tensorflow/python/kernel_tests:decode_png_op_test                      PASSED in 3.2s
+//tensorflow/python/kernel_tests:decode_raw_op_test                      PASSED in 4.6s
+//tensorflow/python/kernel_tests:denormal_test                           PASSED in 3.2s
+//tensorflow/python/kernel_tests:dense_update_ops_no_tsan_test           PASSED in 5.2s
+//tensorflow/python/kernel_tests:dense_update_ops_test                   PASSED in 4.2s
+//tensorflow/python/kernel_tests:depthtospace_op_test                    PASSED in 5.6s
+//tensorflow/python/kernel_tests:depthwise_conv_op_test                  PASSED in 33.1s
+//tensorflow/python/kernel_tests:determinant_op_test                     PASSED in 3.3s
+//tensorflow/python/kernel_tests:draw_bounding_box_op_test               PASSED in 4.8s
+//tensorflow/python/kernel_tests:duplicate_op_test                       PASSED in 3.0s
+//tensorflow/python/kernel_tests:dynamic_partition_op_test               PASSED in 17.2s
+//tensorflow/python/kernel_tests:dynamic_stitch_op_test                  PASSED in 3.6s
+//tensorflow/python/kernel_tests:edit_distance_op_test                   PASSED in 3.5s
+//tensorflow/python/kernel_tests:einsum_op_test                          PASSED in 3.8s
+//tensorflow/python/kernel_tests:extract_image_patches_op_test           PASSED in 3.6s
+//tensorflow/python/kernel_tests:extract_volume_patches_grad_test        PASSED in 115.7s
+//tensorflow/python/kernel_tests:extract_volume_patches_op_test          PASSED in 3.1s
+//tensorflow/python/kernel_tests:fifo_queue_test                         PASSED in 8.9s
+//tensorflow/python/kernel_tests:fingerprint_op_test                     PASSED in 3.7s
+//tensorflow/python/kernel_tests:garbage_collection_test                 PASSED in 4.4s
+//tensorflow/python/kernel_tests:gather_nd_op_test                       PASSED in 3.1s
+//tensorflow/python/kernel_tests:gather_op_test                          PASSED in 30.8s
+//tensorflow/python/kernel_tests:gelu_op_test                            PASSED in 4.7s
+//tensorflow/python/kernel_tests:gradient_correctness_test               PASSED in 3.5s
+//tensorflow/python/kernel_tests:huge_slice_op_test                      PASSED in 3.4s
+//tensorflow/python/kernel_tests:identity_n_op_py_test                   PASSED in 4.8s
+//tensorflow/python/kernel_tests:identity_op_py_test                     PASSED in 4.1s
+//tensorflow/python/kernel_tests:in_topk_op_test                         PASSED in 3.9s
+//tensorflow/python/kernel_tests:invalid_op_test                         PASSED in 4.2s
+//tensorflow/python/kernel_tests:io_ops_test                             PASSED in 4.3s
+//tensorflow/python/kernel_tests:large_concat_op_test                    PASSED in 4.1s
+//tensorflow/python/kernel_tests:linalg_ops_test                         PASSED in 13.2s
+//tensorflow/python/kernel_tests:list_ops_test                           PASSED in 8.9s
+//tensorflow/python/kernel_tests:listdiff_op_test                        PASSED in 5.1s
+//tensorflow/python/kernel_tests:logging_ops_logging_level_test          PASSED in 3.5s
+//tensorflow/python/kernel_tests:logging_ops_test                        PASSED in 4.3s
+//tensorflow/python/kernel_tests:lookup_ops_test                         PASSED in 9.2s
+//tensorflow/python/kernel_tests:losses_test                             PASSED in 11.7s
+//tensorflow/python/kernel_tests:lrn_op_test                             PASSED in 4.0s
+//tensorflow/python/kernel_tests:lu_op_test                              PASSED in 5.2s
+//tensorflow/python/kernel_tests:manip_ops_test                          PASSED in 3.4s
+//tensorflow/python/kernel_tests:map_stage_op_test                       PASSED in 5.5s
+//tensorflow/python/kernel_tests:matrix_inverse_op_test                  PASSED in 8.2s
+//tensorflow/python/kernel_tests:matrix_logarithm_op_test                PASSED in 21.4s
+//tensorflow/python/kernel_tests:matrix_solve_ls_op_test                 PASSED in 15.3s
+//tensorflow/python/kernel_tests:matrix_solve_op_test                    PASSED in 10.0s
+//tensorflow/python/kernel_tests:matrix_square_root_op_test              PASSED in 4.2s
+//tensorflow/python/kernel_tests:matrix_triangular_solve_op_test         PASSED in 4.0s
+//tensorflow/python/kernel_tests:morphological_ops_test                  PASSED in 6.0s
+//tensorflow/python/kernel_tests:neon_depthwise_conv_op_test             PASSED in 4.4s
+//tensorflow/python/kernel_tests:nth_element_op_test                     PASSED in 4.9s
+//tensorflow/python/kernel_tests:numerics_test                           PASSED in 3.8s
+//tensorflow/python/kernel_tests:one_hot_op_test                         PASSED in 4.6s
+//tensorflow/python/kernel_tests:pad_op_test                             PASSED in 5.5s
+//tensorflow/python/kernel_tests:padding_fifo_queue_test                 PASSED in 8.7s
+//tensorflow/python/kernel_tests:parameterized_truncated_normal_op_test  PASSED in 22.1s
+//tensorflow/python/kernel_tests:parse_single_example_op_test            PASSED in 5.9s
+//tensorflow/python/kernel_tests:parsing_ops_test                        PASSED in 4.3s
+//tensorflow/python/kernel_tests:partitioned_variables_test              PASSED in 10.2s
+//tensorflow/python/kernel_tests:pool_test                               PASSED in 20.7s
+//tensorflow/python/kernel_tests:pooling_ops_3d_test                     PASSED in 10.7s
+//tensorflow/python/kernel_tests:priority_queue_test                     PASSED in 6.8s
+//tensorflow/python/kernel_tests:py_func_test                            PASSED in 7.8s
+//tensorflow/python/kernel_tests:reader_ops_test                         PASSED in 4.9s
+//tensorflow/python/kernel_tests:record_input_test                       PASSED in 7.7s
+//tensorflow/python/kernel_tests:reduce_benchmark_test                   PASSED in 4.1s
+//tensorflow/python/kernel_tests:reduce_join_op_test                     PASSED in 4.0s
+//tensorflow/python/kernel_tests:regex_full_match_op_test                PASSED in 4.1s
+//tensorflow/python/kernel_tests:regex_replace_op_test                   PASSED in 3.5s
+//tensorflow/python/kernel_tests:relu_op_test                            PASSED in 3.9s
+//tensorflow/python/kernel_tests:reshape_op_test                         PASSED in 3.3s
+//tensorflow/python/kernel_tests:resource_variable_ops_test              PASSED in 22.9s
+//tensorflow/python/kernel_tests:reverse_sequence_op_test                PASSED in 3.5s
+//tensorflow/python/kernel_tests:save_restore_ops_test                   PASSED in 3.9s
+//tensorflow/python/kernel_tests:scalar_test                             PASSED in 4.3s
+//tensorflow/python/kernel_tests:scan_ops_test                           PASSED in 26.5s
+//tensorflow/python/kernel_tests:scatter_nd_ops_test                     PASSED in 17.5s
+//tensorflow/python/kernel_tests:segment_reduction_ops_test              PASSED in 17.2s
+//tensorflow/python/kernel_tests:session_ops_test                        PASSED in 3.5s
+//tensorflow/python/kernel_tests:sets_test                               PASSED in 13.5s
+//tensorflow/python/kernel_tests:shape_ops_test                          PASSED in 8.8s
+//tensorflow/python/kernel_tests:slice_op_test                           PASSED in 5.4s
+//tensorflow/python/kernel_tests:softmax_op_test                         PASSED in 4.2s
+//tensorflow/python/kernel_tests:softplus_op_test                        PASSED in 3.5s
+//tensorflow/python/kernel_tests:softsign_op_test                        PASSED in 4.7s
+//tensorflow/python/kernel_tests:spacetobatch_op_test                    PASSED in 5.4s
+//tensorflow/python/kernel_tests:spacetodepth_op_test                    PASSED in 4.2s
+//tensorflow/python/kernel_tests:sparse_add_op_test                      PASSED in 4.5s
+//tensorflow/python/kernel_tests:sparse_concat_op_test                   PASSED in 5.1s
+//tensorflow/python/kernel_tests:sparse_cross_op_test                    PASSED in 4.6s
+//tensorflow/python/kernel_tests:sparse_decode_ali_ops_test              PASSED in 3.8s
+//tensorflow/python/kernel_tests:sparse_matmul_op_test                   PASSED in 15.6s
+//tensorflow/python/kernel_tests:sparse_reorder_op_test                  PASSED in 3.6s
+//tensorflow/python/kernel_tests:sparse_reshape_op_test                  PASSED in 4.5s
+//tensorflow/python/kernel_tests:sparse_serialization_ops_test           PASSED in 4.0s
+//tensorflow/python/kernel_tests:sparse_slice_op_test                    PASSED in 4.8s
+//tensorflow/python/kernel_tests:sparse_split_op_test                    PASSED in 3.4s
+//tensorflow/python/kernel_tests:sparse_tensor_dense_matmul_grad_test    PASSED in 4.8s
+//tensorflow/python/kernel_tests:sparse_tensor_dense_matmul_op_deterministic_test PASSED in 3.1s
+//tensorflow/python/kernel_tests:sparse_tensor_dense_matmul_op_test      PASSED in 11.4s
+//tensorflow/python/kernel_tests:sparse_tensors_map_ops_test             PASSED in 3.3s
+//tensorflow/python/kernel_tests:sparse_to_dense_op_py_test              PASSED in 3.6s
+//tensorflow/python/kernel_tests:sparse_xent_op_test                     PASSED in 3.3s
+//tensorflow/python/kernel_tests:sparsemask_op_test                      PASSED in 3.6s
+//tensorflow/python/kernel_tests:split_op_test                           PASSED in 8.5s
+//tensorflow/python/kernel_tests:stack_op_test                           PASSED in 4.9s
+//tensorflow/python/kernel_tests:stack_ops_test                          PASSED in 3.6s
+//tensorflow/python/kernel_tests:stage_op_test                           PASSED in 4.5s
+//tensorflow/python/kernel_tests:string_bytes_split_op_test              PASSED in 3.5s
+//tensorflow/python/kernel_tests:string_format_op_test                   PASSED in 3.5s
+//tensorflow/python/kernel_tests:string_join_op_test                     PASSED in 3.1s
+//tensorflow/python/kernel_tests:string_length_op_test                   PASSED in 4.6s
+//tensorflow/python/kernel_tests:string_lower_op_test                    PASSED in 3.3s
+//tensorflow/python/kernel_tests:string_split_and_pad_ali_op_test        PASSED in 3.4s
+//tensorflow/python/kernel_tests:string_split_op_test                    PASSED in 7.3s
+//tensorflow/python/kernel_tests:string_strip_op_test                    PASSED in 3.3s
+//tensorflow/python/kernel_tests:string_to_hash_bucket_op_test           PASSED in 3.6s
+//tensorflow/python/kernel_tests:string_to_number_op_test                PASSED in 3.4s
+//tensorflow/python/kernel_tests:string_upper_op_test                    PASSED in 3.3s
+//tensorflow/python/kernel_tests:substr_op_test                          PASSED in 4.3s
+//tensorflow/python/kernel_tests:summary_ops_test                        PASSED in 5.5s
+//tensorflow/python/kernel_tests:summary_v1_audio_op_test                PASSED in 4.6s
+//tensorflow/python/kernel_tests:summary_v1_image_op_test                PASSED in 3.3s
+//tensorflow/python/kernel_tests:summary_v1_ops_test                     PASSED in 3.6s
+//tensorflow/python/kernel_tests:summary_v1_tensor_op_test               PASSED in 4.0s
+//tensorflow/python/kernel_tests:template_mirrored_strategy_test         PASSED in 3.1s
+//tensorflow/python/kernel_tests:template_test                           PASSED in 3.9s
+//tensorflow/python/kernel_tests:topk_op_test                            PASSED in 6.3s
+//tensorflow/python/kernel_tests:trace_op_test                           PASSED in 3.8s
+//tensorflow/python/kernel_tests:trans_csv_ali_ops_test                  PASSED in 3.1s
+//tensorflow/python/kernel_tests:unicode_decode_op_test                  PASSED in 8.2s
+//tensorflow/python/kernel_tests:unicode_encode_op_test                  PASSED in 4.3s
+//tensorflow/python/kernel_tests:unicode_script_op_test                  PASSED in 3.6s
+//tensorflow/python/kernel_tests:unicode_transcode_op_test               PASSED in 3.5s
+//tensorflow/python/kernel_tests:unsorted_segment_join_op_test           PASSED in 3.7s
+//tensorflow/python/kernel_tests:unstack_op_test                         PASSED in 5.8s
+//tensorflow/python/kernel_tests:variable_ops_test                       PASSED in 4.7s
+//tensorflow/python/kernel_tests:variable_scope_test                     PASSED in 11.2s
+//tensorflow/python/kernel_tests:variables_test                          PASSED in 4.3s
+//tensorflow/python/kernel_tests:where_op_test                           PASSED in 82.5s
+//tensorflow/python/kernel_tests:while_v2_test                           PASSED in 9.6s
+//tensorflow/python/kernel_tests:xent_op_test                            PASSED in 5.2s
+//tensorflow/python/kernel_tests:zero_division_test                      PASSED in 4.2s
+//tensorflow/python/kernel_tests/boosted_trees:prediction_ops_test       PASSED in 3.6s
+//tensorflow/python/kernel_tests/boosted_trees:quantile_ops_test         PASSED in 3.7s
+//tensorflow/python/kernel_tests/boosted_trees:resource_ops_test         PASSED in 3.4s
+//tensorflow/python/kernel_tests/boosted_trees:stats_ops_test            PASSED in 6.9s
+//tensorflow/python/kernel_tests/boosted_trees:training_ops_test         PASSED in 5.0s
+//tensorflow/python/kernel_tests/distributions:bernoulli_test            PASSED in 4.5s
+//tensorflow/python/kernel_tests/distributions:beta_test                 PASSED in 4.9s
+//tensorflow/python/kernel_tests/distributions:bijector_test             PASSED in 4.4s
+//tensorflow/python/kernel_tests/distributions:categorical_test          PASSED in 4.9s
+//tensorflow/python/kernel_tests/distributions:dirichlet_multinomial_test PASSED in 7.0s
+//tensorflow/python/kernel_tests/distributions:dirichlet_test            PASSED in 4.5s
+//tensorflow/python/kernel_tests/distributions:exponential_test          PASSED in 4.7s
+//tensorflow/python/kernel_tests/distributions:gamma_test                PASSED in 21.3s
+//tensorflow/python/kernel_tests/distributions:identity_bijector_test    PASSED in 5.4s
+//tensorflow/python/kernel_tests/distributions:kullback_leibler_test     PASSED in 3.2s
+//tensorflow/python/kernel_tests/distributions:laplace_test              PASSED in 14.3s
+//tensorflow/python/kernel_tests/distributions:normal_test               PASSED in 7.9s
+//tensorflow/python/kernel_tests/distributions:special_math_test         PASSED in 7.4s
+//tensorflow/python/kernel_tests/distributions:student_t_test            PASSED in 9.3s
+//tensorflow/python/kernel_tests/distributions:uniform_test              PASSED in 4.0s
+//tensorflow/python/kernel_tests/linalg:linear_operator_addition_test    PASSED in 4.6s
+//tensorflow/python/kernel_tests/linalg:linear_operator_algebra_test     PASSED in 3.1s
+//tensorflow/python/kernel_tests/linalg:linear_operator_lower_triangular_test PASSED in 34.8s
+//tensorflow/python/kernel_tests/linalg:linear_operator_test             PASSED in 3.9s
+//tensorflow/python/kernel_tests/proto:decode_proto_op_test              PASSED in 3.6s
+//tensorflow/python/kernel_tests/proto:descriptor_source_test            PASSED in 3.3s
+//tensorflow/python/kernel_tests/proto:encode_proto_op_test              PASSED in 3.1s
+//tensorflow/python/kernel_tests/random:multinomial_op_test              PASSED in 3.9s
+//tensorflow/python/kernel_tests/random:random_binomial_test             PASSED in 3.2s
+//tensorflow/python/kernel_tests/random:random_crop_test                 PASSED in 4.1s
+//tensorflow/python/kernel_tests/random:random_grad_test                 PASSED in 4.6s
+//tensorflow/python/kernel_tests/random:random_ops_test                  PASSED in 6.4s
+//tensorflow/python/kernel_tests/random:random_poisson_test              PASSED in 4.5s
+//tensorflow/python/kernel_tests/random:random_shuffle_queue_test        PASSED in 7.9s
+//tensorflow/python/kernel_tests/random:stateless_random_ops_test        PASSED in 33.3s
+//tensorflow/python/module:module_test                                   PASSED in 4.2s
+//tensorflow/python/ops/losses:util_test                                 PASSED in 2.5s
+//tensorflow/python/ops/parallel_for:array_test                          PASSED in 7.4s
+//tensorflow/python/ops/parallel_for:control_flow_ops_test               PASSED in 19.9s
+//tensorflow/python/ops/parallel_for:gradients_test                      PASSED in 16.2s
+//tensorflow/python/ops/parallel_for:xla_control_flow_ops_test           PASSED in 4.7s
+//tensorflow/python/ops/ragged:convert_to_tensor_or_ragged_tensor_op_test PASSED in 3.2s
+//tensorflow/python/ops/ragged:ragged_batch_gather_op_test               PASSED in 12.1s
+//tensorflow/python/ops/ragged:ragged_boolean_mask_op_test               PASSED in 5.0s
+//tensorflow/python/ops/ragged:ragged_concat_op_test                     PASSED in 5.0s
+//tensorflow/python/ops/ragged:ragged_const_op_test                      PASSED in 3.8s
+//tensorflow/python/ops/ragged:ragged_constant_value_op_test             PASSED in 3.4s
+//tensorflow/python/ops/ragged:ragged_dispatch_test                      PASSED in 22.2s
+//tensorflow/python/ops/ragged:ragged_dynamic_partition_op_test          PASSED in 4.7s
+//tensorflow/python/ops/ragged:ragged_eager_test                         PASSED in 2.4s
+//tensorflow/python/ops/ragged:ragged_expand_dims_op_test                PASSED in 3.5s
+//tensorflow/python/ops/ragged:ragged_from_sparse_op_test                PASSED in 2.8s
+//tensorflow/python/ops/ragged:ragged_from_tensor_op_test                PASSED in 6.3s
+//tensorflow/python/ops/ragged:ragged_gather_nd_op_test                  PASSED in 3.2s
+//tensorflow/python/ops/ragged:ragged_gather_op_test                     PASSED in 2.9s
+//tensorflow/python/ops/ragged:ragged_map_flat_values_op_test            PASSED in 3.5s
+//tensorflow/python/ops/ragged:ragged_map_fn_op_test                     PASSED in 7.5s
+//tensorflow/python/ops/ragged:ragged_operators_test                     PASSED in 11.3s
+//tensorflow/python/ops/ragged:ragged_placeholder_op_test                PASSED in 3.5s
+//tensorflow/python/ops/ragged:ragged_range_op_test                      PASSED in 2.2s
+//tensorflow/python/ops/ragged:ragged_rank_op_test                       PASSED in 2.7s
+//tensorflow/python/ops/ragged:ragged_reduce_op_test                     PASSED in 4.7s
+//tensorflow/python/ops/ragged:ragged_row_lengths_op_test                PASSED in 3.3s
+//tensorflow/python/ops/ragged:ragged_row_splits_to_segment_ids_op_test  PASSED in 2.7s
+//tensorflow/python/ops/ragged:ragged_segment_ids_to_row_splits_op_test  PASSED in 3.5s
+//tensorflow/python/ops/ragged:ragged_segment_op_test                    PASSED in 4.6s
+//tensorflow/python/ops/ragged:ragged_size_op_test                       PASSED in 3.7s
+//tensorflow/python/ops/ragged:ragged_squeeze_op_test                    PASSED in 5.7s
+//tensorflow/python/ops/ragged:ragged_stack_op_test                      PASSED in 5.1s
+//tensorflow/python/ops/ragged:ragged_string_ops_test                    PASSED in 2.8s
+//tensorflow/python/ops/ragged:ragged_tensor_bounding_shape_op_test      PASSED in 3.5s
+//tensorflow/python/ops/ragged:ragged_tensor_shape_test                  PASSED in 18.2s
+//tensorflow/python/ops/ragged:ragged_tile_op_test                       PASSED in 11.2s
+//tensorflow/python/ops/ragged:ragged_to_sparse_op_test                  PASSED in 2.7s
+//tensorflow/python/ops/ragged:ragged_to_tensor_op_test                  PASSED in 4.6s
+//tensorflow/python/ops/ragged:ragged_util_test                          PASSED in 5.7s
+//tensorflow/python/ops/ragged:ragged_where_op_test                      PASSED in 4.6s
+//tensorflow/python/ops/ragged:string_ngrams_op_test                     PASSED in 2.5s
+//tensorflow/python/profiler:pprof_profiler_test                         PASSED in 3.3s
+//tensorflow/python/profiler:profile_context_test                        PASSED in 12.4s
+//tensorflow/python/profiler:profiler_test                               PASSED in 6.3s
+//tensorflow/python/profiler:tfprof_logger_test                          PASSED in 3.1s
+//tensorflow/python/profiler/internal:print_model_analysis_test          PASSED in 2.5s
+//tensorflow/python/profiler/internal:run_metadata_test                  PASSED in 6.0s
+//tensorflow/python/saved_model:load_v1_in_v2_test                       PASSED in 5.5s
+//tensorflow/python/saved_model:loader_test                              PASSED in 5.4s
+//tensorflow/python/saved_model:nested_structure_coder_test              PASSED in 3.1s
+//tensorflow/python/saved_model:revived_types_test                       PASSED in 3.7s
+//tensorflow/python/saved_model:save_test                                PASSED in 7.0s
+//tensorflow/python/saved_model:saved_model_test                         PASSED in 6.4s
+//tensorflow/python/saved_model:signature_def_utils_test                 PASSED in 3.2s
+//tensorflow/python/saved_model:simple_save_test                         PASSED in 2.8s
+//tensorflow/python/saved_model:utils_test                               PASSED in 3.9s
+//tensorflow/python/saved_model/model_utils:export_output_test           PASSED in 4.3s
+//tensorflow/python/saved_model/model_utils:export_test                  PASSED in 7.8s
+//tensorflow/python/saved_model/model_utils:mode_keys_test               PASSED in 2.7s
+//tensorflow/python/tools:freeze_graph_test                              PASSED in 5.2s
+//tensorflow/python/tools:optimize_for_inference_test                    PASSED in 2.9s
+//tensorflow/python/tools:print_selective_registration_header_test       PASSED in 7.8s
+//tensorflow/python/tools:saved_model_utils_test                         PASSED in 2.8s
+//tensorflow/python/tools:strip_unused_test                              PASSED in 2.9s
+//tensorflow/python/tools/api/generator:create_python_api_test           PASSED in 4.8s
+//tensorflow/python/tools/api/generator:tensorflow_doc_srcs_test         PASSED in 4.3s
+//tensorflow/python/tpu:bfloat16_test                                    PASSED in 4.1s
+//tensorflow/python/tpu:feature_column_test                              PASSED in 3.6s
+//tensorflow/python/tpu:feature_column_v2_test                           PASSED in 4.4s
+//tensorflow/python/tpu:topology_test                                    PASSED in 5.1s
+//tensorflow/python/tpu:tpu_infeed_test                                  PASSED in 5.0s
+//tensorflow/python/tpu:tpu_sharding_test                                PASSED in 6.7s
+//tensorflow/python/tpu:tpu_test                                         PASSED in 4.8s
+//tensorflow/python/training/saving:functional_saver_test                PASSED in 3.6s
+//tensorflow/python/training/tracking:base_test                          PASSED in 3.5s
+//tensorflow/python/training/tracking:benchmarks_test                    PASSED in 3.5s
+//tensorflow/python/training/tracking:data_structures_test               PASSED in 5.5s
+//tensorflow/python/training/tracking:python_state_test                  PASSED in 5.8s
+//tensorflow/python/training/tracking:tracking_test                      PASSED in 6.0s
+//tensorflow/python/training/tracking:util_test                          PASSED in 16.7s
+//tensorflow/python/training/tracking:util_with_v1_optimizers_test       PASSED in 15.1s
+//tensorflow/python/training/tracking:util_xla_test_cpu                  PASSED in 6.0s
+//tensorflow/stream_executor:stream_test                                 PASSED in 0.1s
+//tensorflow/stream_executor/cuda:cudnn_version_test                     PASSED in 0.1s
+//tensorflow/stream_executor/host:host_stream_test                       PASSED in 0.1s
+//tensorflow/stream_executor/lib:statusor_test                           PASSED in 0.9s
+//tensorflow/contrib/cudnn_rnn:cudnn_rnn_ops_test                        PASSED in 5.5s
+  Stats over 2 runs: max = 5.5s, min = 5.0s, avg = 5.2s, dev = 0.2s
+//tensorflow/python:control_flow_ops_test                                PASSED in 5.8s
+  Stats over 2 runs: max = 5.8s, min = 5.5s, avg = 5.6s, dev = 0.1s
+//tensorflow/python/keras:correctness_test                               PASSED in 5.9s
+  Stats over 2 runs: max = 5.9s, min = 5.7s, avg = 5.8s, dev = 0.1s
+//tensorflow/python/keras:recurrent_v2_test                              PASSED in 5.7s
+  Stats over 2 runs: max = 5.7s, min = 4.4s, avg = 5.0s, dev = 0.6s
+//tensorflow/python/keras/optimizer_v2:rmsprop_test                      PASSED in 8.5s
+  Stats over 2 runs: max = 8.5s, min = 3.7s, avg = 6.1s, dev = 2.4s
+//tensorflow/python/keras/premade:linear_test                            PASSED in 5.2s
+  Stats over 2 runs: max = 5.2s, min = 5.1s, avg = 5.1s, dev = 0.0s
+//tensorflow/python/keras/premade:wide_deep_test                         PASSED in 10.4s
+  Stats over 2 runs: max = 10.4s, min = 9.6s, avg = 10.0s, dev = 0.4s
+//tensorflow/python/kernel_tests:atrous_conv2d_test                      PASSED in 19.4s
+  Stats over 2 runs: max = 19.4s, min = 4.5s, avg = 12.0s, dev = 7.4s
+//tensorflow/python/kernel_tests:conv2d_backprop_filter_grad_test        PASSED in 17.5s
+  Stats over 2 runs: max = 17.5s, min = 3.4s, avg = 10.5s, dev = 7.0s
+//tensorflow/python/kernel_tests:diag_op_test                            PASSED in 5.2s
+  Stats over 2 runs: max = 5.2s, min = 3.6s, avg = 4.4s, dev = 0.8s
+//tensorflow/python/kernel_tests:functional_ops_test                     PASSED in 8.8s
+  Stats over 2 runs: max = 8.8s, min = 8.4s, avg = 8.6s, dev = 0.2s
+//tensorflow/python/kernel_tests:map_fn_test                             PASSED in 3.9s
+  Stats over 2 runs: max = 3.9s, min = 3.8s, avg = 3.9s, dev = 0.0s
+//tensorflow/python/kernel_tests:scatter_ops_test                        PASSED in 41.2s
+  Stats over 2 runs: max = 41.2s, min = 41.2s, avg = 41.2s, dev = 0.0s
+//tensorflow/contrib/boosted_trees:quantile_ops_test                     PASSED in 2.9s
+  Stats over 3 runs: max = 2.9s, min = 2.7s, avg = 2.8s, dev = 0.1s
+//tensorflow/contrib/timeseries/python/timeseries:estimators_test        PASSED in 67.1s
+  Stats over 3 runs: max = 67.1s, min = 12.8s, avg = 34.0s, dev = 23.7s
+//tensorflow/python/keras:core_test                                      PASSED in 13.6s
+  Stats over 3 runs: max = 13.6s, min = 8.4s, avg = 10.7s, dev = 2.2s
+//tensorflow/python/keras:subclassed_layers_test                         PASSED in 3.7s
+  Stats over 3 runs: max = 3.7s, min = 3.3s, avg = 3.5s, dev = 0.2s
+//tensorflow/python/keras:tensorflow_op_layer_test                       PASSED in 23.3s
+  Stats over 3 runs: max = 23.3s, min = 16.8s, avg = 19.0s, dev = 3.0s
+//tensorflow/python/kernel_tests:extract_image_patches_grad_test         PASSED in 47.3s
+  Stats over 3 runs: max = 47.3s, min = 24.8s, avg = 38.3s, dev = 9.7s
+//tensorflow/python/kernel_tests:weights_broadcast_test                  PASSED in 4.4s
+  Stats over 3 runs: max = 4.4s, min = 4.1s, avg = 4.3s, dev = 0.2s
+//tensorflow/python/kernel_tests/distributions:util_test                 PASSED in 4.3s
+  Stats over 3 runs: max = 4.3s, min = 3.7s, avg = 4.0s, dev = 0.2s
+//tensorflow/python/kernel_tests/random:multinomial_op_big_test          PASSED in 8.7s
+  Stats over 3 runs: max = 8.7s, min = 8.4s, avg = 8.6s, dev = 0.2s
+//tensorflow/contrib/boosted_trees/estimator_batch:estimator_test        PASSED in 27.8s
+  Stats over 4 runs: max = 27.8s, min = 19.5s, avg = 24.2s, dev = 3.0s
+//tensorflow/contrib/distributions:mixture_test                          PASSED in 11.4s
+  Stats over 4 runs: max = 11.4s, min = 7.8s, avg = 9.1s, dev = 1.4s
+//tensorflow/contrib/distributions:statistical_testing_test              PASSED in 10.1s
+  Stats over 4 runs: max = 10.1s, min = 6.2s, avg = 7.5s, dev = 1.6s
+//tensorflow/contrib/distributions:vector_diffeomixture_test             PASSED in 15.0s
+  Stats over 4 runs: max = 15.0s, min = 9.9s, avg = 11.7s, dev = 2.1s
+//tensorflow/contrib/eager/python/examples/densenet:densenet_graph_test  PASSED in 6.7s
+  Stats over 4 runs: max = 6.7s, min = 6.2s, avg = 6.4s, dev = 0.2s
+//tensorflow/contrib/eager/python/examples/densenet:densenet_test        PASSED in 5.5s
+  Stats over 4 runs: max = 5.5s, min = 5.0s, avg = 5.3s, dev = 0.2s
+//tensorflow/contrib/eager/python/examples/l2hmc:l2hmc_test              PASSED in 13.2s
+  Stats over 4 runs: max = 13.2s, min = 7.7s, avg = 9.1s, dev = 2.4s
+//tensorflow/contrib/eager/python/examples/resnet50:resnet50_graph_test  PASSED in 10.8s
+  Stats over 4 runs: max = 10.8s, min = 5.7s, avg = 7.8s, dev = 2.1s
+//tensorflow/contrib/eager/python/examples/resnet50:resnet50_test        PASSED in 10.0s
+  Stats over 4 runs: max = 10.0s, min = 7.5s, avg = 8.6s, dev = 0.9s
+//tensorflow/contrib/eager/python/examples/revnet:blocks_test            PASSED in 5.6s
+  Stats over 4 runs: max = 5.6s, min = 5.1s, avg = 5.4s, dev = 0.2s
+//tensorflow/contrib/eager/python/examples/revnet:ops_test               PASSED in 7.2s
+  Stats over 4 runs: max = 7.2s, min = 6.3s, avg = 6.7s, dev = 0.3s
+//tensorflow/contrib/eager/python/examples/revnet:revnet_test            PASSED in 9.2s
+  Stats over 4 runs: max = 9.2s, min = 5.9s, avg = 7.6s, dev = 1.4s
+//tensorflow/contrib/factorization:factorization_ops_test                PASSED in 10.1s
+  Stats over 4 runs: max = 10.1s, min = 9.1s, avg = 9.6s, dev = 0.4s
+//tensorflow/contrib/factorization:gmm_test                              PASSED in 9.1s
+  Stats over 4 runs: max = 9.1s, min = 7.7s, avg = 8.7s, dev = 0.6s
+//tensorflow/contrib/factorization:kmeans_test                           PASSED in 18.9s
+  Stats over 4 runs: max = 18.9s, min = 14.4s, avg = 16.6s, dev = 1.7s
+//tensorflow/contrib/factorization:wals_test                             PASSED in 32.5s
+  Stats over 4 runs: max = 32.5s, min = 8.0s, avg = 22.6s, dev = 9.2s
+//tensorflow/contrib/learn:debug_test                                    PASSED in 20.7s
+  Stats over 4 runs: max = 20.7s, min = 12.4s, avg = 15.5s, dev = 3.3s
+//tensorflow/contrib/learn:dnn_test                                      PASSED in 26.7s
+  Stats over 4 runs: max = 26.7s, min = 19.8s, avg = 23.9s, dev = 2.5s
+//tensorflow/contrib/learn:dynamic_rnn_estimator_test                    PASSED in 11.1s
+  Stats over 4 runs: max = 11.1s, min = 7.3s, avg = 8.9s, dev = 1.4s
+//tensorflow/contrib/learn:head_test                                     PASSED in 17.5s
+  Stats over 4 runs: max = 17.5s, min = 11.6s, avg = 13.5s, dev = 2.3s
+//tensorflow/contrib/learn:kmeans_test                                   PASSED in 12.9s
+  Stats over 4 runs: max = 12.9s, min = 10.0s, avg = 11.5s, dev = 1.2s
+//tensorflow/contrib/learn:state_saving_rnn_estimator_test               PASSED in 17.9s
+  Stats over 4 runs: max = 17.9s, min = 4.6s, avg = 10.2s, dev = 4.8s
+//tensorflow/contrib/linear_optimizer:sdca_estimator_test                PASSED in 17.0s
+  Stats over 4 runs: max = 17.0s, min = 12.0s, avg = 14.0s, dev = 1.8s
+//tensorflow/contrib/losses:metric_loss_ops_test                         PASSED in 30.4s
+  Stats over 4 runs: max = 30.4s, min = 2.8s, avg = 16.7s, dev = 13.0s
+//tensorflow/contrib/opt:shampoo_test                                    PASSED in 6.1s
+  Stats over 4 runs: max = 6.1s, min = 5.2s, avg = 5.5s, dev = 0.3s
+//tensorflow/contrib/seq2seq:attention_wrapper_v2_test                   PASSED in 11.1s
+  Stats over 4 runs: max = 11.1s, min = 9.9s, avg = 10.5s, dev = 0.5s
+//tensorflow/contrib/slim/python/slim/nets:resnet_v1_test                PASSED in 17.4s
+  Stats over 4 runs: max = 17.4s, min = 4.8s, avg = 9.3s, dev = 4.8s
+//tensorflow/contrib/slim/python/slim/nets:resnet_v2_test                PASSED in 18.6s
+  Stats over 4 runs: max = 18.6s, min = 4.2s, avg = 9.4s, dev = 5.5s
+//tensorflow/contrib/solvers:lanczos_test                                PASSED in 8.4s
+  Stats over 4 runs: max = 8.4s, min = 7.0s, avg = 7.7s, dev = 0.5s
+//tensorflow/contrib/solvers:least_squares_test                          PASSED in 3.3s
+  Stats over 4 runs: max = 3.3s, min = 3.0s, avg = 3.1s, dev = 0.1s
+//tensorflow/contrib/solvers:linear_equations_test                       PASSED in 4.6s
+  Stats over 4 runs: max = 4.6s, min = 3.9s, avg = 4.2s, dev = 0.2s
+//tensorflow/contrib/timeseries/python/timeseries/state_space_models:structural_ensemble_test PASSED in 41.2s
+  Stats over 4 runs: max = 41.2s, min = 4.2s, avg = 19.4s, dev = 13.5s
+//tensorflow/core/kernels:example_parsing_ops_test                       PASSED in 0.2s
+  Stats over 4 runs: max = 0.2s, min = 0.1s, avg = 0.2s, dev = 0.0s
+//tensorflow/examples/saved_model/integration_tests:saved_model_test     PASSED in 22.2s
+  Stats over 4 runs: max = 22.2s, min = 3.8s, avg = 10.1s, dev = 7.4s
+//tensorflow/python:nn_batchnorm_test                                    PASSED in 8.6s
+  Stats over 4 runs: max = 8.6s, min = 4.0s, avg = 6.7s, dev = 1.8s
+//tensorflow/python/data/experimental/kernel_tests/serialization:fixed_length_record_dataset_serialization_test PASSED in 4.2s
+  Stats over 4 runs: max = 4.2s, min = 1.8s, avg = 2.5s, dev = 1.0s
+//tensorflow/python/data/experimental/kernel_tests/serialization:textline_dataset_serialization_test PASSED in 7.4s
+  Stats over 4 runs: max = 7.4s, min = 1.8s, avg = 3.2s, dev = 2.4s
+//tensorflow/python/data/experimental/kernel_tests/serialization:tf_record_dataset_serialization_test PASSED in 5.3s
+  Stats over 4 runs: max = 5.3s, min = 1.6s, avg = 4.0s, dev = 1.5s
+//tensorflow/python/keras:backend_test                                   PASSED in 7.2s
+  Stats over 4 runs: max = 7.2s, min = 4.7s, avg = 5.4s, dev = 1.0s
+//tensorflow/python/keras:convolutional_recurrent_test                   PASSED in 21.9s
+  Stats over 4 runs: max = 21.9s, min = 13.0s, avg = 15.4s, dev = 3.7s
+//tensorflow/python/keras:cudnn_recurrent_test                           PASSED in 3.3s
+  Stats over 4 runs: max = 3.3s, min = 1.8s, avg = 2.4s, dev = 0.6s
+//tensorflow/python/keras:custom_training_loop_test                      PASSED in 4.8s
+  Stats over 4 runs: max = 4.8s, min = 4.7s, avg = 4.8s, dev = 0.0s
+//tensorflow/python/keras:gru_test                                       PASSED in 23.8s
+  Stats over 4 runs: max = 23.8s, min = 12.9s, avg = 17.0s, dev = 4.2s
+//tensorflow/python/keras:local_test                                     PASSED in 36.1s
+  Stats over 4 runs: max = 36.1s, min = 15.4s, avg = 29.6s, dev = 8.4s
+//tensorflow/python/keras:metrics_confusion_matrix_test                  PASSED in 5.4s
+  Stats over 4 runs: max = 5.4s, min = 4.5s, avg = 4.9s, dev = 0.4s
+//tensorflow/python/keras:metrics_correctness_test                       PASSED in 30.3s
+  Stats over 4 runs: max = 30.3s, min = 27.9s, avg = 29.2s, dev = 0.9s
+//tensorflow/python/keras:model_subclassing_compiled_test                PASSED in 15.1s
+  Stats over 4 runs: max = 15.1s, min = 11.1s, avg = 12.8s, dev = 1.7s
+//tensorflow/python/keras:model_subclassing_test                         PASSED in 5.7s
+  Stats over 4 runs: max = 5.7s, min = 4.9s, avg = 5.4s, dev = 0.3s
+//tensorflow/python/keras:rnn_cell_wrapper_v2_test                       PASSED in 3.6s
+  Stats over 4 runs: max = 3.6s, min = 3.3s, avg = 3.5s, dev = 0.1s
+//tensorflow/python/keras:saved_model_experimental_test                  PASSED in 14.6s
+  Stats over 4 runs: max = 14.6s, min = 12.5s, avg = 13.8s, dev = 0.8s
+//tensorflow/python/keras:saved_model_test                               PASSED in 12.8s
+  Stats over 4 runs: max = 12.8s, min = 10.1s, avg = 12.0s, dev = 1.1s
+//tensorflow/python/keras:training_dataset_test                          PASSED in 15.4s
+  Stats over 4 runs: max = 15.4s, min = 12.6s, avg = 14.2s, dev = 1.0s
+//tensorflow/python/keras/distribute:keras_embedding_model_correctness_test PASSED in 39.2s
+  Stats over 4 runs: max = 39.2s, min = 37.5s, avg = 38.3s, dev = 0.7s
+//tensorflow/python/keras/distribute:keras_optimizer_v2_test             PASSED in 3.5s
+  Stats over 4 runs: max = 3.5s, min = 3.4s, avg = 3.4s, dev = 0.0s
+//tensorflow/python/keras/distribute:keras_premade_models_test           PASSED in 5.4s
+  Stats over 4 runs: max = 5.4s, min = 4.3s, avg = 4.9s, dev = 0.5s
+//tensorflow/python/keras/distribute:keras_stateful_lstm_model_correctness_test PASSED in 3.2s
+  Stats over 4 runs: max = 3.2s, min = 2.9s, avg = 3.0s, dev = 0.1s
+//tensorflow/python/keras/distribute:keras_utils_test                    PASSED in 20.0s
+  Stats over 4 runs: max = 20.0s, min = 18.2s, avg = 18.8s, dev = 0.7s
+//tensorflow/python/keras/distribute:multi_worker_training_state_test    PASSED in 4.0s
+  Stats over 4 runs: max = 4.0s, min = 2.4s, avg = 3.2s, dev = 0.8s
+//tensorflow/python/keras/mixed_precision/experimental:keras_test        PASSED in 81.2s
+  Stats over 4 runs: max = 81.2s, min = 11.3s, avg = 44.3s, dev = 29.5s
+//tensorflow/python/keras/optimizer_v2:adadelta_test                     PASSED in 7.3s
+  Stats over 4 runs: max = 7.3s, min = 3.0s, avg = 4.1s, dev = 1.9s
+//tensorflow/python/keras/optimizer_v2:adagrad_test                      PASSED in 3.8s
+  Stats over 4 runs: max = 3.8s, min = 2.7s, avg = 3.5s, dev = 0.4s
+//tensorflow/python/keras/optimizer_v2:adam_test                         PASSED in 4.8s
+  Stats over 4 runs: max = 4.8s, min = 2.9s, avg = 3.7s, dev = 0.8s
+//tensorflow/python/keras/optimizer_v2:adamax_test                       PASSED in 5.3s
+  Stats over 4 runs: max = 5.3s, min = 3.1s, avg = 3.9s, dev = 0.9s
+//tensorflow/python/keras/optimizer_v2:ftrl_test                         PASSED in 4.3s
+  Stats over 4 runs: max = 4.3s, min = 3.7s, avg = 3.9s, dev = 0.2s
+//tensorflow/python/keras/optimizer_v2:gradient_descent_test             PASSED in 4.1s
+  Stats over 4 runs: max = 4.1s, min = 2.6s, avg = 3.7s, dev = 0.7s
+//tensorflow/python/keras/optimizer_v2:learning_rate_schedule_test       PASSED in 5.3s
+  Stats over 4 runs: max = 5.3s, min = 4.3s, avg = 5.0s, dev = 0.4s
+//tensorflow/python/keras/optimizer_v2:nadam_test                        PASSED in 3.7s
+  Stats over 4 runs: max = 3.7s, min = 3.0s, avg = 3.4s, dev = 0.3s
+//tensorflow/python/kernel_tests:conv_ops_test                           PASSED in 15.1s
+  Stats over 4 runs: max = 15.1s, min = 12.9s, avg = 14.0s, dev = 0.9s
+//tensorflow/python/kernel_tests:init_ops_test                           PASSED in 30.3s
+  Stats over 4 runs: max = 30.3s, min = 7.3s, avg = 18.5s, dev = 9.7s
+//tensorflow/python/kernel_tests:pooling_ops_test                        PASSED in 8.6s
+  Stats over 4 runs: max = 8.6s, min = 4.0s, avg = 5.5s, dev = 1.9s
+//tensorflow/python/kernel_tests/random:random_gamma_test                PASSED in 25.2s
+  Stats over 4 runs: max = 25.2s, min = 3.5s, avg = 12.7s, dev = 9.5s
+//tensorflow/python/ops/ragged:ragged_tensor_test                        PASSED in 11.8s
+  Stats over 4 runs: max = 11.8s, min = 10.2s, avg = 10.9s, dev = 0.6s
+//tensorflow/core/grappler/optimizers:constant_folding_test              PASSED in 1.6s
+  Stats over 5 runs: max = 1.6s, min = 0.7s, avg = 1.1s, dev = 0.3s
+//tensorflow/python:image_ops_test                                       PASSED in 14.0s
+  Stats over 5 runs: max = 14.0s, min = 7.5s, avg = 9.9s, dev = 2.5s
+//tensorflow/python/data/experimental/kernel_tests:rejection_resample_test PASSED in 11.6s
+  Stats over 5 runs: max = 11.6s, min = 2.3s, avg = 5.9s, dev = 4.2s
+//tensorflow/python/distribute:keras_save_load_test                      PASSED in 31.5s
+  Stats over 5 runs: max = 31.5s, min = 21.5s, avg = 25.9s, dev = 3.8s
+//tensorflow/python/distribute:mirrored_strategy_test                    PASSED in 4.9s
+  Stats over 5 runs: max = 4.9s, min = 3.9s, avg = 4.2s, dev = 0.4s
+//tensorflow/python/distribute:saved_model_mixed_api_test                PASSED in 21.7s
+  Stats over 5 runs: max = 21.7s, min = 11.7s, avg = 17.7s, dev = 3.3s
+//tensorflow/python/distribute:saved_model_save_load_test                PASSED in 22.2s
+  Stats over 5 runs: max = 22.2s, min = 12.6s, avg = 19.2s, dev = 3.6s
+//tensorflow/python/eager:forwardprop_test                               PASSED in 9.2s
+  Stats over 5 runs: max = 9.2s, min = 4.0s, avg = 6.4s, dev = 2.0s
+//tensorflow/python/eager:function_gradients_test                        PASSED in 7.0s
+  Stats over 5 runs: max = 7.0s, min = 4.3s, avg = 5.5s, dev = 0.9s
+//tensorflow/python/feature_column:feature_column_v2_test                PASSED in 8.2s
+  Stats over 5 runs: max = 8.2s, min = 5.7s, avg = 7.0s, dev = 1.1s
+//tensorflow/python/kernel_tests:cholesky_op_test                        PASSED in 5.8s
+  Stats over 5 runs: max = 5.8s, min = 3.1s, avg = 4.1s, dev = 1.0s
+//tensorflow/python/kernel_tests:fractional_avg_pool_op_test             PASSED in 6.0s
+  Stats over 5 runs: max = 6.0s, min = 3.3s, avg = 4.1s, dev = 1.0s
+//tensorflow/python/kernel_tests:fractional_max_pool_op_test             PASSED in 5.6s
+  Stats over 5 runs: max = 5.6s, min = 3.1s, avg = 3.9s, dev = 0.9s
+//tensorflow/python/kernel_tests:sparse_ops_test                         PASSED in 12.4s
+  Stats over 5 runs: max = 12.4s, min = 4.1s, avg = 6.1s, dev = 3.2s
+//tensorflow/python/kernel_tests/linalg:linear_operator_adjoint_test     PASSED in 12.5s
+  Stats over 5 runs: max = 12.5s, min = 11.2s, avg = 11.8s, dev = 0.5s
+//tensorflow/python/kernel_tests/linalg:linear_operator_composition_test PASSED in 16.5s
+  Stats over 5 runs: max = 16.5s, min = 15.1s, avg = 15.7s, dev = 0.5s
+//tensorflow/python/kernel_tests/linalg:linear_operator_diag_test        PASSED in 10.1s
+  Stats over 5 runs: max = 10.1s, min = 9.3s, avg = 9.7s, dev = 0.3s
+//tensorflow/python/kernel_tests/linalg:linear_operator_full_matrix_test PASSED in 14.7s
+  Stats over 5 runs: max = 14.7s, min = 12.6s, avg = 13.5s, dev = 0.8s
+//tensorflow/python/kernel_tests/linalg:linear_operator_householder_test PASSED in 9.2s
+  Stats over 5 runs: max = 9.2s, min = 7.8s, avg = 8.6s, dev = 0.5s
+//tensorflow/python/kernel_tests/linalg:linear_operator_identity_test    PASSED in 12.0s
+  Stats over 5 runs: max = 12.0s, min = 11.2s, avg = 11.6s, dev = 0.3s
+//tensorflow/python/kernel_tests/linalg:linear_operator_inversion_test   PASSED in 11.0s
+  Stats over 5 runs: max = 11.0s, min = 10.0s, avg = 10.3s, dev = 0.4s
+//tensorflow/python/kernel_tests/linalg:linear_operator_toeplitz_test    PASSED in 10.9s
+  Stats over 5 runs: max = 10.9s, min = 9.3s, avg = 10.1s, dev = 0.6s
+//tensorflow/python/kernel_tests/linalg:linear_operator_util_test        PASSED in 3.4s
+  Stats over 5 runs: max = 3.4s, min = 2.0s, avg = 2.8s, dev = 0.6s
+//tensorflow/python/kernel_tests/linalg:linear_operator_zeros_test       PASSED in 7.2s
+  Stats over 5 runs: max = 7.2s, min = 6.3s, avg = 6.8s, dev = 0.3s
+//tensorflow/python/ops/parallel_for:math_test                           PASSED in 19.5s
+  Stats over 5 runs: max = 19.5s, min = 7.2s, avg = 13.0s, dev = 4.7s
+//tensorflow/contrib/cudnn_rnn:cudnn_rnn_test                            PASSED in 4.7s
+  Stats over 6 runs: max = 4.7s, min = 3.8s, avg = 4.2s, dev = 0.4s
+//tensorflow/contrib/tensor_forest:random_forest_test                    PASSED in 12.7s
+  Stats over 6 runs: max = 12.7s, min = 5.4s, avg = 7.3s, dev = 2.4s
+//tensorflow/python:accumulate_n_benchmark                               PASSED in 2.9s
+  Stats over 6 runs: max = 2.9s, min = 2.7s, avg = 2.8s, dev = 0.1s
+//tensorflow/python/keras:data_utils_test                                PASSED in 4.5s
+  Stats over 6 runs: max = 4.5s, min = 2.2s, avg = 3.1s, dev = 0.8s
+//tensorflow/python/keras:training_generator_test                        PASSED in 24.5s
+  Stats over 6 runs: max = 24.5s, min = 22.3s, avg = 23.8s, dev = 0.7s
+//tensorflow/python/keras:wrappers_test                                  PASSED in 28.6s
+  Stats over 6 runs: max = 28.6s, min = 6.1s, avg = 17.6s, dev = 9.1s
+//tensorflow/python/kernel_tests:reduction_ops_test                      PASSED in 15.7s
+  Stats over 6 runs: max = 15.7s, min = 8.0s, avg = 12.1s, dev = 2.6s
+//tensorflow/python/kernel_tests/linalg:linear_operator_block_diag_test  PASSED in 13.0s
+  Stats over 6 runs: max = 13.0s, min = 11.2s, avg = 12.3s, dev = 0.6s
+//tensorflow/contrib/learn:dnn_linear_combined_test                      PASSED in 21.1s
+  Stats over 8 runs: max = 21.1s, min = 15.8s, avg = 18.2s, dev = 1.5s
+//tensorflow/contrib/slim/python/slim/nets:inception_v1_test             PASSED in 8.6s
+  Stats over 8 runs: max = 8.6s, min = 3.6s, avg = 5.5s, dev = 1.6s
+//tensorflow/contrib/slim/python/slim/nets:inception_v2_test             PASSED in 12.3s
+  Stats over 8 runs: max = 12.3s, min = 5.7s, avg = 8.0s, dev = 2.1s
+//tensorflow/contrib/slim/python/slim/nets:inception_v3_test             PASSED in 13.5s
+  Stats over 8 runs: max = 13.5s, min = 5.1s, avg = 7.7s, dev = 2.5s
+//tensorflow/contrib/training:training_test                              PASSED in 6.3s
+  Stats over 8 runs: max = 6.3s, min = 4.8s, avg = 5.5s, dev = 0.5s
+//tensorflow/python/data/experimental/kernel_tests/optimization:map_vectorization_test PASSED in 5.5s
+  Stats over 8 runs: max = 5.5s, min = 4.3s, avg = 5.1s, dev = 0.4s
+//tensorflow/python/keras:base_layer_test                                PASSED in 4.9s
+  Stats over 8 runs: max = 4.9s, min = 4.2s, avg = 4.5s, dev = 0.2s
+//tensorflow/python/keras:composite_tensor_support_test                  PASSED in 15.3s
+  Stats over 8 runs: max = 15.3s, min = 10.8s, avg = 12.6s, dev = 1.4s
+//tensorflow/python/keras:control_flow_test                              PASSED in 4.8s
+  Stats over 8 runs: max = 4.8s, min = 3.2s, avg = 3.8s, dev = 0.5s
+//tensorflow/python/keras:convolutional_test                             PASSED in 12.1s
+  Stats over 8 runs: max = 12.1s, min = 8.6s, avg = 9.9s, dev = 1.1s
+//tensorflow/python/keras:models_test                                    PASSED in 14.8s
+  Stats over 8 runs: max = 14.8s, min = 7.1s, avg = 10.8s, dev = 2.4s
+//tensorflow/python/keras:network_test                                   PASSED in 8.0s
+  Stats over 8 runs: max = 8.0s, min = 3.8s, avg = 5.2s, dev = 1.3s
+//tensorflow/python/keras:optimizers_test                                PASSED in 12.5s
+  Stats over 8 runs: max = 12.5s, min = 2.6s, avg = 4.9s, dev = 3.4s
+//tensorflow/python/keras:pooling_test                                   PASSED in 4.0s
+  Stats over 8 runs: max = 4.0s, min = 1.7s, avg = 3.3s, dev = 0.7s
+//tensorflow/python/keras/distribute:distribute_strategy_test            PASSED in 21.0s
+  Stats over 8 runs: max = 21.0s, min = 18.4s, avg = 19.7s, dev = 0.9s
+//tensorflow/python/keras/distribute:keras_image_model_correctness_test  PASSED in 47.7s
+  Stats over 8 runs: max = 47.7s, min = 16.9s, avg = 25.6s, dev = 12.5s
+//tensorflow/python/keras/optimizer_v2:optimizer_v2_test                 PASSED in 27.2s
+  Stats over 8 runs: max = 27.2s, min = 15.0s, avg = 22.4s, dev = 4.7s
+//tensorflow/python/keras:normalization_test                             FAILED in 8 out of 8 in 14.2s
+  Stats over 8 runs: max = 14.2s, min = 8.3s, avg = 10.9s, dev = 2.3s
+  /root/.cache/bazel/_bazel_root/35e4a563d8d022421e7c53a7646fe840/execroot/org_tensorflow/bazel-out/k8-opt/testlogs/tensorflow/python/keras/normalization_test/shard_5_of_8/test.log
+  /root/.cache/bazel/_bazel_root/35e4a563d8d022421e7c53a7646fe840/execroot/org_tensorflow/bazel-out/k8-opt/testlogs/tensorflow/python/keras/normalization_test/shard_4_of_8/test.log
+  /root/.cache/bazel/_bazel_root/35e4a563d8d022421e7c53a7646fe840/execroot/org_tensorflow/bazel-out/k8-opt/testlogs/tensorflow/python/keras/normalization_test/shard_7_of_8/test.log
+  /root/.cache/bazel/_bazel_root/35e4a563d8d022421e7c53a7646fe840/execroot/org_tensorflow/bazel-out/k8-opt/testlogs/tensorflow/python/keras/normalization_test/shard_6_of_8/test.log
+  /root/.cache/bazel/_bazel_root/35e4a563d8d022421e7c53a7646fe840/execroot/org_tensorflow/bazel-out/k8-opt/testlogs/tensorflow/python/keras/normalization_test/shard_3_of_8/test.log
+  /root/.cache/bazel/_bazel_root/35e4a563d8d022421e7c53a7646fe840/execroot/org_tensorflow/bazel-out/k8-opt/testlogs/tensorflow/python/keras/normalization_test/shard_2_of_8/test.log
+  /root/.cache/bazel/_bazel_root/35e4a563d8d022421e7c53a7646fe840/execroot/org_tensorflow/bazel-out/k8-opt/testlogs/tensorflow/python/keras/normalization_test/shard_1_of_8/test.log
+  /root/.cache/bazel/_bazel_root/35e4a563d8d022421e7c53a7646fe840/execroot/org_tensorflow/bazel-out/k8-opt/testlogs/tensorflow/python/keras/normalization_test/shard_8_of_8/test.log
+//tensorflow/contrib/distributions:affine_test                           PASSED in 13.2s
+  Stats over 10 runs: max = 13.2s, min = 5.5s, avg = 7.6s, dev = 2.5s
+//tensorflow/contrib/timeseries/python/timeseries:head_test              PASSED in 32.3s
+  Stats over 10 runs: max = 32.3s, min = 3.6s, avg = 9.0s, dev = 8.2s
+//tensorflow/python:cluster_test                                         PASSED in 3.0s
+  Stats over 10 runs: max = 3.0s, min = 2.0s, avg = 2.5s, dev = 0.3s
+//tensorflow/python:function_test                                        PASSED in 28.5s
+  Stats over 10 runs: max = 28.5s, min = 2.3s, avg = 5.7s, dev = 7.7s
+//tensorflow/python:layers_normalization_test                            PASSED in 10.4s
+  Stats over 10 runs: max = 10.4s, min = 3.4s, avg = 7.6s, dev = 1.6s
+//tensorflow/python/data/experimental/kernel_tests:snapshot_test         PASSED in 25.3s
+  Stats over 10 runs: max = 25.3s, min = 3.2s, avg = 6.7s, dev = 6.5s
+//tensorflow/python/keras:recurrent_test                                 PASSED in 25.5s
+  Stats over 10 runs: max = 25.5s, min = 15.4s, avg = 20.2s, dev = 3.2s
+//tensorflow/python/kernel_tests:array_ops_test                          PASSED in 38.0s
+  Stats over 10 runs: max = 38.0s, min = 2.1s, avg = 9.7s, dev = 10.6s
+//tensorflow/python/kernel_tests:inplace_ops_test                        PASSED in 3.4s
+  Stats over 10 runs: max = 3.4s, min = 2.2s, avg = 2.9s, dev = 0.3s
+//tensorflow/python/kernel_tests:rnn_test                                PASSED in 4.9s
+  Stats over 10 runs: max = 4.9s, min = 2.9s, avg = 3.6s, dev = 0.8s
+//tensorflow/python/kernel_tests:tensor_array_ops_test                   PASSED in 5.1s
+  Stats over 10 runs: max = 5.1s, min = 2.9s, avg = 3.6s, dev = 0.7s
+//tensorflow/python/kernel_tests:transpose_op_test                       PASSED in 54.9s
+  Stats over 10 runs: max = 54.9s, min = 2.2s, avg = 13.6s, dev = 20.0s
+//tensorflow/python/kernel_tests:tridiagonal_matmul_op_test              PASSED in 10.2s
+  Stats over 10 runs: max = 10.2s, min = 1.7s, avg = 3.6s, dev = 2.3s
+//tensorflow/python/kernel_tests:tridiagonal_solve_op_test               PASSED in 3.4s
+  Stats over 10 runs: max = 3.4s, min = 2.1s, avg = 2.8s, dev = 0.4s
+//tensorflow/python/kernel_tests/linalg:linear_operator_circulant_test   PASSED in 38.7s
+  Stats over 10 runs: max = 38.7s, min = 35.9s, avg = 37.2s, dev = 1.1s
+//tensorflow/python/kernel_tests/linalg:linear_operator_kronecker_test   PASSED in 20.0s
+  Stats over 10 runs: max = 20.0s, min = 17.4s, avg = 18.6s, dev = 0.6s
+//tensorflow/python/kernel_tests/linalg:linear_operator_low_rank_update_test PASSED in 42.8s
+  Stats over 10 runs: max = 42.8s, min = 31.8s, avg = 36.8s, dev = 3.9s
+//tensorflow/python/saved_model:load_test                                PASSED in 13.9s
+  Stats over 10 runs: max = 13.9s, min = 10.2s, avg = 12.6s, dev = 1.2s
+//tensorflow/python/keras:applications_test                              PASSED in 19.2s
+  Stats over 11 runs: max = 19.2s, min = 5.4s, avg = 12.4s, dev = 4.1s
+//tensorflow/python/keras:gru_v2_test                                    PASSED in 17.3s
+  Stats over 12 runs: max = 17.3s, min = 13.4s, avg = 15.6s, dev = 1.1s
+//tensorflow/python/keras:lstm_v2_test                                   PASSED in 17.8s
+  Stats over 12 runs: max = 17.8s, min = 7.3s, avg = 13.0s, dev = 3.3s
+//tensorflow/python/eager:function_test                                  PASSED in 7.1s
+  Stats over 15 runs: max = 7.1s, min = 3.2s, avg = 4.2s, dev = 0.9s
+//tensorflow/python/kernel_tests:rnn_cell_test                           PASSED in 9.7s
+  Stats over 15 runs: max = 9.7s, min = 2.1s, avg = 4.6s, dev = 2.1s
+//tensorflow/python:nn_fused_batchnorm_test                              PASSED in 18.8s
+  Stats over 16 runs: max = 18.8s, min = 2.0s, avg = 5.2s, dev = 4.0s
+//tensorflow/python/keras:integration_test                               PASSED in 20.9s
+  Stats over 16 runs: max = 20.9s, min = 5.5s, avg = 12.0s, dev = 4.1s
+//tensorflow/python/kernel_tests:control_flow_ops_py_test                PASSED in 6.4s
+  Stats over 16 runs: max = 6.4s, min = 2.9s, avg = 4.5s, dev = 0.8s
+//tensorflow/python/kernel_tests:matrix_exponential_op_test              PASSED in 4.8s
+  Stats over 16 runs: max = 4.8s, min = 2.9s, avg = 3.9s, dev = 0.5s
+//tensorflow/python/keras/distribute:keras_dnn_correctness_test          PASSED in 23.8s
+  Stats over 19 runs: max = 23.8s, min = 9.4s, avg = 17.1s, dev = 4.2s
+//tensorflow/contrib/learn:linear_test                                   PASSED in 20.1s
+  Stats over 20 runs: max = 20.1s, min = 9.1s, avg = 13.9s, dev = 2.7s
+//tensorflow/python/keras:temporal_sample_weights_correctness_test       PASSED in 22.2s
+  Stats over 20 runs: max = 22.2s, min = 10.0s, avg = 15.9s, dev = 3.9s
+//tensorflow/python/kernel_tests:barrier_ops_test                        PASSED in 7.5s
+  Stats over 20 runs: max = 7.5s, min = 1.5s, avg = 2.9s, dev = 1.9s
+//tensorflow/python/kernel_tests:batch_matmul_op_test                    PASSED in 7.2s
+  Stats over 20 runs: max = 7.2s, min = 4.5s, avg = 5.6s, dev = 0.7s
+//tensorflow/python/kernel_tests:embedding_ops_test                      PASSED in 9.7s
+  Stats over 20 runs: max = 9.7s, min = 1.8s, avg = 3.0s, dev = 1.8s
+//tensorflow/python/kernel_tests:linalg_grad_test                        PASSED in 6.7s
+  Stats over 20 runs: max = 6.7s, min = 3.4s, avg = 5.2s, dev = 0.9s
+//tensorflow/python/kernel_tests:matmul_op_test                          PASSED in 8.9s
+  Stats over 20 runs: max = 8.9s, min = 6.6s, avg = 7.4s, dev = 0.7s
+//tensorflow/python/kernel_tests:matrix_band_part_op_test                PASSED in 8.4s
+  Stats over 20 runs: max = 8.4s, min = 6.5s, avg = 7.4s, dev = 0.5s
+//tensorflow/python/kernel_tests:metrics_test                            PASSED in 14.7s
+  Stats over 20 runs: max = 14.7s, min = 2.2s, avg = 6.3s, dev = 3.3s
+//tensorflow/python/kernel_tests:norm_op_test                            PASSED in 8.0s
+  Stats over 20 runs: max = 8.0s, min = 5.5s, avg = 6.5s, dev = 0.7s
+//tensorflow/python/kernel_tests:normalize_op_test                       PASSED in 6.3s
+  Stats over 20 runs: max = 6.3s, min = 2.7s, avg = 4.1s, dev = 1.1s
+//tensorflow/python/kernel_tests:qr_op_test                              PASSED in 7.1s
+  Stats over 20 runs: max = 7.1s, min = 4.7s, avg = 5.7s, dev = 0.7s
+//tensorflow/python/kernel_tests:self_adjoint_eig_op_test                PASSED in 4.3s
+  Stats over 20 runs: max = 4.3s, min = 2.1s, avg = 3.2s, dev = 0.7s
+//tensorflow/python/kernel_tests:svd_op_test                             PASSED in 19.8s
+  Stats over 20 runs: max = 19.8s, min = 3.8s, avg = 10.7s, dev = 4.7s
+//tensorflow/python/kernel_tests:tensordot_op_test                       PASSED in 16.1s
+  Stats over 20 runs: max = 16.1s, min = 2.5s, avg = 8.3s, dev = 4.4s
+//tensorflow/contrib/metrics:metric_ops_test                             PASSED in 15.5s
+  Stats over 30 runs: max = 15.5s, min = 2.3s, avg = 5.7s, dev = 3.3s
+//tensorflow/python/keras:training_integration_test                      PASSED in 18.0s
+  Stats over 30 runs: max = 18.0s, min = 9.6s, avg = 12.9s, dev = 2.1s
+//tensorflow/python/kernel_tests:conv_ops_3d_test                        PASSED in 5.6s
+  Stats over 30 runs: max = 5.6s, min = 1.5s, avg = 2.9s, dev = 1.1s
+//tensorflow/contrib/distribute/python:keras_backward_compat_test        PASSED in 11.3s
+  Stats over 31 runs: max = 11.3s, min = 1.8s, avg = 5.1s, dev = 2.6s
+//tensorflow/python/keras/distribute:keras_lstm_model_correctness_test   PASSED in 18.5s
+  Stats over 31 runs: max = 18.5s, min = 2.0s, avg = 8.1s, dev = 7.1s
+//tensorflow/python/keras/distribute:multi_worker_test                   PASSED in 6.0s
+  Stats over 32 runs: max = 6.0s, min = 1.2s, avg = 2.1s, dev = 1.4s
+//tensorflow/python/kernel_tests:cwise_ops_binary_test                   PASSED in 21.0s
+  Stats over 50 runs: max = 21.0s, min = 4.0s, avg = 8.7s, dev = 3.6s
+//tensorflow/python/kernel_tests:cwise_ops_test                          PASSED in 26.8s
+  Stats over 50 runs: max = 26.8s, min = 1.5s, avg = 3.0s, dev = 4.1s
+//tensorflow/python/kernel_tests:cwise_ops_unary_test                    PASSED in 4.2s
+  Stats over 50 runs: max = 4.2s, min = 1.5s, avg = 2.2s, dev = 0.7s
+
+Executed 1972 out of 1972 tests: 1971 tests pass and 1 fails locally.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.
+------------------
