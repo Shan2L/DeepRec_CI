@@ -47,7 +47,7 @@ part_commit=$(echo $commit_id | cut -c 1-7)
 log_title=$currentTime-$part_commit
 
 test_image_repo=$(cat ./config.properties | grep test_image| awk -F " " '{print $2}' )
-log_dir="./about_ut/log/$currentTime"
+log_dir="./about_ut/log/$log_title"
 if [[ ! -d $log_dir ]];then
     mkdir -p $log_dir
 fi
