@@ -21,6 +21,9 @@ function make_script()
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
         echo "echo 'testing $model_name of deeprec_bf16.......'" >> $deeprec_bf16_script
         echo "cd /root/modelzoo/$model_name/" >> $deeprec_bf16_script
+	if [[ ! -d  $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag ]];then
+		mkdir -p $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag
+	fi
         newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command $paras --checkpoint $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag --bf16 >$log_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag.log 2>&1"
         echo $newline >> $deeprec_bf16_script
     done;
@@ -35,6 +38,9 @@ function make_script()
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
         echo "echo 'testing $model_name of deeprec_fp32.......'" >> $deeprec_fp32_script
         echo "cd /root/modelzoo/$model_name/" >> $deeprec_fp32_script
+	if [[ ! -d  $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag ]];then
+		mkdir -p $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag
+	fi
 
         newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command --checkpoint $checkpoint_dir$currentTime/${model_name,,}_deeprec_fp32_$log_tag >$log_dir$currentTime/${model_name,,}_deeprec_fp32_$log_tag.log 2>&1"
         
@@ -50,6 +56,9 @@ function make_script()
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
         echo "echo 'testing $model_name of tf_fp32.......'" >> $tf_fp32_script
         echo "cd /root/modelzoo/$model_name/" >> $tf_fp32_script
+	if [[ ! -d  $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag ]];then
+		mkdir -p $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag
+	fi
 
         newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command --checkpoint $checkpoint_dir$currentTime/${model_name,,}_tf_fp32_$log_tag >$log_dir$currentTime/${model_name,,}_tf_fp32_$log_tag.log 2>&1"
         
