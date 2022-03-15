@@ -19,7 +19,7 @@ function make_script()
 	paras=$(echo $command | awk -F " " '{print $2}' | awk -F "|" '{print $2}')
 	log_tag=$(echo $paras| sed 's/ /_/g')
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
-        echo "echo 'testing $model_name of deeprec_bf16.......'" >> $deeprec_bf16_script
+        echo "echo 'testing $model_name of deeprec_bf16 $paras.......'" >> $deeprec_bf16_script
         echo "cd /root/modelzoo/$model_name/" >> $deeprec_bf16_script
 	if [[ ! -d  $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag ]];then
 		mkdir -p $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag
@@ -36,7 +36,7 @@ function make_script()
 	paras=$(echo $command | awk -F " " '{print $2}' | awk -F "|" '{print $2}')
 	log_tag=$(echo $paras| sed 's/ /_/g')
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
-        echo "echo 'testing $model_name of deeprec_fp32.......'" >> $deeprec_fp32_script
+        echo "echo 'testing $model_name of deeprec_fp32 $paras.......'" >> $deeprec_fp32_script
         echo "cd /root/modelzoo/$model_name/" >> $deeprec_fp32_script
 	if [[ ! -d  $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag ]];then
 		mkdir -p $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag
@@ -54,7 +54,7 @@ function make_script()
 	paras=$(echo $command | awk -F " " '{print $2}' | awk -F "|" '{print $2}')
 	log_tag=$(echo $paras| sed 's/ /_/g')
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
-        echo "echo 'testing $model_name of tf_fp32.......'" >> $tf_fp32_script
+        echo "echo 'testing $model_name of tf_fp32 $paras.......'" >> $tf_fp32_script
         echo "cd /root/modelzoo/$model_name/" >> $tf_fp32_script
 	if [[ ! -d  $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag ]];then
 		mkdir -p $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag
