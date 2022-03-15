@@ -65,16 +65,10 @@ jobs:
           echo "the number of model is $model_num"        
           declare -i iter=0
           model_list=()
-          for model in ${{github.event.inputs.model_list}}
+          for (( i=0; i<$model_num; i++ ))
           do
-            if [[ $iter == $model_num-1 ]];then
-                model_list[$iter]=\"$model\"
-            fi
-            model_list[$iter]="\"$model\", "
-            echo $iter
-            echo ${model_list[@]}
-            iter=$iter+1
-
+                  [ $i -eq $(( $model_num - 1 )) ] && model_list[$i]="\"${model_array[$i],,}\""
+                  [ $i -ne $(( $model_num -1 ))  ] && model_list[$i]="\"${model_array[$i],,}\","
           done
           echo ${model_list[@]}
           sed -i "28c\    model_list = [ '${model_list[@],,}' ]" ./distributed_benchmark/gen_template.py \
