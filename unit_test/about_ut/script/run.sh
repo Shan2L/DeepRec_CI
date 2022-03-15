@@ -1,12 +1,12 @@
 #!/bin/bash
 
 currentTime=$1
+commit_id=$2
 
 proxy_address=http://child-prc.intel.com:913
 export http_proxy=$proxy_address
 export https_proxy=$proxy_address
 
-commit_id=$(cat ../../config.properties|grep commit| awk -F " " '{print $2}')
 part_id=$(echo $commit_id | cut -c 1-7)
 log_title=$currentTime-$part_id
 
