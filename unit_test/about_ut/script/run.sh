@@ -6,7 +6,7 @@ proxy_address=http://child-prc.intel.com:913
 export http_proxy=$proxy_address
 export https_proxy=$proxy_address
 
-commit_id=$(cat ../../config.properites|grep commit| awk -F " " '{print $2}')
+commit_id=$(cat ../../config.properties|grep commit| awk -F " " '{print $2}')
 part_id=$(echo $commit_id| cut -c 1-7)
 part_date=$(echo $currentTime | cut -c 3-8)
 log_title=$part_date-$part_id
