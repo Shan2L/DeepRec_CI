@@ -83,8 +83,8 @@ jobs:
           echo $upper_model_list
           echo $lower_model_list
           
-          sed -i "28c\    model_list = [$upper_list]" ./distributed_benchmark/gen_template.py \
-          &&sed -i "29c\    model_name_list = [$lower_list]" ./distributed_benchmark/gen_template.py\
+          sed -i "28c\    model_list = [$lower_list]" ./distributed_benchmark/gen_template.py \
+          &&sed -i "29c\    model_name_list = [$upper_list]" ./distributed_benchmark/gen_template.py\
           &&echo "------------------------------------------------gen_template.py----------------------------------------------"\
           &&cat ./distributed_benchmark/gen_template.py\
           &&echo "----------------------------------------------------end-------------------------------------------------------"\
@@ -92,8 +92,9 @@ jobs:
           && cd ./distributed_benchmark/\
           &&python3 ./gen_template.py         
       - name: run the distributed test
-        run: |          
-          bash -x distributed_test.sh
+        run: | 
+          cd /home/shanlin/DeepRec_CI/distributed_benchmark/\
+          && bash -x distributed_test.sh
           
           if [[ $? == 1 ]];then
             echo "The UT has not been finished"
