@@ -34,7 +34,7 @@ function runContainer()
 
 set -x
 # 获取当前时间戳
-currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
+currentTime=`date "+%m-%d-%H-%M-%S"`
 
 
 repo_dir="./repo/ali_repo"
@@ -43,9 +43,8 @@ code_repo=$(cat ./config.properties | grep code_repo | awk -F " " '{print$2}')
 branch_name=$(cat ./config.properties | grep branch| awk -F " " '{print $2}' )
 commit_id=$(cat ./config.properties | grep commit| awk -F " " '{print $2}' )
 
-part_Time=$(echo $currentTime | cut -c 3-8)
 part_commit=$(echo $commit_id | cut -c 1-7)
-log_title=$part_Time-$part_commit
+log_title=$currentTime-$part_commit
 
 test_image_repo=$(cat ./config.properties | grep test_image| awk -F " " '{print $2}' )
 log_dir="./about_ut/log/$currentTime"
