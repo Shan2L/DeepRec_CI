@@ -72,6 +72,8 @@ jobs:
             fi
             model_list[iter]="\"$model\", "
             iter=$iter+1
+            echo $iter
+            echo ${model_list[@]}
           done
           echo ${model_list[@]}
           sed -i "28c\    model_list = [ ${model_list[@],,} ]" ./distributed_benchmark/gen_template.py \
