@@ -70,10 +70,13 @@ jobs:
           for (( i=0; i<$model_num; i++ ))
           do
                   [ $i -eq $(( $model_num - 1 )) ] && lower_model_list[$i]="\"${model_array[$i],,}\""
-                  [ $i -ne $(( $model_num -1 ))  ] && lower_model_list[$i]="\"${model_array[$i],,}\","                  
+                  [ $i -ne $(( $model_num - 1 ))  ] && lower_model_list[$i]="\"${model_array[$i],,}\","                  
                   
                   [ $i -eq $(( $model_num - 1 )) ] && upper_model_list[$i]="\"${model_array[$i]}\""
-                  [ $i -ne $(( $model_num -1 ))  ] && upper_model_list[$i]="\"${model_array[$i]}\","
+                  [ $i -ne $(( $model_num - 1 ))  ] && upper_model_list[$i]="\"${model_array[$i]}\","
+                  echo  $i
+                  echo ${lower_model_list[@]}
+                  echo ${lower_model_list[@]}
           done
           
           lower_model_list=${lower_model_list[@]}
