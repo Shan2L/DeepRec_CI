@@ -79,14 +79,14 @@ jobs:
                   echo ${lower_model_list[@]}
           done
           
-          lower_model_list=${lower_model_list[@]}
-          upper_model_list=${lower_model_list[@]}
+          lower_list=${lower_model_list[@]}
+          upper_list=${upper_model_list[@]}
           
           echo $upper_model_list
           echo $lower_model_list
           
-          sed -i "28c\    model_list = [$upper_model_list]" ./distributed_benchmark/gen_template.py \
-          &&sed -i "29c\    model_name_list = [$lower_model_list]" ./distributed_benchmark/gen_template.py\
+          sed -i "28c\    model_list = [$upper_list]" ./distributed_benchmark/gen_template.py \
+          &&sed -i "29c\    model_name_list = [$lower_list]" ./distributed_benchmark/gen_template.py\
           &&echo "------------------------------------------------gen_template.py----------------------------------------------"\
           &&cat ./distributed_benchmark/gen_template.py\
           &&echo "----------------------------------------------------end-------------------------------------------------------"\
