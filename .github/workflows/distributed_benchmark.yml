@@ -22,7 +22,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  distribute_test:
     # The type of runner that the job will run on
     runs-on: distributed_test
 
@@ -33,62 +33,61 @@ jobs:
       - name: modify the config file by inputs params
         run: |
           currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
-
           image_tag=$(echo ${{github.event.inputs.DeepRec_test_image}} | awk -F ":" '{print $2}')
           if [[ -z ${{github.event.inputs.log_tag}}} ]];then
               tag='$currentTime-$image_tag'
           fi
-          tag='$currentTime-${{github.event.inputs.log_tag}}'
-          
-          
+          tag='$currentTime-${{github.event.inputs.log_tag}}'        
           cd /home/shanlin/
           if [[ ! -d DeepRec_CI ]];then
               git clone https://github.com/GosTraight2020/DeepRec_CI.git
-          fi
-          
+          fi      
           cd DeepRec_CI/ \
           &&git pull
-          
           deeprec_template=./distributed_benchmark/templates/deeprec_template.yaml
-          tf_template=./distributed_benchmark/templates/tf_template.yaml
-          
+          tf_template=./distributed_benchmark/templates/tf_template.yaml  
           # modify the template
           sed -i '44c\              image: ${{github.event.inputs.DeepRec_test_image}}' $deeprec_template \
           &&sed -i '91c\              image: ${{github.event.inputs.DeepRec_test_image}}' $deeprec_template \
           &&sed -i '40c\              image: ${{github.event.inputs.TF_test_image}}' $tf_template\
-          &&sed -i '83c\              image: ${{github.event.inputs.TF_test_image}}' $tf_template\
-          
+          &&sed -i '83c\              image: ${{github.event.inputs.TF_test_image}}' $tf_template\     
+          echo "---------------------------------------------DeepRec_template.yaml--------------------------------------------"
+          cat $deeprec_tempalte
+          echo "----------------------------------------------------end-------------------------------------------------------"
+          echo "------------------------------------------------tf_template.yaml----------------------------------------------"
+          cat $tf_template
+          echo "----------------------------------------------------end-------------------------------------------------------"       
           # produce the new template
           model_array=(${{github.event.inputs.model_list}})
           declare -i model_num=${#model_array[@]}
-          echo "the number of model is $model_num"
-          
+          echo "the number of model is $model_num"        
           declare -i iter=0
           model_list=()
           for model in ${{github.event.inputs.model_list}}
           do
-            if [[ $iter == $model_num ]];then
+            if [[ $iter == $model_num-1 ]];then
                 model_list[iter]=\"$model\"
             fi
             model_list[iter]="\"$model\", "
+            iter=$iter+1
           done
           echo ${model_list[@]}
-          
           sed -i "28c\    model_list = [ ${model_list[@],,} ]" ./distributed_benchmark/gen_template.py \
           &&sed -i "29c\    model_name_list = [ ${model_list[@]} ]" ./distributed_benchmark/gen_template.py\
+          &&echo "------------------------------------------------gen_template.py----------------------------------------------"\
+          &&cat ./distributed_benchmark/gen_template.py\
+          &&echo "----------------------------------------------------end-------------------------------------------------------"\
           &&sudo rm -f ./distributed_benchmark/yaml_file/* \
-          &&python3 .distributed_benchmark/gen_template.py
-          
+          &&python3 ./distributed_benchmark/gen_template.py         
       - name: run the distributed test
         run: |          
-          bash 
           cd ./distributed_benchmark/ \
-          && bash distributed_test.sh
+          && bash -x distributed_test.sh
           
           if [[ $? == 1 ]];then
             echo "The UT has not been finished"
             exit 1
           fi
-          
+      - name: output infomation
           echo "the distributed benchmark has been finished"
-          echo "the output xls file will be put in the directory /home/shanlin/DeepRec_CI/distributed_benchmark/logs/$currentTime/ut_res.xls"
+          echo "the output log file will be put in the directory /home/shanlin/DeepRec_CI/distributed_benchmark/logs/$currentTime/"
