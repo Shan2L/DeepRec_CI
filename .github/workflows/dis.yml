@@ -52,7 +52,7 @@ jobs:
           sed -i '44c\              image: ${{github.event.inputs.DeepRec_test_image}}'  $deeprec_template \
           &&sed -i '91c\              image: ${{github.event.inputs.DeepRec_test_image}}'  $deeprec_template \
           &&sed -i '40c\              image: ${{github.event.inputs.TF_test_image}}'  $tf_template\
-          &&sed -i '83c\              image: ${{github.event.inputs.TF_test_image}}'  $tf_template\     
+          &&sed -i '83c\              image: ${{github.event.inputs.TF_test_image}}'  $tf_template\
           echo "---------------------------------------------DeepRec_template.yaml--------------------------------------------"
           cat $deeprec_tempalte
           echo "----------------------------------------------------end-------------------------------------------------------"
