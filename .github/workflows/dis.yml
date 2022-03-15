@@ -44,10 +44,10 @@ jobs:
           fi      
           cd DeepRec_CI/ \
           &&git pull
-          deeprec_template=./distributed_benchmark/templates/deeprec_template.yaml
-          deeprec_template=$(cd $deeprec_template && pwd)
-          tf_template=./distributed_benchmark/templates/tf_template.yaml  
-          deeprec_template=$(cd $tf_template && pwd)
+          template_path=./distributed_benchmark/templates/
+          template_path=$(cd $template_path && pwd)
+          tf_template=$template_path/tf_template.yaml
+          deeprec_template=$template_path/deeprec_template.yaml
           # modify the template
           sed -i '44c\              image: ${{github.event.inputs.DeepRec_test_image}}'  $deeprec_template \
           &&sed -i '91c\              image: ${{github.event.inputs.DeepRec_test_image}}'  $deeprec_template \
