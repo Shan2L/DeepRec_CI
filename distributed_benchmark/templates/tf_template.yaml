@@ -37,7 +37,7 @@ spec:
                   value: "train.py"
                 - name: "MEM_USAGE_STRATEGY"
                   value: "{{MEM_USAGE_STRATEGY}}"
-              image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:tf220222-fix-launch
+              image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:tf
               imagePullPolicy: Always
               workingDir: /root/
               command: ["/bin/sh", "-c"]
@@ -80,7 +80,7 @@ spec:
                   value: "train.py"
                 - name: "MEM_USAGE_STRATEGY"
                   value: "{{MEM_USAGE_STRATEGY}}"
-              image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:tf220222-fix-launch
+              image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:tf
               imagePullPolicy: Always
               workingDir: /root/
               command: ["/bin/sh", "-c"]

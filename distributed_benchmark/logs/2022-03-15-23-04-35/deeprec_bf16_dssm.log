@@ -1,0 +1,147 @@
+-rw-r--r-- 1 root root 920 Mar 15 15:34 /tmp/.endpoint_map
+Using TensorFlow version 1.15.5
+{"cluster":{"ps":["trainer-ps-0.default.svc:2222","trainer-ps-1.default.svc:2222","trainer-ps-2.default.svc:2222","trainer-ps-3.default.svc:2222"],"worker":["trainer-worker-0.default.svc:2222","trainer-worker-1.default.svc:2222","trainer-worker-2.default.svc:2222","trainer-worker-3.default.svc:2222","trainer-worker-4.default.svc:2222","trainer-worker-5.default.svc:2222","trainer-worker-6.default.svc:2222","trainer-worker-7.default.svc:2222","trainer-worker-8.default.svc:2222","trainer-worker-9.default.svc:2222"]},"task":{"type":"worker","index":0},"environment":"cloud"}
+2022-03-15 15:34:57.831468: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3299995000 Hz
+2022-03-15 15:34:57.835645: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fb2b86b0b40 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-03-15 15:34:57.835671: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-03-15 15:34:57.841499: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:258] Initialize GrpcChannelCache for job ps -> {0 -> trainer-ps-0.default.svc:2222, 1 -> trainer-ps-1.default.svc:2222, 2 -> trainer-ps-2.default.svc:2222, 3 -> trainer-ps-3.default.svc:2222}
+2022-03-15 15:34:57.841516: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:258] Initialize GrpcChannelCache for job worker -> {0 -> localhost:2222, 1 -> trainer-worker-1.default.svc:2222, 2 -> trainer-worker-2.default.svc:2222, 3 -> trainer-worker-3.default.svc:2222, 4 -> trainer-worker-4.default.svc:2222, 5 -> trainer-worker-5.default.svc:2222, 6 -> trainer-worker-6.default.svc:2222, 7 -> trainer-worker-7.default.svc:2222, 8 -> trainer-worker-8.default.svc:2222, 9 -> trainer-worker-9.default.svc:2222}
+2022-03-15 15:34:57.850519: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:374] Started server with target: grpc://localhost:2222
+Checking dataset
+Numbers of training dataset is 50000
+Numbers of test dataset is 10000
+Saving model checkpoints to /pvc/model_DSSM_1647358497
+INFO:tensorflow:Parsing ./data/taobao_train_data
+INFO:tensorflow:Parsing ./data/taobao_test_data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Init incremental saver , incremental_save:False, incremental_path:/pvc/model_DSSM_1647358497/.incremental_checkpoint/incremental_model.ckpt
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:run without loading checkpoint
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 0 into /pvc/model_DSSM_1647358497/model.ckpt.
+INFO:tensorflow:Create incremental timer, incremental_save:False, incremental_save_secs:None
+INFO:tensorflow:loss = 1361.7502, steps = 172
+INFO:tensorflow:global_step/sec: 89.2862
+INFO:tensorflow:global_step/sec: 89.1392
+INFO:tensorflow:global_step/sec: 110.565
+INFO:tensorflow:global_step/sec: 111.44
+INFO:tensorflow:global_step/sec: 104.999
+INFO:tensorflow:global_step/sec: 105.315
+INFO:tensorflow:global_step/sec: 91.852
+INFO:tensorflow:loss = 980.30096, steps = 1192 (10.456 sec)
+INFO:tensorflow:global_step/sec: 115.459
+INFO:tensorflow:global_step/sec: 106.478
+INFO:tensorflow:global_step/sec: 112.322
+INFO:tensorflow:global_step/sec: 106.711
+INFO:tensorflow:loss = 1042.1824, steps = 1659 (4.238 sec)
+INFO:tensorflow:global_step/sec: 112.647
+INFO:tensorflow:global_step/sec: 109.434
+INFO:tensorflow:global_step/sec: 109.706
+INFO:tensorflow:global_step/sec: 110.55
+INFO:tensorflow:loss = 1194.0549, steps = 2118 (4.149 sec)
+INFO:tensorflow:global_step/sec: 112.233
+INFO:tensorflow:global_step/sec: 111.479
+INFO:tensorflow:global_step/sec: 109.79
+INFO:tensorflow:global_step/sec: 110.323
+INFO:tensorflow:loss = 1552.2205, steps = 10 (4.179 sec)
+INFO:tensorflow:loss = 1394.543, steps = 406 (4.048 sec)
+INFO:tensorflow:loss = 1211.6318, steps = 1259 (4.133 sec)
+INFO:tensorflow:loss = 1047.6753, steps = 2153 (4.129 sec)
+INFO:tensorflow:global_step/sec: 6.91819
+INFO:tensorflow:global_step/sec: 220.061
+INFO:tensorflow:global_step/sec: 218.931
+INFO:tensorflow:global_step/sec: 219.39
+INFO:tensorflow:global_step/sec: 220.744
+INFO:tensorflow:loss = 1273.1981, steps = 3072 (4.242 sec)
+INFO:tensorflow:global_step/sec: 214.388
+INFO:tensorflow:global_step/sec: 218.255
+INFO:tensorflow:global_step/sec: 214.528
+INFO:tensorflow:global_step/sec: 223.263
+INFO:tensorflow:global_step/sec: 214.48
+INFO:tensorflow:global_step/sec: 222.271
+INFO:tensorflow:global_step/sec: 216.402
+INFO:tensorflow:global_step/sec: 223.09
+INFO:tensorflow:loss = 1271.28, steps = 4000 (4.270 sec)
+INFO:tensorflow:global_step/sec: 209.152
+INFO:tensorflow:global_step/sec: 221.839
+INFO:tensorflow:global_step/sec: 214.412
+INFO:tensorflow:global_step/sec: 218.265
+INFO:tensorflow:global_step/sec: 215.813
+INFO:tensorflow:global_step/sec: 218.874
+INFO:tensorflow:global_step/sec: 216.925
+INFO:tensorflow:global_step/sec: 217.408
+INFO:tensorflow:global_step/sec: 219.115
+INFO:tensorflow:loss = 1188.907, steps = 4946 (4.352 sec)
+INFO:tensorflow:global_step/sec: 211.617
+INFO:tensorflow:global_step/sec: 218.243
+INFO:tensorflow:global_step/sec: 213.994
+INFO:tensorflow:global_step/sec: 214.67
+INFO:tensorflow:global_step/sec: 215.032
+INFO:tensorflow:global_step/sec: 219.243
+INFO:tensorflow:global_step/sec: 216.543
+INFO:tensorflow:global_step/sec: 220.743
+INFO:tensorflow:loss = 1265.8352, steps = 5892 (4.380 sec)
+INFO:tensorflow:global_step/sec: 213.035
+INFO:tensorflow:global_step/sec: 219.833
+INFO:tensorflow:global_step/sec: 211.422
+INFO:tensorflow:global_step/sec: 217.077
+INFO:tensorflow:global_step/sec: 220.957
+INFO:tensorflow:global_step/sec: 219.296
+INFO:tensorflow:global_step/sec: 213.399
+INFO:tensorflow:global_step/sec: 217.217
+INFO:tensorflow:loss = 1331.4789, steps = 6835 (4.343 sec)
+INFO:tensorflow:global_step/sec: 213.982
+INFO:tensorflow:global_step/sec: 222.799
+INFO:tensorflow:global_step/sec: 214.642
+INFO:tensorflow:global_step/sec: 214.078
+INFO:tensorflow:global_step/sec: 222.766
+INFO:tensorflow:global_step/sec: 218.011
+INFO:tensorflow:global_step/sec: 217.62
+INFO:tensorflow:global_step/sec: 215.194
+INFO:tensorflow:global_step/sec: 218.061
+INFO:tensorflow:loss = 1161.8408, steps = 7767 (4.282 sec)
+INFO:tensorflow:global_step/sec: 215.138
+INFO:tensorflow:global_step/sec: 216.788
+INFO:tensorflow:global_step/sec: 219.019
+INFO:tensorflow:global_step/sec: 218.192
+INFO:tensorflow:global_step/sec: 216.635
+INFO:tensorflow:global_step/sec: 214.547
+INFO:tensorflow:global_step/sec: 218.997
+INFO:tensorflow:global_step/sec: 219.756
+INFO:tensorflow:loss = 1067.5919, steps = 8705 (4.322 sec)
+INFO:tensorflow:global_step/sec: 214.137
+INFO:tensorflow:global_step/sec: 212.952
+INFO:tensorflow:global_step/sec: 216.072
+INFO:tensorflow:global_step/sec: 220.338
+INFO:tensorflow:global_step/sec: 218.671
+INFO:tensorflow:global_step/sec: 211.277
+INFO:tensorflow:global_step/sec: 218.351
+INFO:tensorflow:global_step/sec: 214.711
+INFO:tensorflow:loss = 1304.9171, steps = 9636 (4.315 sec)
+INFO:tensorflow:global_step/sec: 217.265
+INFO:tensorflow:global_step/sec: 220.641
+INFO:tensorflow:global_step/sec: 215.62
+INFO:tensorflow:global_step/sec: 215.426
+INFO:tensorflow:global_step/sec: 217.107
+INFO:tensorflow:global_step/sec: 219.069
+INFO:tensorflow:global_step/sec: 216.515
+INFO:tensorflow:global_step/sec: 216.515
+INFO:tensorflow:loss = 1307.9989, steps = 10574 (4.313 sec)
+INFO:tensorflow:global_step/sec: 217.42
+INFO:tensorflow:global_step/sec: 210.398
+INFO:tensorflow:global_step/sec: 215.87
+INFO:tensorflow:global_step/sec: 217.554
+INFO:tensorflow:global_step/sec: 211.654
+INFO:tensorflow:global_step/sec: 219.151
+INFO:tensorflow:global_step/sec: 216.796
+INFO:tensorflow:global_step/sec: 223.095
+INFO:tensorflow:global_step/sec: 210.073
+INFO:tensorflow:loss = 1239.7695, steps = 11527 (4.411 sec)
+INFO:tensorflow:global_step/sec: 226.888
+INFO:tensorflow:global_step/sec: 209.884
+INFO:tensorflow:global_step/sec: 214.186
+INFO:tensorflow:global_step/sec: 221.795
+INFO:tensorflow:global_step/sec: 214.717
+INFO:tensorflow:global_step/sec: 217.215
+INFO:tensorflow:Saving checkpoints for 12217 into /pvc/model_DSSM_1647358497/model.ckpt.

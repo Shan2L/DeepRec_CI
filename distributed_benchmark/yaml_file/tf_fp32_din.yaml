@@ -32,22 +32,18 @@ spec:
                 - name: "JEMALLOC_PATH"
                   value: "/root/modelzoo/"
                 - name: "TF_WORKSPACE"
-                  value: "/root/modelzoo/DLRM"
+                  value: "/root/modelzoo/DIN"
                 - name: "TF_SCRIPT"
                   value: "train.py"
                 - name: "MEM_USAGE_STRATEGY"
-                  value: "251"
-                - name: "START_STATISTIC_STEP"
-                  value: "100"
-                - name: "STOP_STATISTIC_STEP"
-                  value: "200"
-              image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:latest
+                  value: "closed"
+              image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:tf
               imagePullPolicy: Always
               workingDir: /root/
               command: ["/bin/sh", "-c"]
               args:
                 [
-                  "cd /root/modelzoo/; python launch.py --output_dir=/pvc --protocol=grpc --inter=8 --intra=8 --input_layer_partitioner=8 --dense_layer_partitioner=16 ",
+                  "cd /root/modelzoo/; python launch.py --output_dir=/pvc --protocol=grpc --inter=8 --intra=8 --input_layer_partitioner=8 --dense_layer_partitioner=16",
                 ]
               volumeMounts:
                 - mountPath: "/pvc"
@@ -79,22 +75,18 @@ spec:
                 - name: "JEMALLOC_PATH"
                   value: "/root/modelzoo/"
                 - name: "TF_WORKSPACE"
-                  value: "/root/modelzoo/DLRM/"
+                  value: "/root/modelzoo/DIN"
                 - name: "TF_SCRIPT"
                   value: "train.py"
                 - name: "MEM_USAGE_STRATEGY"
-                  value: "251"
-                - name: "START_STATISTIC_STEP"
-                  value: "100"
-                - name: "STOP_STATISTIC_STEP"
-                  value: "200"
-              image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:latest
+                  value: "closed"
+              image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:tf
               imagePullPolicy: Always
               workingDir: /root/
               command: ["/bin/sh", "-c"]
               args:
                 [
-                  "cd /root/modelzoo/; python launch.py --output_dir=/pvc --protocol=grpc --inter=8 --intra=8 --input_layer_partitioner=8 --dense_layer_partitioner=16 ",
+                  "cd /root/modelzoo/; python launch.py --output_dir=/pvc --protocol=grpc --inter=8 --intra=8 --input_layer_partitioner=8 --dense_layer_partitioner=16",
                 ]
               volumeMounts:
                 - mountPath: "/pvc"

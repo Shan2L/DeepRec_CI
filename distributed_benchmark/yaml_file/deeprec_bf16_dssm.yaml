@@ -41,7 +41,7 @@ spec:
                   value: "100"
                 - name: "STOP_STATISTIC_STEP"
                   value: "200"
-              image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:220222-499d92f-fix-launch
+              image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:latest
               imagePullPolicy: Always
               workingDir: /root/
               command: ["/bin/sh", "-c"]
@@ -88,7 +88,7 @@ spec:
                   value: "100"
                 - name: "STOP_STATISTIC_STEP"
                   value: "200"
-              image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:220222-499d92f-fix-launch
+              image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:latest
               imagePullPolicy: Always
               workingDir: /root/
               command: ["/bin/sh", "-c"]

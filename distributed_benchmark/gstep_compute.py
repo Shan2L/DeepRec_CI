@@ -3,7 +3,7 @@ import re
 import argparse
 import os
 import csv
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import numpy as np
 
 def get_arg_parser():
@@ -52,11 +52,11 @@ if __name__ == "__main__":
         tail = round(len(values) * 0.9)
         values = values[head:tail]
 
-        plt.figure()
-        plt.plot(np.arange(0, len(values)), values)
-        plt.title(filename_nosuf)
-        plt.savefig(log_dir+"/"+filename_nosuf+".png")
-        plt.close()
+#        plt.figure()
+#        plt.plot(np.arange(0, len(values)), values)
+#        plt.title(filename_nosuf)
+#        plt.savefig(log_dir+"/"+filename_nosuf+".png")
+#        plt.close()
 
         avg = sum(values) / len(values)
         print("the processed data's length is {}, and it's average value is {}". format(len(values), avg))
