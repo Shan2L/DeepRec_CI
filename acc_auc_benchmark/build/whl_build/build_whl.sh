@@ -5,6 +5,7 @@ export http_proxy=$proxy_address
 export https_proxy=$proxy_address
 
 apt update
+apt upgrade -y
 apt install libsnappy-dev
 
 cd /whl_build/repo/ali_DeepRec/DeepRec
