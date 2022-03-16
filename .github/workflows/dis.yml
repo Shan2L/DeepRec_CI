@@ -24,7 +24,7 @@ jobs:
   # This workflow contains a single job called "build"
   distribute_test:
     # The type of runner that the job will run on
-    runs-on: distributed_test
+    runs-on: distributed_test2
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -32,19 +32,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: modify the config file by inputs params
         run: |
-          currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
-          log_tag=
-          if [[ -n ${{github.event.inputs.log_tag}} ]];then
-              log_tag=${{github.event.inputs.log_tag}}
-          else
-              deeprec_image_tag=$(echo ${{github.event.inputs.DeepRec_test_image}} | awk -F ":" '{print $2}')
-              if [[ $deeprec_image_tag == latest ]];then
-                  log_tag=$currentTime$deeprec_image_tag
-              else
-                  commit_id=$(echo $deeprec_image_tag | cut -c 8-14 )
-                  log_tag=$currentTime-$commit_it
-              fi
-          fi     
           cd /home/shanlin/
           if [[ ! -d DeepRec_CI ]];then
               git clone https://github.com/GosTraight2020/DeepRec_CI.git
@@ -82,8 +69,7 @@ jobs:
                   [ $i -eq $(( $model_num - 1 )) ] && upper_model_list[$i]="\"${model_array[$i]}\""
                   [ $i -ne $(( $model_num - 1 ))  ] && upper_model_list[$i]="\"${model_array[$i]}\","
                   echo  $i
-          done
-          
+          done          
           lower_list=${lower_model_list[@]}
           upper_list=${upper_model_list[@]}
           
@@ -100,6 +86,19 @@ jobs:
           &&python3 ./gen_template.py         
       - name: run the distributed test
         run: | 
+          currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
+          log_tag=
+          if [[ -n ${{github.event.inputs.log_tag}} ]];then
+              log_tag=${{github.event.inputs.log_tag}}
+          else
+              deeprec_image_tag=$(echo ${{github.event.inputs.DeepRec_test_image}} | awk -F ":" '{print $2}')
+              if [[ $deeprec_image_tag == latest ]];then
+                  log_tag=$currentTime$deeprec_image_tag
+              else
+                  commit_id=$(echo $deeprec_image_tag | cut -c 8-14 )
+                  log_tag=$currentTime-$commit_it
+              fi
+          fi     
           cd /home/shanlin/DeepRec_CI/distributed_benchmark/\
           && bash -x distributed_test.sh $log_tag
           
