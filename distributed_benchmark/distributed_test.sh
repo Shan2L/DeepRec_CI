@@ -138,7 +138,7 @@ function switchAndTrainModel()
                 echo "    ps-0  ps-1  ps-2  ps-3  worker-0  worker-1  worker-2  worker-3  worker-4  worker-5  worker-6  worker-7  worker-8  worker-9"
                 echo $statuses
 
-        sleep 30s
+        sleep 5m
     done
     kubectl logs trainer-worker-0 > $log_base_dir/$currentTime/$yaml_file_name.log \
     && kubectl delete tfjobs trainer
