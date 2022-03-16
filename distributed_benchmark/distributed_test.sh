@@ -163,16 +163,21 @@ function distributed_test()
 }
 
 set -x
+log_tag=$1
 log_base_dir='./logs'
 echoColor green "log_base_dir is ####$log_base_dir####"
 currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
 echoColor green "currentTime is ####$currentTime####"
-log_dir=$log_base_dir/$currentTime
+if [[ -z $log_tag ]];then
+	log_dir=$log_base_dir/$currentTime
+else
+	log_dir=$log_base_dir/$log_tag
+fi
 echoColor green "log_dir is ####$log_dir####"
 yaml_file_dir='./yaml_file'
 echoColor green "yaml_file_dir is ####$yaml_file_dir####"
 
-mkdir $log_base_dir/$currentTime \
+mkdir $log_dir \
 && distributed_test 
 wait
 python3 gstep_compute.py --log_dir ./logs/$currentTime
