@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BM_targets="\
+#BM_targets="\
 #	     //tensorflow/core/kernels:mkl_aggregate_ops_test \
 #            //tensorflow/core/kernels:mkl_batch_matmul_op_test \
 #            //tensorflow/core/kernels:mkl_concat_op_test \
@@ -14,8 +14,36 @@ BM_targets="\
 #            //tensorflow/core/kernels:mkl_reshape_op_test \
 #            //tensorflow/core/kernels:mkl_slice_op_test \
 #            //tensorflow/core/kernels:mkl_softmax_op_test \
-            //tensorflow/core/kernels:mkl_transpose_op_test \
-            "
+#           //tensorflow/core/kernels:mkl_transpose_op_test \
+#            "
+
+default_opts="--remote_cache=http://crt-e302.sh.intel.com:9092 \
+             --cxxopt=-D_GLIBCXX_USE_CXX11_ABI=0 \
+             --copt=-O2 \
+             --copt=-Wformat \
+             --copt=-Wformat-security \
+             --copt=-fstack-protector \
+             --copt=-fPIC \
+             --copt=-fpic \
+             --linkopt=-znoexecstack \
+             --linkopt=-zrelro \
+             --linkopt=-znow \
+             --linkopt=-fstack-protector"
+
+mkl_opts="--config=mkl_threadpool \
+           --define build_with_mkl_dnn_v1_only=true \
+           --copt=-DENABLE_INTEL_MKL_BFLOAT16 \
+           --copt=-march=skylake-avx512"
+
+test_opts="--nocache_test_results \
+           --test_output=all \
+           --verbose_failures \
+           --test_verbose_timeout_warnings \
+           --flaky_test_attempts 1 \
+           --test_timeout 99999999 \
+           --test_size_filters=small,medium,large,enormous \
+           -c opt \
+           --keep_going"
 
 BM_targets="//tensorflow/core/kernels:mkl_reshape_op_test"
 
