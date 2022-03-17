@@ -1,21 +1,20 @@
 #!/bin/bash
 
-#BM_targets="\
-#	     //tensorflow/core/kernels:mkl_aggregate_ops_test \
-#            //tensorflow/core/kernels:mkl_batch_matmul_op_test \
-#            //tensorflow/core/kernels:mkl_concat_op_test \
-#            //tensorflow/core/kernels:mkl_cwise_ops_test \
-#            //tensorflow/core/kernels:mkl_fused_batch_norm_op_test \
-#            //tensorflow/core/kernels:mkl_identity_op_test \
-#            //tensorflow/core/kernels:mkl_lrn_op_test \
-#            //tensorflow/core/kernels:mkl_matmul_op_test \
-#            //tensorflow/core/kernels:mkl_matmul_op_test \
-#            //tensorflow/core/kernels:mkl_relu_op_test \
-#            //tensorflow/core/kernels:mkl_reshape_op_test \
-#            //tensorflow/core/kernels:mkl_slice_op_test \
-#            //tensorflow/core/kernels:mkl_softmax_op_test \
-#           //tensorflow/core/kernels:mkl_transpose_op_test \
-#            "
+BM_targets="\
+	     //tensorflow/core/kernels:mkl_aggregate_ops_test \
+            //tensorflow/core/kernels:mkl_batch_matmul_op_test \
+            //tensorflow/core/kernels:mkl_concat_op_test \
+            //tensorflow/core/kernels:mkl_cwise_ops_test \
+            //tensorflow/core/kernels:mkl_fused_batch_norm_op_test \
+            //tensorflow/core/kernels:mkl_identity_op_test \
+            //tensorflow/core/kernels:mkl_lrn_op_test \
+            //tensorflow/core/kernels:mkl_matmul_op_test \
+            //tensorflow/core/kernels:mkl_matmul_op_test \
+            //tensorflow/core/kernels:mkl_relu_op_test \
+            //tensorflow/core/kernels:mkl_reshape_op_test \
+            //tensorflow/core/kernels:mkl_slice_op_test \
+            //tensorflow/core/kernels:mkl_softmax_op_test \
+           //tensorflow/core/kernels:mkl_transpose_op_test"
 
 default_opts="--remote_cache=http://crt-e302.sh.intel.com:9092 \
              --cxxopt=-D_GLIBCXX_USE_CXX11_ABI=0 \
@@ -45,7 +44,7 @@ test_opts="--nocache_test_results \
            -c opt \
            --keep_going"
 
-BM_targets="//tensorflow/core/kernels:mkl_reshape_op_test"
+#BM_targets="//tensorflow/core/kernels:mkl_reshape_op_test"
 
 function get_target_name() 
 {
