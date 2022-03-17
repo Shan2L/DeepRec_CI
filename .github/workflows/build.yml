@@ -61,17 +61,17 @@ jobs:
           sed -i '9c base_image_modelzoo ${{github.event.inputs.base_image}}' $config_file
           sed -i '19c code_repo ${{github.event.inputs.code_repo}}' $config_file
           sed -i '11c image_TAG ${{github.event.inputs.image_tag}}' $config_file
-          
-          if [[ ${{github.event.inputs.deeprec_tag}} ]];then
+
+          if [[ ${{github.event.inputs.deeprec_tag}} == true ]];then
             sed -i '192c\   build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
           else
             sed -i '192c\   #build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
           fi
           
-          if [[ ${{github.event.inputs.deeprec_modelzoo_tag}} ]];then
+          if [[ ${{github.event.inputs.deeprec_modelzoo_tag}} == true ]];then
             sed -i '193c\   build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh' $bash_file
           else
-            sed -i '1923\   #build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh' $bash_file
+            sed -i '193c\   #build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh' $bash_file
           fi
           
           echo --------------------------------------config.properties-------------------------------------------------
