@@ -44,7 +44,9 @@ function runDockerContrainer(){
     host_path=$(cd ./whl_build && pwd)
     
     if [[ $container_name == "whl_build" ]];then
-    	optional="--rm"
+	sudo docker volume create ut_cache
+    	optional="--rm \
+		 --mount source=ut_cache,target=/root/.cache/"
     fi
     
     sudo docker run \
@@ -56,6 +58,10 @@ function runDockerContrainer(){
     if [[ $? != 0 ]];then
         echoColor red "Something wrong happened when run the container..."
         exit 1
+    fi
+
+    if [[ $container_name == "whl_build" ]];then
+	    sudo docker volume rm ut_cache
     fi
 }
 
