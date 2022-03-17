@@ -15,62 +15,6 @@ on:
         default: 'main'
       commit_id:
         description: 'commit id'
-      mkl_aggregate_ops_test:
-        description: 'tensorflow/core/kernels:mkl_aggregate_ops_test'
-        type: boolean
-        default: 'true'     
-      mkl_batch_matmul_op_test:
-        description: 'tensorflow/core/kernels:mkl_batch_matmul_op_test'
-        type: boolean
-        default: 'true'     
-      mkl_concat_op_test:
-        description: 'tensorflow/core/kernels:mkl_concat_op_test'
-        type: boolean
-        default: 'true'      
-      mkl_cwise_ops_test:
-        description: 'tensorflow/core/kernels:mkl_cwise_ops_test'
-        type: boolean
-        default: 'true'      
-      mkl_fused_batch_norm_op_test:
-        description: 'tensorflow/core/kernels:mkl_fused_batch_norm_op_test'
-        type: boolean
-        default: 'true'      
-      mkl_identity_op_test:
-        description: 'tensorflow/core/kernels:mkl_identity_op_test'
-        type: boolean
-        default: 'true'      
-      mkl_lrn_op_test:
-        description: 'tensorflow/core/kernels:mkl_lrn_op_test'
-        type: boolean
-        default: 'true'      
-      mkl_matmul_op_test:
-        description: 'tensorflow/core/kernels:mkl_matmul_op_test'
-        type: boolean
-        default: 'true'   
-      mkl_relu_op_test:
-        description: 'tensorflow/core/kernels:mkl_relu_op_test'
-        type: boolean
-        default: 'true'   
-      mkl_reshape_op_test:
-        description: 'tensorflow/core/kernels:mkl_reshape_op_test'
-        type: boolean
-        default: 'true'      
-      mkl_slice_op_test:
-        description: 'tensorflow/core/kernels:mkl_slice_op_test'
-        type: 'boolean'
-        default: 'true'      
-      mkl_softmax_op_test:
-        description: 'tensorflow/core/kernels:mkl_softmax_op_test'
-        type: boolean
-        default: 'true'      
-      mkl_transpose_op_test:
-        description: 'tensorflow/core/kernels:mkl_transpose_op_test'
-        type: boolean
-        default: 'true'      
-
-
-       
-      
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -101,27 +45,7 @@ jobs:
           echo ----------------------------------------------------------------------------------------------
           cat $config_file
           echo ------------------------------------------------------------------------------------------------
-          if [[ ${{github.event.inputs.}} == true ]];then
-              sed -i '4c\              //tensorflow/core/kernels:mkl_aggregate_ops_test \' $bash_file
-          else
-              sed -i '4c\#             //tensorflow/core/kernels:mkl_aggregate_ops_test \' $bash_file
-          fi
-          num=4
-          for op in "mkl_aggregate_ops_test mkl_batch_matmul_op_test mkl_concat_op_test mkl_cwise_ops_test mkl_fused_batch_norm_op_test mkl_identity_op_testmkl_lrn_op_test \
-                     mkl_matmul_op_test mkl_relu_op_test mkl_reshape_op_test mkl_slice_op_test mkl_softmax_op_test mkl_transpose_op_test"
-          do
-            echo num
-            echo $op:${{github.event.inputs.$op}}
-            if [[ ${{github.event.inputs.$op}} == true ]];then
-                sed -i "$num c\              //tensorflow/core/kernels:mkl_aggregate_ops_test \" $bash_file
-            else
-                sed -i "$num c\#             //tensorflow/core/kernels:mkl_aggregate_ops_test \" $bash_file
-            fi
-            ((num++))
-          done
-          echo ----------------------------------------------------------------------------------------------
-          cat $home/shanlin/DeepRec_CI/BM_test/about_BM/script/BM_test.sh|head -n 18 |tail -n 15
-          echo ------------------------------------------------------------------------------------------------
+
       - name: run BM test
         run: |
           cd /home/shanlin/DeepRec_CI/BM_test/ \
