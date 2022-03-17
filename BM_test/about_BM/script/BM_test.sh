@@ -17,7 +17,7 @@ BM_targets="\
             //tensorflow/core/kernels:mkl_transpose_op_test \
             "
 
-# BM_targets="//tensorflow/core/kernels:mkl_reshape_op_test"
+BM_targets="//tensorflow/core/kernels:mkl_reshape_op_test"
 
 function get_target_name() 
 {
