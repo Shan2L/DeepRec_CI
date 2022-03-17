@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#BM_targets="\
+BM_targets="\
 #	     //tensorflow/core/kernels:mkl_aggregate_ops_test \
 #            //tensorflow/core/kernels:mkl_batch_matmul_op_test \
 #            //tensorflow/core/kernels:mkl_concat_op_test \
@@ -14,9 +14,10 @@
 #            //tensorflow/core/kernels:mkl_reshape_op_test \
 #            //tensorflow/core/kernels:mkl_slice_op_test \
 #            //tensorflow/core/kernels:mkl_softmax_op_test \
-#            //tensorflow/core/kernels:mkl_transpose_op_test"
+            //tensorflow/core/kernels:mkl_transpose_op_test \
+            "
 
-BM_targets="//tensorflow/core/kernels:mkl_reshape_op_test"
+# BM_targets="//tensorflow/core/kernels:mkl_reshape_op_test"
 
 function get_target_name() 
 {
