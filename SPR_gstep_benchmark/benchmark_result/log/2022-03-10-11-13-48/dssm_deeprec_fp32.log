@@ -1,8 +1,0 @@
-INFO:tensorflow:Parsing ./data/taobao_train_data
-INFO:tensorflow:Parsing ./data/taobao_test_data
-2022-03-10 11:15:09.337264: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1900000000 Hz
-2022-03-10 11:15:09.340660: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f9bf6ac3b40 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
-2022-03-10 11:15:09.340682: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
-2022-03-10 11:15:14.632439: I tensorflow/core/profiler/lib/profiler_session.cc:205] Profiler session started.
-2022-03-10 11:15:42.628538: I tensorflow/core/profiler/lib/profiler_session.cc:205] Profiler session started.
-2022-03-10 11:16:07.297551: I tensorflow/core/profiler/lib/profiler_session.cc:205] Profiler session started.

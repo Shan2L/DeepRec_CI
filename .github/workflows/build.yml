@@ -65,18 +65,22 @@ jobs:
           if [[ ${{github.event.inputs.deeprec_tag}} ]];then
             sed -i '192c\   build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
           else
-            sed -i '192c\#  build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
+            sed -i '192c\   #build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
           fi
           
           if [[ ${{github.event.inputs.deeprec_modelzoo_tag}} ]];then
-            sed -i '193c\   build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
+            sed -i '193c\   build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh' $bash_file
           else
-            sed -i '1923\#  build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
+            sed -i '1923\   #build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh' $bash_file
           fi
           
-          echo ----------------------------------------------------------------------------------------------
+          echo --------------------------------------$config.properties-------------------------------------------------
           cat $config_file
-          echo ------------------------------------------------------------------------------------------------
+          echo ---------------------------------------------------------------------------------------------------------
+          echo -------------------------------------image_build.sh-----------------------------------------------------
+          cat $bash_file | tail -n 94 | head -n 23
+          echo ${{github.event.inputs.deeprec_tag}}
+          echo ${{github.event.inputs.deeprec_modelzoo_tag}}
       - name: run the build process
         run: |
           cd /home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/build
@@ -90,4 +94,5 @@ jobs:
       - name: output the result
         run: |          
           echo "the build process has been executed successfully"
+
 
