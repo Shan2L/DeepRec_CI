@@ -6,7 +6,7 @@ import xlwt
 
 
 class Config(object):
-    def __init__(self, config_path: str = "config.yaml"):
+    def __init__(self, config_path: str = "/about_BM/script/config.yaml"):
         self.curr_config_path = os.path.abspath(config_path)
         if not os.path.exists(self.curr_config_path):
             raise FileNotFoundError(

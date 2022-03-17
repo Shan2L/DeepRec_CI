@@ -18,18 +18,23 @@
 
 BM_targets="//tensorflow/core/kernels:mkl_reshape_op_test"
 
+function get_target_name() 
+{
+  echo $1 | awk -F ':' '{print $2}'
+}
 
 function cpu_bazel_test_BM() {
   test_options="--test_arg=--benchmarks=all"
   yes "" | ./configure
   for test_target in ${BM_targets[@]}; do
-    target_name=$(get_target_name $test_target)
+    target_name=$(echo $test_target| awk -F ':' '{print $2}')
     bazel test ${default_opts} ${mkl_opts} \
       ${test_opts} ${test_options} \
-      -- ${test_target} | tee ./../BM_log/$target_name.log 2>&1
-    python /repo/writer/ExcelWriter.py BM /repo/BM_log/$target_name.log
+      -- ${test_target} | tee /about_BM/log/$log_tag/$target_name.log 2>&1
+    python /about_BM/script/ExeclWriter.py BM /about_BM/log/$log_tag/$target_name.log
   done
 }
 
 log_tag=$1
+pip install -r /about_BM/script/requirements.txt
 cpu_bazel_test_BM

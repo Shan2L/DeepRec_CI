@@ -15,51 +15,59 @@ function codeReview()
     &&cd $current_path
 }
 
-function checkEnv()
-{
-    container_id=$(sudo docker ps -a | grep ut_et | awk -F " " '{print $1}')
-    if [[ -n $container_id ]];then
-        echo "the container ut_et has already exist"
-        echo "killing ut_et container"
-        sudo docker rm -f $container_di
-    fi
-}
-
 
 function runContainer()
 {
     host_path1=$(cd "$repo_dir/DeepRec" && pwd)
-    host_path2=$(cd ./about_ut && pwd)
+    host_path2=$(cd ./about_BM && pwd)
 
-    sudo docker volume create ut_cache
     sudo docker pull $test_image_repo \
-    && sudo docker run \
-    -it \
+    && sudo docker run -it\
     -v $host_path1:/DeepRec/ \
-    -v $host_path2:/about_ut/ \
-    --mount source=ut_cache,target=/root/.cache/ \
+    -v $host_path2:/about_BM/ \
+    -v $cache_path:/root/.cache/ \
     --rm \
-    --name ut_et $test_image_repo /bin/bash /about_ut/script/run.sh $currentTime
+    --name BM_test $test_image_repo /bin/bash /about_BM/script/run.sh $currentTime $commit_id
 }
 
 
 set -x
 # 获取当前时间戳
-currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
+currentTime=`date "+%m-%d-%H-%M-%S"`
+
+
 repo_dir="./repo/ali_repo"
 repo_dir=$(cd $repo_dir && pwd)
 code_repo=$(cat ./config.properties | grep code_repo | awk -F " " '{print$2}')
 branch_name=$(cat ./config.properties | grep branch| awk -F " " '{print $2}' )
 commit_id=$(cat ./config.properties | grep commit| awk -F " " '{print $2}' )
+
+part_commit=$(echo $commit_id | cut -c 1-7)
+log_title=$currentTime-$part_commit
+
 test_image_repo=$(cat ./config.properties | grep test_image| awk -F " " '{print $2}' )
-log_dir="./about_ut/log/$currentTime"
+log_dir="./about_BM/log/$log_title"
 if [[ ! -d $log_dir ]];then
     mkdir -p $log_dir
 fi
 
-file_path=$(cd ./about_ut/log/$currentTime && pwd)
+cache_path=./cache
+if [[ ! -d $cache_path ]];then
+	mkdir -p $cache_path
+fi
+cache_path=$(cd $cache_path && pwd)
+
+file_path=$(cd ./about_BM/log/$log_title && pwd)
 
 codeReview \
-&& runContainer\
+&& runContainer
+
+current_path=$(pwd)
+cd ./repo/ali_repo/ \
+&&sudo rm -rf ./*
+cd $current_path
+
+git add ./about_BM/log/$log_title/*\
+&& git commit -m "add new log file: $log_title"\
+&& git push\
 && echo "the files generated is in the directory : $file_path"
-sudo docker volume rm ut_cache
