@@ -45,7 +45,7 @@ function runDockerContrainer(){
     
     if [[ $container_name == "whl_build" ]];then
 	sudo docker volume create ut_cache
-    	optional="-v  $cache_path:/root/.chache \
+    	optional="-v  $cache_path:/root/.cache \
 		 --rm"
 		 
     fi
@@ -188,9 +188,9 @@ function run()
     runDockerContrainer $build_image_repo whl_build /whl_build/build_whl.sh
     sudo rm -rf $ali_repo_dir
     checkResult \
-    && oss_upload\
-    && build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh \
-    && build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh \
+    && oss_upload
+    build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh
+    build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh
     
 } 
 
