@@ -1,0 +1,56 @@
+==================== Test output for //tensorflow/core/kernels:mkl_reshape_op_test:
+Running main() from test_main.cc
+Benchmark                                                           Time(ns) Iterations
+---------------------------------------------------------------------------------------
+BM_Reshape_Default_float_2D_1024x1024_To_256x4096_cpu_1                17007      37821	 61655.3M items/s
+BM_Reshape_Mkl_float_2D_1024x1024_To_256x4096_cpu_1                    29340      35668	 35738.6M items/s
+BM_Reshape_Default_float_2D_1024x1024_To_256x4096_cpu_4                15236      41481	 68821.1M items/s
+BM_Reshape_Mkl_float_2D_1024x1024_To_256x4096_cpu_4                    22572      33346	 46455.2M items/s
+BM_Reshape_Default_float_2D_1024x1024_To_256x4096_cpu_8                15647      41836	 67013.8M items/s
+BM_Reshape_Mkl_float_2D_1024x1024_To_256x4096_cpu_8                    19705      35874	 53212.4M items/s
+BM_Reshape_Default_bfloat16_2D_1024x1024_To_256x4096_cpu_1             29504      36719	 35540.2M items/s
+BM_Reshape_Mkl_bfloat16_2D_1024x1024_To_256x4096_cpu_1                 24759      24650	 42351.2M items/s
+BM_Reshape_Default_bfloat16_2D_1024x1024_To_256x4096_cpu_4             28692      29853	 36545.4M items/s
+BM_Reshape_Mkl_bfloat16_2D_1024x1024_To_256x4096_cpu_4                 21349      32158	 49114.9M items/s
+BM_Reshape_Default_bfloat16_2D_1024x1024_To_256x4096_cpu_8             17711      34670	 59204.7M items/s
+BM_Reshape_Mkl_bfloat16_2D_1024x1024_To_256x4096_cpu_8                 19492      27229	 53794.5M items/s
+BM_Reshape_Default_float_2D_1024x1024_To_16x256x256_cpu_1              27402      36714	 38266.0M items/s
+BM_Reshape_Mkl_float_2D_1024x1024_To_16x256x256_cpu_1                  23370      31175	 44868.3M items/s
+BM_Reshape_Default_float_2D_1024x1024_To_16x256x256_cpu_4              18727      28639	 55991.4M items/s
+BM_Reshape_Mkl_float_2D_1024x1024_To_16x256x256_cpu_4                  17845      29873	 58761.5M items/s
+BM_Reshape_Default_float_2D_1024x1024_To_16x256x256_cpu_8              21823      28581	 48049.3M items/s
+BM_Reshape_Mkl_float_2D_1024x1024_To_16x256x256_cpu_8                  22558      25516	 46484.2M items/s
+BM_Reshape_Default_bfloat16_2D_1024x1024_To_16x256x256_cpu_1           18684      36190	 56121.2M items/s
+BM_Reshape_Mkl_bfloat16_2D_1024x1024_To_16x256x256_cpu_1               29837      36119	 35143.3M items/s
+BM_Reshape_Default_bfloat16_2D_1024x1024_To_16x256x256_cpu_4           17012      35131	 61637.8M items/s
+BM_Reshape_Mkl_bfloat16_2D_1024x1024_To_16x256x256_cpu_4               27572      25312	 38031.1M items/s
+BM_Reshape_Default_bfloat16_2D_1024x1024_To_16x256x256_cpu_8           16045      32746	 65352.8M items/s
+BM_Reshape_Mkl_bfloat16_2D_1024x1024_To_16x256x256_cpu_8               19183      31000	 54662.1M items/s
+BM_Reshape_Default_float_3D_128x128x256_To_256x128x128_cpu_1           16117      31120	 260234.8M items/s
+BM_Reshape_Mkl_float_3D_128x128x256_To_256x128x128_cpu_1               26270      30594	 159663.6M items/s
+BM_Reshape_Default_float_3D_128x128x256_To_256x128x128_cpu_4           23639      26232	 177430.2M items/s
+BM_Reshape_Mkl_float_3D_128x128x256_To_256x128x128_cpu_4               17173      39871	 244242.8M items/s
+BM_Reshape_Default_float_3D_128x128x256_To_256x128x128_cpu_8           16006      39695	 262044.2M items/s
+BM_Reshape_Mkl_float_3D_128x128x256_To_256x128x128_cpu_8               22844      32661	 183609.8M items/s
+BM_Reshape_Default_bfloat16_3D_128x128x256_To_256x128x128_cpu_1        16311      39003	 257151.4M items/s
+BM_Reshape_Mkl_bfloat16_3D_128x128x256_To_256x128x128_cpu_1            18307      33771	 229108.8M items/s
+BM_Reshape_Default_bfloat16_3D_128x128x256_To_256x128x128_cpu_4        23999      34144	 174769.9M items/s
+BM_Reshape_Mkl_bfloat16_3D_128x128x256_To_256x128x128_cpu_4            22863      24068	 183451.7M items/s
+BM_Reshape_Default_bfloat16_3D_128x128x256_To_256x128x128_cpu_8        19312      26289	 217184.8M items/s
+BM_Reshape_Mkl_bfloat16_3D_128x128x256_To_256x128x128_cpu_8            16704      40078	 251100.3M items/s
+BM_Reshape_Default_float_4D_128x128x16x16_To_256x128x128_cpu_1         15889      35667	 263973.9M items/s
+BM_Reshape_Mkl_float_4D_128x128x16x16_To_256x128x128_cpu_1             19774      38612	 212111.4M items/s
+BM_Reshape_Default_float_4D_128x128x16x16_To_256x128x128_cpu_4         15818      36134	 265165.6M items/s
+BM_Reshape_Mkl_float_4D_128x128x16x16_To_256x128x128_cpu_4             27128      23080	 154611.9M items/s
+BM_Reshape_Default_float_4D_128x128x16x16_To_256x128x128_cpu_8         21095      33792	 198826.0M items/s
+BM_Reshape_Mkl_float_4D_128x128x16x16_To_256x128x128_cpu_8             23449      25850	 178867.9M items/s
+BM_Reshape_Default_bfloat16_4D_128x128x16x16_To_256x128x128_cpu_1      19630      26117	 213667.5M items/s
+BM_Reshape_Mkl_bfloat16_4D_128x128x16x16_To_256x128x128_cpu_1          21488      25432	 195191.0M items/s
+BM_Reshape_Default_bfloat16_4D_128x128x16x16_To_256x128x128_cpu_4      25747      34345	 162903.2M items/s
+BM_Reshape_Mkl_bfloat16_4D_128x128x16x16_To_256x128x128_cpu_4          24120      23567	 173889.8M items/s
+BM_Reshape_Default_bfloat16_4D_128x128x16x16_To_256x128x128_cpu_8      24468      26108	 171419.9M items/s
+BM_Reshape_Mkl_bfloat16_4D_128x128x16x16_To_256x128x128_cpu_8          23174      32613	 180990.0M items/s
+================================================================================
+//tensorflow/core/kernels:mkl_reshape_op_test                            PASSED in 58.4s
+
+Executed 1 out of 1 test: 1 test passes.
