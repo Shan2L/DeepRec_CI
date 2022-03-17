@@ -20,6 +20,14 @@ on:
         default: 'https://github.com/alibaba/DeepRec.git'
       image_tag:
         description: 'the image tag of the image built just now:'
+      deeprec_tag:
+        description: 'build deeprec image'
+        type: boolean
+        default: 'true'
+      deeprec_modelzoo_tag:
+        description: 'build deeprec-modelzoo image'
+        type: boolean
+        default: 'true'
       latest:
         description: 'Tag as the latest'
         type: boolean
@@ -47,24 +55,39 @@ jobs:
           mkdir image_build_temp_dir && cd image_build_temp_dir
           git clone https://github.com/GosTraight2020/DeepRec_CI.git
           config_file='/home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/config.properties'
-          
+          bash_file='/home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/build/image_build-action.sh'
           sed -i '3c commit_id ${{github.event.inputs.commit_id}}' $config_file
           sed -i '4c branch_name ${{github.event.inputs.branch_name}}' $config_file
           sed -i '9c base_image_modelzoo ${{github.event.inputs.base_image}}' $config_file
           sed -i '19c code_repo ${{github.event.inputs.code_repo}}' $config_file
           sed -i '11c image_TAG ${{github.event.inputs.image_tag}}' $config_file
+          
+          if [[ ${{github.event.inputs.deeprec_tag}} ]];then
+            sed -i '192c/   build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
+          else
+            sed -i '192c/#  build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
+          fi
+          
+          if [[ ${{github.event.inputs.deeprec_modelzoo_tag}} ]];then
+            sed -i '193c/   build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
+          else
+            sed -i '1923/#  build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
+          fi
+          
           echo ----------------------------------------------------------------------------------------------
           cat $config_file
           echo ------------------------------------------------------------------------------------------------
-          cd DeepRec_CI/acc_auc_benchmark/build
+      - name: run the build process
+        run: |
+          cd /home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/build
           if [[ ${{github.event.inputs.latest}} == true ]];then
               bash image_build-action.sh -l | tee /home/shanlin/githubCI.log
           else 
               bash image_build-action.sh | tee /home/shanlin/githubCI.log
           fi
           
-          cd ~ && sudo rm  -rf /home/shanlin/image_build_temp_dir/
-          
+          cd ~ && sudo rm  -rf /home/shanlin/image_build_temp_dir
+      - name: output the result
+        run: |          
           echo "the build process has been executed successfully"
-          echo "the image name is :cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:${{github.event.inputs.image_tag}}"
-          echo "the image name is :cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec:${{github.event.inputs.image_tag}}"
+
