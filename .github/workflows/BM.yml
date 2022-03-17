@@ -1,0 +1,136 @@
+# This is a basic workflow to help you get started with Actions
+
+name: unit_test
+
+# Controls when the workflow will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      code_repo:
+        description: 'the repo you wanna to do UT'
+        default: 'https://github.com/alibaba/DeepRec.git'
+      branch_name:
+        description: 'branch name'
+        default: 'main'
+      commit_id:
+        description: 'commit id'
+      mkl_aggregate_ops_test：
+        description: 'tensorflow/core/kernels:mkl_aggregate_ops_test'
+        type: boolean
+        default: true      
+      mkl_batch_matmul_op_test：
+        description: 'tensorflow/core/kernels:mkl_batch_matmul_op_test'
+        type: boolean
+        default: true     
+      mkl_concat_op_test：
+        description: 'tensorflow/core/kernels:mkl_concat_op_test'
+        type: boolean
+        default: true      
+      mkl_cwise_ops_test：
+        description: 'tensorflow/core/kernels:mkl_cwise_ops_test'
+        type: boolean
+        default: true      
+      mkl_fused_batch_norm_op_test：
+        description: 'tensorflow/core/kernels:mkl_fused_batch_norm_op_test'
+        type: boolean
+        default: true      
+      mkl_identity_op_test：
+        description: 'tensorflow/core/kernels:mkl_identity_op_test'
+        type: boolean
+        default: true      
+      mkl_lrn_op_test：
+        description: 'tensorflow/core/kernels:mkl_lrn_op_test'
+        type: boolean
+        default: true      
+      mkl_matmul_op_test：
+        description: 'tensorflow/core/kernels:mkl_matmul_op_test'
+        type: boolean
+        default: true   
+      mkl_relu_op_test：
+        description: 'tensorflow/core/kernels:mkl_relu_op_test'
+        type: boolean
+        default: true   
+      mkl_reshape_op_test：
+        description: 'tensorflow/core/kernels:mkl_reshape_op_test'
+        type: boolean
+        default: true      
+      mkl_slice_op_test：
+        description: 'tensorflow/core/kernels:mkl_slice_op_test'
+        type: boolean
+        default: true      
+      mkl_softmax_op_test：
+        description: 'tensorflow/core/kernels:mkl_softmax_op_test'
+        type: boolean
+        default: true      
+      mkl_transpose_op_test：
+        description: 'tensorflow/core/kernels:mkl_transpose_op_test'
+        type: boolean
+        default: true      
+
+
+       
+      
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: unit_test
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+
+      # Runs a set of commands using the runners shell
+      - name: modify the config file by inputs params
+        run: |
+          currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
+          cd /home/shanlin/
+          if [[ ! -d DeepRec_CI ]];then
+              git clone https://github.com/GosTraight2020/DeepRec_CI.git
+          fi
+          
+          cd DeepRec_CI/ \
+          &&git pull
+          config_file='/home/shanlin/DeepRec_CI/BM_test/config.properties'
+          bash_file='home/shanlin/DeepRec_CI/BM_test/about_BM/script/BM_test.sh'
+          sed -i '1c branch ${{github.event.inputs.branch_name}}' $config_file \
+          &&sed -i '2c commit ${{github.event.inputs.commit_id}}' $config_file\
+          &&sed -i '4c code_repo ${{github.event.inputs.code_repo}}' $config_file
+          echo ----------------------------------------------------------------------------------------------
+          cat $config_file
+          echo ------------------------------------------------------------------------------------------------
+          if [[ ${{github.event.inputs.}} == true ]];then
+              sed -i '4c\              //tensorflow/core/kernels:mkl_aggregate_ops_test \' $bash_file
+          else
+              sed -i '4c\#             //tensorflow/core/kernels:mkl_aggregate_ops_test \' $bash_file
+          fi
+          num=4
+          for op in "mkl_aggregate_ops_test mkl_batch_matmul_op_test mkl_concat_op_test mkl_cwise_ops_test mkl_fused_batch_norm_op_test mkl_identity_op_testmkl_lrn_op_test \
+                     mkl_matmul_op_test mkl_relu_op_test mkl_reshape_op_test mkl_slice_op_test mkl_softmax_op_test mkl_transpose_op_test"
+          do
+            echo num
+            if [[ ${{github.event.inputs.$op}} == true ]];then
+                sed -i "$num c\              //tensorflow/core/kernels:mkl_aggregate_ops_test \" $bash_file
+            else
+                sed -i "$num c\#             //tensorflow/core/kernels:mkl_aggregate_ops_test \" $bash_file
+            fi
+            ((num++))
+          done
+          echo ----------------------------------------------------------------------------------------------
+          cat $home/shanlin/DeepRec_CI/BM_test/about_BM/script/BM_test.sh|head -n 18 |tail -n 15
+          echo ------------------------------------------------------------------------------------------------
+      - name: run BM test
+        run: |
+          cd /home/shanlin/DeepRec_CI/BM_test/ \
+          && bash BM_test-action.sh
+          if [[ $? == 1 ]];then
+            echo "The BM has not been finished"
+            exit 1
+          fi
+      
+      - name: check the result
+        run: |
+          echo "the UT  has been executed successfully"
+          echo "the output xls file will be put in the directory /home/shanlin/DeepRec_CI/unit_test/about_ut/log/$currentTime/ut_res.xls"
