@@ -45,8 +45,10 @@ function runDockerContrainer(){
     
     if [[ $container_name == "whl_build" ]];then
 	sudo docker volume create ut_cache
-    	optional="--rm \
-		 --mount source=ut_cache,target=/root/.cache/"
+	cache_path="./"
+    	optional="-v  $cache_path:/root/.chache \
+		--rm"
+		 
     fi
     
     sudo docker run \
@@ -209,6 +211,9 @@ echoColor green "the buid image repo is :$build_image_repo"
 echoColor green "the deepRec base image repo is :$base_image_deepRec_repo"
 echoColor green "the modelzoo base image repo id is :$base_image_modelzoo_repo"
 
+cache_path=./cache
+mkdir $cache_path
+cache_path=$(cd $cache_path && pwd)
 
 # 阿里git code地址
 ali_repo_dir="./whl_build/repo/ali_DeepRec/DeepRec/"
