@@ -22,7 +22,7 @@ function runContainer()
     host_path2=$(cd ./about_BM && pwd)
 
     sudo docker pull $test_image_repo \
-    && sudo docker run -it\
+    && sudo docker run \
     -v $host_path1:/DeepRec/ \
     -v $host_path2:/about_BM/ \
     -v $cache_path:/root/.cache/ \
