@@ -2,14 +2,8 @@ Patterns:
   suffix_items: " {:^}{:d} {:>} {data}M {unit_per_sec:.5}/s"
   suffix_bytes: " {:^}{:d} {:>} {data}{unit_per_sec:.2}/s"
 
-  start: "Configuration finished"
-  end: "------------------"
-
-  single_row:
-      patterns:
-      - "//{dir}:{target}[0m[32m{Status}[0m{}"
-      - "//{dir}:{target}[0m[31m[1m{Status}[0m{}"
-      - "//{dir}:{target}{:s}{Status}{:s}"
+  start: "==================== Test output for {case_path}:{case_name}:"
+  end: "================================================================================"
 
   mkl_matmul_op_test:
     target: "//tensorflow/core/kernels:mkl_matmul_op_test"
@@ -92,3 +86,4 @@ Patterns:
     with_suffix: suffix_items
     patterns:
       - "BM_{kind}_{test_case}_{device}_{size1}*{size2}_{T}_{num_threads}"
+
