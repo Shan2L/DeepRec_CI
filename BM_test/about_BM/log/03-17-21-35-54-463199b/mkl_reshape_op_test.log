@@ -1,0 +1,4 @@
+//tensorflow/core/kernels:mkl_reshape_op_test                            [0m[32mPASSED[0m in 0.4s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.
