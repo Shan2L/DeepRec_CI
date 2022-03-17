@@ -74,11 +74,12 @@ jobs:
             sed -i '1923\   #build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh' $bash_file
           fi
           
-          echo --------------------------------------$config.properties-------------------------------------------------
+          echo --------------------------------------config.properties-------------------------------------------------
           cat $config_file
           echo ---------------------------------------------------------------------------------------------------------
           echo -------------------------------------image_build.sh-----------------------------------------------------
           cat $bash_file | tail -n 94 | head -n 23
+          echo --------------------------------------------------------------------------------------------------------
           echo ${{github.event.inputs.deeprec_tag}}
           echo ${{github.event.inputs.deeprec_modelzoo_tag}}
       - name: run the build process
