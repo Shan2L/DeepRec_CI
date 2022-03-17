@@ -32,8 +32,6 @@ class Executor:
         self.ws = None
 
     def BM(self, log_path: str, execl_path: str):
-        print(log_path)
-        print(execl_path)
         print(config.start)
         _title = []
         _parse_flag = False
@@ -44,47 +42,43 @@ class Executor:
                 _line = "".join(_char for _char in _line if _char.isprintable())
                 _parse_start = parse.search(config.start, _line)
                 _parse_end = parse.search(config.end, _line)
-                # print("*{}*".format(_line))
                 if _parse_start:
                     _parse_flag = True
+                    _curr_target_name: str = _parse_start["case_name"]
 
+                    print("_curr_target_name", _curr_target_name)
                 if _parse_end and _parse_flag:
                     _parse_flag = False
                     # store data to excel
                     if len(_all_excel_data) > 0:
-                        self.ws = self.wb.add_sheet("UT_result")
+                        _curr_target_name_sheet = _curr_target_name if len(
+                            _curr_target_name) < 31 else _curr_target_name[:30]
+                        self.ws = self.wb.add_sheet(_curr_target_name_sheet)
                         _all_excel_data.insert(0, _title)
                         for i, j in [(i, j) for i in range(len(_all_excel_data)) for j in
                                      range(len(_all_excel_data[0]))]:
                             self.ws.write(i, j, _all_excel_data[i][j])
                             pass
                         self.wb.save(execl_path)
-                        print(_all_excel_data)
+                        # print(_all_excel_data)
 
                     _all_excel_data.clear()
 
                 if _parse_flag:
                     # start parse BM datastore data
-                    _curr_target_name="single_row"
                     _test_case = config[_curr_target_name]
                     if not _test_case:
                         continue
                     _target_patterns = _test_case["patterns"]
-                    # print(_target_pattern)
 
-                    _pattern1 = _target_patterns[0]
-                    print(_pattern1)
-                    _pattern2 = _target_patterns[1]
-                    print(_pattern2)
-                    _pattern3 = _target_patterns[2]
-                    print(_pattern3)
-                    _search = parse.search(_pattern1, _line) or parse.search(_pattern2, _line) or parse.search(_pattern3, _line)
-                    print(_search)
-                    if _search:
-                        print(1)
-                        _title = [_item for _item in _search.named.keys()]
-                        _all_excel_data.append([_item for _item in _search.named.values()])
-                        #break
+                    for _pattern in _target_patterns:
+                        if "with_suffix" in _test_case.keys() and _test_case["with_suffix"]:
+                            _pattern = _pattern + config[_test_case["with_suffix"]]
+                        _search = parse.search(_pattern, _line)
+                        if _search:
+                            _title = [_item for _item in _search.named.keys()]
+                            _all_excel_data.append([_item for _item in _search.named.values()])
+                            break
 
         pass
 
@@ -128,3 +122,4 @@ class LogParser(object):
 
 if __name__ == '__main__':
     fire.Fire(LogParser)
+
