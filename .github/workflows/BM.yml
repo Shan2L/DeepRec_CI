@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: unit_test
+name: BM_test
 
 # Controls when the workflow will run
 on:
@@ -15,58 +15,58 @@ on:
         default: 'main'
       commit_id:
         description: 'commit id'
-      mkl_aggregate_ops_test：
+      mkl_aggregate_ops_test:
         description: 'tensorflow/core/kernels:mkl_aggregate_ops_test'
         type: boolean
-        default: true      
-      mkl_batch_matmul_op_test：
+        default: 'true'     
+      mkl_batch_matmul_op_test:
         description: 'tensorflow/core/kernels:mkl_batch_matmul_op_test'
         type: boolean
-        default: true     
-      mkl_concat_op_test：
+        default: 'true'     
+      mkl_concat_op_test:
         description: 'tensorflow/core/kernels:mkl_concat_op_test'
         type: boolean
-        default: true      
-      mkl_cwise_ops_test：
+        default: 'true'      
+      mkl_cwise_ops_test:
         description: 'tensorflow/core/kernels:mkl_cwise_ops_test'
         type: boolean
-        default: true      
-      mkl_fused_batch_norm_op_test：
+        default: 'true'      
+      mkl_fused_batch_norm_op_test:
         description: 'tensorflow/core/kernels:mkl_fused_batch_norm_op_test'
         type: boolean
-        default: true      
-      mkl_identity_op_test：
+        default: 'true'      
+      mkl_identity_op_test:
         description: 'tensorflow/core/kernels:mkl_identity_op_test'
         type: boolean
-        default: true      
-      mkl_lrn_op_test：
+        default: 'true'      
+      mkl_lrn_op_test:
         description: 'tensorflow/core/kernels:mkl_lrn_op_test'
         type: boolean
-        default: true      
-      mkl_matmul_op_test：
+        default: 'true'      
+      mkl_matmul_op_test:
         description: 'tensorflow/core/kernels:mkl_matmul_op_test'
         type: boolean
-        default: true   
-      mkl_relu_op_test：
+        default: 'true'   
+      mkl_relu_op_test:
         description: 'tensorflow/core/kernels:mkl_relu_op_test'
         type: boolean
-        default: true   
-      mkl_reshape_op_test：
+        default: 'true'   
+      mkl_reshape_op_test:
         description: 'tensorflow/core/kernels:mkl_reshape_op_test'
         type: boolean
-        default: true      
-      mkl_slice_op_test：
+        default: 'true'      
+      mkl_slice_op_test:
         description: 'tensorflow/core/kernels:mkl_slice_op_test'
-        type: boolean
-        default: true      
-      mkl_softmax_op_test：
+        type: 'boolean'
+        default: 'true'      
+      mkl_softmax_op_test:
         description: 'tensorflow/core/kernels:mkl_softmax_op_test'
         type: boolean
-        default: true      
-      mkl_transpose_op_test：
+        default: 'true'      
+      mkl_transpose_op_test:
         description: 'tensorflow/core/kernels:mkl_transpose_op_test'
         type: boolean
-        default: true      
+        default: 'true'      
 
 
        
@@ -111,6 +111,7 @@ jobs:
                      mkl_matmul_op_test mkl_relu_op_test mkl_reshape_op_test mkl_slice_op_test mkl_softmax_op_test mkl_transpose_op_test"
           do
             echo num
+            echo $op:${{github.event.inputs.$op}}
             if [[ ${{github.event.inputs.$op}} == true ]];then
                 sed -i "$num c\              //tensorflow/core/kernels:mkl_aggregate_ops_test \" $bash_file
             else
