@@ -45,9 +45,8 @@ function runDockerContrainer(){
     
     if [[ $container_name == "whl_build" ]];then
 	sudo docker volume create ut_cache
-	cache_path="./"
     	optional="-v  $cache_path:/root/.chache \
-		--rm"
+		 --rm"
 		 
     fi
     
