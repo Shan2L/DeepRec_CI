@@ -25,33 +25,34 @@ if __name__ == "__main__":
     result={}
     for root, dirs, files in os.walk(log_dir, topdown=False):
         for name in files:
-            # print(os.path.join(root, name))
-            # print(name)
             if os.path.splitext(name)[1] == '.log':
                 log_list.append(os.path.join(root, name))
 
     result = {}    
     for log_file in log_list:
         values = []
+        print("file:{}".format(log_file))
         with open(log_file, 'r') as f:
             for line in f:
                 matchObj = re.search(r'global_step/sec: \d+(\.\d+)?', line)
+
                 if matchObj:
+
                     temp = (matchObj.group()[17:])
                     values.append(float(temp))
-        
+       
         filename = os.path.split(log_file)[1]
         filename_nosuf = os.path.splitext(filename)[0]
-        
+
+        if(len(values)==0):
+               print("{} :error".format(log_file))
+               continue
         pre_avg = sum(values) / len(values)
-
-
-        print("the unprocessed data's length is {}, and it's average value is {}".format(len(values), pre_avg))
-        
+ #       print("the unprocessed data's length is {}, and it's average value is {}".format(len(values), pre_avg))    
         head = round(len(values) * 0.4)
         tail = round(len(values) * 0.9)
         values = values[head:tail]
-
+        
 #        plt.figure()
 #        plt.plot(np.arange(0, len(values)), values)
 #        plt.title(filename_nosuf)
@@ -59,14 +60,13 @@ if __name__ == "__main__":
 #        plt.close()
 
         avg = sum(values) / len(values)
-        print("the processed data's length is {}, and it's average value is {}". format(len(values), avg))
+  #      print("the processed data's length is {}, and it's average value is {}". format(len(values), avg))
         result[filename_nosuf] = avg
-
+        
     keys = []
     for (key, value) in result.items():
         keys.append(key)
-
-
+        
     for model_name in ["dlrm", "dssm", "deepfm", "wdl", "dien", "din"]:
         tf_name = "tf_fp32_"+model_name
         dp16_name = "deeprec_bf16_"+model_name
@@ -151,11 +151,3 @@ if __name__ == "__main__":
             data.append(result[model_name + "_deeprec_bf16_ratio"])
         print(data)
         writer.writerow(data)
-
-
-
-
-
-
-
-
