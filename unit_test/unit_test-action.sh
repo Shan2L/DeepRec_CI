@@ -35,8 +35,7 @@ function runContainer()
 set -x
 # 获取当前时间戳
 currentTime=`date "+%m-%d-%H-%M-%S"`
-
-
+mkl_tag=$1
 repo_dir="./repo/ali_repo"
 repo_dir=$(cd $repo_dir && pwd)
 code_repo=$(cat ./config.properties | grep code_repo | awk -F " " '{print$2}')
@@ -45,6 +44,10 @@ commit_id=$(cat ./config.properties | grep commit| awk -F " " '{print $2}' )
 
 part_commit=$(echo $commit_id | cut -c 1-7)
 log_title=$currentTime-$part_commit
+
+if [[ -n $mkl_tag ]];then
+    log_title=$log_title_with_$mkl_tag
+fi
 
 test_image_repo=$(cat ./config.properties | grep test_image| awk -F " " '{print $2}' )
 log_dir="./about_ut/log/$log_title"
