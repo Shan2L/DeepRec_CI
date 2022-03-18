@@ -52,11 +52,11 @@ jobs:
           
           bash_file='/home/shanlin/DeepRec_CI/unit_test/about_ut/script/ut.sh'
           if [[ ${{github.event.inputs.mkl_flag}} == true ]];then
-              sed '74c\                    --config=mkl_threadpool \'  $bash_file
-              sed '75c\                    --define build_with_mkl_dnn_v1_only=true\' $bash_file
+              sed -i '74c\                    --config=mkl_threadpool \\'  $bash_file
+              sed -i '75c\                    --define build_with_mkl_dnn_v1_only=true \\' $bash_file
           else
-              sed '74c\#                    --config=mkl_threadpool \'  $bash_file
-              sed '75c\#                    --define build_with_mkl_dnn_v1_only=true\' $bash_file
+              sed -i '74c\#                    --config=mkl_threadpool \\'  $bash_file
+              sed -i '75c\#                    --define build_with_mkl_dnn_v1_only=true \\' $bash_file
           fi
           echo ----------------------------------------------------ut.sh------------------------------------------------------
           cat $bash_file
