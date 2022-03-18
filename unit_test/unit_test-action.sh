@@ -15,6 +15,12 @@ function codeReview()
     &&cd $current_path
 }
 
+function checkCache()
+{
+    status=$(sudo docker volume ls | grep ut_cache)
+    [[ $status ]] && sudo docker volume rm ut_cache
+}
+
 
 function runContainer()
 {
@@ -30,6 +36,7 @@ function runContainer()
     --rm \
     --name ut_et $test_image_repo /bin/bash /about_ut/script/run.sh $currentTime $commit_id $mkl_tag
 }
+
 
 
 set -x
@@ -56,6 +63,8 @@ if [[ ! -d $log_dir ]];then
 fi
 
 file_path=$(cd ./about_ut/log/$log_title && pwd)
+
+checkCache
 
 codeReview \
 && runContainer
