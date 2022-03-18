@@ -46,9 +46,9 @@ jobs:
           sed -i '1c branch ${{github.event.inputs.branch_name}}' $config_file \
           &&sed -i '2c commit ${{github.event.inputs.commit_id}}' $config_file\
           &&sed -i '4c code_repo ${{github.event.inputs.code_repo}}' $config_file
-          echo ----------------------------------------------------------------------------------------------
+          echo ----------------------------------------config.properties------------------------------------------------------
           cat $config_file
-          echo ------------------------------------------------------------------------------------------------
+          echo ---------------------------------------------------------------------------------------------------------------
           
           bash_file='/home/shanlin/DeepRec_CI/unit_test/about_ut/script/ut.sh'
           if [[ ${{github.event.inputs.mkl_flag}} == true ]];then
@@ -58,6 +58,9 @@ jobs:
               sed '74c\#                    --config=mkl_threadpool \'  $bash_file
               sed '75c\#                    --define build_with_mkl_dnn_v1_only=true\' $bash_file
           fi
+          echo ----------------------------------------------------ut.sh------------------------------------------------------
+          cat $bash_file
+          echo ---------------------------------------------------------------------------------------------------------------
       
       - name: run unit test
         run: |
