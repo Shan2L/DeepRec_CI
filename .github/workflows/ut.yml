@@ -15,6 +15,10 @@ on:
         default: 'main'
       commit_id:
         description: 'commit id'
+      mkl_flag:
+        description: mkl_TreadPool
+        type: boolean
+        default: 'true'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -45,11 +49,25 @@ jobs:
           echo ----------------------------------------------------------------------------------------------
           cat $config_file
           echo ------------------------------------------------------------------------------------------------
+          
+          bash_file='/home/shanlin/DeepRec_CI/unit_test/about_ut/script/ut.sh'
+          if [[ ${{github.event.inputs.mkl_flag}} == true ]];then
+              sed '74c\                    --config=mkl_threadpool \'  $bash_file
+              sed '75c\                    --define build_with_mkl_dnn_v1_only=true\' $bash_file
+          else
+              sed '74c\#                    --config=mkl_threadpool \'  $bash_file
+              sed '75c\#                    --define build_with_mkl_dnn_v1_only=true\' $bash_file
+          fi
       
       - name: run unit test
         run: |
-          cd /home/shanlin/DeepRec_CI/unit_test/ \
-          && bash unit_test-action.sh
+          cd /home/shanlin/DeepRec_CI/unit_test/ 
+          if [[ ${{github.event.inputs.mkl_flag}} == true ]];then
+              bash unit_test-action.sh mkl
+          else
+              bash unit_test-action.sh 
+          fi
+          
           if [[ $? == 1 ]];then
             echo "The UT has not been finished"
             exit 1
