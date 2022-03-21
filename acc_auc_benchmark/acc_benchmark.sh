@@ -50,7 +50,7 @@ function make_script()
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
         echo "echo 'testing $model_name of tf_fp32.......'" >> $tf_fp32_script
         echo "cd /root/modelzoo/$model_name/" >> $tf_fp32_script
-        newline="$command --checkpoint $checkpoint_dir$currentTime/${model_name,,}_tf_fp32log_tag >$log_dir$currentTime/${model_name,,}_tf_fp32$log_tag.log 2>&1"
+        newline="$command --checkpoint $checkpoint_dir$currentTime/${model_name,,}_tf_fp32$log_tag >$log_dir$currentTime/${model_name,,}_tf_fp32$log_tag.log 2>&1"
         echo $newline >> $tf_fp32_script
     done;
     IFS=$IFS_old
