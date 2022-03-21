@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: build
+name: gstep_benmark
 
 # Controls when the workflow will run
 on:
@@ -18,20 +18,23 @@ on:
         default: 'WDL DSSM DeepFM DLRM DIEN DIN'
       deeprec_params:
         description: 'DeepRec Benchmark Parameters'
-        default: '--timeline 1000
-                  --fusion'
+        default: |
+          "--timeline 1000 
+          --fusion"
       tf_params:
         description: 'TF Benchmark Parameters'
-        default: '--timeline 1000'
+        default: |
+          '--timeline 1000'
       cpu:
         description: 'CPU'
         default: '24-47'
       env_var:
         description: 'Environment Variables'
-        default: 'export START_STATISTIC_STEP=100
-                  export STOP_STATISTIC_STEP=200
-                  export MALLOC_CONF="background_thread:true,metadata_thp:auto,dirty_decay_ms:60000,muzzy_decay_ms:60000"
-                  export TF_LAYOUT_PASS_GRAPH_CAST_FUSION=1'
+        default: |
+          "export START_STATISTIC_STEP=100
+          export STOP_STATISTIC_STEP=200
+          export MALLOC_CONF=\"background_thread:true,metadata_thp:auto,dirty_decay_ms:60000,muzzy_decay_ms:60000\"
+          export TF_LAYOUT_PASS_GRAPH_CAST_FUSION=1"
       weekly_tag:
         description: 'Regression Benmark'
         type: boolean
@@ -40,9 +43,9 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  gstep_benchmark:
     # The type of runner that the job will run on
-    runs-on: acc
+    runs-on: gstep_benchmark
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
