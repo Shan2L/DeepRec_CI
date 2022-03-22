@@ -77,6 +77,7 @@ function runContainers()
     [[ -n $deeprec_bf16_CMD ]] && runSingleContainer $deeprec_test_image deeprec_bf16.sh        
     [[ -n $deeprec_fp32_CMD ]] && runSingleContainer $deeprec_test_image deeprec_fp32.sh       
     [[ -n $tf_fp32_CMD ]] && runSingleContainer $tf_test_image tf_fp32.sh   
+    echo "all container finished"
 }
 
 function checkEnv()
@@ -87,6 +88,7 @@ function checkEnv()
     [[  -n $status1 ]] && sudo docker rm -f deeprec_bf16
     [[  -n $status2 ]] && sudo docker rm -f deeprec_fp32
     [[  -n $status3 ]] && sudo docker rm -f tf_fp32
+    echo "check Env Over"
 }
 
 
