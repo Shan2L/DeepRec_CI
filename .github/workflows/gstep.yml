@@ -52,6 +52,20 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: modify the config file by inputs params
         run: |
+           [[ {{github.event.inputs.weekly_tag}} == 'true' ]] \
+           && model_list="WDL DSSM DeepFM DLRM DIEN DIN" \
+           && dp_param1="" \
+           && dp_param2="" \
+           && tf_param1="" \
+           && tf_param2=""
+           
+           [[ {{github.event.inputs.weekly_tag}} != 'true' ]] \
+           && model_list=${{github.event.inputs.model_list}} \
+           && dp_param1="${{github.event.inputs.deeprec_param1}}" \
+           && dp_param2="${{github.event.inputs.deeprec_param2}}" \
+           && tf_param1="${{github.event.inputs.tf_param1}}" \
+           && tf_param2="${{github.event.inputs.tf_param2}}"
+           
            config_file="/home/shanlin/DeepRec_CI/gstep_benchmark/config.properties"
            cd /home/shanlin/
            if [[ ! -d DeepRec_CI ]];then
@@ -63,10 +77,14 @@ jobs:
            && sed -i "2c deeprec_test_image ${{github.event.inputs.deeprec_test_image}}" $config_file\
            && sed -i "3c tf_test_image ${{github.event.inputs.tf_test_image}}" $config_file\
            && sed -i "17c cpus ${{github.event.inputs.cpu}}" $config_file \
-           && bash ./CI_connection.sh "${{github.event.inputs.model_list}}" "${{github.event.inputs.deeprec_param1}}" "${{github.event.inputs.deeprec_param2}}" "${{github.event.inputs.tf_param1}}" "${{github.event.inputs.tf_param2}}" \
+           && bash ./CI_connection.sh "$model_list" "dp_param1" "$dp_param2" "tf_param1" "$tf_param2" \
            &&echo "##########################################config.properties############################################" \
            &&cat $config_file\
            &&echo "#######################################################################################################"     
+      - name: run the build process
+        run: |
+          cd /home/shanlin/DeepRec_CI/gstep_benchmark/
+          bash gstep_benchmark-action.sh ${{github.event.inputs.weekly_tag}}
       - name: output the result
         run: |          
           echo "the build process has been executed successfully"
