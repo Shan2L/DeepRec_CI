@@ -60,32 +60,40 @@ function clear_command_history()
 function make_cmd()
 {
 	old_IFS=$IFS	
-	for model in $model_list
-	do
-			echo $model
-			echo $param
-			sed -i "/##########1/a\CMD ${model}_deeprec_bf16:python train.py | $deeprec_param1" $config_file
-			sed -i "/##########1/a\CMD ${model}_deeprec_bf16:python train.py | $deeprec_param2" $config_file
-	done
+	if [[ $dp_flag != 'no' ]];then 
+		for model in $model_list
+		do
+				echo $model
+				echo $param
+				sed -i "/##########1/a\CMD ${model}_deeprec_bf16:python train.py | $deeprec_param1" $config_file
+				sed -i "/##########1/a\CMD ${model}_deeprec_bf16:python train.py | $deeprec_param2" $config_file
+		done
 
-	for model in $model_list
-	do
-			sed -i "/##########3/a\CMD ${model}_deeprec_fp32:python train.py | $deeprec_param1" $config_file
-			sed -i "/##########3/a\CMD ${model}_deeprec_fp32:python train.py | $deeprec_param2" $config_file
-	done
-
-	for model in $model_list
-	do
-			sed -i "/##########5/a\CMD ${model}_tf_fp32:python train.py | $tf_param1" $config_file
-			sed -i "/##########5/a\CMD ${model}_tf_fp32:python train.py | $tf_param2" $config_file
-	done
+		for model in $model_list
+		do
+				sed -i "/##########3/a\CMD ${model}_deeprec_fp32:python train.py | $deeprec_param1" $config_file
+				sed -i "/##########3/a\CMD ${model}_deeprec_fp32:python train.py | $deeprec_param2" $config_file
+		done
+	fi
+	
+	if [[ $tf_flag != 'no' ]];then 
+		for model in $model_list
+		do
+				sed -i "/##########5/a\CMD ${model}_tf_fp32:python train.py | $tf_param1" $config_file
+				sed -i "/##########5/a\CMD ${model}_tf_fp32:python train.py | $tf_param2" $config_file
+		done
+	fi
 }
 
-config_file="./config.properties"
+
 model_list=$1
 deeprec_param1=$2
 deeprec_param2=$3
 tf_param1=$4
 tf_param2=$5
+dp_flag=$6
+tf_flag=$7
+
+config_file="./config.properties"
 clear_command_history
 make_cmd
