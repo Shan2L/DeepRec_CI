@@ -76,11 +76,11 @@ jobs:
            && sed -i "2c deeprec_test_image ${{github.event.inputs.deeprec_test_image}}" $config_file\
            && sed -i "3c tf_test_image ${{github.event.inputs.tf_test_image}}" $config_file\
            && sed -i "17c cpus ${{github.event.inputs.cpu}}" $config_file
-           
-           [[ $dp_param1 == "/" && dp_param2 == "/" ]] && dp_flag='no'
-           [[ $tf_param1 == "/" && tf_param2 == "/" ]] && tf_flag='no'     
-           
-           bash -x ./CI_connection.sh "$model_list" "$dp_param1" "$dp_param2" "$tf_param1" "$tf_param2" $dp_flag  $tf_flag \
+           echo "$dp_param1" 
+           echo "$dp_param2" 
+           echo "$tf_param1" 
+           echo "$tf_param2"
+           bash -x ./CI_connection.sh "$model_list" "$dp_param1" "$dp_param2" "$tf_param1" "$tf_param2" \
            &&echo "##########################################config.properties############################################" \
            &&cat $config_file\
            &&echo "#######################################################################################################"     
