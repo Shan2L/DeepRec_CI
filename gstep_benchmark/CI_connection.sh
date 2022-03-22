@@ -62,34 +62,22 @@ function make_cmd()
 	old_IFS=$IFS	
 	for model in $model_list
 	do
-		IFS=$'\n\n'
-		for param in $deeprec_param1 $deeprec_param2
-		do
 			echo $model
 			echo $param
-			sed -i "/##########1/a\CMD ${model}_deeprec_bf16:python train.py | $param" $config_file
-		done
-		IFS=$old_IFS
+			sed -i "/##########1/a\CMD ${model}_deeprec_bf16:python train.py | $deeprec_param1" $config_file
+			sed -i "/##########1/a\CMD ${model}_deeprec_bf16:python train.py | $deeprec_param2" $config_file
 	done
 
 	for model in $model_list
 	do
-		IFS=$'\n\n'
-		for param in $deeprec_param1 $deeprec_param2
-		do
-			sed -i "/##########3/a\CMD ${model}_deeprec_fp32:python train.py | $param" $config_file
-		done
-		IFS=$old_IFS
+			sed -i "/##########3/a\CMD ${model}_deeprec_fp32:python train.py | $deeprec_param1" $config_file
+			sed -i "/##########3/a\CMD ${model}_deeprec_fp32:python train.py | $deeprec_param2" $config_file
 	done
 
 	for model in $model_list
 	do
-		IFS=$'\n\n'
-		for param in $tf_param1 $tf_param2
-		do
-			sed -i "/##########5/a\CMD ${model}_tf_fp32:python train.py | $param" $config_file
-		done
-		IFS=$old_IFS
+			sed -i "/##########5/a\CMD ${model}_tf_fp32:python train.py | $tf_param1" $config_file
+			sed -i "/##########5/a\CMD ${model}_tf_fp32:python train.py | $tf_param2" $config_file
 	done
 }
 
