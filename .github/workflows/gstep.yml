@@ -75,7 +75,7 @@ jobs:
            && cd ./gstep_benchmark/ \
            && sed -i "2c deeprec_test_image ${{github.event.inputs.deeprec_test_image}}" $config_file\
            && sed -i "3c tf_test_image ${{github.event.inputs.tf_test_image}}" $config_file\
-           && sed -i "17c cpus ${{github.event.inputs.cpu}}" $config_file \
+           && sed -i "17c cpus ${{github.event.inputs.cpu}}" $config_file
            
            [[ $dp_param1 == "/" && dp_param2 == "/" ]] && dp_flag='no'
            [[ $tf_param1 == "/" && tf_param2 == "/" ]] && tf_flag='no'     
