@@ -63,13 +63,13 @@ function runSingleContainer()
     image_repo=$1
     script_name=$2
     container_name=$(echo $2 | awk -F "." '{print $1}')
-    [  -z $cpus ] && cpu_set=""
-    [[ -n ]] && cpu_set="--cpuset-cpus $cpus"
+    [[ -z $cpus ]] && optional=""
+    [[ -n $cpus ]] && optional="--cpuset-cpus $cpus"
 
     host_path=$(cd benchmark_result && pwd) 
     sudo docker run --name $container_name\
-                    $cpu_set  \
-	                --rm \
+                    $optional  \
+	            --rm \
                     -v $host_path:/benchmark_result/\
                     $image_repo /bin/bash /benchmark_result/record/script/$currentTime/$script_name  
 }
