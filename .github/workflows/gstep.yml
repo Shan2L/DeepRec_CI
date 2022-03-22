@@ -64,9 +64,9 @@ jobs:
            && sed -i "3c, tf_test_image ${{github.event.inputs.tf_test_image}}" $config_file\
            && sed -i "17c, cpus ${{github.event.inputs.cpu}}" $config_file \
            && bash ./CI_connection.sh "${{github.event.inputs.model_list}}" "${{github.event.inputs.deeprec_param1}}" "${{github.event.inputs.deeprec_param1}}" "${{github.event.inputs.tf_param1}}" "${{github.event.inputs.tf_param2}}" \
-           &&echo ##########################################config.properties############################################\
+           &&echo "##########################################config.properties############################################" \
            &&cat $config_file\
-           &&echo #######################################################################################################      
+           &&echo "#######################################################################################################"     
       - name: output the result
         run: |          
           echo "the build process has been executed successfully"
