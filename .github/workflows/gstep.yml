@@ -56,9 +56,6 @@ jobs:
            cd /home/shanlin/
            if [[ ! -d DeepRec_CI ]];then
                git clone https://github.com/GosTraight2020/DeepRec_CI.git
-               if [[ $? != 1 ]];then
-                    exit 1;
-               fi
            fi
            cd ./DeepRec_CI/ \
            && git pull \
