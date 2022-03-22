@@ -57,7 +57,7 @@ jobs:
            if [[ ! -d DeepRec_CI ]];then
                git clone https://github.com/GosTraight2020/DeepRec_CI.git
            fi
-           cd ./DeepRec_CI/
+           cd ./DeepRec_CI/ \
            && git pull \
            && cd ./gstep_benchmark/ \
            && sed -i "2c, deeprec_test_image ${{github.event.inputs.deeprec_test_image}}" $config_file\
