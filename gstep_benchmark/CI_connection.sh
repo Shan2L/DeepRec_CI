@@ -78,6 +78,7 @@ function make_cmd()
 			[[ $tf_param1 != '/' ]] && sed -i "/##########5/a\CMD ${model}_tf_fp32:python train.py | $tf_param1" $config_file
 			[[ $tf_param2 != '/' ]] && sed -i "/##########5/a\CMD ${model}_tf_fp32:python train.py | $tf_param2" $config_file
 	done
+	echo "finished"
 
 }
 
