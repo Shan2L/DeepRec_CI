@@ -37,7 +37,7 @@ function clear_command_history()
 		echo "deeprec_32_end $deeprec32_end"
 
 		declare -i deeprec32_begin=$deeprec32_begin+2
-		declare -i deepre32_end=$deeprec32_end-2
+		declare -i deeprec32_end=$deeprec32_end-2
 
 		sed -i "$deeprec32_begin,$deeprec32_end d" $config_file
 	fi
@@ -63,7 +63,7 @@ function make_cmd()
 	for model in $model_list
 	do
 		IFS=$'\n\n'
-		for param in $deeprec_params
+		for param in $deeprec_param1 $deeprec_param2
 		do
 			echo $model
 			echo $param
@@ -75,7 +75,7 @@ function make_cmd()
 	for model in $model_list
 	do
 		IFS=$'\n\n'
-		for param in $deeprec_params
+		for param in $deeprec_param1 $deeprec_param2
 		do
 			sed -i "/##########3/a\CMD ${model}_deeprec_fp32:python train.py | $param" $config_file
 		done
@@ -85,7 +85,7 @@ function make_cmd()
 	for model in $model_list
 	do
 		IFS=$'\n\n'
-		for param in $tf_params
+		for param in $tf_param1 $tf_param2
 		do
 			sed -i "/##########5/a\CMD ${model}_tf_fp32:python train.py | $param" $config_file
 		done
@@ -95,8 +95,9 @@ function make_cmd()
 
 config_file="./config.properties"
 model_list=$1
-deeprec_params=$2
-tf_params=$3
-
+deeprec_param1=$2
+deeprec_param2=$3
+tf_param1=$4
+tf_param2=$5
 clear_command_history
 make_cmd
