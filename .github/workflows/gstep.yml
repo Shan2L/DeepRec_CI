@@ -87,7 +87,7 @@ jobs:
       - name: run the build process
         run: |
           cd /home/shanlin/DeepRec_CI/gstep_benchmark/
-          bash gstep_benchmark-action.sh ${{github.event.inputs.weekly_tag}}
+          bash -x gstep_benchmark-action.sh ${{github.event.inputs.weekly_tag}}
       - name: output the result
         run: |          
           echo "the build process has been executed successfully"
