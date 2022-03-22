@@ -60,7 +60,7 @@ jobs:
            && tf_param2=""
            
            [[ {{github.event.inputs.weekly_tag}} != 'true' ]] \
-           && model_list=${{github.event.inputs.model_list}} \
+           && model_list="${{github.event.inputs.model_list}}" \
            && dp_param1="${{github.event.inputs.deeprec_param1}}" \
            && dp_param2="${{github.event.inputs.deeprec_param2}}" \
            && tf_param1="${{github.event.inputs.tf_param1}}" \
