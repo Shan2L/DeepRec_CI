@@ -16,25 +16,24 @@ on:
       model_list:
         description: 'Model list'
         default: 'WDL DSSM DeepFM DLRM DIEN DIN'
-      deeprec_params:
-        description: 'DeepRec Benchmark Parameters'
-        default: >
-          "--timeline 1000 
-          --fusion"
-      tf_params:
-        description: 'TF Benchmark Parameters'
-        default: >
-          '--timeline 1000'
+      deeprec_param1:
+        description: 'DeepRec Benchmark Parameter1'
+        default: '--timeline 1000'
+      deeprec_param2:
+        description: 'DeepRec Benchmark Parameter2'
+        default: '--fusion'
+      tf_param1:
+        description: 'TF Benchmark Parameter1'
+        default: '--timeline 1000'
+      tf_param2:
+        description: 'TF Benchmark Parameter2'
       cpu:
         description: 'CPU'
         default: '24-47'
-      env_var:
-        description: 'Environment Variables'
-        default: >
-          "export START_STATISTIC_STEP=100
-          export STOP_STATISTIC_STEP=200
-          export MALLOC_CONF=\"background_thread:true,metadata_thp:auto,dirty_decay_ms:60000,muzzy_decay_ms:60000\"
-          export TF_LAYOUT_PASS_GRAPH_CAST_FUSION=1"
+      optimation:
+        description: 'Turn optimation On'
+        type: boolean
+        default: 'true'
       weekly_tag:
         description: 'Regression Benmark'
         type: boolean
@@ -64,7 +63,7 @@ jobs:
            && sed -i "2c, deeprec_test_image ${{github.event.inputs.deeprec_test_image}}" $config_file\
            && sed -i "3c, tf_test_image ${{github.event.inputs.tf_test_image}}" $config_file\
            && sed -i "17c, cpus ${{github.event.inputs.cpu}}" $config_file \
-           && bash ./CI_connection.sh ${{github.event.inputs.model_list}} ${{github.event.inputs.deeprec_params}} ${{github.event.inputs.tf_params}} \
+           && bash ./CI_connection.sh ${{github.event.inputs.model_list}} ${{github.event.inputs.deeprec_param1}} ${{github.event.inputs.deeprec_param1}} ${{github.event.inputs.tf_param1}} ${{github.event.inputs.tf_param2}} \
            echo ##########################################config.properties############################################
            cat $config_file
            echo #######################################################################################################      
