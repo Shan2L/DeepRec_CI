@@ -65,7 +65,7 @@ jobs:
            && sed -i "17c, cpus ${{github.event.inputs.cpu}}" $config_file \
            && bash ./CI_connection.sh "${{github.event.inputs.model_list}}" "${{github.event.inputs.deeprec_param1}}" "${{github.event.inputs.deeprec_param1}}" "${{github.event.inputs.tf_param1}}" "${{github.event.inputs.tf_param2}}" \
            &&echo ##########################################config.properties############################################\
-           &&cat $config_file\\
+           &&cat $config_file\
            &&echo #######################################################################################################      
       - name: output the result
         run: |          
