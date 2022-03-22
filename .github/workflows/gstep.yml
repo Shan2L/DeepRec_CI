@@ -18,7 +18,7 @@ on:
         default: 'WDL DSSM DeepFM DLRM DIEN DIN'
       deeprec_params:
         description: 'DeepRec Benchmark Parameters'
-        default: |
+        default: >
           "--timeline 1000 
           --fusion"
       tf_params:
