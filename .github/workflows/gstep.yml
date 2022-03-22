@@ -52,14 +52,14 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: modify the config file by inputs params
         run: |
-           [[ {{github.event.inputs.weekly_tag}} == 'true' ]] \
+           [[ ${{github.event.inputs.weekly_tag}} == 'true' ]] \
            && model_list="WDL DSSM DeepFM DLRM DIEN DIN" \
            && dp_param1="" \
            && dp_param2="" \
            && tf_param1="" \
            && tf_param2=""
            
-           [[ {{github.event.inputs.weekly_tag}} != 'true' ]] \
+           [[ ${{github.event.inputs.weekly_tag}} != 'true' ]] \
            && model_list="${{github.event.inputs.model_list}}" \
            && dp_param1="${{github.event.inputs.deeprec_param1}}" \
            && dp_param2="${{github.event.inputs.deeprec_param2}}" \
