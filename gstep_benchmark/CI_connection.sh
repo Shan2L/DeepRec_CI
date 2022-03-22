@@ -63,8 +63,7 @@ function make_cmd()
 	if [[ $dp_flag != 'no' ]];then 
 		for model in $model_list
 		do
-				echo $model
-				echo $param
+
 				sed -i "/##########1/a\CMD ${model}_deeprec_bf16:python train.py | $deeprec_param1" $config_file
 				sed -i "/##########1/a\CMD ${model}_deeprec_bf16:python train.py | $deeprec_param2" $config_file
 		done
