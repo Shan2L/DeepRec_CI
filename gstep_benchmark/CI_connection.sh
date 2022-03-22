@@ -92,6 +92,7 @@ tf_param1=$4
 tf_param2=$5
 dp_flag=$6
 tf_flag=$7
+echo "#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!$dp_flag!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!$tf_flag!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 
 config_file="./config.properties"
 clear_command_history
