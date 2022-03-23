@@ -95,8 +95,8 @@ function push_to_git()
 {
 	dp_tag=$(echo deeprec_test_image | awk -F ":" '{print $2}')
 	tf_tag=$(echo deeprec_test_image | awk -F ":" '{print $2}')
-	git add $pointcheck_dir$currentTime/* \
-	&& git add $gol_dir/* \
+	git add $pointcheck_dir/$currentTime/* \
+	&& git add $gol_dir/$currentTime/* \
 	&& git commit -m "[Benchmark] Add the checkpoint and log directory of $currentTime, and the DeepRec image is $dp_tag  the TF image is $tf_tag" \
 	&& git push
 }
