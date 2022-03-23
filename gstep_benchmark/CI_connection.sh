@@ -85,7 +85,7 @@ model_list=$1
 deeprec_bf16_param1=$2
 deeprec_bf16_param2=$3
 deeprec_fp32_param1=$4
-deeprec_fp32_param=$5
+deeprec_fp32_param2=$5
 tf_param=$6
 weekly_tag=$7
 
