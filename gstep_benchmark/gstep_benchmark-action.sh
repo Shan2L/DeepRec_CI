@@ -133,8 +133,8 @@ cpus=$(cat $config_file | grep cpus | awk -F " " '{print $2}')
 env_var=$(cat $config_file |grep export)
 
 [[ ! -d "./benchmark_result/record/script/$currentTime/" ]] && mkdir -p ./benchmark_result/record/script/$currentTime/
-[[ ! -d $gol_dir$currentTime ]] && mkdir -p "$gol_dir$currentTime" 
-[[ ! -d $pointcheck_dir$currentTime ]] && mkdir -p "$pointcheck_dir$currentTime"
+[[ ! -d $gol_dir/$currentTime ]] && mkdir -p "$gol_dir/$currentTime" 
+[[ ! -d $pointcheck_dir/$currentTime ]] && mkdir -p "$pointcheck_dir/$currentTime"
 
 make_script\
 && checkEnv\
