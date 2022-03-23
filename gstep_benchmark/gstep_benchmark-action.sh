@@ -96,10 +96,17 @@ function push_to_git()
 	dp_tag=$(echo deeprec_test_image | awk -F ":" '{print $2}')
 	tf_tag=$(echo deeprec_test_image | awk -F ":" '{print $2}')
 	git add $pointcheck_dir/$currentTime/* \
-	&& git add $gol_dir/$currentTime/* \
-	&& git commit -m "[Benchmark] Add the checkpoint and log directory of $currentTime, and the DeepRec image is $dp_tag  the TF image is $tf_tag" \
-	&& git push
-}
+	&& git add $gol_dir/$currentTime/* 
+	if [[ $weekly == 'true' ]];then
+		git commit -m "[Regression Benchmark] Add the checkpoint and log directory of $currentTime, and the DeepRec image is $dp_tag  the TF image is $tf_tag" 
+	else
+		git commit -m "[Benchmark] Add the checkpoint and log directory of $currentTime, and the DeepRec image is $dp_tag  the TF image is $tf_tag" 
+	fi
+	while [[ $? != 0 ]]
+	do
+		git push
+	done
+}	
 
 
 currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
