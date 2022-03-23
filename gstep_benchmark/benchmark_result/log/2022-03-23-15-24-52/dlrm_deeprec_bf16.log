@@ -1,0 +1,78 @@
+INFO:tensorflow:Parsing ./data/train.csv
+INFO:tensorflow:Parsing ./data/eval.csv
+2022-03-23 07:28:57.630770: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3299995000 Hz
+2022-03-23 07:28:57.636062: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7ff81d2a9200 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-03-23 07:28:57.636100: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-03-23 07:29:00.428849: I tensorflow/core/profiler/lib/profiler_session.cc:205] Profiler session started.
+2022-03-23 07:29:12.637719: I tensorflow/core/profiler/lib/profiler_session.cc:205] Profiler session started.
+2022-03-23 07:29:22.290412: I tensorflow/core/profiler/lib/profiler_session.cc:205] Profiler session started.
+Using TensorFlow version 1.15.5
+Checking dataset
+Numbers of training dataset is 8000000
+Numbers of test dataset is 2000000
+Saving model checkpoints to /benchmark_result/checkpoint/2022-03-23-15-24-52/dlrm_deeprec_bf16
+Save timeline to /benchmark_result/checkpoint/2022-03-23-15-24-52/dlrm_deeprec_bf16
+global_step/sec: 22.0644
+loss = 0.6688438057899475, steps = 0, cost time = 4.53s
+global_step/sec: 98.6216
+loss = 0.4913358688354492, steps = 100, cost time = 1.01s
+global_step/sec: 96.5774
+loss = 0.46187523007392883, steps = 200, cost time = 1.04s
+global_step/sec: 104.8681
+loss = 0.5376430749893188, steps = 300, cost time = 0.95s
+global_step/sec: 105.1428
+loss = 0.5357784032821655, steps = 400, cost time = 0.95s
+global_step/sec: 105.2802
+loss = 0.5021770596504211, steps = 500, cost time = 0.95s
+global_step/sec: 105.2372
+loss = 0.5584231615066528, steps = 600, cost time = 0.95s
+global_step/sec: 106.0545
+loss = 0.5532057881355286, steps = 700, cost time = 0.94s
+global_step/sec: 105.6354
+loss = 0.541109561920166, steps = 800, cost time = 0.95s
+global_step/sec: 105.7992
+loss = 0.49975574016571045, steps = 900, cost time = 0.95s
+Save timeline to /benchmark_result/checkpoint/2022-03-23-15-24-52/dlrm_deeprec_bf16
+global_step/sec: 85.9292
+loss = 0.5367001295089722, steps = 1000, cost time = 1.16s
+global_step/sec: 105.9453
+loss = 0.5438019037246704, steps = 1100, cost time = 0.94s
+global_step/sec: 106.2408
+loss = 0.5055984258651733, steps = 1200, cost time = 0.94s
+global_step/sec: 105.2130
+loss = 0.49151843786239624, steps = 1300, cost time = 0.95s
+global_step/sec: 105.8666
+loss = 0.49329283833503723, steps = 1400, cost time = 0.94s
+global_step/sec: 106.0504
+loss = 0.47769618034362793, steps = 1500, cost time = 0.94s
+global_step/sec: 105.6772
+loss = 0.48987409472465515, steps = 1600, cost time = 0.95s
+global_step/sec: 106.1498
+loss = 0.5161561965942383, steps = 1700, cost time = 0.94s
+global_step/sec: 106.1880
+loss = 0.4948514699935913, steps = 1800, cost time = 0.94s
+global_step/sec: 106.2857
+loss = 0.4997525215148926, steps = 1900, cost time = 0.94s
+Save timeline to /benchmark_result/checkpoint/2022-03-23-15-24-52/dlrm_deeprec_bf16
+global_step/sec: 89.7993
+loss = 0.4796823263168335, steps = 2000, cost time = 1.11s
+global_step/sec: 105.6380
+loss = 0.4913804531097412, steps = 2100, cost time = 0.95s
+global_step/sec: 105.7837
+loss = 0.5354346632957458, steps = 2200, cost time = 0.95s
+global_step/sec: 106.0209
+loss = 0.4858221709728241, steps = 2300, cost time = 0.94s
+global_step/sec: 105.8144
+loss = 0.5174145102500916, steps = 2400, cost time = 0.95s
+global_step/sec: 105.3860
+loss = 0.4607263207435608, steps = 2500, cost time = 0.95s
+global_step/sec: 105.7725
+loss = 0.5017789006233215, steps = 2600, cost time = 0.95s
+global_step/sec: 105.6161
+loss = 0.546201229095459, steps = 2700, cost time = 0.95s
+global_step/sec: 105.0233
+loss = 0.5038527250289917, steps = 2800, cost time = 0.95s
+global_step/sec: 105.4238
+loss = 0.5209802389144897, steps = 2900, cost time = 0.95s
+global_step/sec: 3201.5703
+loss = 0.5261390805244446, steps = 2999, cost time = 0.94s
