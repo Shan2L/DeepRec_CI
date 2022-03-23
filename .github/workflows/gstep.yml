@@ -65,18 +65,15 @@ jobs:
            config_file="/home/shanlin/DeepRec_CI/gstep_benchmark/config.properties"
            cd /home/shanlin/
            if [[ ! -d DeepRec_CI ]];then
+              git clone https://github.com/GosTraight2020/DeepRec_CI.git
               while [[ $? != 0 ]]
               do
                   git clone https://github.com/GosTraight2020/DeepRec_CI.git
               done
            fi
            cd ./DeepRec_CI/ \
-           && git pull 
-           while [[ $? != 0 ]]
-           do
-              git pull
-           done
-           cd ./gstep_benchmark/ \
+           && git pull\
+           && cd ./gstep_benchmark/ \
            && sed -i "2c deeprec_test_image ${{github.event.inputs.deeprec_test_image}}" $config_file\
            && sed -i "3c tf_test_image ${{github.event.inputs.tf_test_image}}" $config_file\
            && sed -i "17c cpus ${{github.event.inputs.cpu}}" $config_file
