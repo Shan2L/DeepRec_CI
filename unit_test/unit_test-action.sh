@@ -3,10 +3,8 @@
 function codeReview()
 {
     current_path=$(pwd)
-    if [[ -d $repo_dir/DeepRec ]];then
-        cd $repo_dir \
-        && sudo rm -rf DeepRec
-    fi
+    [[ -d $repo_dir/DeepRec ]] && cd $repo_dir && sudo rm -rf DeepRec
+
     cd $repo_dir \
     && git clone $code_repo \
     && cd $repo_dir/DeepRec\
@@ -19,6 +17,7 @@ function checkCache()
 {
     status=$(sudo docker volume ls | grep ut_cache)
     [[ $status ]] && sudo docker volume rm ut_cache
+    echo "Finishing checking the cache"
 }
 
 
@@ -37,6 +36,18 @@ function runContainer()
     --name ut_et $test_image_repo /bin/bash /about_ut/script/run.sh $currentTime $commit_id $mkl_tag
 }
 
+function push_to_github()
+{
+    git add ./about_ut/log/$log_title/*\
+    && git commit -m "add new log file: $log_title"\
+    && git push
+    while [[ $? != 0 ]]
+    do
+        git push
+    done
+    echo "the files generated is in the directory : $file_path"
+}
+
 
 
 set -x
@@ -48,34 +59,24 @@ repo_dir=$(cd $repo_dir && pwd)
 code_repo=$(cat ./config.properties | grep code_repo | awk -F " " '{print$2}')
 branch_name=$(cat ./config.properties | grep branch| awk -F " " '{print $2}' )
 commit_id=$(cat ./config.properties | grep commit| awk -F " " '{print $2}' )
-
+test_image_repo=$(cat ./config.properties | grep test_image| awk -F " " '{print $2}' )
 part_commit=$(echo $commit_id | cut -c 1-7)
 log_title=$currentTime-$part_commit
 
-if [[ -n $mkl_tag ]];then
-    log_title=${log_title}_with_$mkl_tag
-fi
+[[ -n $mkl_tag ]] && log_title=${log_title}_with_$mkl_tag
+[[ ! -d $log_dir ]] && mkdir -p $log_dir
 
-test_image_repo=$(cat ./config.properties | grep test_image| awk -F " " '{print $2}' )
 log_dir="./about_ut/log/$log_title"
-if [[ ! -d $log_dir ]];then
-    mkdir -p $log_dir
-fi
-
 file_path=$(cd ./about_ut/log/$log_title && pwd)
 
-checkCache
 
-codeReview \
+checkCache\
+&& codeReview \
 && runContainer
 
 current_path=$(pwd)
 cd ./repo/ali_repo/ \
 &&sudo rm -rf ./*
 cd $current_path
-
-git add ./about_ut/log/$log_title/*\
-&& git commit -m "add new log file: $log_title"\
-&& git push\
-&& echo "the files generated is in the directory : $file_path"
 sudo docker volume rm ut_cache
+push_to_github
