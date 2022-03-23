@@ -93,9 +93,14 @@ function checkEnv()
 
 function push_to_git()
 {
-	dp_tag=$(echo deeprec_test_image | awk -F ":" '{print $2}')
-	tf_tag=$(echo deeprec_test_image | awk -F ":" '{print $2}')
-	git add $pointcheck_dir/$currentTime/* \
+	dp_tag=$(echo $deeprec_test_image | awk -F ":" '{print $2}')
+	tf_tag=$(echo $deeprec_test_image | awk -F ":" '{print $2}')
+	[[ -z $tf_fp32_CMD ]] && tf_tag='None'
+	[[ -z $deeprec_bf16_CMD ]] && [[ -z $deeprec_fp32_CMD ]] && dp_tag='None'
+	current_path=$(pwd)
+	cd $pointcheck_dir/$currentTime/\
+	&& zip -r ${currentTime}-deeprec-${dp_tag}-tf-${tf_tag}.zip ./*
+	git add $pointcheck_dir/$currentTime/${currentTime}-deeprec-${dp_tag}-tf-${tf_tag}.zip \
 	&& git add $gol_dir/$currentTime/* 
 	if [[ $weekly == 'true' ]];then
 		git commit -m "[Regression Benchmark] Add the checkpoint and log directory of $currentTime, and the DeepRec image is $dp_tag  the TF image is $tf_tag" 
