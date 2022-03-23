@@ -1,0 +1,120 @@
+INFO:tensorflow:Parsing ./data/taobao_train_data
+INFO:tensorflow:Parsing ./data/taobao_test_data
+INFO:tensorflow:Is using fused embedding lookup for this scope age_level_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope cms_group_id_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope cms_segid_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope new_user_class_level_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope occupation_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope pvalue_level_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope shopping_level_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope tag_brand_list_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope tag_category_list_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope user_id_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope adgroup_id_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope brand_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope campaign_id_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope cate_id_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope customer_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope pid_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope price_embedding_weights
+2022-03-23 09:08:16.743772: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3299995000 Hz
+2022-03-23 09:08:16.749245: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fc3a2bf9440 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-03-23 09:08:16.749288: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Using TensorFlow version 1.15.5
+Checking dataset
+Numbers of training dataset is 50000
+Numbers of test dataset is 10000
+Saving model checkpoints to /benchmark_result/checkpoint/2022-03-23-17-02-12/dssm_deeprec_fp32_--fusion
+global_step/sec: 62.8196
+loss = 1912.866943359375, steps = 0, cost time = 1.59s
+loss = 1912.866943359375, steps = 0
+global_step/sec: 27.5220
+loss = 1282.8907470703125, steps = 100, cost time = 3.63s
+loss = 1282.8907470703125, steps = 100
+global_step/sec: 26.5258
+loss = 1114.5911865234375, steps = 200, cost time = 3.77s
+loss = 1114.5911865234375, steps = 200
+global_step/sec: 29.2944
+loss = 1213.2366943359375, steps = 300, cost time = 3.41s
+loss = 1213.2366943359375, steps = 300
+global_step/sec: 29.2385
+loss = 987.2967529296875, steps = 400, cost time = 3.42s
+loss = 987.2967529296875, steps = 400
+global_step/sec: 29.1526
+loss = 1263.299560546875, steps = 500, cost time = 3.43s
+loss = 1263.299560546875, steps = 500
+global_step/sec: 29.1450
+loss = 1114.9337158203125, steps = 600, cost time = 3.43s
+loss = 1114.9337158203125, steps = 600
+global_step/sec: 29.3107
+loss = 963.2920532226562, steps = 700, cost time = 3.41s
+loss = 963.2920532226562, steps = 700
+global_step/sec: 29.2759
+loss = 1183.3447265625, steps = 800, cost time = 3.42s
+loss = 1183.3447265625, steps = 800
+global_step/sec: 29.2631
+loss = 1189.25537109375, steps = 900, cost time = 3.42s
+loss = 1189.25537109375, steps = 900
+global_step/sec: 29.1218
+loss = 1099.919677734375, steps = 1000, cost time = 3.43s
+loss = 1099.919677734375, steps = 1000
+global_step/sec: 29.1972
+loss = 1200.3726806640625, steps = 1100, cost time = 3.42s
+loss = 1200.3726806640625, steps = 1100
+global_step/sec: 29.0833
+loss = 1260.598876953125, steps = 1200, cost time = 3.44s
+loss = 1260.598876953125, steps = 1200
+global_step/sec: 29.1905
+loss = 1093.2177734375, steps = 1300, cost time = 3.43s
+loss = 1093.2177734375, steps = 1300
+global_step/sec: 29.2787
+loss = 986.15625, steps = 1400, cost time = 3.42s
+loss = 986.15625, steps = 1400
+global_step/sec: 29.1184
+loss = 1220.15478515625, steps = 1500, cost time = 3.43s
+loss = 1220.15478515625, steps = 1500
+global_step/sec: 29.0210
+loss = 1245.70361328125, steps = 1600, cost time = 3.45s
+loss = 1245.70361328125, steps = 1600
+global_step/sec: 29.1105
+loss = 1175.087890625, steps = 1700, cost time = 3.44s
+loss = 1175.087890625, steps = 1700
+global_step/sec: 29.0574
+loss = 1010.6343383789062, steps = 1800, cost time = 3.44s
+loss = 1010.6343383789062, steps = 1800
+global_step/sec: 29.2063
+loss = 1277.639892578125, steps = 1900, cost time = 3.42s
+loss = 1277.639892578125, steps = 1900
+global_step/sec: 29.1841
+loss = 1155.725830078125, steps = 2000, cost time = 3.43s
+loss = 1155.725830078125, steps = 2000
+global_step/sec: 29.0754
+loss = 1322.80712890625, steps = 2100, cost time = 3.44s
+loss = 1322.80712890625, steps = 2100
+global_step/sec: 29.1229
+loss = 1104.7958984375, steps = 2200, cost time = 3.43s
+loss = 1104.7958984375, steps = 2200
+global_step/sec: 29.1466
+loss = 1232.371826171875, steps = 2300, cost time = 3.43s
+loss = 1232.371826171875, steps = 2300
+global_step/sec: 29.0481
+loss = 1258.0390625, steps = 2400, cost time = 3.44s
+loss = 1258.0390625, steps = 2400
+global_step/sec: 29.1627
+loss = 1004.0256958007812, steps = 2500, cost time = 3.43s
+loss = 1004.0256958007812, steps = 2500
+global_step/sec: 29.1632
+loss = 1168.219482421875, steps = 2600, cost time = 3.43s
+loss = 1168.219482421875, steps = 2600
+global_step/sec: 29.0711
+loss = 1168.189697265625, steps = 2700, cost time = 3.44s
+loss = 1168.189697265625, steps = 2700
+global_step/sec: 29.0717
+loss = 1187.334228515625, steps = 2800, cost time = 3.44s
+loss = 1187.334228515625, steps = 2800
+global_step/sec: 29.1024
+loss = 1123.5927734375, steps = 2900, cost time = 3.44s
+loss = 1123.5927734375, steps = 2900
+global_step/sec: 923.8050
+loss = 1022.646728515625, steps = 2999, cost time = 3.25s
+loss = 1022.646728515625, steps = 2999
