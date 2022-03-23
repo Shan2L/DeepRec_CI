@@ -102,6 +102,7 @@ function push_to_git()
 	else
 		git commit -m "[Benchmark] Add the checkpoint and log directory of $currentTime, and the DeepRec image is $dp_tag  the TF image is $tf_tag" 
 	fi
+	git push
 	while [[ $? != 0 ]]
 	do
 		git push
