@@ -29,7 +29,6 @@ on:
         description: 'TF Benchmark Parameter2'
       cpu:
         description: 'CPU'
-        default: '24-47'
       optimation:
         description: 'Turn optimation On'
         type: boolean
