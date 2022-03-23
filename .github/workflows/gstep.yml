@@ -56,10 +56,10 @@ jobs:
            
            [[ ${{github.event.inputs.weekly_tag}} != 'true' ]] \
            && model_list="${{github.event.inputs.model_list}}" \
-           && deeprec_bf16_param1="${{github.event.inputs.deeprec_param1}}" \
-           && deeprec_bf16_param2="${{github.event.inputs.deeprec_param2}}" \
-           && deeprec_fp32_param1="${{github.event.inputs.tf_param1}}" \
-           && deeprec_fp32_param2="${{github.event.inputs.tf_param2}}" \
+           && deeprec_bf16_param1="${{github.event.inputs.deeprec_bf16_param1}}" \
+           && deeprec_bf16_param2="${{github.event.inputs.deeprec_bf16_param2}}" \
+           && deeprec_fp32_param1="${{github.event.inputs.deeprec_fp32_param1}}" \
+           && deeprec_fp32_param2="${{github.event.inputs.deeprec_fp32_param2}}" \
            && tf_param="${{github.event.inputs.tf_param}}"
            
            config_file="/home/shanlin/DeepRec_CI/gstep_benchmark/config.properties"
