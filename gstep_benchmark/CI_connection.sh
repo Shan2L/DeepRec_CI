@@ -63,19 +63,19 @@ function make_cmd()
 
 	for model in $model_list
 	do
-			[[ $deeprec_bf16_param1 != "/" ]]&&sed -i "/##########1/a\CMD ${model}_deeprec_bf16:python train.py | $deeprec_param1" $config_file
-			[[ $deeprec_bf16_param2 != "/" ]]&&sed -i "/##########1/a\CMD ${model}_deeprec_bf16:python train.py | $deeprec_param2" $config_file	
+			[[ $deeprec_bf16_param1 != "/" ]]&&sed -i "/##########1/a\CMD ${model}_deeprec_bf16:python train.py | $deeprec_bf16_param1" $config_file
+			[[ $deeprec_bf16_param2 != "/" ]]&&sed -i "/##########1/a\CMD ${model}_deeprec_bf16:python train.py | $deeprec_bf16_param2" $config_file	
 	done
 		
 	for model in $model_list
 	do
-			[[ $deeprec_fp32_param1 != "/" ]]&&sed -i "/##########3/a\CMD ${model}_deeprec_fp32:python train.py | $deeprec_param1" $config_file
-			[[ $deeprec_fp32_param2 != "/" ]]&&sed -i "/##########3/a\CMD ${model}_deeprec_fp32:python train.py | $deeprec_param2" $config_file
+			[[ $deeprec_fp32_param1 != "/" ]]&&sed -i "/##########3/a\CMD ${model}_deeprec_fp32:python train.py | $deeprec_fp32_param1" $config_file
+			[[ $deeprec_fp32_param2 != "/" ]]&&sed -i "/##########3/a\CMD ${model}_deeprec_fp32:python train.py | $deeprec_fp32_param2" $config_file
 	done
 	
 	for model in $model_list
 	do
-			[[ $tf_param != '/' ]] && sed -i "/##########5/a\CMD ${model}_tf_fp32:python train.py | $tf_param1" $config_file
+			[[ $tf_param != '/' ]] && sed -i "/##########5/a\CMD ${model}_tf_fp32:python train.py | $tf_param" $config_file
 	done
 	echo "finished"
 
