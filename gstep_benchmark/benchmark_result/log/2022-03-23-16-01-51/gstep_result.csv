@@ -1,0 +1,5 @@
+Gstep, ,WDL,WDL,DLRM,DLRM,Deep FM,Deep FM,DSSM,DSSM,DIEN,DIEN,DIN,DIN
+Gstep, ,value,percent,value,percent,value,percent,value,percent,value,percent,value,percent
+Commuty TF, ,31.25753,baseline,80.0511,baseline,36.67071,baseline,18.33227,baseline,12.2947,baseline,31.04885,baseline
+DeepRec FP32, ,33.06332,105.78%,95.03751,118.72%,63.41655,172.94%,27.80624,151.68%,15.44383,125.61%,117.85401,379.58%
+DeepRec BF16, ,46.67936,149.34%,103.93103,129.83%,71.47515,194.91%,30.73931,167.68%,16.04326,130.49%,102.9952,331.72%

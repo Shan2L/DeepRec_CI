@@ -1,0 +1,86 @@
+INFO:tensorflow:vocabulary_size = 543060 in UID is inferred from the number of elements in the vocabulary_file ./data/uid_voc.txt.
+INFO:tensorflow:vocabulary_size = 367983 in ITEM is inferred from the number of elements in the vocabulary_file ./data/mid_voc.txt.
+INFO:tensorflow:vocabulary_size = 1601 in CATEGORY is inferred from the number of elements in the vocabulary_file ./data/cat_voc.txt.
+INFO:tensorflow:vocabulary_size = 367983 in HISTORY_ITEM is inferred from the number of elements in the vocabulary_file ./data/mid_voc.txt.
+INFO:tensorflow:vocabulary_size = 1601 in HISTORY_CATEGORY is inferred from the number of elements in the vocabulary_file ./data/cat_voc.txt.
+INFO:tensorflow:vocabulary_size = 367983 in NOCLK_HISTORY_ITEM is inferred from the number of elements in the vocabulary_file ./data/mid_voc.txt.
+INFO:tensorflow:vocabulary_size = 1601 in NOCLK_HISTORY_CATEGORY is inferred from the number of elements in the vocabulary_file ./data/cat_voc.txt.
+INFO:tensorflow:Parsing ./data/local_train_splitByUser
+INFO:tensorflow:Parsing ./data/local_test_splitByUser
+2022-03-23 08:02:37.703759: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3299995000 Hz
+2022-03-23 08:02:37.709907: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fe6813e89c0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-03-23 08:02:37.709947: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-03-23 08:02:41.832626: I tensorflow/core/profiler/lib/profiler_session.cc:205] Profiler session started.
+2022-03-23 08:02:41.951864: I tensorflow/compiler/jit/xla_compilation_cache.cc:241] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+2022-03-23 08:03:46.338382: I tensorflow/core/profiler/lib/profiler_session.cc:205] Profiler session started.
+2022-03-23 08:04:48.900868: I tensorflow/core/profiler/lib/profiler_session.cc:205] Profiler session started.
+Using TensorFlow version 1.15.5
+Checking dataset
+Numbers of training dataset is 1086120
+Numbers of test dataset is 121216
+Saving model checkpoints to /benchmark_result/checkpoint/2022-03-23-16-01-51/dien_deeprec_bf16
+Save timeline to /benchmark_result/checkpoint/2022-03-23-16-01-51/dien_deeprec_bf16
+global_step/sec: 15.1097
+loss = 1.0611134767532349, steps = 0, cost time = 6.62s
+global_step/sec: 16.4825
+loss = 0.990378737449646, steps = 100, cost time = 6.07s
+global_step/sec: 16.0016
+loss = 1.004888892173767, steps = 200, cost time = 6.25s
+global_step/sec: 16.5745
+loss = 0.9879425168037415, steps = 300, cost time = 6.03s
+global_step/sec: 16.5653
+loss = 0.9352014660835266, steps = 400, cost time = 6.04s
+global_step/sec: 16.5739
+loss = 0.9926702976226807, steps = 500, cost time = 6.03s
+global_step/sec: 16.5625
+loss = 0.9681298732757568, steps = 600, cost time = 6.04s
+global_step/sec: 16.5702
+loss = 0.907551109790802, steps = 700, cost time = 6.03s
+global_step/sec: 16.5422
+loss = 0.923068642616272, steps = 800, cost time = 6.05s
+global_step/sec: 16.5436
+loss = 0.934585452079773, steps = 900, cost time = 6.04s
+Save timeline to /benchmark_result/checkpoint/2022-03-23-16-01-51/dien_deeprec_bf16
+global_step/sec: 12.9038
+loss = 0.9458234906196594, steps = 1000, cost time = 7.75s
+global_step/sec: 16.4674
+loss = 0.9704844951629639, steps = 1100, cost time = 6.07s
+global_step/sec: 16.4530
+loss = 0.9354554414749146, steps = 1200, cost time = 6.08s
+global_step/sec: 16.4151
+loss = 0.9326155185699463, steps = 1300, cost time = 6.09s
+global_step/sec: 16.4340
+loss = 0.957024097442627, steps = 1400, cost time = 6.08s
+global_step/sec: 16.4185
+loss = 0.9666943550109863, steps = 1500, cost time = 6.09s
+global_step/sec: 16.4481
+loss = 0.9015222191810608, steps = 1600, cost time = 6.08s
+global_step/sec: 16.4664
+loss = 1.0003923177719116, steps = 1700, cost time = 6.07s
+global_step/sec: 16.4142
+loss = 0.917736291885376, steps = 1800, cost time = 6.09s
+global_step/sec: 16.4072
+loss = 0.9039936661720276, steps = 1900, cost time = 6.09s
+Save timeline to /benchmark_result/checkpoint/2022-03-23-16-01-51/dien_deeprec_bf16
+global_step/sec: 12.9860
+loss = 0.9924538135528564, steps = 2000, cost time = 7.70s
+global_step/sec: 16.4270
+loss = 0.9980977177619934, steps = 2100, cost time = 6.09s
+global_step/sec: 16.4013
+loss = 0.890499472618103, steps = 2200, cost time = 6.10s
+global_step/sec: 16.3776
+loss = 0.9187424182891846, steps = 2300, cost time = 6.11s
+global_step/sec: 16.4109
+loss = 0.8732945919036865, steps = 2400, cost time = 6.09s
+global_step/sec: 16.3795
+loss = 0.9639996290206909, steps = 2500, cost time = 6.11s
+global_step/sec: 16.3463
+loss = 0.8597689270973206, steps = 2600, cost time = 6.12s
+global_step/sec: 16.3622
+loss = 0.9934401512145996, steps = 2700, cost time = 6.11s
+global_step/sec: 16.3492
+loss = 0.9124132394790649, steps = 2800, cost time = 6.12s
+global_step/sec: 16.3926
+loss = 0.8636806011199951, steps = 2900, cost time = 6.10s
+global_step/sec: 494.8276
+loss = 0.9301284551620483, steps = 2999, cost time = 6.06s
