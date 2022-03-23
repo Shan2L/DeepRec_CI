@@ -93,7 +93,12 @@ function checkEnv()
 
 function push_to_git()
 {
-	git add $pointcheck_dir$currentTime
+	dp_tag=$(echo deeprec_test_image | awk -F ":" '{print $2}')
+	tf_tag=$(echo deeprec_test_image | awk -F ":" '{print $2}')
+	git add $pointcheck_dir$currentTime/* \
+	&& git add $gol_dir/* \
+	&& git commit -m "[Benchmark] Add the checkpoint and log directory of $currentTime, and the DeepRec image is $dp_tag  the TF image is $tf_tag"
+	&& git push
 }
 
 
@@ -106,7 +111,9 @@ log_dir=$(cat $config_file |grep log_dir | awk -F " " '{print $2}')
 checkpoint_dir=$(cat $config_file | grep checkpoint_dir | awk -F " " '{print $2}')
 
 gol_dir=$(cat $config_file |grep gol_dir | awk -F " " '{print $2}')
+gol_dir=$(cd $gol_dir && pwd)
 pointcheck_dir=$(cat $config_file | grep pointcheck_dir | awk -F " " '{print $2}')
+pointcheck_dir=$(cd $pointcheck_dir && pwd)
 
 deeprec_fp32_script="./benchmark_result/record/script/$currentTime/deeprec_fp32.sh"
 deeprec_bf16_script="./benchmark_result/record/script/$currentTime/deeprec_bf16.sh"
