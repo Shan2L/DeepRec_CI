@@ -91,6 +91,11 @@ function checkEnv()
     echo "check Env Over"
 }
 
+function push_to_git()
+{
+	git add $pointcheck_dir$currentTime
+}
+
 
 currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
 weekly=$1
@@ -127,4 +132,5 @@ env_var=$(cat $config_file |grep export)
 make_script\
 && checkEnv\
 && runContainers\
-&& python3 ./gstep_count.py --log_dir=$gol_dir$currentTime
+&& python3 ./gstep_count.py --log_dir=$gol_dir$currentTime \
+&& push_to_git
