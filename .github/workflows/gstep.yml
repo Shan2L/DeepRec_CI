@@ -70,7 +70,7 @@ jobs:
                   git clone https://github.com/GosTraight2020/DeepRec_CI.git
               done
            fi
-           cd ./DeepRec_CI/ 
+           cd ./DeepRec_CI/ \
            && git pull 
            while [[ $? != 0 ]]
            do
