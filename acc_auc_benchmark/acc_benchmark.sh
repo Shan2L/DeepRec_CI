@@ -1,59 +1,42 @@
 # 将要在容器中执行的命令归档
 function make_script()
 {
-
-    # 记录运行的命令脚本
-    if [ ! -d $(dirname $deeprec_fp32_script) ];then
-        mkdir -p $(dirname $deeprec_fp32_script)
-    fi
-    
-
-    echo "$env_var" > $deeprec_bf16_script
-    echo " " >> $deeprec_bf16_script
     IFS_old=$IFS
-    IFS=$'\n';
-    for line in $(cat $config_file | grep CMD | grep deeprec_bf16 )
-    do
-        command=$(echo "$line" | awk -F ":" '{print $2}'| awk -F "|" '{print $1}')
-	paras=$(echo "$line" | awk -F ":" '{print $2}' | awk -F "|" '{print $2}')
-	log_tag=$(echo $paras| sed 's/ /_/g')
-        model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
-        echo "echo 'testing $model_name of deeprec_bf16.......'" >> $deeprec_bf16_script
-        echo "cd /root/modelzoo/$model_name/" >> $deeprec_bf16_script
-      	if [[ ! -d  $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag ]];then
-      		sudo mkdir -p $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16_$log_tag
-      	fi
-        newline="$command $paras --checkpoint $checkpoint_dir$currentTime/${model_name,,}_deeprec_bf16$log_tag --bf16 >$log_dir$currentTime/${model_name,,}_deeprec_bf16$log_tag.log 2>&1"
-        echo $newline >> $deeprec_bf16_script
-    done;
-
-    echo "$env_var" > $deeprec_fp32_script
-    echo " " >> $deeprec_fp32_script
-    for line in $(cat $config_file | grep CMD | grep deeprec_fp32 )
-    do
-        command=$(echo "$line" | awk -F ":" '{print $2}'| awk -F "|" '{print $1}')
-	      paras=$(echo "$line" | awk -F ":" '{print $2}' | awk -F "|" '{print $2}')
-	      log_tag=$(echo $paras| sed 's/ /_/g')
-        model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
-        echo "echo 'testing $model_name of deeprec_fp32.......'" >> $deeprec_fp32_script
-        echo "cd /root/modelzoo/$model_name/" >> $deeprec_fp32_script
-        newline="$command $paras --checkpoint $checkpoint_dir$currentTime/${model_name,,}_deeprec_fp32$log_tag >$log_dir$currentTime/${model_name,,}_deeprec_fp32$log_tag.log 2>&1"
-
-        echo $newline >> $deeprec_fp32_script
-    done;
-
-    for line in $(cat $config_file | grep CMD | grep tf_fp32 )
-    do
-        command=$(echo "$line" | awk -F ":" '{print $2}'| awk -F "|" '{print $1}')
-	      paras=$(echo "$line" | awk -F ":" '{print $2}' | awk -F "|" '{print $2}')
-	      log_tag=$(echo $paras| sed 's/ /_/g')
-        model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
-        echo "echo 'testing $model_name of tf_fp32.......'" >> $tf_fp32_script
-        echo "cd /root/modelzoo/$model_name/" >> $tf_fp32_script
-        newline="$command $paras --checkpoint $checkpoint_dir$currentTime/${model_name,,}_tf_fp32$log_tag >$log_dir$currentTime/${model_name,,}_tf_fp32$log_tag.log 2>&1"
-        echo $newline >> $tf_fp32_script
-    done;
+    IFS=$'\n'
+    make_single_script deeprec_bf16 $deeprec_bf16_script
+    make_single_script deeprec_fp32 $deeprec_fp32_script
+    make_single_script tf_fp32 $tf_fp32_script
     IFS=$IFS_old
+}
+
+function make_single_script()
+{
+    catg=$1
+    script=$2
+    # 记录运行的命令脚本
+    bf16_para=
+    [[ ! -d $(dirname $script) ]] && mkdir -p $(dirname $script)
+    [[ $catg != "tf_fp32" ]] && echo "$env_var" > $script && echo " " >> $script
+    [[ $catg == "deeprec_bf16" ]] && bf16_para="--bf16"
+        
+    for line in $(cat $config_file | grep CMD | grep $catg )
+    do
+        command=$(echo "$line" | awk -F ":" '{print $2}'| awk -F "|" '{print $1}')
+        paras=$(echo "$line" | awk -F ":" '{print $2}' | awk -F "|" '{print $2}')
+        log_tag=$(echo $paras| sed 's/ /_/g')
+        model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
+        echo "echo 'testing $model_name of deeprec_bf16 $paras.......'" >> $script
+        echo "/root/modelzoo/$model_name/" >> $script
+      	if [[ ! -d  $checkpoint_dir$currentTime/${model_name,,}_script$$log_tag ]];then
+      		sudo mkdir -p $checkpoint_dir$currentTime/${model_name,,}_$script$log_tag
+      	fi
+        if [[  $weekly != 'true' ]];then
+            newline="$command $paras  $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg$log_tag  >$log_dir$currentTime/${model_name,,}_$catg$log_tag.log 2>&1"
+        else
+            newline="$command  $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg  >$log_dir$currentTime/${model_name,,}_$catg.log 2>&1"
+        fi
+        echo $newline >> $script
+    done
 }
 
 function echoColor() {
@@ -79,11 +62,12 @@ function runSingleContainer()
     host_path=$(cd ./benchmark_result && pwd)
     cpu_item=
     if [[ -n $cpus ]];then
-        cpu_item="--cpuset-cpus $cpus"
+        optional="--cpuset-cpus $cpus"
     fi
-    sudo docker run -itd --name $container_name\
+    sudo docker run -itd \
+    	--name $container_name\
         --rm\
-        $cpu_item \
+        $optional \
         -v $host_path:/benchmark_result/\
         $image_repo /bin/bash /benchmark_result/record/script/$currentTime/$script_name  
 }
@@ -146,17 +130,14 @@ function checkStatus()
 
         if [[ "$tf_32_status" == *"Exited"* ]]; then
             echoColor red "Container tf_fp32 has exited..."
-            sudo docker logs tf_fp32
         fi
 
         if [[ "$deeprec_32_status" == *"Exited"* ]]; then
             echoColor red "Container deeprec_fp32 has exited..."
-            sudo docker logs deepRec_fp32
         fi
 
         if [[ "$deeprec_16_status" == *"Exited"* ]]; then
             echoColor red "Container deeprec_bf16 has exited..."
-            sudo docker logs deepRec_bf16
         fi
 
         echo "sleep for 1 min ......"
@@ -169,6 +150,12 @@ function checkStatus()
 
 }
 
+function push_to_git()
+{ 
+	git add ./benchmark_result/log/$currentTime/* \
+	&& git commit ''
+	
+}
 
 
 # set -x
