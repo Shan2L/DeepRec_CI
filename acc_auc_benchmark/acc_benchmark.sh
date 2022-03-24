@@ -152,9 +152,18 @@ function checkStatus()
 
 function push_to_git()
 { 
-	git add ./benchmark_result/log/$currentTime/* \
-	&& git commit ''
-	
+	git add ./benchmark_result/log/$currentTime/* 
+	if [[ $weekly == 'true' ]];then
+		git commit -m "[Regression Benchmark] Add log directory of $currentTime, and the DeepRec image is $dp_tag  the TF image is $tf_tag" 
+	else
+		git commit -m "[Benchmark] Add log directory of $currentTime, and the DeepRec image is $dp_tag  the TF image is $tf_tag" 
+	fi
+	git push
+	while [[ $? != 0 ]]
+	do
+		git push
+	done
+	echo "Finsh pushing to Github"	
 }
 
 
