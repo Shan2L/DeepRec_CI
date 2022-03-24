@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: gstep_benchmark
+name: SPR_gstep_benchmark
 
 # Controls when the workflow will run
 on:
@@ -33,7 +33,7 @@ jobs:
   # This workflow contains a single job called "build"
   gstep_benchmark:
     # The type of runner that the job will run on
-    runs-on: gstep_benchmark
+    runs-on: SPR
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -74,7 +74,7 @@ jobs:
            &&echo "##########################################config.properties############################################" \
            &&cat $config_file\
            &&echo "#######################################################################################################"     
-      - name: run the build process
+      - name: run the benchmark process
         run: |
           cd /home/shanlin/DeepRec_CI/gstep_benchmark/
           bash -x SPR_gstep_benchmark.sh ${{github.event.inputs.weekly_tag}}
