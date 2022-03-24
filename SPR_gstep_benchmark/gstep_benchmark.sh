@@ -12,16 +12,11 @@ function make_single_script()
 {
     catg=$1
     script=$2
-    
-    # 记录运行的命令脚本
-    [[ ! -d $(dirname $script) ]] && mkdir -p $(dirname $script)
-
-    # 记录运行的命令脚本
     bf16_para=
-    [[ ! -d $(dirname $script) ]] && mkdir -p $(dirname $script)
-    [[ $catg != "tf_fp32" ]] && echo "$env_var" > $script && echo " " >> $script
-    [[ $catg == "deeprec_bf16" ]] && bf16_para="--bf16"
 
+    [[ ! -d $(dirname $script) ]] && mkdir -p $(dirname $script)
+    [[ $catg == "deeprec_bf16" ]] && bf16_para="--bf16"
+    [[ $catg != "tf_fp32" ]] && echo "$env_var" > $script && echo " " >> $script
     for line in $(cat $config_file | grep CMD | grep $catg )
     do
         command=$(echo "$line" | awk -F ":" '{print $2}'| awk -F "|" '{print $1}')
@@ -125,6 +120,3 @@ make_script\
 &&bash $tf_fp32_script\
 &&python3 ./gstep_count.py --log_dir=$gol_dir/$currentTime\
 &&push_to_git
-
-
-
