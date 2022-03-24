@@ -101,7 +101,8 @@ function push_to_git()
 	cd $pointcheck_dir/$currentTime/\
 	&& zip -r ${currentTime}-deeprec-${dp_tag}-tf-${tf_tag}.zip ./*
 	git add $pointcheck_dir/$currentTime/${currentTime}-deeprec-${dp_tag}-tf-${tf_tag}.zip \
-	&& git add $gol_dir/$currentTime/* 
+	&& git add $gol_dir/$currentTime/* \&&
+	cd $current_path
 	if [[ $weekly == 'true' ]];then
 		git commit -m "[Regression Benchmark] Add the checkpoint and log directory of $currentTime, and the DeepRec image is $dp_tag  the TF image is $tf_tag" 
 	else
