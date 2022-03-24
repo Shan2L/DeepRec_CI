@@ -14,9 +14,8 @@ function make_single_script()
     script=$2
     
     # 记录运行的命令脚本
-    if [ ! -d $(dirname $script) ];then
-        mkdir -p $(dirname $script)
-    fi
+    [[ ! -d $(dirname $script) ]] && mkdir -p $(dirname $script)
+
     # 记录运行的命令脚本
     bf16_para=
     [[ ! -d $(dirname $script) ]] && mkdir -p $(dirname $script)
@@ -31,9 +30,7 @@ function make_single_script()
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
         echo "echo 'testing $model_name of $catg $paras.......'" >> $script
         echo "cd /root/modelzoo/$model_name/" >> $script
-      	if [[ ! -d  $checkpoint_dir$currentTime/${model_name,,}_script$$log_tag ]];then
-      		sudo mkdir -p $checkpoint_dir$currentTime/${model_name,,}_$script$log_tag
-      	fi
+      	[[ ! -d  $checkpoint_dir$currentTime/${model_name,,}_script$$log_tag ]]&& sudo mkdir -p $checkpoint_dir$currentTime/${model_name,,}_$script$log_tag
         if [[  $weekly != 'true' ]];then
             newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 numactl -C $cpus -l $command $paras --no_eval --steps 3000 $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg$log_tag  >$log_dir$currentTime/${model_name,,}_$catg$log_tag.log 2>&1"
         else
