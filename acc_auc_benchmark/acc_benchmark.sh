@@ -25,8 +25,8 @@ function make_single_script()
         paras=$(echo "$line" | awk -F ":" '{print $2}' | awk -F "|" '{print $2}')
         log_tag=$(echo $paras| sed 's/ /_/g')
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
-        echo "echo 'testing $model_name of deeprec_bf16 $paras.......'" >> $script
-        echo "/root/modelzoo/$model_name/" >> $script
+        echo "echo 'testing $model_name of $catg $paras.......'" >> $script
+        echo "cd /root/modelzoo/$model_name/" >> $script
       	if [[ ! -d  $checkpoint_dir$currentTime/${model_name,,}_script$$log_tag ]];then
       		sudo mkdir -p $checkpoint_dir$currentTime/${model_name,,}_$script$log_tag
       	fi
@@ -170,7 +170,7 @@ function push_to_git()
 # set -x
 # 获取当前时间戳
 currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
-
+weekly=$1
 # 配置文件的存放位置
 config_file="./config.properties"
 
