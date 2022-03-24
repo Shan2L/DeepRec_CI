@@ -64,9 +64,8 @@ part_commit=$(echo $commit_id | cut -c 1-7)
 log_title=$currentTime-$part_commit
 
 [[ -n $mkl_tag ]] && log_title=${log_title}_with_$mkl_tag
-[[ ! -d $log_dir ]] && mkdir -p $log_dir
-
 log_dir="./about_ut/log/$log_title"
+[[ ! -d $log_dir ]] && mkdir -p $log_dir
 file_path=$(cd ./about_ut/log/$log_title && pwd)
 
 
