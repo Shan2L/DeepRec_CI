@@ -41,10 +41,6 @@ function push_to_github()
     git add ./about_ut/log/$log_title/*\
     && git commit -m "add new log file: $log_title"\
     && git push
-    while [[ $? != 0 ]]
-    do
-        git push
-    done
     echo "the files generated is in the directory : $file_path"
 }
 
