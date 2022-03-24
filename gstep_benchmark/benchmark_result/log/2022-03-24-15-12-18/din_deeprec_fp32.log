@@ -1,0 +1,83 @@
+INFO:tensorflow:vocabulary_size = 543060 in UID is inferred from the number of elements in the vocabulary_file ./data/uid_voc.txt.
+INFO:tensorflow:vocabulary_size = 367983 in ITEM is inferred from the number of elements in the vocabulary_file ./data/mid_voc.txt.
+INFO:tensorflow:vocabulary_size = 1601 in CATEGORY is inferred from the number of elements in the vocabulary_file ./data/cat_voc.txt.
+INFO:tensorflow:vocabulary_size = 367983 in HISTORY_ITEM is inferred from the number of elements in the vocabulary_file ./data/mid_voc.txt.
+INFO:tensorflow:vocabulary_size = 1601 in HISTORY_CATEGORY is inferred from the number of elements in the vocabulary_file ./data/cat_voc.txt.
+INFO:tensorflow:Parsing ./data/local_train_splitByUser
+INFO:tensorflow:Parsing ./data/local_test_splitByUser
+2022-03-24 07:21:29.799753: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3299995000 Hz
+2022-03-24 07:21:29.805533: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f25f965cc00 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-03-24 07:21:29.805576: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-03-24 07:21:32.305175: I tensorflow/core/profiler/lib/profiler_session.cc:205] Profiler session started.
+2022-03-24 07:21:41.954109: I tensorflow/core/profiler/lib/profiler_session.cc:205] Profiler session started.
+2022-03-24 07:21:50.384493: I tensorflow/core/profiler/lib/profiler_session.cc:205] Profiler session started.
+Using TensorFlow version 1.15.5
+Checking dataset
+Numbers of training dataset is 1086120
+Numbers of test dataset is 121216
+Saving model checkpoints to /benchmark_result/checkpoint/2022-03-24-15-12-18/din_deeprec_fp32
+Save timeline to /benchmark_result/checkpoint/2022-03-24-15-12-18/din_deeprec_fp32
+global_step/sec: 39.1157
+loss = 0.6882541179656982, steps = 0, cost time = 2.56s
+global_step/sec: 113.7233
+loss = 0.7003988027572632, steps = 100, cost time = 0.88s
+global_step/sec: 98.5389
+loss = 0.6883276700973511, steps = 200, cost time = 1.01s
+global_step/sec: 119.7623
+loss = 0.6625697612762451, steps = 300, cost time = 0.83s
+global_step/sec: 119.4393
+loss = 0.6625741720199585, steps = 400, cost time = 0.84s
+global_step/sec: 119.5927
+loss = 0.6672564744949341, steps = 500, cost time = 0.84s
+global_step/sec: 119.8713
+loss = 0.6610079407691956, steps = 600, cost time = 0.83s
+global_step/sec: 120.3067
+loss = 0.6511771082878113, steps = 700, cost time = 0.83s
+global_step/sec: 120.4762
+loss = 0.6276468634605408, steps = 800, cost time = 0.83s
+global_step/sec: 119.8950
+loss = 0.6553446650505066, steps = 900, cost time = 0.83s
+Save timeline to /benchmark_result/checkpoint/2022-03-24-15-12-18/din_deeprec_fp32
+global_step/sec: 105.6203
+loss = 0.6648645401000977, steps = 1000, cost time = 0.95s
+global_step/sec: 120.3338
+loss = 0.6748948097229004, steps = 1100, cost time = 0.83s
+global_step/sec: 120.5748
+loss = 0.6425135135650635, steps = 1200, cost time = 0.83s
+global_step/sec: 120.4840
+loss = 0.5968843102455139, steps = 1300, cost time = 0.83s
+global_step/sec: 120.5219
+loss = 0.6559354066848755, steps = 1400, cost time = 0.83s
+global_step/sec: 120.6156
+loss = 0.6623548865318298, steps = 1500, cost time = 0.83s
+global_step/sec: 120.8289
+loss = 0.6475510001182556, steps = 1600, cost time = 0.83s
+global_step/sec: 120.2163
+loss = 0.6371910572052002, steps = 1700, cost time = 0.83s
+global_step/sec: 119.8418
+loss = 0.6317589282989502, steps = 1800, cost time = 0.83s
+global_step/sec: 119.1816
+loss = 0.649601399898529, steps = 1900, cost time = 0.84s
+Save timeline to /benchmark_result/checkpoint/2022-03-24-15-12-18/din_deeprec_fp32
+global_step/sec: 107.2400
+loss = 0.6999018788337708, steps = 2000, cost time = 0.93s
+global_step/sec: 119.3908
+loss = 0.6458223462104797, steps = 2100, cost time = 0.84s
+global_step/sec: 118.5654
+loss = 0.586230993270874, steps = 2200, cost time = 0.84s
+global_step/sec: 119.7129
+loss = 0.6266895532608032, steps = 2300, cost time = 0.84s
+global_step/sec: 119.4730
+loss = 0.6165763139724731, steps = 2400, cost time = 0.84s
+global_step/sec: 119.6734
+loss = 0.6596519947052002, steps = 2500, cost time = 0.84s
+global_step/sec: 119.6692
+loss = 0.5787808895111084, steps = 2600, cost time = 0.84s
+global_step/sec: 119.8091
+loss = 0.665976881980896, steps = 2700, cost time = 0.83s
+global_step/sec: 119.4051
+loss = 0.596740186214447, steps = 2800, cost time = 0.84s
+global_step/sec: 119.1333
+loss = 0.5841158628463745, steps = 2900, cost time = 0.84s
+global_step/sec: 3622.7149
+loss = 0.6028992533683777, steps = 2999, cost time = 0.83s
