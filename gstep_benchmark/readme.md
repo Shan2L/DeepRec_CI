@@ -12,7 +12,8 @@ The process of ACC/AUC benchmark of DeepRec
 
 How to Use
 
-1. Modify the important parameters in the config.properties deeprec_test_image: Image that has already installed the DeepRec environment you want to benchmark<br/>
+1. Modify the important parameters in the config.properties `
+`deeprec_test_image`: Image that has already installed the DeepRec environment you want to benchmark<br/>
 `tf_test_image`: Image that installed the Stock tensorflow. <br/>
 `cpus`: The cpu you limit the docker to use.<br/>
 `CMD`: The model and corresponding parameters you want to run<br/>
