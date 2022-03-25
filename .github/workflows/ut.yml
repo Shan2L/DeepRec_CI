@@ -59,7 +59,7 @@ jobs:
         run: |
           cd /home/shanlin/DeepRec_CI/unit_test/ 
           if [[ ${{github.event.inputs.mkl_flag}} == true ]];then
-              bash unit_test-action.sh mkl
+              bash unit_test-action.sh 
           else
               bash unit_test-action.sh 
           fi
