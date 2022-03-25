@@ -13,10 +13,10 @@ tips: You can also use the Github Action UI interface to Benchmark.
       https://github.com/GosTraight2020/DeepRec_CI/actions/workflows/acc_auc.yml
       
 **How to Use**
-1.Modify the important parameters in the config.properties
-`deeprec_test_image`: Image that has already installed the DeepRec environment you want to benchmark
-`tf_test_image`: Image that installed the Stock tensorflow.
-`cpus`: The cpu you limit the docker to use.
-`CMD`: The model and corresponding parameters you want to run.
-'Env': The environment variables you want to export to the docker container
+1. Modify the important parameters in the config.properties
+`deeprec_test_image`: Image that has already installed the DeepRec environment you want to benchmark<br/>
+`tf_test_image`: Image that installed the Stock tensorflow.<br/>
+`cpus`: The cpu you limit the docker to use.<br/>
+`CMD`: The model and corresponding parameters you want to run.<br/>
+`ENV`: The environment variables you want to export to the docker container<br/>
 2. Run acc_auc_benchmark.sh
