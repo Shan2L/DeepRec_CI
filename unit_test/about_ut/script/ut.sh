@@ -71,8 +71,6 @@ export TF_TOTAL_BAZEL_TARGET="$TF_ALL_TARGETS "\
 "-//tensorflow/python/keras:training_test "\
 
  bazel test -c opt --config=opt \
- 
- 
                     --discard_analysis_cache\
                     --nokeep_state_after_build\
                     --notrack_incremental_state\
