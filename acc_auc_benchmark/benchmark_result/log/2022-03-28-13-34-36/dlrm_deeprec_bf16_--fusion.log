@@ -1,0 +1,3170 @@
+INFO:tensorflow:Parsing ./data/train.csv
+INFO:tensorflow:Parsing ./data/eval.csv
+INFO:tensorflow:Is using fused embedding lookup for this scope C10_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C11_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C12_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C13_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C14_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C15_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C16_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C17_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C18_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C19_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C1_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C20_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C21_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C22_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C23_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C24_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C25_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C26_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C2_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C3_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C4_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C5_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C6_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C7_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C8_embedding_weights
+INFO:tensorflow:Is using fused embedding lookup for this scope C9_embedding_weights
+2022-03-28 05:34:44.992746: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3400000000 Hz
+2022-03-28 05:34:44.995024: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3eeefc0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-03-28 05:34:44.995046: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Using TensorFlow version 1.15.5
+Checking dataset
+Numbers of training dataset is 8000000
+Numbers of test dataset is 2000000
+Saving model checkpoints to /benchmark_result/checkpoint/2022-03-28-13-34-36/dlrm_deeprec_bf16_--fusion
+global_step/sec: 49.2121
+loss = 1.0394524335861206, steps = 0, cost time = 2.03s
+global_step/sec: 97.2624
+loss = 0.4794464111328125, steps = 100, cost time = 1.03s
+global_step/sec: 92.2643
+loss = 0.44557905197143555, steps = 200, cost time = 1.08s
+global_step/sec: 102.3506
+loss = 0.5255978107452393, steps = 300, cost time = 0.98s
+global_step/sec: 102.9453
+loss = 0.5268523693084717, steps = 400, cost time = 0.97s
+global_step/sec: 101.8687
+loss = 0.501825213432312, steps = 500, cost time = 0.98s
+global_step/sec: 102.4587
+loss = 0.5579980611801147, steps = 600, cost time = 0.98s
+global_step/sec: 102.1672
+loss = 0.5612002611160278, steps = 700, cost time = 0.98s
+global_step/sec: 102.7045
+loss = 0.5212515592575073, steps = 800, cost time = 0.97s
+global_step/sec: 102.0623
+loss = 0.5080929398536682, steps = 900, cost time = 0.98s
+global_step/sec: 101.7007
+loss = 0.5290340185165405, steps = 1000, cost time = 0.98s
+global_step/sec: 101.9303
+loss = 0.5327070951461792, steps = 1100, cost time = 0.98s
+global_step/sec: 103.0456
+loss = 0.5007315874099731, steps = 1200, cost time = 0.97s
+global_step/sec: 102.0601
+loss = 0.49166738986968994, steps = 1300, cost time = 0.98s
+global_step/sec: 102.6690
+loss = 0.49019694328308105, steps = 1400, cost time = 0.97s
+global_step/sec: 102.2961
+loss = 0.47795963287353516, steps = 1500, cost time = 0.98s
+global_step/sec: 102.4535
+loss = 0.4788582921028137, steps = 1600, cost time = 0.98s
+global_step/sec: 102.5547
+loss = 0.5238634347915649, steps = 1700, cost time = 0.98s
+global_step/sec: 102.6100
+loss = 0.4911336898803711, steps = 1800, cost time = 0.97s
+global_step/sec: 102.0896
+loss = 0.49648478627204895, steps = 1900, cost time = 0.98s
+global_step/sec: 102.5669
+loss = 0.4712512791156769, steps = 2000, cost time = 0.97s
+global_step/sec: 102.3027
+loss = 0.4780374765396118, steps = 2100, cost time = 0.98s
+global_step/sec: 102.7940
+loss = 0.5334371328353882, steps = 2200, cost time = 0.97s
+global_step/sec: 102.8682
+loss = 0.4948325753211975, steps = 2300, cost time = 0.97s
+global_step/sec: 102.5854
+loss = 0.5083020925521851, steps = 2400, cost time = 0.97s
+global_step/sec: 102.1819
+loss = 0.46590155363082886, steps = 2500, cost time = 0.98s
+global_step/sec: 102.6718
+loss = 0.506001353263855, steps = 2600, cost time = 0.97s
+global_step/sec: 102.4921
+loss = 0.5405224561691284, steps = 2700, cost time = 0.98s
+global_step/sec: 102.2640
+loss = 0.503517746925354, steps = 2800, cost time = 0.98s
+global_step/sec: 103.1427
+loss = 0.5086885094642639, steps = 2900, cost time = 0.97s
+global_step/sec: 102.4024
+loss = 0.5141279697418213, steps = 3000, cost time = 0.98s
+global_step/sec: 102.6844
+loss = 0.5023066401481628, steps = 3100, cost time = 0.97s
+global_step/sec: 102.1577
+loss = 0.4922019839286804, steps = 3200, cost time = 0.98s
+global_step/sec: 102.3566
+loss = 0.49039044976234436, steps = 3300, cost time = 0.98s
+global_step/sec: 102.3246
+loss = 0.4884294271469116, steps = 3400, cost time = 0.98s
+global_step/sec: 103.0886
+loss = 0.5008554458618164, steps = 3500, cost time = 0.97s
+global_step/sec: 102.3810
+loss = 0.46406102180480957, steps = 3600, cost time = 0.98s
+global_step/sec: 103.1445
+loss = 0.47732317447662354, steps = 3700, cost time = 0.97s
+global_step/sec: 102.7628
+loss = 0.48791730403900146, steps = 3800, cost time = 0.97s
+global_step/sec: 101.3380
+loss = 0.5048085451126099, steps = 3900, cost time = 0.99s
+global_step/sec: 102.9545
+loss = 0.5317410826683044, steps = 4000, cost time = 0.97s
+global_step/sec: 102.8339
+loss = 0.48991841077804565, steps = 4100, cost time = 0.97s
+global_step/sec: 102.3978
+loss = 0.45731067657470703, steps = 4200, cost time = 0.98s
+global_step/sec: 101.9185
+loss = 0.5131843090057373, steps = 4300, cost time = 0.98s
+global_step/sec: 102.8683
+loss = 0.48460906744003296, steps = 4400, cost time = 0.97s
+global_step/sec: 101.9521
+loss = 0.5003741383552551, steps = 4500, cost time = 0.98s
+global_step/sec: 102.2781
+loss = 0.4868900775909424, steps = 4600, cost time = 0.98s
+global_step/sec: 101.9012
+loss = 0.45476943254470825, steps = 4700, cost time = 0.98s
+global_step/sec: 103.1391
+loss = 0.4989999234676361, steps = 4800, cost time = 0.97s
+global_step/sec: 102.9669
+loss = 0.474040687084198, steps = 4900, cost time = 0.97s
+global_step/sec: 102.7565
+loss = 0.47778403759002686, steps = 5000, cost time = 0.97s
+global_step/sec: 102.7782
+loss = 0.4840395450592041, steps = 5100, cost time = 0.97s
+global_step/sec: 103.7022
+loss = 0.49932706356048584, steps = 5200, cost time = 0.96s
+global_step/sec: 102.4778
+loss = 0.4707126021385193, steps = 5300, cost time = 0.98s
+global_step/sec: 102.3074
+loss = 0.5219512581825256, steps = 5400, cost time = 0.98s
+global_step/sec: 101.9637
+loss = 0.4958454668521881, steps = 5500, cost time = 0.98s
+global_step/sec: 103.0403
+loss = 0.46562305092811584, steps = 5600, cost time = 0.97s
+global_step/sec: 102.3586
+loss = 0.5012614130973816, steps = 5700, cost time = 0.98s
+global_step/sec: 102.3684
+loss = 0.5038946866989136, steps = 5800, cost time = 0.98s
+global_step/sec: 102.7064
+loss = 0.5081684589385986, steps = 5900, cost time = 0.97s
+global_step/sec: 102.9039
+loss = 0.48169776797294617, steps = 6000, cost time = 0.97s
+global_step/sec: 102.4349
+loss = 0.5131233930587769, steps = 6100, cost time = 0.98s
+global_step/sec: 102.9336
+loss = 0.4788873791694641, steps = 6200, cost time = 0.97s
+global_step/sec: 102.2801
+loss = 0.5157999992370605, steps = 6300, cost time = 0.98s
+global_step/sec: 102.8711
+loss = 0.5213747620582581, steps = 6400, cost time = 0.97s
+global_step/sec: 102.3337
+loss = 0.4649222493171692, steps = 6500, cost time = 0.98s
+global_step/sec: 102.1955
+loss = 0.47866517305374146, steps = 6600, cost time = 0.98s
+global_step/sec: 102.7614
+loss = 0.49338412284851074, steps = 6700, cost time = 0.97s
+global_step/sec: 102.5408
+loss = 0.47077077627182007, steps = 6800, cost time = 0.98s
+global_step/sec: 102.2140
+loss = 0.4441058039665222, steps = 6900, cost time = 0.98s
+global_step/sec: 102.6515
+loss = 0.5068186521530151, steps = 7000, cost time = 0.97s
+global_step/sec: 102.4849
+loss = 0.543639063835144, steps = 7100, cost time = 0.98s
+global_step/sec: 102.0833
+loss = 0.4716275930404663, steps = 7200, cost time = 0.98s
+global_step/sec: 102.5504
+loss = 0.4868244528770447, steps = 7300, cost time = 0.98s
+global_step/sec: 102.4747
+loss = 0.4946075975894928, steps = 7400, cost time = 0.98s
+global_step/sec: 103.1542
+loss = 0.4823249578475952, steps = 7500, cost time = 0.97s
+global_step/sec: 102.6756
+loss = 0.4893032908439636, steps = 7600, cost time = 0.97s
+global_step/sec: 102.1985
+loss = 0.42830848693847656, steps = 7700, cost time = 0.98s
+global_step/sec: 102.1697
+loss = 0.43149876594543457, steps = 7800, cost time = 0.98s
+global_step/sec: 102.4903
+loss = 0.4809025526046753, steps = 7900, cost time = 0.98s
+global_step/sec: 103.3485
+loss = 0.4471055567264557, steps = 8000, cost time = 0.97s
+global_step/sec: 102.5265
+loss = 0.47758936882019043, steps = 8100, cost time = 0.98s
+global_step/sec: 102.6244
+loss = 0.47860386967658997, steps = 8200, cost time = 0.97s
+global_step/sec: 102.0098
+loss = 0.44949719309806824, steps = 8300, cost time = 0.98s
+global_step/sec: 102.2180
+loss = 0.48288673162460327, steps = 8400, cost time = 0.98s
+global_step/sec: 103.1159
+loss = 0.4943186640739441, steps = 8500, cost time = 0.97s
+global_step/sec: 102.8688
+loss = 0.46936091780662537, steps = 8600, cost time = 0.97s
+global_step/sec: 102.4195
+loss = 0.47685444355010986, steps = 8700, cost time = 0.98s
+global_step/sec: 102.3799
+loss = 0.48077720403671265, steps = 8800, cost time = 0.98s
+global_step/sec: 101.6083
+loss = 0.47085675597190857, steps = 8900, cost time = 0.98s
+global_step/sec: 102.7596
+loss = 0.4852268099784851, steps = 9000, cost time = 0.97s
+global_step/sec: 102.3569
+loss = 0.5113624334335327, steps = 9100, cost time = 0.98s
+global_step/sec: 102.6357
+loss = 0.48111164569854736, steps = 9200, cost time = 0.97s
+global_step/sec: 102.4168
+loss = 0.5018370747566223, steps = 9300, cost time = 0.98s
+global_step/sec: 102.0366
+loss = 0.5097887516021729, steps = 9400, cost time = 0.98s
+global_step/sec: 102.8982
+loss = 0.4467526078224182, steps = 9500, cost time = 0.97s
+global_step/sec: 102.4402
+loss = 0.488070011138916, steps = 9600, cost time = 0.98s
+global_step/sec: 102.3832
+loss = 0.4835059642791748, steps = 9700, cost time = 0.98s
+global_step/sec: 102.0942
+loss = 0.5219560861587524, steps = 9800, cost time = 0.98s
+global_step/sec: 102.4706
+loss = 0.45766139030456543, steps = 9900, cost time = 0.98s
+global_step/sec: 101.4452
+loss = 0.4471762776374817, steps = 10000, cost time = 0.99s
+global_step/sec: 102.6361
+loss = 0.4835505783557892, steps = 10100, cost time = 0.97s
+global_step/sec: 102.5147
+loss = 0.4759577810764313, steps = 10200, cost time = 0.98s
+global_step/sec: 102.5461
+loss = 0.47083115577697754, steps = 10300, cost time = 0.98s
+global_step/sec: 102.0250
+loss = 0.4683241844177246, steps = 10400, cost time = 0.98s
+global_step/sec: 102.9483
+loss = 0.5020302534103394, steps = 10500, cost time = 0.97s
+global_step/sec: 102.9476
+loss = 0.46500134468078613, steps = 10600, cost time = 0.97s
+global_step/sec: 102.6447
+loss = 0.5124061703681946, steps = 10700, cost time = 0.97s
+global_step/sec: 102.1461
+loss = 0.4772722125053406, steps = 10800, cost time = 0.98s
+global_step/sec: 102.7928
+loss = 0.4553576111793518, steps = 10900, cost time = 0.97s
+global_step/sec: 102.5627
+loss = 0.4923520088195801, steps = 11000, cost time = 0.98s
+global_step/sec: 102.3446
+loss = 0.49316006898880005, steps = 11100, cost time = 0.98s
+global_step/sec: 102.4308
+loss = 0.44172346591949463, steps = 11200, cost time = 0.98s
+global_step/sec: 102.2210
+loss = 0.4762006402015686, steps = 11300, cost time = 0.98s
+global_step/sec: 101.7170
+loss = 0.4666467010974884, steps = 11400, cost time = 0.98s
+global_step/sec: 101.6426
+loss = 0.4694385230541229, steps = 11500, cost time = 0.98s
+global_step/sec: 101.9925
+loss = 0.46938639879226685, steps = 11600, cost time = 0.98s
+global_step/sec: 101.6016
+loss = 0.4852820932865143, steps = 11700, cost time = 0.98s
+global_step/sec: 101.1945
+loss = 0.4813549816608429, steps = 11800, cost time = 0.99s
+global_step/sec: 102.4569
+loss = 0.5028189420700073, steps = 11900, cost time = 0.98s
+global_step/sec: 102.3129
+loss = 0.4628727436065674, steps = 12000, cost time = 0.98s
+global_step/sec: 102.0613
+loss = 0.48875483870506287, steps = 12100, cost time = 0.98s
+global_step/sec: 103.1323
+loss = 0.4439767301082611, steps = 12200, cost time = 0.97s
+global_step/sec: 102.4570
+loss = 0.4986328184604645, steps = 12300, cost time = 0.98s
+global_step/sec: 102.4566
+loss = 0.49777692556381226, steps = 12400, cost time = 0.98s
+global_step/sec: 102.6983
+loss = 0.44731053709983826, steps = 12500, cost time = 0.97s
+global_step/sec: 101.6381
+loss = 0.4277217388153076, steps = 12600, cost time = 0.98s
+global_step/sec: 102.4268
+loss = 0.4375980496406555, steps = 12700, cost time = 0.98s
+global_step/sec: 102.7271
+loss = 0.4852396249771118, steps = 12800, cost time = 0.97s
+global_step/sec: 102.1601
+loss = 0.5296515226364136, steps = 12900, cost time = 0.98s
+global_step/sec: 102.5038
+loss = 0.5317708253860474, steps = 13000, cost time = 0.98s
+global_step/sec: 102.6753
+loss = 0.5177377462387085, steps = 13100, cost time = 0.97s
+global_step/sec: 102.6874
+loss = 0.4960654377937317, steps = 13200, cost time = 0.97s
+global_step/sec: 103.5905
+loss = 0.5004277229309082, steps = 13300, cost time = 0.97s
+global_step/sec: 101.9716
+loss = 0.5135201811790466, steps = 13400, cost time = 0.98s
+global_step/sec: 102.6757
+loss = 0.5101059675216675, steps = 13500, cost time = 0.97s
+global_step/sec: 102.3268
+loss = 0.5361786484718323, steps = 13600, cost time = 0.98s
+global_step/sec: 102.1848
+loss = 0.5036136507987976, steps = 13700, cost time = 0.98s
+global_step/sec: 102.6519
+loss = 0.4916217625141144, steps = 13800, cost time = 0.97s
+global_step/sec: 102.3755
+loss = 0.49193519353866577, steps = 13900, cost time = 0.98s
+global_step/sec: 102.7216
+loss = 0.5203263759613037, steps = 14000, cost time = 0.97s
+global_step/sec: 102.7305
+loss = 0.49757614731788635, steps = 14100, cost time = 0.97s
+global_step/sec: 102.5409
+loss = 0.5031285881996155, steps = 14200, cost time = 0.98s
+global_step/sec: 103.2850
+loss = 0.4499277174472809, steps = 14300, cost time = 0.97s
+global_step/sec: 102.4717
+loss = 0.4797290563583374, steps = 14400, cost time = 0.98s
+global_step/sec: 102.8703
+loss = 0.48709020018577576, steps = 14500, cost time = 0.97s
+global_step/sec: 102.4376
+loss = 0.49791374802589417, steps = 14600, cost time = 0.98s
+global_step/sec: 101.1685
+loss = 0.45530447363853455, steps = 14700, cost time = 0.99s
+global_step/sec: 102.5092
+loss = 0.4941387176513672, steps = 14800, cost time = 0.98s
+global_step/sec: 102.9025
+loss = 0.4839586615562439, steps = 14900, cost time = 0.97s
+global_step/sec: 102.9501
+loss = 0.50987708568573, steps = 15000, cost time = 0.97s
+global_step/sec: 101.7680
+loss = 0.4563353657722473, steps = 15100, cost time = 0.98s
+global_step/sec: 102.1547
+loss = 0.4995417892932892, steps = 15200, cost time = 0.98s
+global_step/sec: 102.9036
+loss = 0.49837884306907654, steps = 15300, cost time = 0.97s
+global_step/sec: 102.2089
+loss = 0.4535263180732727, steps = 15400, cost time = 0.98s
+global_step/sec: 102.4763
+loss = 0.5367018580436707, steps = 15500, cost time = 0.98s
+global_step/sec: 102.8622
+loss = 0.4426229000091553, steps = 15600, cost time = 0.97s
+global_step/sec: 102.4414
+loss = 0.4037005305290222, steps = 15700, cost time = 0.98s
+global_step/sec: 102.9076
+loss = 0.451651930809021, steps = 15800, cost time = 0.97s
+global_step/sec: 102.1090
+loss = 0.5186675190925598, steps = 15900, cost time = 0.98s
+global_step/sec: 102.3277
+loss = 0.47994476556777954, steps = 16000, cost time = 0.98s
+global_step/sec: 102.8478
+loss = 0.527418315410614, steps = 16100, cost time = 0.97s
+global_step/sec: 102.7061
+loss = 0.5000764727592468, steps = 16200, cost time = 0.97s
+global_step/sec: 102.2922
+loss = 0.4604651927947998, steps = 16300, cost time = 0.98s
+global_step/sec: 102.9504
+loss = 0.5131060481071472, steps = 16400, cost time = 0.97s
+global_step/sec: 102.6784
+loss = 0.5403739809989929, steps = 16500, cost time = 0.97s
+global_step/sec: 102.7040
+loss = 0.46596938371658325, steps = 16600, cost time = 0.97s
+global_step/sec: 101.7752
+loss = 0.5178894996643066, steps = 16700, cost time = 0.98s
+global_step/sec: 102.6078
+loss = 0.503282904624939, steps = 16800, cost time = 0.97s
+global_step/sec: 102.0327
+loss = 0.45252904295921326, steps = 16900, cost time = 0.98s
+global_step/sec: 102.5036
+loss = 0.4852498769760132, steps = 17000, cost time = 0.98s
+global_step/sec: 102.7393
+loss = 0.48928630352020264, steps = 17100, cost time = 0.97s
+global_step/sec: 102.3046
+loss = 0.44789689779281616, steps = 17200, cost time = 0.98s
+global_step/sec: 102.0209
+loss = 0.4818747937679291, steps = 17300, cost time = 0.98s
+global_step/sec: 102.1266
+loss = 0.47407615184783936, steps = 17400, cost time = 0.98s
+global_step/sec: 102.0230
+loss = 0.4631001055240631, steps = 17500, cost time = 0.98s
+global_step/sec: 102.8692
+loss = 0.5117118954658508, steps = 17600, cost time = 0.97s
+global_step/sec: 103.4159
+loss = 0.49408158659935, steps = 17700, cost time = 0.97s
+global_step/sec: 102.3555
+loss = 0.494812548160553, steps = 17800, cost time = 0.98s
+global_step/sec: 102.6271
+loss = 0.5032042264938354, steps = 17900, cost time = 0.97s
+global_step/sec: 101.9832
+loss = 0.4604804813861847, steps = 18000, cost time = 0.98s
+global_step/sec: 103.2270
+loss = 0.4761829674243927, steps = 18100, cost time = 0.97s
+global_step/sec: 102.1519
+loss = 0.506301999092102, steps = 18200, cost time = 0.98s
+global_step/sec: 102.1877
+loss = 0.47941380739212036, steps = 18300, cost time = 0.98s
+global_step/sec: 102.0148
+loss = 0.47546571493148804, steps = 18400, cost time = 0.98s
+global_step/sec: 102.8736
+loss = 0.49760308861732483, steps = 18500, cost time = 0.97s
+global_step/sec: 101.6750
+loss = 0.5168843269348145, steps = 18600, cost time = 0.98s
+global_step/sec: 101.9184
+loss = 0.518588125705719, steps = 18700, cost time = 0.98s
+global_step/sec: 102.1786
+loss = 0.48428356647491455, steps = 18800, cost time = 0.98s
+global_step/sec: 102.4682
+loss = 0.49914050102233887, steps = 18900, cost time = 0.98s
+global_step/sec: 102.6051
+loss = 0.47849681973457336, steps = 19000, cost time = 0.97s
+global_step/sec: 102.7852
+loss = 0.4702466130256653, steps = 19100, cost time = 0.97s
+global_step/sec: 101.8736
+loss = 0.46094954013824463, steps = 19200, cost time = 0.98s
+global_step/sec: 102.2246
+loss = 0.4939980208873749, steps = 19300, cost time = 0.98s
+global_step/sec: 103.1119
+loss = 0.46565571427345276, steps = 19400, cost time = 0.97s
+global_step/sec: 102.0565
+loss = 0.49889832735061646, steps = 19500, cost time = 0.98s
+global_step/sec: 102.2529
+loss = 0.5010316371917725, steps = 19600, cost time = 0.98s
+global_step/sec: 102.2772
+loss = 0.47116899490356445, steps = 19700, cost time = 0.98s
+global_step/sec: 102.4438
+loss = 0.4359056353569031, steps = 19800, cost time = 0.98s
+global_step/sec: 102.3720
+loss = 0.4325897693634033, steps = 19900, cost time = 0.98s
+global_step/sec: 102.8595
+loss = 0.48186230659484863, steps = 20000, cost time = 0.97s
+global_step/sec: 103.0127
+loss = 0.4762386679649353, steps = 20100, cost time = 0.97s
+global_step/sec: 101.7356
+loss = 0.5153580904006958, steps = 20200, cost time = 0.98s
+global_step/sec: 102.5599
+loss = 0.46196475625038147, steps = 20300, cost time = 0.98s
+global_step/sec: 102.4659
+loss = 0.48867177963256836, steps = 20400, cost time = 0.98s
+global_step/sec: 102.8810
+loss = 0.4791942238807678, steps = 20500, cost time = 0.97s
+global_step/sec: 102.5173
+loss = 0.46374082565307617, steps = 20600, cost time = 0.98s
+global_step/sec: 101.9575
+loss = 0.4776533246040344, steps = 20700, cost time = 0.98s
+global_step/sec: 102.9053
+loss = 0.4737856686115265, steps = 20800, cost time = 0.97s
+global_step/sec: 102.6819
+loss = 0.5074590444564819, steps = 20900, cost time = 0.97s
+global_step/sec: 103.1230
+loss = 0.4950864315032959, steps = 21000, cost time = 0.97s
+global_step/sec: 102.7450
+loss = 0.45158490538597107, steps = 21100, cost time = 0.97s
+global_step/sec: 102.7306
+loss = 0.5026968717575073, steps = 21200, cost time = 0.97s
+global_step/sec: 101.7022
+loss = 0.45546990633010864, steps = 21300, cost time = 0.98s
+global_step/sec: 102.4166
+loss = 0.44895845651626587, steps = 21400, cost time = 0.98s
+global_step/sec: 102.9024
+loss = 0.47669804096221924, steps = 21500, cost time = 0.97s
+global_step/sec: 102.9059
+loss = 0.4931064546108246, steps = 21600, cost time = 0.97s
+global_step/sec: 102.6253
+loss = 0.5084471106529236, steps = 21700, cost time = 0.97s
+global_step/sec: 103.0759
+loss = 0.48085153102874756, steps = 21800, cost time = 0.97s
+global_step/sec: 101.8858
+loss = 0.47245463728904724, steps = 21900, cost time = 0.98s
+global_step/sec: 102.4095
+loss = 0.4972294270992279, steps = 22000, cost time = 0.98s
+global_step/sec: 102.7404
+loss = 0.5054811239242554, steps = 22100, cost time = 0.97s
+global_step/sec: 101.9198
+loss = 0.4819563627243042, steps = 22200, cost time = 0.98s
+global_step/sec: 102.2237
+loss = 0.44899511337280273, steps = 22300, cost time = 0.98s
+global_step/sec: 102.5560
+loss = 0.5085852742195129, steps = 22400, cost time = 0.98s
+global_step/sec: 102.3192
+loss = 0.4642774760723114, steps = 22500, cost time = 0.98s
+global_step/sec: 103.0854
+loss = 0.48324644565582275, steps = 22600, cost time = 0.97s
+global_step/sec: 102.4284
+loss = 0.4425802230834961, steps = 22700, cost time = 0.98s
+global_step/sec: 102.1123
+loss = 0.4379778504371643, steps = 22800, cost time = 0.98s
+global_step/sec: 102.9765
+loss = 0.48666343092918396, steps = 22900, cost time = 0.97s
+global_step/sec: 102.2716
+loss = 0.48353540897369385, steps = 23000, cost time = 0.98s
+global_step/sec: 101.9784
+loss = 0.49269816279411316, steps = 23100, cost time = 0.98s
+global_step/sec: 102.7052
+loss = 0.47507843375205994, steps = 23200, cost time = 0.97s
+global_step/sec: 101.8520
+loss = 0.47855815291404724, steps = 23300, cost time = 0.98s
+global_step/sec: 102.6981
+loss = 0.4759710431098938, steps = 23400, cost time = 0.97s
+global_step/sec: 102.7809
+loss = 0.4598800837993622, steps = 23500, cost time = 0.97s
+global_step/sec: 102.0585
+loss = 0.5001503229141235, steps = 23600, cost time = 0.98s
+global_step/sec: 101.6419
+loss = 0.4569350481033325, steps = 23700, cost time = 0.98s
+global_step/sec: 102.7532
+loss = 0.468514621257782, steps = 23800, cost time = 0.97s
+global_step/sec: 102.0887
+loss = 0.43729865550994873, steps = 23900, cost time = 0.98s
+global_step/sec: 102.9411
+loss = 0.4501899778842926, steps = 24000, cost time = 0.97s
+global_step/sec: 102.4464
+loss = 0.436892569065094, steps = 24100, cost time = 0.98s
+global_step/sec: 102.7575
+loss = 0.4356535077095032, steps = 24200, cost time = 0.97s
+global_step/sec: 102.5968
+loss = 0.49403417110443115, steps = 24300, cost time = 0.97s
+global_step/sec: 102.0493
+loss = 0.47284868359565735, steps = 24400, cost time = 0.98s
+global_step/sec: 102.5969
+loss = 0.45323359966278076, steps = 24500, cost time = 0.97s
+global_step/sec: 102.3920
+loss = 0.4879870116710663, steps = 24600, cost time = 0.98s
+global_step/sec: 103.2110
+loss = 0.4281993806362152, steps = 24700, cost time = 0.97s
+global_step/sec: 102.5143
+loss = 0.48501506447792053, steps = 24800, cost time = 0.98s
+global_step/sec: 102.3780
+loss = 0.45510709285736084, steps = 24900, cost time = 0.98s
+global_step/sec: 102.4016
+loss = 0.48139244318008423, steps = 25000, cost time = 0.98s
+global_step/sec: 101.6624
+loss = 0.46099600195884705, steps = 25100, cost time = 0.98s
+global_step/sec: 101.9880
+loss = 0.48571300506591797, steps = 25200, cost time = 0.98s
+global_step/sec: 102.7185
+loss = 0.4380032420158386, steps = 25300, cost time = 0.97s
+global_step/sec: 102.5998
+loss = 0.4313117265701294, steps = 25400, cost time = 0.97s
+global_step/sec: 102.1199
+loss = 0.485906720161438, steps = 25500, cost time = 0.98s
+global_step/sec: 103.1668
+loss = 0.4738529324531555, steps = 25600, cost time = 0.97s
+global_step/sec: 102.7953
+loss = 0.44360464811325073, steps = 25700, cost time = 0.97s
+global_step/sec: 102.0123
+loss = 0.462993860244751, steps = 25800, cost time = 0.98s
+global_step/sec: 102.0897
+loss = 0.4805898368358612, steps = 25900, cost time = 0.98s
+global_step/sec: 102.6671
+loss = 0.48646318912506104, steps = 26000, cost time = 0.97s
+global_step/sec: 102.7138
+loss = 0.4518200755119324, steps = 26100, cost time = 0.97s
+global_step/sec: 101.9672
+loss = 0.4315960109233856, steps = 26200, cost time = 0.98s
+global_step/sec: 102.7649
+loss = 0.4651451110839844, steps = 26300, cost time = 0.97s
+global_step/sec: 103.1404
+loss = 0.4595429003238678, steps = 26400, cost time = 0.97s
+global_step/sec: 102.0998
+loss = 0.4718130826950073, steps = 26500, cost time = 0.98s
+global_step/sec: 102.5201
+loss = 0.45460256934165955, steps = 26600, cost time = 0.98s
+global_step/sec: 102.3635
+loss = 0.457091748714447, steps = 26700, cost time = 0.98s
+global_step/sec: 102.3613
+loss = 0.48861145973205566, steps = 26800, cost time = 0.98s
+global_step/sec: 102.7760
+loss = 0.47136449813842773, steps = 26900, cost time = 0.97s
+global_step/sec: 102.9452
+loss = 0.4902952313423157, steps = 27000, cost time = 0.97s
+global_step/sec: 102.3358
+loss = 0.47376543283462524, steps = 27100, cost time = 0.98s
+global_step/sec: 102.4539
+loss = 0.4584885537624359, steps = 27200, cost time = 0.98s
+global_step/sec: 102.5765
+loss = 0.47765156626701355, steps = 27300, cost time = 0.97s
+global_step/sec: 102.4608
+loss = 0.4441697299480438, steps = 27400, cost time = 0.98s
+global_step/sec: 102.1907
+loss = 0.45894545316696167, steps = 27500, cost time = 0.98s
+global_step/sec: 102.1856
+loss = 0.4218102991580963, steps = 27600, cost time = 0.98s
+global_step/sec: 102.4507
+loss = 0.5098586082458496, steps = 27700, cost time = 0.98s
+global_step/sec: 102.8893
+loss = 0.4598158001899719, steps = 27800, cost time = 0.97s
+global_step/sec: 102.5727
+loss = 0.47710272669792175, steps = 27900, cost time = 0.97s
+global_step/sec: 101.9551
+loss = 0.5419782400131226, steps = 28000, cost time = 0.98s
+global_step/sec: 102.3957
+loss = 0.4716287851333618, steps = 28100, cost time = 0.98s
+global_step/sec: 102.8077
+loss = 0.4500771462917328, steps = 28200, cost time = 0.97s
+global_step/sec: 102.4518
+loss = 0.4486287832260132, steps = 28300, cost time = 0.98s
+global_step/sec: 102.5723
+loss = 0.44611626863479614, steps = 28400, cost time = 0.97s
+global_step/sec: 103.1085
+loss = 0.5030093193054199, steps = 28500, cost time = 0.97s
+global_step/sec: 102.6548
+loss = 0.5223032236099243, steps = 28600, cost time = 0.97s
+global_step/sec: 102.9758
+loss = 0.5378645658493042, steps = 28700, cost time = 0.97s
+global_step/sec: 102.9103
+loss = 0.48848941922187805, steps = 28800, cost time = 0.97s
+global_step/sec: 102.7933
+loss = 0.5173778533935547, steps = 28900, cost time = 0.97s
+global_step/sec: 102.2612
+loss = 0.5043823719024658, steps = 29000, cost time = 0.98s
+global_step/sec: 102.3272
+loss = 0.5050660371780396, steps = 29100, cost time = 0.98s
+global_step/sec: 102.1639
+loss = 0.4882819652557373, steps = 29200, cost time = 0.98s
+global_step/sec: 101.9740
+loss = 0.46691590547561646, steps = 29300, cost time = 0.98s
+global_step/sec: 102.8350
+loss = 0.47736406326293945, steps = 29400, cost time = 0.97s
+global_step/sec: 103.0119
+loss = 0.5051605701446533, steps = 29500, cost time = 0.97s
+global_step/sec: 102.5584
+loss = 0.5307854413986206, steps = 29600, cost time = 0.98s
+global_step/sec: 102.3646
+loss = 0.5132911205291748, steps = 29700, cost time = 0.98s
+global_step/sec: 102.1128
+loss = 0.45893311500549316, steps = 29800, cost time = 0.98s
+global_step/sec: 101.9754
+loss = 0.47033822536468506, steps = 29900, cost time = 0.98s
+global_step/sec: 102.4782
+loss = 0.48612022399902344, steps = 30000, cost time = 0.98s
+global_step/sec: 102.1496
+loss = 0.4727937579154968, steps = 30100, cost time = 0.98s
+global_step/sec: 101.8396
+loss = 0.4858018159866333, steps = 30200, cost time = 0.98s
+global_step/sec: 102.8948
+loss = 0.5016623735427856, steps = 30300, cost time = 0.97s
+global_step/sec: 102.9894
+loss = 0.4873853623867035, steps = 30400, cost time = 0.97s
+global_step/sec: 102.4142
+loss = 0.48939627408981323, steps = 30500, cost time = 0.98s
+global_step/sec: 103.2178
+loss = 0.5157128572463989, steps = 30600, cost time = 0.97s
+global_step/sec: 101.8999
+loss = 0.4211578071117401, steps = 30700, cost time = 0.98s
+global_step/sec: 102.5147
+loss = 0.47337305545806885, steps = 30800, cost time = 0.98s
+global_step/sec: 102.0113
+loss = 0.45673102140426636, steps = 30900, cost time = 0.98s
+global_step/sec: 101.9312
+loss = 0.45669132471084595, steps = 31000, cost time = 0.98s
+global_step/sec: 103.0645
+loss = 0.5044606924057007, steps = 31100, cost time = 0.97s
+global_step/sec: 102.7483
+loss = 0.4616018533706665, steps = 31200, cost time = 0.97s
+global_step/sec: 103.0576
+loss = 0.4304784834384918, steps = 31300, cost time = 0.97s
+global_step/sec: 102.6560
+loss = 0.48197782039642334, steps = 31400, cost time = 0.97s
+global_step/sec: 102.3589
+loss = 0.45985639095306396, steps = 31500, cost time = 0.98s
+global_step/sec: 102.2488
+loss = 0.4692290425300598, steps = 31600, cost time = 0.98s
+global_step/sec: 102.4578
+loss = 0.5126526355743408, steps = 31700, cost time = 0.98s
+global_step/sec: 102.9642
+loss = 0.4983028471469879, steps = 31800, cost time = 0.97s
+global_step/sec: 102.7152
+loss = 0.5109214782714844, steps = 31900, cost time = 0.97s
+global_step/sec: 103.0848
+loss = 0.43368011713027954, steps = 32000, cost time = 0.97s
+global_step/sec: 102.2089
+loss = 0.4830620288848877, steps = 32100, cost time = 0.98s
+global_step/sec: 102.8471
+loss = 0.4759148061275482, steps = 32200, cost time = 0.97s
+global_step/sec: 103.0736
+loss = 0.45224905014038086, steps = 32300, cost time = 0.97s
+global_step/sec: 102.8630
+loss = 0.4732905626296997, steps = 32400, cost time = 0.97s
+global_step/sec: 102.8657
+loss = 0.4740913212299347, steps = 32500, cost time = 0.97s
+global_step/sec: 102.6172
+loss = 0.504619300365448, steps = 32600, cost time = 0.97s
+global_step/sec: 102.0918
+loss = 0.5071706771850586, steps = 32700, cost time = 0.98s
+global_step/sec: 102.5551
+loss = 0.4676339030265808, steps = 32800, cost time = 0.98s
+global_step/sec: 102.1103
+loss = 0.515465259552002, steps = 32900, cost time = 0.98s
+global_step/sec: 102.8810
+loss = 0.4716178774833679, steps = 33000, cost time = 0.97s
+global_step/sec: 102.7438
+loss = 0.448613703250885, steps = 33100, cost time = 0.97s
+global_step/sec: 102.3094
+loss = 0.45242154598236084, steps = 33200, cost time = 0.98s
+global_step/sec: 103.3451
+loss = 0.45081666111946106, steps = 33300, cost time = 0.97s
+global_step/sec: 102.8355
+loss = 0.5179405808448792, steps = 33400, cost time = 0.97s
+global_step/sec: 103.4773
+loss = 0.4766453504562378, steps = 33500, cost time = 0.97s
+global_step/sec: 103.0806
+loss = 0.47330906987190247, steps = 33600, cost time = 0.97s
+global_step/sec: 102.4347
+loss = 0.4317448139190674, steps = 33700, cost time = 0.98s
+global_step/sec: 102.3116
+loss = 0.4641439914703369, steps = 33800, cost time = 0.98s
+global_step/sec: 103.0312
+loss = 0.46359968185424805, steps = 33900, cost time = 0.97s
+global_step/sec: 102.6980
+loss = 0.5193992853164673, steps = 34000, cost time = 0.97s
+global_step/sec: 103.2720
+loss = 0.4264979362487793, steps = 34100, cost time = 0.97s
+global_step/sec: 102.5722
+loss = 0.48825186491012573, steps = 34200, cost time = 0.97s
+global_step/sec: 103.3563
+loss = 0.43420931696891785, steps = 34300, cost time = 0.97s
+global_step/sec: 102.1431
+loss = 0.48120176792144775, steps = 34400, cost time = 0.98s
+global_step/sec: 101.4814
+loss = 0.46234130859375, steps = 34500, cost time = 0.99s
+global_step/sec: 102.8682
+loss = 0.4529726803302765, steps = 34600, cost time = 0.97s
+global_step/sec: 102.7925
+loss = 0.47882527112960815, steps = 34700, cost time = 0.97s
+global_step/sec: 102.5570
+loss = 0.49417075514793396, steps = 34800, cost time = 0.98s
+global_step/sec: 102.5948
+loss = 0.47335827350616455, steps = 34900, cost time = 0.97s
+global_step/sec: 101.8541
+loss = 0.46788254380226135, steps = 35000, cost time = 0.98s
+global_step/sec: 102.2526
+loss = 0.49738484621047974, steps = 35100, cost time = 0.98s
+global_step/sec: 102.6025
+loss = 0.4464690089225769, steps = 35200, cost time = 0.97s
+global_step/sec: 102.6731
+loss = 0.46503397822380066, steps = 35300, cost time = 0.97s
+global_step/sec: 102.1634
+loss = 0.46425315737724304, steps = 35400, cost time = 0.98s
+global_step/sec: 102.3922
+loss = 0.4494403898715973, steps = 35500, cost time = 0.98s
+global_step/sec: 102.4047
+loss = 0.5168675184249878, steps = 35600, cost time = 0.98s
+global_step/sec: 101.8718
+loss = 0.46885716915130615, steps = 35700, cost time = 0.98s
+global_step/sec: 102.1694
+loss = 0.4841333031654358, steps = 35800, cost time = 0.98s
+global_step/sec: 102.8013
+loss = 0.48543834686279297, steps = 35900, cost time = 0.97s
+global_step/sec: 102.1895
+loss = 0.4720388650894165, steps = 36000, cost time = 0.98s
+global_step/sec: 100.9915
+loss = 0.4587630033493042, steps = 36100, cost time = 0.99s
+global_step/sec: 102.0598
+loss = 0.49996232986450195, steps = 36200, cost time = 0.98s
+global_step/sec: 102.4203
+loss = 0.4875186085700989, steps = 36300, cost time = 0.98s
+global_step/sec: 102.7588
+loss = 0.4608649015426636, steps = 36400, cost time = 0.97s
+global_step/sec: 102.6679
+loss = 0.5008568167686462, steps = 36500, cost time = 0.97s
+global_step/sec: 102.5627
+loss = 0.466031014919281, steps = 36600, cost time = 0.98s
+global_step/sec: 101.5520
+loss = 0.4672433137893677, steps = 36700, cost time = 0.98s
+global_step/sec: 102.5501
+loss = 0.5219725966453552, steps = 36800, cost time = 0.98s
+global_step/sec: 102.3521
+loss = 0.458477646112442, steps = 36900, cost time = 0.98s
+global_step/sec: 102.7470
+loss = 0.4550548791885376, steps = 37000, cost time = 0.97s
+global_step/sec: 102.9241
+loss = 0.5063998699188232, steps = 37100, cost time = 0.97s
+global_step/sec: 102.6827
+loss = 0.46552884578704834, steps = 37200, cost time = 0.97s
+global_step/sec: 102.3227
+loss = 0.42715147137641907, steps = 37300, cost time = 0.98s
+global_step/sec: 102.6682
+loss = 0.4989723265171051, steps = 37400, cost time = 0.97s
+global_step/sec: 102.3994
+loss = 0.48053765296936035, steps = 37500, cost time = 0.98s
+global_step/sec: 102.5135
+loss = 0.44976580142974854, steps = 37600, cost time = 0.98s
+global_step/sec: 102.2460
+loss = 0.48793596029281616, steps = 37700, cost time = 0.98s
+global_step/sec: 102.4482
+loss = 0.4356200098991394, steps = 37800, cost time = 0.98s
+global_step/sec: 102.8676
+loss = 0.5029768943786621, steps = 37900, cost time = 0.97s
+global_step/sec: 102.4724
+loss = 0.4604487121105194, steps = 38000, cost time = 0.98s
+global_step/sec: 102.1708
+loss = 0.46945345401763916, steps = 38100, cost time = 0.98s
+global_step/sec: 102.5726
+loss = 0.47490668296813965, steps = 38200, cost time = 0.97s
+global_step/sec: 103.1095
+loss = 0.5035673379898071, steps = 38300, cost time = 0.97s
+global_step/sec: 102.6376
+loss = 0.5112648606300354, steps = 38400, cost time = 0.97s
+global_step/sec: 102.8404
+loss = 0.45810651779174805, steps = 38500, cost time = 0.97s
+global_step/sec: 102.9716
+loss = 0.4688255190849304, steps = 38600, cost time = 0.97s
+global_step/sec: 102.8262
+loss = 0.4501487612724304, steps = 38700, cost time = 0.97s
+global_step/sec: 102.9840
+loss = 0.45279660820961, steps = 38800, cost time = 0.97s
+global_step/sec: 102.6418
+loss = 0.4638471007347107, steps = 38900, cost time = 0.97s
+global_step/sec: 102.0477
+loss = 0.45724815130233765, steps = 39000, cost time = 0.98s
+global_step/sec: 103.0061
+loss = 0.4457924962043762, steps = 39100, cost time = 0.97s
+global_step/sec: 102.6200
+loss = 0.49972087144851685, steps = 39200, cost time = 0.97s
+global_step/sec: 102.6914
+loss = 0.4858176112174988, steps = 39300, cost time = 0.97s
+global_step/sec: 102.2772
+loss = 0.44144219160079956, steps = 39400, cost time = 0.98s
+global_step/sec: 102.7953
+loss = 0.44348323345184326, steps = 39500, cost time = 0.97s
+global_step/sec: 103.0030
+loss = 0.4749440550804138, steps = 39600, cost time = 0.97s
+global_step/sec: 103.0942
+loss = 0.4648338556289673, steps = 39700, cost time = 0.97s
+global_step/sec: 101.5146
+loss = 0.45474472641944885, steps = 39800, cost time = 0.99s
+global_step/sec: 102.8769
+loss = 0.4635462462902069, steps = 39900, cost time = 0.97s
+global_step/sec: 102.7032
+loss = 0.405897855758667, steps = 40000, cost time = 0.97s
+global_step/sec: 102.1178
+loss = 0.4672037363052368, steps = 40100, cost time = 0.98s
+global_step/sec: 103.2581
+loss = 0.5149024128913879, steps = 40200, cost time = 0.97s
+global_step/sec: 102.2130
+loss = 0.4399213194847107, steps = 40300, cost time = 0.98s
+global_step/sec: 102.3514
+loss = 0.47987037897109985, steps = 40400, cost time = 0.98s
+global_step/sec: 102.5230
+loss = 0.4452880620956421, steps = 40500, cost time = 0.98s
+global_step/sec: 102.5794
+loss = 0.47522324323654175, steps = 40600, cost time = 0.97s
+global_step/sec: 102.0198
+loss = 0.4520382285118103, steps = 40700, cost time = 0.98s
+global_step/sec: 102.5135
+loss = 0.5192811489105225, steps = 40800, cost time = 0.98s
+global_step/sec: 102.3531
+loss = 0.4854642450809479, steps = 40900, cost time = 0.98s
+global_step/sec: 102.9831
+loss = 0.5045440196990967, steps = 41000, cost time = 0.97s
+global_step/sec: 102.3810
+loss = 0.43653571605682373, steps = 41100, cost time = 0.98s
+global_step/sec: 102.3897
+loss = 0.4563628137111664, steps = 41200, cost time = 0.98s
+global_step/sec: 102.6038
+loss = 0.4716201424598694, steps = 41300, cost time = 0.97s
+global_step/sec: 102.3957
+loss = 0.5041566491127014, steps = 41400, cost time = 0.98s
+global_step/sec: 102.7284
+loss = 0.5063893795013428, steps = 41500, cost time = 0.97s
+global_step/sec: 102.0841
+loss = 0.43192464113235474, steps = 41600, cost time = 0.98s
+global_step/sec: 101.6683
+loss = 0.47112977504730225, steps = 41700, cost time = 0.98s
+global_step/sec: 102.2095
+loss = 0.4977392852306366, steps = 41800, cost time = 0.98s
+global_step/sec: 102.5854
+loss = 0.45793622732162476, steps = 41900, cost time = 0.97s
+global_step/sec: 102.2981
+loss = 0.49948495626449585, steps = 42000, cost time = 0.98s
+global_step/sec: 102.6390
+loss = 0.42707857489585876, steps = 42100, cost time = 0.97s
+global_step/sec: 102.7786
+loss = 0.4517272710800171, steps = 42200, cost time = 0.97s
+global_step/sec: 102.7357
+loss = 0.49319058656692505, steps = 42300, cost time = 0.97s
+global_step/sec: 102.0380
+loss = 0.46096670627593994, steps = 42400, cost time = 0.98s
+global_step/sec: 101.3737
+loss = 0.4415654242038727, steps = 42500, cost time = 0.99s
+global_step/sec: 101.8529
+loss = 0.43678101897239685, steps = 42600, cost time = 0.98s
+global_step/sec: 101.9167
+loss = 0.4231460988521576, steps = 42700, cost time = 0.98s
+global_step/sec: 102.3514
+loss = 0.4686039686203003, steps = 42800, cost time = 0.98s
+global_step/sec: 101.9089
+loss = 0.5100654363632202, steps = 42900, cost time = 0.98s
+global_step/sec: 101.8952
+loss = 0.47942960262298584, steps = 43000, cost time = 0.98s
+global_step/sec: 102.6550
+loss = 0.46465668082237244, steps = 43100, cost time = 0.97s
+global_step/sec: 102.6729
+loss = 0.45814675092697144, steps = 43200, cost time = 0.97s
+global_step/sec: 102.5847
+loss = 0.43426358699798584, steps = 43300, cost time = 0.97s
+global_step/sec: 102.3189
+loss = 0.46325042843818665, steps = 43400, cost time = 0.98s
+global_step/sec: 102.7566
+loss = 0.46373450756073, steps = 43500, cost time = 0.97s
+global_step/sec: 101.9771
+loss = 0.44961148500442505, steps = 43600, cost time = 0.98s
+global_step/sec: 102.8292
+loss = 0.4891669750213623, steps = 43700, cost time = 0.97s
+global_step/sec: 102.0147
+loss = 0.4517971873283386, steps = 43800, cost time = 0.98s
+global_step/sec: 102.0223
+loss = 0.47584444284439087, steps = 43900, cost time = 0.98s
+global_step/sec: 102.7399
+loss = 0.4175873398780823, steps = 44000, cost time = 0.97s
+global_step/sec: 102.7806
+loss = 0.460972398519516, steps = 44100, cost time = 0.97s
+global_step/sec: 101.6244
+loss = 0.4830109775066376, steps = 44200, cost time = 0.98s
+global_step/sec: 102.3375
+loss = 0.4923141896724701, steps = 44300, cost time = 0.98s
+global_step/sec: 102.4560
+loss = 0.4780607223510742, steps = 44400, cost time = 0.98s
+global_step/sec: 102.8829
+loss = 0.4785557687282562, steps = 44500, cost time = 0.97s
+global_step/sec: 102.5699
+loss = 0.4950889050960541, steps = 44600, cost time = 0.97s
+global_step/sec: 102.6305
+loss = 0.47557902336120605, steps = 44700, cost time = 0.97s
+global_step/sec: 103.0211
+loss = 0.4851645231246948, steps = 44800, cost time = 0.97s
+global_step/sec: 102.7397
+loss = 0.5282076597213745, steps = 44900, cost time = 0.97s
+global_step/sec: 102.4743
+loss = 0.5078098773956299, steps = 45000, cost time = 0.98s
+global_step/sec: 103.1489
+loss = 0.4861983060836792, steps = 45100, cost time = 0.97s
+global_step/sec: 102.8236
+loss = 0.4681277275085449, steps = 45200, cost time = 0.97s
+global_step/sec: 102.8519
+loss = 0.4994202256202698, steps = 45300, cost time = 0.97s
+global_step/sec: 102.3789
+loss = 0.4539310038089752, steps = 45400, cost time = 0.98s
+global_step/sec: 102.8206
+loss = 0.4968554675579071, steps = 45500, cost time = 0.97s
+global_step/sec: 102.7880
+loss = 0.4816269874572754, steps = 45600, cost time = 0.97s
+global_step/sec: 102.9572
+loss = 0.4293452501296997, steps = 45700, cost time = 0.97s
+global_step/sec: 101.7695
+loss = 0.477573037147522, steps = 45800, cost time = 0.98s
+global_step/sec: 102.4360
+loss = 0.44194495677948, steps = 45900, cost time = 0.98s
+global_step/sec: 102.7242
+loss = 0.4857676029205322, steps = 46000, cost time = 0.97s
+global_step/sec: 102.2854
+loss = 0.48610758781433105, steps = 46100, cost time = 0.98s
+global_step/sec: 102.4720
+loss = 0.47627967596054077, steps = 46200, cost time = 0.98s
+global_step/sec: 103.0109
+loss = 0.47704464197158813, steps = 46300, cost time = 0.97s
+global_step/sec: 103.0591
+loss = 0.4448082447052002, steps = 46400, cost time = 0.97s
+global_step/sec: 102.1392
+loss = 0.4996427595615387, steps = 46500, cost time = 0.98s
+global_step/sec: 102.1428
+loss = 0.4864184260368347, steps = 46600, cost time = 0.98s
+global_step/sec: 103.2511
+loss = 0.45535901188850403, steps = 46700, cost time = 0.97s
+global_step/sec: 102.6322
+loss = 0.4341394901275635, steps = 46800, cost time = 0.97s
+global_step/sec: 103.0628
+loss = 0.45907342433929443, steps = 46900, cost time = 0.97s
+global_step/sec: 102.0950
+loss = 0.4251723289489746, steps = 47000, cost time = 0.98s
+global_step/sec: 101.6345
+loss = 0.4853522479534149, steps = 47100, cost time = 0.98s
+global_step/sec: 102.4788
+loss = 0.45974019169807434, steps = 47200, cost time = 0.98s
+global_step/sec: 102.7257
+loss = 0.4744393825531006, steps = 47300, cost time = 0.97s
+global_step/sec: 102.6557
+loss = 0.5116004347801208, steps = 47400, cost time = 0.97s
+global_step/sec: 101.3590
+loss = 0.4764634966850281, steps = 47500, cost time = 0.99s
+global_step/sec: 102.7641
+loss = 0.48870396614074707, steps = 47600, cost time = 0.97s
+global_step/sec: 102.2761
+loss = 0.4923937916755676, steps = 47700, cost time = 0.98s
+global_step/sec: 102.8821
+loss = 0.44877952337265015, steps = 47800, cost time = 0.97s
+global_step/sec: 102.8510
+loss = 0.5073226690292358, steps = 47900, cost time = 0.97s
+global_step/sec: 102.4680
+loss = 0.4390123188495636, steps = 48000, cost time = 0.98s
+global_step/sec: 102.5523
+loss = 0.4568895697593689, steps = 48100, cost time = 0.98s
+global_step/sec: 102.6909
+loss = 0.48419415950775146, steps = 48200, cost time = 0.97s
+global_step/sec: 101.9469
+loss = 0.46758419275283813, steps = 48300, cost time = 0.98s
+global_step/sec: 102.4228
+loss = 0.44428959488868713, steps = 48400, cost time = 0.98s
+global_step/sec: 103.1686
+loss = 0.4810386598110199, steps = 48500, cost time = 0.97s
+global_step/sec: 102.4963
+loss = 0.48996543884277344, steps = 48600, cost time = 0.98s
+global_step/sec: 102.5561
+loss = 0.4561629891395569, steps = 48700, cost time = 0.98s
+global_step/sec: 102.2437
+loss = 0.44257256388664246, steps = 48800, cost time = 0.98s
+global_step/sec: 102.2182
+loss = 0.44315677881240845, steps = 48900, cost time = 0.98s
+global_step/sec: 103.4958
+loss = 0.46737730503082275, steps = 49000, cost time = 0.97s
+global_step/sec: 102.7221
+loss = 0.5043481588363647, steps = 49100, cost time = 0.97s
+global_step/sec: 102.0080
+loss = 0.4683597683906555, steps = 49200, cost time = 0.98s
+global_step/sec: 102.8411
+loss = 0.4749276041984558, steps = 49300, cost time = 0.97s
+global_step/sec: 102.5764
+loss = 0.462293803691864, steps = 49400, cost time = 0.97s
+global_step/sec: 102.2510
+loss = 0.49992766976356506, steps = 49500, cost time = 0.98s
+global_step/sec: 102.0748
+loss = 0.44803372025489807, steps = 49600, cost time = 0.98s
+global_step/sec: 101.7423
+loss = 0.4826463758945465, steps = 49700, cost time = 0.98s
+global_step/sec: 102.5357
+loss = 0.46011143922805786, steps = 49800, cost time = 0.98s
+global_step/sec: 102.6062
+loss = 0.42512011528015137, steps = 49900, cost time = 0.97s
+global_step/sec: 103.1304
+loss = 0.4517271816730499, steps = 50000, cost time = 0.97s
+global_step/sec: 102.6165
+loss = 0.49559998512268066, steps = 50100, cost time = 0.97s
+global_step/sec: 102.5883
+loss = 0.4465652108192444, steps = 50200, cost time = 0.97s
+global_step/sec: 102.9365
+loss = 0.5167169570922852, steps = 50300, cost time = 0.97s
+global_step/sec: 102.1709
+loss = 0.4359692335128784, steps = 50400, cost time = 0.98s
+global_step/sec: 101.8860
+loss = 0.4701266288757324, steps = 50500, cost time = 0.98s
+global_step/sec: 102.2894
+loss = 0.42782002687454224, steps = 50600, cost time = 0.98s
+global_step/sec: 102.5346
+loss = 0.46947312355041504, steps = 50700, cost time = 0.98s
+global_step/sec: 102.5694
+loss = 0.4963758587837219, steps = 50800, cost time = 0.97s
+global_step/sec: 102.0856
+loss = 0.4773818254470825, steps = 50900, cost time = 0.98s
+global_step/sec: 101.8402
+loss = 0.46438950300216675, steps = 51000, cost time = 0.98s
+global_step/sec: 102.7137
+loss = 0.48514413833618164, steps = 51100, cost time = 0.97s
+global_step/sec: 102.8636
+loss = 0.45119619369506836, steps = 51200, cost time = 0.97s
+global_step/sec: 102.7563
+loss = 0.4619094431400299, steps = 51300, cost time = 0.97s
+global_step/sec: 102.2585
+loss = 0.4860836863517761, steps = 51400, cost time = 0.98s
+global_step/sec: 102.0300
+loss = 0.4763180911540985, steps = 51500, cost time = 0.98s
+global_step/sec: 102.8557
+loss = 0.4626907706260681, steps = 51600, cost time = 0.97s
+global_step/sec: 102.4548
+loss = 0.4543837308883667, steps = 51700, cost time = 0.98s
+global_step/sec: 102.2515
+loss = 0.4467613697052002, steps = 51800, cost time = 0.98s
+global_step/sec: 101.9857
+loss = 0.4436497986316681, steps = 51900, cost time = 0.98s
+global_step/sec: 102.4409
+loss = 0.5050259232521057, steps = 52000, cost time = 0.98s
+global_step/sec: 103.1848
+loss = 0.45808619260787964, steps = 52100, cost time = 0.97s
+global_step/sec: 102.0323
+loss = 0.45949625968933105, steps = 52200, cost time = 0.98s
+global_step/sec: 102.4737
+loss = 0.4777376055717468, steps = 52300, cost time = 0.98s
+global_step/sec: 101.9822
+loss = 0.4529697597026825, steps = 52400, cost time = 0.98s
+global_step/sec: 103.1800
+loss = 0.4542181193828583, steps = 52500, cost time = 0.97s
+global_step/sec: 102.6613
+loss = 0.4511270523071289, steps = 52600, cost time = 0.97s
+global_step/sec: 103.0981
+loss = 0.46037328243255615, steps = 52700, cost time = 0.97s
+global_step/sec: 102.5339
+loss = 0.4844248294830322, steps = 52800, cost time = 0.98s
+global_step/sec: 102.4445
+loss = 0.44385790824890137, steps = 52900, cost time = 0.98s
+global_step/sec: 103.1512
+loss = 0.4962121844291687, steps = 53000, cost time = 0.97s
+global_step/sec: 102.3441
+loss = 0.47474583983421326, steps = 53100, cost time = 0.98s
+global_step/sec: 102.2672
+loss = 0.5172367691993713, steps = 53200, cost time = 0.98s
+global_step/sec: 103.5508
+loss = 0.4862601161003113, steps = 53300, cost time = 0.97s
+global_step/sec: 102.2814
+loss = 0.46876242756843567, steps = 53400, cost time = 0.98s
+global_step/sec: 102.4564
+loss = 0.5037084817886353, steps = 53500, cost time = 0.98s
+global_step/sec: 102.9211
+loss = 0.45350879430770874, steps = 53600, cost time = 0.97s
+global_step/sec: 101.5768
+loss = 0.44219091534614563, steps = 53700, cost time = 0.98s
+global_step/sec: 103.0419
+loss = 0.46795862913131714, steps = 53800, cost time = 0.97s
+global_step/sec: 102.3898
+loss = 0.4581190347671509, steps = 53900, cost time = 0.98s
+global_step/sec: 102.2553
+loss = 0.48132458329200745, steps = 54000, cost time = 0.98s
+global_step/sec: 102.6813
+loss = 0.5095173120498657, steps = 54100, cost time = 0.97s
+global_step/sec: 103.0059
+loss = 0.463382750749588, steps = 54200, cost time = 0.97s
+global_step/sec: 101.6341
+loss = 0.4518389105796814, steps = 54300, cost time = 0.98s
+global_step/sec: 101.9387
+loss = 0.4780574440956116, steps = 54400, cost time = 0.98s
+global_step/sec: 102.3568
+loss = 0.44983118772506714, steps = 54500, cost time = 0.98s
+global_step/sec: 101.2769
+loss = 0.4989185631275177, steps = 54600, cost time = 0.99s
+global_step/sec: 101.7437
+loss = 0.4627874791622162, steps = 54700, cost time = 0.98s
+global_step/sec: 102.5551
+loss = 0.45530009269714355, steps = 54800, cost time = 0.98s
+global_step/sec: 102.8722
+loss = 0.44646790623664856, steps = 54900, cost time = 0.97s
+global_step/sec: 101.4019
+loss = 0.4830833375453949, steps = 55000, cost time = 0.99s
+global_step/sec: 102.8239
+loss = 0.4820093512535095, steps = 55100, cost time = 0.97s
+global_step/sec: 102.7728
+loss = 0.46913179755210876, steps = 55200, cost time = 0.97s
+global_step/sec: 102.0625
+loss = 0.4443148374557495, steps = 55300, cost time = 0.98s
+global_step/sec: 102.9549
+loss = 0.425756573677063, steps = 55400, cost time = 0.97s
+global_step/sec: 102.0421
+loss = 0.4738462567329407, steps = 55500, cost time = 0.98s
+global_step/sec: 103.1506
+loss = 0.43185850977897644, steps = 55600, cost time = 0.97s
+global_step/sec: 102.4070
+loss = 0.4674820005893707, steps = 55700, cost time = 0.98s
+global_step/sec: 102.6066
+loss = 0.4693010151386261, steps = 55800, cost time = 0.97s
+global_step/sec: 102.2509
+loss = 0.5225304365158081, steps = 55900, cost time = 0.98s
+global_step/sec: 102.0856
+loss = 0.44999879598617554, steps = 56000, cost time = 0.98s
+global_step/sec: 102.1800
+loss = 0.4563911557197571, steps = 56100, cost time = 0.98s
+global_step/sec: 102.1595
+loss = 0.44282567501068115, steps = 56200, cost time = 0.98s
+global_step/sec: 102.3653
+loss = 0.5007411241531372, steps = 56300, cost time = 0.98s
+global_step/sec: 103.6332
+loss = 0.42547672986984253, steps = 56400, cost time = 0.96s
+global_step/sec: 102.6634
+loss = 0.5020716786384583, steps = 56500, cost time = 0.97s
+global_step/sec: 102.4020
+loss = 0.45799893140792847, steps = 56600, cost time = 0.98s
+global_step/sec: 102.2960
+loss = 0.479278564453125, steps = 56700, cost time = 0.98s
+global_step/sec: 101.7337
+loss = 0.42519304156303406, steps = 56800, cost time = 0.98s
+global_step/sec: 101.6552
+loss = 0.41891705989837646, steps = 56900, cost time = 0.98s
+global_step/sec: 102.4892
+loss = 0.4563586711883545, steps = 57000, cost time = 0.98s
+global_step/sec: 102.7181
+loss = 0.4681037366390228, steps = 57100, cost time = 0.97s
+global_step/sec: 102.6748
+loss = 0.44698601961135864, steps = 57200, cost time = 0.97s
+global_step/sec: 102.8136
+loss = 0.46648019552230835, steps = 57300, cost time = 0.97s
+global_step/sec: 102.7696
+loss = 0.46581965684890747, steps = 57400, cost time = 0.97s
+global_step/sec: 102.8859
+loss = 0.47241976857185364, steps = 57500, cost time = 0.97s
+global_step/sec: 103.2162
+loss = 0.4709516167640686, steps = 57600, cost time = 0.97s
+global_step/sec: 102.6002
+loss = 0.43385159969329834, steps = 57700, cost time = 0.97s
+global_step/sec: 102.4552
+loss = 0.4389704167842865, steps = 57800, cost time = 0.98s
+global_step/sec: 102.6072
+loss = 0.47161686420440674, steps = 57900, cost time = 0.97s
+global_step/sec: 102.3324
+loss = 0.44970497488975525, steps = 58000, cost time = 0.98s
+global_step/sec: 102.3616
+loss = 0.47720450162887573, steps = 58100, cost time = 0.98s
+global_step/sec: 102.0030
+loss = 0.4296848773956299, steps = 58200, cost time = 0.98s
+global_step/sec: 102.7315
+loss = 0.43758606910705566, steps = 58300, cost time = 0.97s
+global_step/sec: 102.9686
+loss = 0.47063446044921875, steps = 58400, cost time = 0.97s
+global_step/sec: 102.0915
+loss = 0.4860406219959259, steps = 58500, cost time = 0.98s
+global_step/sec: 101.8968
+loss = 0.43874794244766235, steps = 58600, cost time = 0.98s
+global_step/sec: 102.7371
+loss = 0.49481117725372314, steps = 58700, cost time = 0.97s
+global_step/sec: 102.6457
+loss = 0.4738406538963318, steps = 58800, cost time = 0.97s
+global_step/sec: 102.6925
+loss = 0.47724390029907227, steps = 58900, cost time = 0.97s
+global_step/sec: 102.5547
+loss = 0.44725126028060913, steps = 59000, cost time = 0.98s
+global_step/sec: 102.6734
+loss = 0.46447858214378357, steps = 59100, cost time = 0.97s
+global_step/sec: 102.1821
+loss = 0.46517348289489746, steps = 59200, cost time = 0.98s
+global_step/sec: 102.7280
+loss = 0.47403964400291443, steps = 59300, cost time = 0.97s
+global_step/sec: 102.0455
+loss = 0.44068071246147156, steps = 59400, cost time = 0.98s
+global_step/sec: 103.3690
+loss = 0.48718875646591187, steps = 59500, cost time = 0.97s
+global_step/sec: 103.5003
+loss = 0.40142562985420227, steps = 59600, cost time = 0.97s
+global_step/sec: 103.0511
+loss = 0.4485189616680145, steps = 59700, cost time = 0.97s
+global_step/sec: 102.6613
+loss = 0.5040736198425293, steps = 59800, cost time = 0.97s
+global_step/sec: 101.8913
+loss = 0.48914092779159546, steps = 59900, cost time = 0.98s
+global_step/sec: 102.3365
+loss = 0.4941766560077667, steps = 60000, cost time = 0.98s
+global_step/sec: 102.4700
+loss = 0.5072427988052368, steps = 60100, cost time = 0.98s
+global_step/sec: 103.1831
+loss = 0.4942367374897003, steps = 60200, cost time = 0.97s
+global_step/sec: 102.3928
+loss = 0.4672844409942627, steps = 60300, cost time = 0.98s
+global_step/sec: 103.4716
+loss = 0.5312488079071045, steps = 60400, cost time = 0.97s
+global_step/sec: 103.4955
+loss = 0.4563923478126526, steps = 60500, cost time = 0.97s
+global_step/sec: 102.5331
+loss = 0.47374817728996277, steps = 60600, cost time = 0.98s
+global_step/sec: 102.3382
+loss = 0.5002612471580505, steps = 60700, cost time = 0.98s
+global_step/sec: 103.3262
+loss = 0.47411489486694336, steps = 60800, cost time = 0.97s
+global_step/sec: 102.2576
+loss = 0.44831252098083496, steps = 60900, cost time = 0.98s
+global_step/sec: 103.1519
+loss = 0.5043566823005676, steps = 61000, cost time = 0.97s
+global_step/sec: 102.5341
+loss = 0.41067373752593994, steps = 61100, cost time = 0.98s
+global_step/sec: 102.5750
+loss = 0.4828747808933258, steps = 61200, cost time = 0.97s
+global_step/sec: 102.9905
+loss = 0.41003474593162537, steps = 61300, cost time = 0.97s
+global_step/sec: 102.7845
+loss = 0.49046048521995544, steps = 61400, cost time = 0.97s
+global_step/sec: 103.1103
+loss = 0.4338661730289459, steps = 61500, cost time = 0.97s
+global_step/sec: 102.6062
+loss = 0.45573991537094116, steps = 61600, cost time = 0.97s
+global_step/sec: 102.4482
+loss = 0.454070508480072, steps = 61700, cost time = 0.98s
+global_step/sec: 103.3833
+loss = 0.495514452457428, steps = 61800, cost time = 0.97s
+global_step/sec: 103.3560
+loss = 0.5131947994232178, steps = 61900, cost time = 0.97s
+global_step/sec: 102.6436
+loss = 0.43800032138824463, steps = 62000, cost time = 0.97s
+global_step/sec: 102.5249
+loss = 0.5089055299758911, steps = 62100, cost time = 0.98s
+global_step/sec: 102.0819
+loss = 0.5057253837585449, steps = 62200, cost time = 0.98s
+global_step/sec: 102.1428
+loss = 0.49931520223617554, steps = 62300, cost time = 0.98s
+global_step/sec: 102.7452
+loss = 0.46162185072898865, steps = 62400, cost time = 0.97s
+global_step/sec: 103.7928
+loss = 0.4268060028553009, steps = 62500, cost time = 0.96s
+global_step/sec: 102.7549
+loss = 0.47916558384895325, steps = 62600, cost time = 0.97s
+global_step/sec: 102.0937
+loss = 0.47943776845932007, steps = 62700, cost time = 0.98s
+global_step/sec: 102.4972
+loss = 0.45506787300109863, steps = 62800, cost time = 0.98s
+global_step/sec: 102.6836
+loss = 0.4917120337486267, steps = 62900, cost time = 0.97s
+global_step/sec: 102.6591
+loss = 0.44236040115356445, steps = 63000, cost time = 0.97s
+global_step/sec: 103.0511
+loss = 0.47197622060775757, steps = 63100, cost time = 0.97s
+global_step/sec: 102.9376
+loss = 0.43999382853507996, steps = 63200, cost time = 0.97s
+global_step/sec: 102.2437
+loss = 0.5139462947845459, steps = 63300, cost time = 0.98s
+global_step/sec: 103.1130
+loss = 0.4393925368785858, steps = 63400, cost time = 0.97s
+global_step/sec: 102.5753
+loss = 0.4679049849510193, steps = 63500, cost time = 0.97s
+global_step/sec: 102.5289
+loss = 0.4852784276008606, steps = 63600, cost time = 0.98s
+global_step/sec: 102.6485
+loss = 0.4811699688434601, steps = 63700, cost time = 0.97s
+global_step/sec: 103.1163
+loss = 0.4474419057369232, steps = 63800, cost time = 0.97s
+global_step/sec: 102.6857
+loss = 0.49457722902297974, steps = 63900, cost time = 0.97s
+global_step/sec: 103.2451
+loss = 0.4628640413284302, steps = 64000, cost time = 0.97s
+global_step/sec: 102.8579
+loss = 0.4409330189228058, steps = 64100, cost time = 0.97s
+global_step/sec: 103.1202
+loss = 0.4540450870990753, steps = 64200, cost time = 0.97s
+global_step/sec: 102.4371
+loss = 0.4530429542064667, steps = 64300, cost time = 0.98s
+global_step/sec: 102.8089
+loss = 0.47673746943473816, steps = 64400, cost time = 0.97s
+global_step/sec: 102.8933
+loss = 0.44963788986206055, steps = 64500, cost time = 0.97s
+global_step/sec: 103.1042
+loss = 0.4425129294395447, steps = 64600, cost time = 0.97s
+global_step/sec: 101.8734
+loss = 0.448091596364975, steps = 64700, cost time = 0.98s
+global_step/sec: 102.3861
+loss = 0.43241429328918457, steps = 64800, cost time = 0.98s
+global_step/sec: 102.7569
+loss = 0.4427375793457031, steps = 64900, cost time = 0.97s
+global_step/sec: 102.8863
+loss = 0.4812288284301758, steps = 65000, cost time = 0.97s
+global_step/sec: 103.2980
+loss = 0.45121437311172485, steps = 65100, cost time = 0.97s
+global_step/sec: 102.4511
+loss = 0.4731869101524353, steps = 65200, cost time = 0.98s
+global_step/sec: 102.6065
+loss = 0.4817730188369751, steps = 65300, cost time = 0.97s
+global_step/sec: 102.9636
+loss = 0.44183021783828735, steps = 65400, cost time = 0.97s
+global_step/sec: 102.4416
+loss = 0.4298866391181946, steps = 65500, cost time = 0.98s
+global_step/sec: 102.4178
+loss = 0.4572974443435669, steps = 65600, cost time = 0.98s
+global_step/sec: 102.8435
+loss = 0.470830500125885, steps = 65700, cost time = 0.97s
+global_step/sec: 102.8591
+loss = 0.45578718185424805, steps = 65800, cost time = 0.97s
+global_step/sec: 103.0724
+loss = 0.4340786933898926, steps = 65900, cost time = 0.97s
+global_step/sec: 102.8683
+loss = 0.437063604593277, steps = 66000, cost time = 0.97s
+global_step/sec: 103.4587
+loss = 0.4917023777961731, steps = 66100, cost time = 0.97s
+global_step/sec: 101.9270
+loss = 0.504073441028595, steps = 66200, cost time = 0.98s
+global_step/sec: 102.7481
+loss = 0.45646682381629944, steps = 66300, cost time = 0.97s
+global_step/sec: 102.5106
+loss = 0.4908709228038788, steps = 66400, cost time = 0.98s
+global_step/sec: 102.9296
+loss = 0.4503929615020752, steps = 66500, cost time = 0.97s
+global_step/sec: 102.4429
+loss = 0.46723994612693787, steps = 66600, cost time = 0.98s
+global_step/sec: 102.0526
+loss = 0.45776575803756714, steps = 66700, cost time = 0.98s
+global_step/sec: 102.4670
+loss = 0.47431015968322754, steps = 66800, cost time = 0.98s
+global_step/sec: 102.2724
+loss = 0.4743766784667969, steps = 66900, cost time = 0.98s
+global_step/sec: 101.9281
+loss = 0.4742456376552582, steps = 67000, cost time = 0.98s
+global_step/sec: 103.9327
+loss = 0.4774603545665741, steps = 67100, cost time = 0.96s
+global_step/sec: 103.5133
+loss = 0.4616871178150177, steps = 67200, cost time = 0.97s
+global_step/sec: 102.8312
+loss = 0.45227211713790894, steps = 67300, cost time = 0.97s
+global_step/sec: 102.8058
+loss = 0.46328115463256836, steps = 67400, cost time = 0.97s
+global_step/sec: 103.1667
+loss = 0.4521459639072418, steps = 67500, cost time = 0.97s
+global_step/sec: 101.6955
+loss = 0.4741742014884949, steps = 67600, cost time = 0.98s
+global_step/sec: 103.0567
+loss = 0.4785602390766144, steps = 67700, cost time = 0.97s
+global_step/sec: 102.8002
+loss = 0.4436468780040741, steps = 67800, cost time = 0.97s
+global_step/sec: 103.1577
+loss = 0.4818478226661682, steps = 67900, cost time = 0.97s
+global_step/sec: 102.4394
+loss = 0.46978822350502014, steps = 68000, cost time = 0.98s
+global_step/sec: 102.6460
+loss = 0.4326135516166687, steps = 68100, cost time = 0.97s
+global_step/sec: 102.4163
+loss = 0.4563148021697998, steps = 68200, cost time = 0.98s
+global_step/sec: 102.4005
+loss = 0.4584457576274872, steps = 68300, cost time = 0.98s
+global_step/sec: 102.1607
+loss = 0.46186062693595886, steps = 68400, cost time = 0.98s
+global_step/sec: 103.1095
+loss = 0.4588906168937683, steps = 68500, cost time = 0.97s
+global_step/sec: 102.3182
+loss = 0.47643807530403137, steps = 68600, cost time = 0.98s
+global_step/sec: 102.3511
+loss = 0.4428098201751709, steps = 68700, cost time = 0.98s
+global_step/sec: 102.7357
+loss = 0.4609249532222748, steps = 68800, cost time = 0.97s
+global_step/sec: 103.2131
+loss = 0.48105454444885254, steps = 68900, cost time = 0.97s
+global_step/sec: 102.3969
+loss = 0.45768558979034424, steps = 69000, cost time = 0.98s
+global_step/sec: 102.6115
+loss = 0.4211989939212799, steps = 69100, cost time = 0.97s
+global_step/sec: 102.7987
+loss = 0.44751060009002686, steps = 69200, cost time = 0.97s
+global_step/sec: 102.5624
+loss = 0.46315237879753113, steps = 69300, cost time = 0.98s
+global_step/sec: 102.2862
+loss = 0.4602788984775543, steps = 69400, cost time = 0.98s
+global_step/sec: 102.5883
+loss = 0.45088326930999756, steps = 69500, cost time = 0.97s
+global_step/sec: 102.7155
+loss = 0.42173150181770325, steps = 69600, cost time = 0.97s
+global_step/sec: 102.2051
+loss = 0.41852492094039917, steps = 69700, cost time = 0.98s
+global_step/sec: 102.7475
+loss = 0.4751460552215576, steps = 69800, cost time = 0.97s
+global_step/sec: 102.8110
+loss = 0.5030769109725952, steps = 69900, cost time = 0.97s
+global_step/sec: 103.0377
+loss = 0.47049281001091003, steps = 70000, cost time = 0.97s
+global_step/sec: 102.8258
+loss = 0.44703543186187744, steps = 70100, cost time = 0.97s
+global_step/sec: 102.8536
+loss = 0.4472482204437256, steps = 70200, cost time = 0.97s
+global_step/sec: 103.0073
+loss = 0.47874295711517334, steps = 70300, cost time = 0.97s
+global_step/sec: 102.7551
+loss = 0.44147825241088867, steps = 70400, cost time = 0.97s
+global_step/sec: 102.8979
+loss = 0.4356469511985779, steps = 70500, cost time = 0.97s
+global_step/sec: 102.9884
+loss = 0.3933675289154053, steps = 70600, cost time = 0.97s
+global_step/sec: 103.0716
+loss = 0.42501768469810486, steps = 70700, cost time = 0.97s
+global_step/sec: 102.5962
+loss = 0.4248136281967163, steps = 70800, cost time = 0.97s
+global_step/sec: 103.1985
+loss = 0.4578803777694702, steps = 70900, cost time = 0.97s
+global_step/sec: 102.6362
+loss = 0.47232943773269653, steps = 71000, cost time = 0.97s
+global_step/sec: 103.1259
+loss = 0.47925275564193726, steps = 71100, cost time = 0.97s
+global_step/sec: 102.3761
+loss = 0.49291056394577026, steps = 71200, cost time = 0.98s
+global_step/sec: 102.8000
+loss = 0.43078380823135376, steps = 71300, cost time = 0.97s
+global_step/sec: 102.7085
+loss = 0.44017043709754944, steps = 71400, cost time = 0.97s
+global_step/sec: 103.0424
+loss = 0.4588417112827301, steps = 71500, cost time = 0.97s
+global_step/sec: 102.3939
+loss = 0.452339768409729, steps = 71600, cost time = 0.98s
+global_step/sec: 102.6687
+loss = 0.44787830114364624, steps = 71700, cost time = 0.97s
+global_step/sec: 102.8461
+loss = 0.4457688331604004, steps = 71800, cost time = 0.97s
+global_step/sec: 102.1048
+loss = 0.4509812593460083, steps = 71900, cost time = 0.98s
+global_step/sec: 102.7123
+loss = 0.5042321681976318, steps = 72000, cost time = 0.97s
+global_step/sec: 102.3265
+loss = 0.4595296382904053, steps = 72100, cost time = 0.98s
+global_step/sec: 101.8137
+loss = 0.42630285024642944, steps = 72200, cost time = 0.98s
+global_step/sec: 102.7062
+loss = 0.4588429927825928, steps = 72300, cost time = 0.97s
+global_step/sec: 102.6946
+loss = 0.5119503736495972, steps = 72400, cost time = 0.97s
+global_step/sec: 102.8070
+loss = 0.44678694009780884, steps = 72500, cost time = 0.97s
+global_step/sec: 101.8826
+loss = 0.43343499302864075, steps = 72600, cost time = 0.98s
+global_step/sec: 102.5390
+loss = 0.4493967294692993, steps = 72700, cost time = 0.98s
+global_step/sec: 102.4835
+loss = 0.44276347756385803, steps = 72800, cost time = 0.98s
+global_step/sec: 102.6800
+loss = 0.4532771110534668, steps = 72900, cost time = 0.97s
+global_step/sec: 103.4954
+loss = 0.4611093997955322, steps = 73000, cost time = 0.97s
+global_step/sec: 102.3459
+loss = 0.4668753743171692, steps = 73100, cost time = 0.98s
+global_step/sec: 102.4113
+loss = 0.4201415777206421, steps = 73200, cost time = 0.98s
+global_step/sec: 102.2119
+loss = 0.4350531995296478, steps = 73300, cost time = 0.98s
+global_step/sec: 103.0771
+loss = 0.45820409059524536, steps = 73400, cost time = 0.97s
+global_step/sec: 102.3730
+loss = 0.46937963366508484, steps = 73500, cost time = 0.98s
+global_step/sec: 102.6414
+loss = 0.4766758382320404, steps = 73600, cost time = 0.97s
+global_step/sec: 102.3989
+loss = 0.4860498905181885, steps = 73700, cost time = 0.98s
+global_step/sec: 102.8677
+loss = 0.448833167552948, steps = 73800, cost time = 0.97s
+global_step/sec: 102.8063
+loss = 0.4516627788543701, steps = 73900, cost time = 0.97s
+global_step/sec: 102.1034
+loss = 0.43197059631347656, steps = 74000, cost time = 0.98s
+global_step/sec: 102.9529
+loss = 0.4568021297454834, steps = 74100, cost time = 0.97s
+global_step/sec: 103.5063
+loss = 0.4421535134315491, steps = 74200, cost time = 0.97s
+global_step/sec: 102.7655
+loss = 0.45815467834472656, steps = 74300, cost time = 0.97s
+global_step/sec: 102.6376
+loss = 0.4683935046195984, steps = 74400, cost time = 0.97s
+global_step/sec: 103.0885
+loss = 0.4784661531448364, steps = 74500, cost time = 0.97s
+global_step/sec: 102.6145
+loss = 0.48559442162513733, steps = 74600, cost time = 0.97s
+global_step/sec: 102.4205
+loss = 0.42207303643226624, steps = 74700, cost time = 0.98s
+global_step/sec: 102.4019
+loss = 0.4658050239086151, steps = 74800, cost time = 0.98s
+global_step/sec: 102.2387
+loss = 0.4463139772415161, steps = 74900, cost time = 0.98s
+global_step/sec: 102.9374
+loss = 0.422793447971344, steps = 75000, cost time = 0.97s
+global_step/sec: 101.9880
+loss = 0.42145204544067383, steps = 75100, cost time = 0.98s
+global_step/sec: 102.2122
+loss = 0.4515742063522339, steps = 75200, cost time = 0.98s
+global_step/sec: 102.3898
+loss = 0.4177743196487427, steps = 75300, cost time = 0.98s
+global_step/sec: 102.7282
+loss = 0.47409307956695557, steps = 75400, cost time = 0.97s
+global_step/sec: 102.8757
+loss = 0.49773213267326355, steps = 75500, cost time = 0.97s
+global_step/sec: 101.7429
+loss = 0.4682649075984955, steps = 75600, cost time = 0.98s
+global_step/sec: 102.9221
+loss = 0.5310338735580444, steps = 75700, cost time = 0.97s
+global_step/sec: 101.6174
+loss = 0.45494788885116577, steps = 75800, cost time = 0.98s
+global_step/sec: 102.6298
+loss = 0.5215811729431152, steps = 75900, cost time = 0.97s
+global_step/sec: 102.9672
+loss = 0.480722576379776, steps = 76000, cost time = 0.97s
+global_step/sec: 102.3061
+loss = 0.4752712845802307, steps = 76100, cost time = 0.98s
+global_step/sec: 102.5105
+loss = 0.5100358724594116, steps = 76200, cost time = 0.98s
+global_step/sec: 102.4105
+loss = 0.538475513458252, steps = 76300, cost time = 0.98s
+global_step/sec: 103.0366
+loss = 0.49142760038375854, steps = 76400, cost time = 0.97s
+global_step/sec: 102.9017
+loss = 0.4568050503730774, steps = 76500, cost time = 0.97s
+global_step/sec: 102.5252
+loss = 0.4851300120353699, steps = 76600, cost time = 0.98s
+global_step/sec: 102.3139
+loss = 0.46745261549949646, steps = 76700, cost time = 0.98s
+global_step/sec: 102.5476
+loss = 0.5106687545776367, steps = 76800, cost time = 0.98s
+global_step/sec: 102.5369
+loss = 0.4409801661968231, steps = 76900, cost time = 0.98s
+global_step/sec: 102.8415
+loss = 0.44442594051361084, steps = 77000, cost time = 0.97s
+global_step/sec: 102.7133
+loss = 0.41981780529022217, steps = 77100, cost time = 0.97s
+global_step/sec: 102.6597
+loss = 0.45813798904418945, steps = 77200, cost time = 0.97s
+global_step/sec: 102.3711
+loss = 0.47900694608688354, steps = 77300, cost time = 0.98s
+global_step/sec: 102.5446
+loss = 0.525750994682312, steps = 77400, cost time = 0.98s
+global_step/sec: 102.6541
+loss = 0.47669264674186707, steps = 77500, cost time = 0.97s
+global_step/sec: 101.9338
+loss = 0.45571884512901306, steps = 77600, cost time = 0.98s
+global_step/sec: 102.1856
+loss = 0.44054633378982544, steps = 77700, cost time = 0.98s
+global_step/sec: 102.5219
+loss = 0.45288345217704773, steps = 77800, cost time = 0.98s
+global_step/sec: 102.9924
+loss = 0.4662884473800659, steps = 77900, cost time = 0.97s
+global_step/sec: 102.8513
+loss = 0.4200207591056824, steps = 78000, cost time = 0.97s
+global_step/sec: 102.8106
+loss = 0.42317909002304077, steps = 78100, cost time = 0.97s
+global_step/sec: 102.3972
+loss = 0.4283110797405243, steps = 78200, cost time = 0.98s
+global_step/sec: 102.9097
+loss = 0.4138951897621155, steps = 78300, cost time = 0.97s
+global_step/sec: 102.5632
+loss = 0.46410608291625977, steps = 78400, cost time = 0.98s
+global_step/sec: 102.1723
+loss = 0.4739070534706116, steps = 78500, cost time = 0.98s
+global_step/sec: 101.8162
+loss = 0.4928802251815796, steps = 78600, cost time = 0.98s
+global_step/sec: 103.4469
+loss = 0.4518285393714905, steps = 78700, cost time = 0.97s
+global_step/sec: 102.4102
+loss = 0.4654964208602905, steps = 78800, cost time = 0.98s
+global_step/sec: 102.7711
+loss = 0.44104743003845215, steps = 78900, cost time = 0.97s
+global_step/sec: 102.8526
+loss = 0.4690089225769043, steps = 79000, cost time = 0.97s
+global_step/sec: 101.9689
+loss = 0.4901134967803955, steps = 79100, cost time = 0.98s
+global_step/sec: 102.0525
+loss = 0.4938482642173767, steps = 79200, cost time = 0.98s
+global_step/sec: 101.7652
+loss = 0.449882447719574, steps = 79300, cost time = 0.98s
+global_step/sec: 102.2052
+loss = 0.4350378215312958, steps = 79400, cost time = 0.98s
+global_step/sec: 102.2997
+loss = 0.4948027431964874, steps = 79500, cost time = 0.98s
+global_step/sec: 102.5963
+loss = 0.4913371205329895, steps = 79600, cost time = 0.97s
+global_step/sec: 102.2592
+loss = 0.4693686068058014, steps = 79700, cost time = 0.98s
+global_step/sec: 102.0506
+loss = 0.44736024737358093, steps = 79800, cost time = 0.98s
+global_step/sec: 102.9133
+loss = 0.4826575517654419, steps = 79900, cost time = 0.97s
+global_step/sec: 103.0485
+loss = 0.5128473043441772, steps = 80000, cost time = 0.97s
+global_step/sec: 102.6169
+loss = 0.491952121257782, steps = 80100, cost time = 0.97s
+global_step/sec: 102.7281
+loss = 0.4948679208755493, steps = 80200, cost time = 0.97s
+global_step/sec: 102.3890
+loss = 0.47003549337387085, steps = 80300, cost time = 0.98s
+global_step/sec: 102.9885
+loss = 0.4646792411804199, steps = 80400, cost time = 0.97s
+global_step/sec: 102.3534
+loss = 0.4796452522277832, steps = 80500, cost time = 0.98s
+global_step/sec: 102.3466
+loss = 0.44682997465133667, steps = 80600, cost time = 0.98s
+global_step/sec: 102.8690
+loss = 0.4426036477088928, steps = 80700, cost time = 0.97s
+global_step/sec: 102.3766
+loss = 0.4595438539981842, steps = 80800, cost time = 0.98s
+global_step/sec: 102.4857
+loss = 0.4604038894176483, steps = 80900, cost time = 0.98s
+global_step/sec: 102.6236
+loss = 0.4792236089706421, steps = 81000, cost time = 0.97s
+global_step/sec: 101.5912
+loss = 0.45330578088760376, steps = 81100, cost time = 0.98s
+global_step/sec: 102.6969
+loss = 0.4535542130470276, steps = 81200, cost time = 0.97s
+global_step/sec: 102.5909
+loss = 0.4663938581943512, steps = 81300, cost time = 0.97s
+global_step/sec: 103.0368
+loss = 0.43664127588272095, steps = 81400, cost time = 0.97s
+global_step/sec: 103.8052
+loss = 0.4146525263786316, steps = 81500, cost time = 0.96s
+global_step/sec: 102.0805
+loss = 0.43797802925109863, steps = 81600, cost time = 0.98s
+global_step/sec: 102.5148
+loss = 0.46272653341293335, steps = 81700, cost time = 0.98s
+global_step/sec: 102.6402
+loss = 0.45876118540763855, steps = 81800, cost time = 0.97s
+global_step/sec: 102.2408
+loss = 0.44267916679382324, steps = 81900, cost time = 0.98s
+global_step/sec: 103.4083
+loss = 0.46374809741973877, steps = 82000, cost time = 0.97s
+global_step/sec: 102.8197
+loss = 0.4902055263519287, steps = 82100, cost time = 0.97s
+global_step/sec: 102.5635
+loss = 0.43753501772880554, steps = 82200, cost time = 0.98s
+global_step/sec: 102.9326
+loss = 0.47680094838142395, steps = 82300, cost time = 0.97s
+global_step/sec: 102.0345
+loss = 0.482074499130249, steps = 82400, cost time = 0.98s
+global_step/sec: 102.0797
+loss = 0.4535912573337555, steps = 82500, cost time = 0.98s
+global_step/sec: 102.5486
+loss = 0.49523574113845825, steps = 82600, cost time = 0.98s
+global_step/sec: 102.4827
+loss = 0.4265156388282776, steps = 82700, cost time = 0.98s
+global_step/sec: 102.6836
+loss = 0.49556612968444824, steps = 82800, cost time = 0.97s
+global_step/sec: 102.4535
+loss = 0.48565906286239624, steps = 82900, cost time = 0.98s
+global_step/sec: 102.6239
+loss = 0.45610278844833374, steps = 83000, cost time = 0.97s
+global_step/sec: 103.1323
+loss = 0.4530298113822937, steps = 83100, cost time = 0.97s
+global_step/sec: 102.7336
+loss = 0.44810667634010315, steps = 83200, cost time = 0.97s
+global_step/sec: 102.8971
+loss = 0.4364010691642761, steps = 83300, cost time = 0.97s
+global_step/sec: 102.8779
+loss = 0.4243217706680298, steps = 83400, cost time = 0.97s
+global_step/sec: 103.0988
+loss = 0.4257916212081909, steps = 83500, cost time = 0.97s
+global_step/sec: 103.1086
+loss = 0.48035743832588196, steps = 83600, cost time = 0.97s
+global_step/sec: 102.6924
+loss = 0.4716748595237732, steps = 83700, cost time = 0.97s
+global_step/sec: 102.7050
+loss = 0.4700261950492859, steps = 83800, cost time = 0.97s
+global_step/sec: 102.3773
+loss = 0.49517717957496643, steps = 83900, cost time = 0.98s
+global_step/sec: 102.3601
+loss = 0.48190826177597046, steps = 84000, cost time = 0.98s
+global_step/sec: 103.0005
+loss = 0.45110443234443665, steps = 84100, cost time = 0.97s
+global_step/sec: 102.6854
+loss = 0.4453805088996887, steps = 84200, cost time = 0.97s
+global_step/sec: 101.9974
+loss = 0.4647645056247711, steps = 84300, cost time = 0.98s
+global_step/sec: 102.5244
+loss = 0.48903924226760864, steps = 84400, cost time = 0.98s
+global_step/sec: 103.0139
+loss = 0.4623291492462158, steps = 84500, cost time = 0.97s
+global_step/sec: 102.8893
+loss = 0.44218534231185913, steps = 84600, cost time = 0.97s
+global_step/sec: 103.0377
+loss = 0.4681525230407715, steps = 84700, cost time = 0.97s
+global_step/sec: 101.8198
+loss = 0.45187145471572876, steps = 84800, cost time = 0.98s
+global_step/sec: 102.2422
+loss = 0.48338815569877625, steps = 84900, cost time = 0.98s
+global_step/sec: 102.7748
+loss = 0.4717639982700348, steps = 85000, cost time = 0.97s
+global_step/sec: 102.5994
+loss = 0.48246434330940247, steps = 85100, cost time = 0.97s
+global_step/sec: 102.4314
+loss = 0.5129270553588867, steps = 85200, cost time = 0.98s
+global_step/sec: 103.1230
+loss = 0.45258837938308716, steps = 85300, cost time = 0.97s
+global_step/sec: 102.0831
+loss = 0.48081278800964355, steps = 85400, cost time = 0.98s
+global_step/sec: 103.0163
+loss = 0.47864288091659546, steps = 85500, cost time = 0.97s
+global_step/sec: 101.8522
+loss = 0.44513407349586487, steps = 85600, cost time = 0.98s
+global_step/sec: 102.6312
+loss = 0.4306398630142212, steps = 85700, cost time = 0.97s
+global_step/sec: 102.7001
+loss = 0.4684567451477051, steps = 85800, cost time = 0.97s
+global_step/sec: 102.4049
+loss = 0.447182834148407, steps = 85900, cost time = 0.98s
+global_step/sec: 102.6437
+loss = 0.4427568316459656, steps = 86000, cost time = 0.97s
+global_step/sec: 102.5686
+loss = 0.47164401412010193, steps = 86100, cost time = 0.97s
+global_step/sec: 103.0236
+loss = 0.43401268124580383, steps = 86200, cost time = 0.97s
+global_step/sec: 102.9729
+loss = 0.45379525423049927, steps = 86300, cost time = 0.97s
+global_step/sec: 102.8598
+loss = 0.44225436449050903, steps = 86400, cost time = 0.97s
+global_step/sec: 102.9382
+loss = 0.47423046827316284, steps = 86500, cost time = 0.97s
+global_step/sec: 102.4021
+loss = 0.5232588052749634, steps = 86600, cost time = 0.98s
+global_step/sec: 102.3712
+loss = 0.46693000197410583, steps = 86700, cost time = 0.98s
+global_step/sec: 103.8943
+loss = 0.47609707713127136, steps = 86800, cost time = 0.96s
+global_step/sec: 102.9866
+loss = 0.4533929228782654, steps = 86900, cost time = 0.97s
+global_step/sec: 102.7218
+loss = 0.39960741996765137, steps = 87000, cost time = 0.97s
+global_step/sec: 102.0860
+loss = 0.4582720398902893, steps = 87100, cost time = 0.98s
+global_step/sec: 103.6192
+loss = 0.4986445903778076, steps = 87200, cost time = 0.97s
+global_step/sec: 103.1694
+loss = 0.47256672382354736, steps = 87300, cost time = 0.97s
+global_step/sec: 103.2910
+loss = 0.4198271334171295, steps = 87400, cost time = 0.97s
+global_step/sec: 103.2637
+loss = 0.47749584913253784, steps = 87500, cost time = 0.97s
+global_step/sec: 103.6871
+loss = 0.4425962567329407, steps = 87600, cost time = 0.96s
+global_step/sec: 101.8727
+loss = 0.4335983991622925, steps = 87700, cost time = 0.98s
+global_step/sec: 102.4534
+loss = 0.4891766905784607, steps = 87800, cost time = 0.98s
+global_step/sec: 102.6415
+loss = 0.46441227197647095, steps = 87900, cost time = 0.97s
+global_step/sec: 103.0404
+loss = 0.4926135540008545, steps = 88000, cost time = 0.97s
+global_step/sec: 101.9720
+loss = 0.42947590351104736, steps = 88100, cost time = 0.98s
+global_step/sec: 102.8607
+loss = 0.4816819429397583, steps = 88200, cost time = 0.97s
+global_step/sec: 102.9969
+loss = 0.4885851740837097, steps = 88300, cost time = 0.97s
+global_step/sec: 101.8626
+loss = 0.46299105882644653, steps = 88400, cost time = 0.98s
+global_step/sec: 102.0763
+loss = 0.46274805068969727, steps = 88500, cost time = 0.98s
+global_step/sec: 102.3204
+loss = 0.4913625717163086, steps = 88600, cost time = 0.98s
+global_step/sec: 102.3602
+loss = 0.419411838054657, steps = 88700, cost time = 0.98s
+global_step/sec: 102.6408
+loss = 0.4592248797416687, steps = 88800, cost time = 0.97s
+global_step/sec: 102.4387
+loss = 0.4557057321071625, steps = 88900, cost time = 0.98s
+global_step/sec: 102.9817
+loss = 0.4648526608943939, steps = 89000, cost time = 0.97s
+global_step/sec: 102.4152
+loss = 0.48011213541030884, steps = 89100, cost time = 0.98s
+global_step/sec: 102.8219
+loss = 0.5078709125518799, steps = 89200, cost time = 0.97s
+global_step/sec: 102.7744
+loss = 0.4357527494430542, steps = 89300, cost time = 0.97s
+global_step/sec: 101.8368
+loss = 0.4210907220840454, steps = 89400, cost time = 0.98s
+global_step/sec: 102.5097
+loss = 0.4010068476200104, steps = 89500, cost time = 0.98s
+global_step/sec: 103.2152
+loss = 0.46921277046203613, steps = 89600, cost time = 0.97s
+global_step/sec: 102.5993
+loss = 0.4579574167728424, steps = 89700, cost time = 0.97s
+global_step/sec: 102.2828
+loss = 0.44960570335388184, steps = 89800, cost time = 0.98s
+global_step/sec: 102.8341
+loss = 0.4513954520225525, steps = 89900, cost time = 0.97s
+global_step/sec: 102.5583
+loss = 0.4604562222957611, steps = 90000, cost time = 0.98s
+global_step/sec: 102.6766
+loss = 0.43295764923095703, steps = 90100, cost time = 0.97s
+global_step/sec: 103.0485
+loss = 0.4595538079738617, steps = 90200, cost time = 0.97s
+global_step/sec: 102.2304
+loss = 0.4813745617866516, steps = 90300, cost time = 0.98s
+global_step/sec: 103.4458
+loss = 0.42863017320632935, steps = 90400, cost time = 0.97s
+global_step/sec: 103.1850
+loss = 0.4734451174736023, steps = 90500, cost time = 0.97s
+global_step/sec: 102.9743
+loss = 0.4419098496437073, steps = 90600, cost time = 0.97s
+global_step/sec: 101.8021
+loss = 0.4404873847961426, steps = 90700, cost time = 0.98s
+global_step/sec: 102.9012
+loss = 0.4259601831436157, steps = 90800, cost time = 0.97s
+global_step/sec: 102.5369
+loss = 0.4341416358947754, steps = 90900, cost time = 0.98s
+global_step/sec: 103.1666
+loss = 0.457133412361145, steps = 91000, cost time = 0.97s
+global_step/sec: 102.9916
+loss = 0.49072474241256714, steps = 91100, cost time = 0.97s
+global_step/sec: 102.7861
+loss = 0.482574999332428, steps = 91200, cost time = 0.97s
+global_step/sec: 103.1626
+loss = 0.5027759075164795, steps = 91300, cost time = 0.97s
+global_step/sec: 102.6070
+loss = 0.4941287636756897, steps = 91400, cost time = 0.97s
+global_step/sec: 102.5333
+loss = 0.4984745383262634, steps = 91500, cost time = 0.98s
+global_step/sec: 102.9022
+loss = 0.4547160863876343, steps = 91600, cost time = 0.97s
+global_step/sec: 101.9670
+loss = 0.47656235098838806, steps = 91700, cost time = 0.98s
+global_step/sec: 102.5059
+loss = 0.4500246047973633, steps = 91800, cost time = 0.98s
+global_step/sec: 103.5239
+loss = 0.48254507780075073, steps = 91900, cost time = 0.97s
+global_step/sec: 102.3683
+loss = 0.4690401554107666, steps = 92000, cost time = 0.98s
+global_step/sec: 102.7628
+loss = 0.4684284031391144, steps = 92100, cost time = 0.97s
+global_step/sec: 102.8787
+loss = 0.42645636200904846, steps = 92200, cost time = 0.97s
+global_step/sec: 102.5139
+loss = 0.48978573083877563, steps = 92300, cost time = 0.98s
+global_step/sec: 102.3022
+loss = 0.4771086871623993, steps = 92400, cost time = 0.98s
+global_step/sec: 102.3491
+loss = 0.46289491653442383, steps = 92500, cost time = 0.98s
+global_step/sec: 102.9091
+loss = 0.48560410737991333, steps = 92600, cost time = 0.97s
+global_step/sec: 102.7583
+loss = 0.4415162205696106, steps = 92700, cost time = 0.97s
+global_step/sec: 103.3773
+loss = 0.4970727562904358, steps = 92800, cost time = 0.97s
+global_step/sec: 102.5187
+loss = 0.4527231454849243, steps = 92900, cost time = 0.98s
+global_step/sec: 103.0095
+loss = 0.4683157801628113, steps = 93000, cost time = 0.97s
+global_step/sec: 102.6856
+loss = 0.46274814009666443, steps = 93100, cost time = 0.97s
+global_step/sec: 102.9356
+loss = 0.48075413703918457, steps = 93200, cost time = 0.97s
+global_step/sec: 102.7792
+loss = 0.47765594720840454, steps = 93300, cost time = 0.97s
+global_step/sec: 101.7913
+loss = 0.4423651099205017, steps = 93400, cost time = 0.98s
+global_step/sec: 102.8392
+loss = 0.437447190284729, steps = 93500, cost time = 0.97s
+global_step/sec: 102.0418
+loss = 0.503577709197998, steps = 93600, cost time = 0.98s
+global_step/sec: 103.5398
+loss = 0.42431581020355225, steps = 93700, cost time = 0.97s
+global_step/sec: 102.8973
+loss = 0.38942116498947144, steps = 93800, cost time = 0.97s
+global_step/sec: 102.5645
+loss = 0.45035654306411743, steps = 93900, cost time = 0.97s
+global_step/sec: 102.3192
+loss = 0.5104581117630005, steps = 94000, cost time = 0.98s
+global_step/sec: 102.3335
+loss = 0.4523829519748688, steps = 94100, cost time = 0.98s
+global_step/sec: 102.8677
+loss = 0.503582775592804, steps = 94200, cost time = 0.97s
+global_step/sec: 102.4488
+loss = 0.5116389989852905, steps = 94300, cost time = 0.98s
+global_step/sec: 102.9920
+loss = 0.46677160263061523, steps = 94400, cost time = 0.97s
+global_step/sec: 102.0671
+loss = 0.4826838970184326, steps = 94500, cost time = 0.98s
+global_step/sec: 102.6368
+loss = 0.491610586643219, steps = 94600, cost time = 0.97s
+global_step/sec: 103.2283
+loss = 0.47523725032806396, steps = 94700, cost time = 0.97s
+global_step/sec: 102.2617
+loss = 0.4551472067832947, steps = 94800, cost time = 0.98s
+global_step/sec: 102.6412
+loss = 0.4551798701286316, steps = 94900, cost time = 0.97s
+global_step/sec: 102.9430
+loss = 0.5034124255180359, steps = 95000, cost time = 0.97s
+global_step/sec: 102.5900
+loss = 0.4968423843383789, steps = 95100, cost time = 0.97s
+global_step/sec: 103.1614
+loss = 0.46332114934921265, steps = 95200, cost time = 0.97s
+global_step/sec: 102.7118
+loss = 0.45628225803375244, steps = 95300, cost time = 0.97s
+global_step/sec: 102.8090
+loss = 0.5046985149383545, steps = 95400, cost time = 0.97s
+global_step/sec: 103.1491
+loss = 0.4674784541130066, steps = 95500, cost time = 0.97s
+global_step/sec: 103.6917
+loss = 0.4361613690853119, steps = 95600, cost time = 0.96s
+global_step/sec: 101.8371
+loss = 0.45510345697402954, steps = 95700, cost time = 0.98s
+global_step/sec: 102.6039
+loss = 0.4355677366256714, steps = 95800, cost time = 0.97s
+global_step/sec: 102.9033
+loss = 0.4497290253639221, steps = 95900, cost time = 0.97s
+global_step/sec: 103.0656
+loss = 0.4686479866504669, steps = 96000, cost time = 0.97s
+global_step/sec: 102.6580
+loss = 0.44654279947280884, steps = 96100, cost time = 0.97s
+global_step/sec: 103.0603
+loss = 0.4471169114112854, steps = 96200, cost time = 0.97s
+global_step/sec: 102.3813
+loss = 0.4480050206184387, steps = 96300, cost time = 0.98s
+global_step/sec: 102.4523
+loss = 0.47480353713035583, steps = 96400, cost time = 0.98s
+global_step/sec: 102.5959
+loss = 0.5062280893325806, steps = 96500, cost time = 0.97s
+global_step/sec: 102.8721
+loss = 0.42686235904693604, steps = 96600, cost time = 0.97s
+global_step/sec: 102.2840
+loss = 0.48087045550346375, steps = 96700, cost time = 0.98s
+global_step/sec: 102.0146
+loss = 0.4383199214935303, steps = 96800, cost time = 0.98s
+global_step/sec: 102.4096
+loss = 0.44576507806777954, steps = 96900, cost time = 0.98s
+global_step/sec: 102.7485
+loss = 0.4521636962890625, steps = 97000, cost time = 0.97s
+global_step/sec: 102.7290
+loss = 0.4469795525074005, steps = 97100, cost time = 0.97s
+global_step/sec: 103.1428
+loss = 0.41593801975250244, steps = 97200, cost time = 0.97s
+global_step/sec: 103.2797
+loss = 0.45283669233322144, steps = 97300, cost time = 0.97s
+global_step/sec: 102.6635
+loss = 0.43948042392730713, steps = 97400, cost time = 0.97s
+global_step/sec: 102.2582
+loss = 0.48993274569511414, steps = 97500, cost time = 0.98s
+global_step/sec: 102.2091
+loss = 0.4543898403644562, steps = 97600, cost time = 0.98s
+global_step/sec: 102.3102
+loss = 0.4441925883293152, steps = 97700, cost time = 0.98s
+global_step/sec: 102.7185
+loss = 0.44685569405555725, steps = 97800, cost time = 0.97s
+global_step/sec: 102.5927
+loss = 0.47893011569976807, steps = 97900, cost time = 0.97s
+global_step/sec: 102.9136
+loss = 0.4890836775302887, steps = 98000, cost time = 0.97s
+global_step/sec: 102.8905
+loss = 0.46913594007492065, steps = 98100, cost time = 0.97s
+global_step/sec: 102.9921
+loss = 0.42731794714927673, steps = 98200, cost time = 0.97s
+global_step/sec: 102.8968
+loss = 0.48121392726898193, steps = 98300, cost time = 0.97s
+global_step/sec: 102.8659
+loss = 0.46985191106796265, steps = 98400, cost time = 0.97s
+global_step/sec: 102.0052
+loss = 0.5005069971084595, steps = 98500, cost time = 0.98s
+global_step/sec: 102.3546
+loss = 0.4745984971523285, steps = 98600, cost time = 0.98s
+global_step/sec: 102.9179
+loss = 0.4402165710926056, steps = 98700, cost time = 0.97s
+global_step/sec: 102.7979
+loss = 0.4437299370765686, steps = 98800, cost time = 0.97s
+global_step/sec: 102.9565
+loss = 0.45545923709869385, steps = 98900, cost time = 0.97s
+global_step/sec: 103.0348
+loss = 0.4378155469894409, steps = 99000, cost time = 0.97s
+global_step/sec: 103.0778
+loss = 0.46674853563308716, steps = 99100, cost time = 0.97s
+global_step/sec: 102.6349
+loss = 0.4654518663883209, steps = 99200, cost time = 0.97s
+global_step/sec: 102.9583
+loss = 0.49361878633499146, steps = 99300, cost time = 0.97s
+global_step/sec: 102.3337
+loss = 0.46252813935279846, steps = 99400, cost time = 0.98s
+global_step/sec: 102.1438
+loss = 0.4380342364311218, steps = 99500, cost time = 0.98s
+global_step/sec: 102.5501
+loss = 0.4050721526145935, steps = 99600, cost time = 0.98s
+global_step/sec: 102.4158
+loss = 0.46763551235198975, steps = 99700, cost time = 0.98s
+global_step/sec: 101.8659
+loss = 0.4274386167526245, steps = 99800, cost time = 0.98s
+global_step/sec: 103.0634
+loss = 0.4410577118396759, steps = 99900, cost time = 0.97s
+global_step/sec: 103.3806
+loss = 0.45258787274360657, steps = 100000, cost time = 0.97s
+global_step/sec: 102.3288
+loss = 0.46906256675720215, steps = 100100, cost time = 0.98s
+global_step/sec: 103.2615
+loss = 0.4909656345844269, steps = 100200, cost time = 0.97s
+global_step/sec: 102.2488
+loss = 0.4189040958881378, steps = 100300, cost time = 0.98s
+global_step/sec: 103.0753
+loss = 0.44374722242355347, steps = 100400, cost time = 0.97s
+global_step/sec: 102.3960
+loss = 0.4572952389717102, steps = 100500, cost time = 0.98s
+global_step/sec: 102.6825
+loss = 0.4903162717819214, steps = 100600, cost time = 0.97s
+global_step/sec: 103.2688
+loss = 0.4491312801837921, steps = 100700, cost time = 0.97s
+global_step/sec: 102.5935
+loss = 0.4596678614616394, steps = 100800, cost time = 0.97s
+global_step/sec: 102.3043
+loss = 0.4867098927497864, steps = 100900, cost time = 0.98s
+global_step/sec: 102.0200
+loss = 0.4949527382850647, steps = 101000, cost time = 0.98s
+global_step/sec: 102.9662
+loss = 0.4159734547138214, steps = 101100, cost time = 0.97s
+global_step/sec: 102.1555
+loss = 0.485984206199646, steps = 101200, cost time = 0.98s
+global_step/sec: 102.0276
+loss = 0.4575290083885193, steps = 101300, cost time = 0.98s
+global_step/sec: 102.4737
+loss = 0.45327508449554443, steps = 101400, cost time = 0.98s
+global_step/sec: 103.0605
+loss = 0.47771745920181274, steps = 101500, cost time = 0.97s
+global_step/sec: 103.2203
+loss = 0.44809117913246155, steps = 101600, cost time = 0.97s
+global_step/sec: 102.9959
+loss = 0.4928775131702423, steps = 101700, cost time = 0.97s
+global_step/sec: 102.4638
+loss = 0.44362637400627136, steps = 101800, cost time = 0.98s
+global_step/sec: 102.3823
+loss = 0.5250393152236938, steps = 101900, cost time = 0.98s
+global_step/sec: 102.6158
+loss = 0.4514077305793762, steps = 102000, cost time = 0.97s
+global_step/sec: 102.6530
+loss = 0.45605766773223877, steps = 102100, cost time = 0.97s
+global_step/sec: 103.0575
+loss = 0.4264949560165405, steps = 102200, cost time = 0.97s
+global_step/sec: 102.3893
+loss = 0.4691242277622223, steps = 102300, cost time = 0.98s
+global_step/sec: 102.5004
+loss = 0.42683297395706177, steps = 102400, cost time = 0.98s
+global_step/sec: 102.1650
+loss = 0.47005391120910645, steps = 102500, cost time = 0.98s
+global_step/sec: 102.6950
+loss = 0.4563099443912506, steps = 102600, cost time = 0.97s
+global_step/sec: 102.6670
+loss = 0.46144789457321167, steps = 102700, cost time = 0.97s
+global_step/sec: 102.3999
+loss = 0.4687986969947815, steps = 102800, cost time = 0.98s
+global_step/sec: 102.4664
+loss = 0.4301500916481018, steps = 102900, cost time = 0.98s
+global_step/sec: 102.6741
+loss = 0.44238224625587463, steps = 103000, cost time = 0.97s
+global_step/sec: 103.2348
+loss = 0.4568387269973755, steps = 103100, cost time = 0.97s
+global_step/sec: 102.6426
+loss = 0.46916142106056213, steps = 103200, cost time = 0.97s
+global_step/sec: 102.7786
+loss = 0.4868258237838745, steps = 103300, cost time = 0.97s
+global_step/sec: 102.4840
+loss = 0.48121073842048645, steps = 103400, cost time = 0.98s
+global_step/sec: 102.4553
+loss = 0.4488706588745117, steps = 103500, cost time = 0.98s
+global_step/sec: 102.4449
+loss = 0.44400298595428467, steps = 103600, cost time = 0.98s
+global_step/sec: 102.8678
+loss = 0.4427805542945862, steps = 103700, cost time = 0.97s
+global_step/sec: 102.5662
+loss = 0.4239932894706726, steps = 103800, cost time = 0.97s
+global_step/sec: 102.5577
+loss = 0.46246927976608276, steps = 103900, cost time = 0.98s
+global_step/sec: 102.5168
+loss = 0.43518972396850586, steps = 104000, cost time = 0.98s
+global_step/sec: 101.7205
+loss = 0.46919485926628113, steps = 104100, cost time = 0.98s
+global_step/sec: 102.3660
+loss = 0.4325403571128845, steps = 104200, cost time = 0.98s
+global_step/sec: 102.1087
+loss = 0.45775818824768066, steps = 104300, cost time = 0.98s
+global_step/sec: 102.2573
+loss = 0.46642976999282837, steps = 104400, cost time = 0.98s
+global_step/sec: 102.6450
+loss = 0.4542907476425171, steps = 104500, cost time = 0.97s
+global_step/sec: 102.5615
+loss = 0.4404449462890625, steps = 104600, cost time = 0.98s
+global_step/sec: 102.8296
+loss = 0.4525856673717499, steps = 104700, cost time = 0.97s
+global_step/sec: 101.7861
+loss = 0.4706406593322754, steps = 104800, cost time = 0.98s
+global_step/sec: 102.5220
+loss = 0.4538733661174774, steps = 104900, cost time = 0.98s
+global_step/sec: 102.7837
+loss = 0.40941840410232544, steps = 105000, cost time = 0.97s
+global_step/sec: 102.9545
+loss = 0.43601641058921814, steps = 105100, cost time = 0.97s
+global_step/sec: 102.5058
+loss = 0.4996020197868347, steps = 105200, cost time = 0.98s
+global_step/sec: 103.1827
+loss = 0.4755958914756775, steps = 105300, cost time = 0.97s
+global_step/sec: 102.4937
+loss = 0.43103349208831787, steps = 105400, cost time = 0.98s
+global_step/sec: 102.6071
+loss = 0.4523378908634186, steps = 105500, cost time = 0.97s
+global_step/sec: 102.4243
+loss = 0.47732025384902954, steps = 105600, cost time = 0.98s
+global_step/sec: 103.2856
+loss = 0.42567768692970276, steps = 105700, cost time = 0.97s
+global_step/sec: 102.4744
+loss = 0.41049623489379883, steps = 105800, cost time = 0.98s
+global_step/sec: 102.2466
+loss = 0.48068565130233765, steps = 105900, cost time = 0.98s
+global_step/sec: 103.1888
+loss = 0.45406636595726013, steps = 106000, cost time = 0.97s
+global_step/sec: 102.6473
+loss = 0.4137114882469177, steps = 106100, cost time = 0.97s
+global_step/sec: 102.3318
+loss = 0.4477355480194092, steps = 106200, cost time = 0.98s
+global_step/sec: 102.8083
+loss = 0.38139232993125916, steps = 106300, cost time = 0.97s
+global_step/sec: 102.6286
+loss = 0.43445220589637756, steps = 106400, cost time = 0.97s
+global_step/sec: 102.6385
+loss = 0.4051588177680969, steps = 106500, cost time = 0.97s
+global_step/sec: 102.7398
+loss = 0.41916602849960327, steps = 106600, cost time = 0.97s
+global_step/sec: 103.2526
+loss = 0.48257243633270264, steps = 106700, cost time = 0.97s
+global_step/sec: 102.8888
+loss = 0.48754721879959106, steps = 106800, cost time = 0.97s
+global_step/sec: 102.8167
+loss = 0.49542760848999023, steps = 106900, cost time = 0.97s
+global_step/sec: 102.6881
+loss = 0.5021083354949951, steps = 107000, cost time = 0.97s
+global_step/sec: 103.4912
+loss = 0.4858015179634094, steps = 107100, cost time = 0.97s
+global_step/sec: 103.0971
+loss = 0.5298449993133545, steps = 107200, cost time = 0.97s
+global_step/sec: 102.5565
+loss = 0.4201143980026245, steps = 107300, cost time = 0.98s
+global_step/sec: 102.0690
+loss = 0.46610158681869507, steps = 107400, cost time = 0.98s
+global_step/sec: 102.9030
+loss = 0.4554896056652069, steps = 107500, cost time = 0.97s
+global_step/sec: 102.0093
+loss = 0.5276906490325928, steps = 107600, cost time = 0.98s
+global_step/sec: 102.9374
+loss = 0.45501595735549927, steps = 107700, cost time = 0.97s
+global_step/sec: 102.3570
+loss = 0.45182234048843384, steps = 107800, cost time = 0.98s
+global_step/sec: 102.5285
+loss = 0.44504663348197937, steps = 107900, cost time = 0.98s
+global_step/sec: 103.2231
+loss = 0.4866672158241272, steps = 108000, cost time = 0.97s
+global_step/sec: 102.8652
+loss = 0.4937051832675934, steps = 108100, cost time = 0.97s
+global_step/sec: 103.1749
+loss = 0.4354097843170166, steps = 108200, cost time = 0.97s
+global_step/sec: 103.0360
+loss = 0.4654954969882965, steps = 108300, cost time = 0.97s
+global_step/sec: 102.8880
+loss = 0.4623686671257019, steps = 108400, cost time = 0.97s
+global_step/sec: 101.9409
+loss = 0.46087199449539185, steps = 108500, cost time = 0.98s
+global_step/sec: 102.7176
+loss = 0.45522433519363403, steps = 108600, cost time = 0.97s
+global_step/sec: 102.4649
+loss = 0.4626222252845764, steps = 108700, cost time = 0.98s
+global_step/sec: 102.8656
+loss = 0.43887296319007874, steps = 108800, cost time = 0.97s
+global_step/sec: 102.9178
+loss = 0.4876749515533447, steps = 108900, cost time = 0.97s
+global_step/sec: 102.1754
+loss = 0.42663800716400146, steps = 109000, cost time = 0.98s
+global_step/sec: 102.8608
+loss = 0.43296217918395996, steps = 109100, cost time = 0.97s
+global_step/sec: 102.4001
+loss = 0.450317919254303, steps = 109200, cost time = 0.98s
+global_step/sec: 103.2988
+loss = 0.4236339330673218, steps = 109300, cost time = 0.97s
+global_step/sec: 103.2191
+loss = 0.4189540147781372, steps = 109400, cost time = 0.97s
+global_step/sec: 101.8788
+loss = 0.4044416546821594, steps = 109500, cost time = 0.98s
+global_step/sec: 103.4043
+loss = 0.4418368339538574, steps = 109600, cost time = 0.97s
+global_step/sec: 102.4198
+loss = 0.4725682735443115, steps = 109700, cost time = 0.98s
+global_step/sec: 102.8224
+loss = 0.48773762583732605, steps = 109800, cost time = 0.97s
+global_step/sec: 102.3305
+loss = 0.452308714389801, steps = 109900, cost time = 0.98s
+global_step/sec: 102.4192
+loss = 0.4965510070323944, steps = 110000, cost time = 0.98s
+global_step/sec: 102.2250
+loss = 0.482546329498291, steps = 110100, cost time = 0.98s
+global_step/sec: 103.6382
+loss = 0.47607678174972534, steps = 110200, cost time = 0.96s
+global_step/sec: 102.7967
+loss = 0.4825185239315033, steps = 110300, cost time = 0.97s
+global_step/sec: 102.7932
+loss = 0.4738306999206543, steps = 110400, cost time = 0.97s
+global_step/sec: 102.4727
+loss = 0.4832693040370941, steps = 110500, cost time = 0.98s
+global_step/sec: 102.6129
+loss = 0.44847404956817627, steps = 110600, cost time = 0.97s
+global_step/sec: 102.5795
+loss = 0.465721070766449, steps = 110700, cost time = 0.97s
+global_step/sec: 102.5871
+loss = 0.4886552691459656, steps = 110800, cost time = 0.97s
+global_step/sec: 103.2097
+loss = 0.4429285228252411, steps = 110900, cost time = 0.97s
+global_step/sec: 102.7582
+loss = 0.47486305236816406, steps = 111000, cost time = 0.97s
+global_step/sec: 102.3646
+loss = 0.4275946319103241, steps = 111100, cost time = 0.98s
+global_step/sec: 102.5938
+loss = 0.45286881923675537, steps = 111200, cost time = 0.97s
+global_step/sec: 102.0025
+loss = 0.43387699127197266, steps = 111300, cost time = 0.98s
+global_step/sec: 103.0117
+loss = 0.4623444080352783, steps = 111400, cost time = 0.97s
+global_step/sec: 102.6188
+loss = 0.46541827917099, steps = 111500, cost time = 0.97s
+global_step/sec: 102.9864
+loss = 0.44923681020736694, steps = 111600, cost time = 0.97s
+global_step/sec: 103.1128
+loss = 0.46492522954940796, steps = 111700, cost time = 0.97s
+global_step/sec: 102.6798
+loss = 0.445928692817688, steps = 111800, cost time = 0.97s
+global_step/sec: 102.9224
+loss = 0.44661399722099304, steps = 111900, cost time = 0.97s
+global_step/sec: 103.1003
+loss = 0.4599056839942932, steps = 112000, cost time = 0.97s
+global_step/sec: 102.8477
+loss = 0.4427530765533447, steps = 112100, cost time = 0.97s
+global_step/sec: 102.3403
+loss = 0.49233102798461914, steps = 112200, cost time = 0.98s
+global_step/sec: 102.7234
+loss = 0.4386862516403198, steps = 112300, cost time = 0.97s
+global_step/sec: 102.4530
+loss = 0.4511455297470093, steps = 112400, cost time = 0.98s
+global_step/sec: 102.0787
+loss = 0.4256442189216614, steps = 112500, cost time = 0.98s
+global_step/sec: 102.3297
+loss = 0.4331880807876587, steps = 112600, cost time = 0.98s
+global_step/sec: 102.3228
+loss = 0.42425572872161865, steps = 112700, cost time = 0.98s
+global_step/sec: 103.1228
+loss = 0.42459774017333984, steps = 112800, cost time = 0.97s
+global_step/sec: 102.2527
+loss = 0.4418298602104187, steps = 112900, cost time = 0.98s
+global_step/sec: 103.2621
+loss = 0.4390077590942383, steps = 113000, cost time = 0.97s
+global_step/sec: 102.4824
+loss = 0.4432995617389679, steps = 113100, cost time = 0.98s
+global_step/sec: 102.3486
+loss = 0.4530279040336609, steps = 113200, cost time = 0.98s
+global_step/sec: 103.0310
+loss = 0.47997522354125977, steps = 113300, cost time = 0.97s
+global_step/sec: 102.0778
+loss = 0.4837074875831604, steps = 113400, cost time = 0.98s
+global_step/sec: 102.2133
+loss = 0.414858341217041, steps = 113500, cost time = 0.98s
+global_step/sec: 103.6475
+loss = 0.4790654182434082, steps = 113600, cost time = 0.96s
+global_step/sec: 103.2912
+loss = 0.41894617676734924, steps = 113700, cost time = 0.97s
+global_step/sec: 102.8314
+loss = 0.4753473997116089, steps = 113800, cost time = 0.97s
+global_step/sec: 102.3858
+loss = 0.4666318893432617, steps = 113900, cost time = 0.98s
+global_step/sec: 102.5307
+loss = 0.4009447991847992, steps = 114000, cost time = 0.98s
+global_step/sec: 103.1855
+loss = 0.4565719664096832, steps = 114100, cost time = 0.97s
+global_step/sec: 102.8808
+loss = 0.4901045560836792, steps = 114200, cost time = 0.97s
+global_step/sec: 102.1729
+loss = 0.4351910948753357, steps = 114300, cost time = 0.98s
+global_step/sec: 102.5028
+loss = 0.42604345083236694, steps = 114400, cost time = 0.98s
+global_step/sec: 102.7595
+loss = 0.42004668712615967, steps = 114500, cost time = 0.97s
+global_step/sec: 102.6186
+loss = 0.4887581169605255, steps = 114600, cost time = 0.97s
+global_step/sec: 101.7523
+loss = 0.46698200702667236, steps = 114700, cost time = 0.98s
+global_step/sec: 102.5503
+loss = 0.4567502737045288, steps = 114800, cost time = 0.98s
+global_step/sec: 103.2682
+loss = 0.4720099866390228, steps = 114900, cost time = 0.97s
+global_step/sec: 102.7474
+loss = 0.5063712000846863, steps = 115000, cost time = 0.97s
+global_step/sec: 103.0086
+loss = 0.4956496059894562, steps = 115100, cost time = 0.97s
+global_step/sec: 102.4335
+loss = 0.45751744508743286, steps = 115200, cost time = 0.98s
+global_step/sec: 102.8930
+loss = 0.476087361574173, steps = 115300, cost time = 0.97s
+global_step/sec: 103.1964
+loss = 0.4239010810852051, steps = 115400, cost time = 0.97s
+global_step/sec: 102.2501
+loss = 0.44728368520736694, steps = 115500, cost time = 0.98s
+global_step/sec: 102.0594
+loss = 0.4522145986557007, steps = 115600, cost time = 0.98s
+global_step/sec: 102.9663
+loss = 0.4685162901878357, steps = 115700, cost time = 0.97s
+global_step/sec: 102.8700
+loss = 0.4565834403038025, steps = 115800, cost time = 0.97s
+global_step/sec: 101.9899
+loss = 0.44139400124549866, steps = 115900, cost time = 0.98s
+global_step/sec: 103.0440
+loss = 0.4660695195198059, steps = 116000, cost time = 0.97s
+global_step/sec: 102.5006
+loss = 0.4803522229194641, steps = 116100, cost time = 0.98s
+global_step/sec: 102.2873
+loss = 0.4500507712364197, steps = 116200, cost time = 0.98s
+global_step/sec: 102.0423
+loss = 0.4879162013530731, steps = 116300, cost time = 0.98s
+global_step/sec: 102.0471
+loss = 0.4528476595878601, steps = 116400, cost time = 0.98s
+global_step/sec: 102.5357
+loss = 0.4452431797981262, steps = 116500, cost time = 0.98s
+global_step/sec: 103.3668
+loss = 0.4450763761997223, steps = 116600, cost time = 0.97s
+global_step/sec: 103.3021
+loss = 0.46650558710098267, steps = 116700, cost time = 0.97s
+global_step/sec: 102.6494
+loss = 0.45627561211586, steps = 116800, cost time = 0.97s
+global_step/sec: 102.5538
+loss = 0.44188863039016724, steps = 116900, cost time = 0.98s
+global_step/sec: 103.2079
+loss = 0.4689549207687378, steps = 117000, cost time = 0.97s
+global_step/sec: 102.4573
+loss = 0.4578861892223358, steps = 117100, cost time = 0.98s
+global_step/sec: 102.9377
+loss = 0.4003068208694458, steps = 117200, cost time = 0.97s
+global_step/sec: 102.4090
+loss = 0.47064700722694397, steps = 117300, cost time = 0.98s
+global_step/sec: 103.0360
+loss = 0.4450860619544983, steps = 117400, cost time = 0.97s
+global_step/sec: 102.2108
+loss = 0.4171389639377594, steps = 117500, cost time = 0.98s
+global_step/sec: 102.1866
+loss = 0.4473686218261719, steps = 117600, cost time = 0.98s
+global_step/sec: 102.6158
+loss = 0.4583161771297455, steps = 117700, cost time = 0.97s
+global_step/sec: 102.6228
+loss = 0.45458710193634033, steps = 117800, cost time = 0.97s
+global_step/sec: 102.0778
+loss = 0.47379058599472046, steps = 117900, cost time = 0.98s
+global_step/sec: 103.0826
+loss = 0.45401763916015625, steps = 118000, cost time = 0.97s
+global_step/sec: 102.4560
+loss = 0.45902976393699646, steps = 118100, cost time = 0.98s
+global_step/sec: 103.3694
+loss = 0.4666709005832672, steps = 118200, cost time = 0.97s
+global_step/sec: 103.0078
+loss = 0.4511245787143707, steps = 118300, cost time = 0.97s
+global_step/sec: 102.9228
+loss = 0.4471074938774109, steps = 118400, cost time = 0.97s
+global_step/sec: 103.5324
+loss = 0.4646155834197998, steps = 118500, cost time = 0.97s
+global_step/sec: 102.5886
+loss = 0.4469625949859619, steps = 118600, cost time = 0.97s
+global_step/sec: 102.7822
+loss = 0.4375216066837311, steps = 118700, cost time = 0.97s
+global_step/sec: 102.2939
+loss = 0.4315347671508789, steps = 118800, cost time = 0.98s
+global_step/sec: 102.1929
+loss = 0.4442308247089386, steps = 118900, cost time = 0.98s
+global_step/sec: 102.8798
+loss = 0.46202635765075684, steps = 119000, cost time = 0.97s
+global_step/sec: 102.5456
+loss = 0.45740917325019836, steps = 119100, cost time = 0.98s
+global_step/sec: 101.3678
+loss = 0.44032853841781616, steps = 119200, cost time = 0.99s
+global_step/sec: 102.9951
+loss = 0.4462115168571472, steps = 119300, cost time = 0.97s
+global_step/sec: 101.7238
+loss = 0.4382433295249939, steps = 119400, cost time = 0.98s
+global_step/sec: 102.8961
+loss = 0.42867186665534973, steps = 119500, cost time = 0.97s
+global_step/sec: 102.9095
+loss = 0.4704676866531372, steps = 119600, cost time = 0.97s
+global_step/sec: 102.6258
+loss = 0.391445517539978, steps = 119700, cost time = 0.97s
+global_step/sec: 102.7580
+loss = 0.4771965742111206, steps = 119800, cost time = 0.97s
+global_step/sec: 102.7387
+loss = 0.45469382405281067, steps = 119900, cost time = 0.97s
+global_step/sec: 102.2112
+loss = 0.4532540440559387, steps = 120000, cost time = 0.98s
+global_step/sec: 102.8568
+loss = 0.43341296911239624, steps = 120100, cost time = 0.97s
+global_step/sec: 102.1848
+loss = 0.44045859575271606, steps = 120200, cost time = 0.98s
+global_step/sec: 102.4907
+loss = 0.4493390917778015, steps = 120300, cost time = 0.98s
+global_step/sec: 102.4348
+loss = 0.4303273558616638, steps = 120400, cost time = 0.98s
+global_step/sec: 101.5724
+loss = 0.42461735010147095, steps = 120500, cost time = 0.98s
+global_step/sec: 103.0460
+loss = 0.42808905243873596, steps = 120600, cost time = 0.97s
+global_step/sec: 102.6493
+loss = 0.4650940001010895, steps = 120700, cost time = 0.97s
+global_step/sec: 102.4718
+loss = 0.5062134265899658, steps = 120800, cost time = 0.98s
+global_step/sec: 101.9223
+loss = 0.4463750422000885, steps = 120900, cost time = 0.98s
+global_step/sec: 103.1896
+loss = 0.47637563943862915, steps = 121000, cost time = 0.97s
+global_step/sec: 102.1440
+loss = 0.4663333296775818, steps = 121100, cost time = 0.98s
+global_step/sec: 102.7431
+loss = 0.4475765526294708, steps = 121200, cost time = 0.97s
+global_step/sec: 102.7994
+loss = 0.472647488117218, steps = 121300, cost time = 0.97s
+global_step/sec: 103.0531
+loss = 0.4490118622779846, steps = 121400, cost time = 0.97s
+global_step/sec: 102.5033
+loss = 0.4813946485519409, steps = 121500, cost time = 0.98s
+global_step/sec: 102.2467
+loss = 0.45513397455215454, steps = 121600, cost time = 0.98s
+global_step/sec: 102.7258
+loss = 0.428821861743927, steps = 121700, cost time = 0.97s
+global_step/sec: 102.4367
+loss = 0.433361291885376, steps = 121800, cost time = 0.98s
+global_step/sec: 103.3269
+loss = 0.4165767729282379, steps = 121900, cost time = 0.97s
+global_step/sec: 102.9673
+loss = 0.44049713015556335, steps = 122000, cost time = 0.97s
+global_step/sec: 102.7964
+loss = 0.39737623929977417, steps = 122100, cost time = 0.97s
+global_step/sec: 102.4219
+loss = 0.43218380212783813, steps = 122200, cost time = 0.98s
+global_step/sec: 102.1424
+loss = 0.4659055471420288, steps = 122300, cost time = 0.98s
+global_step/sec: 102.2884
+loss = 0.5298738479614258, steps = 122400, cost time = 0.98s
+global_step/sec: 102.1815
+loss = 0.4909476041793823, steps = 122500, cost time = 0.98s
+global_step/sec: 102.3466
+loss = 0.5044759511947632, steps = 122600, cost time = 0.98s
+global_step/sec: 104.0021
+loss = 0.5006200075149536, steps = 122700, cost time = 0.96s
+global_step/sec: 103.1330
+loss = 0.48295772075653076, steps = 122800, cost time = 0.97s
+global_step/sec: 103.4339
+loss = 0.4621468186378479, steps = 122900, cost time = 0.97s
+global_step/sec: 102.5234
+loss = 0.4879605174064636, steps = 123000, cost time = 0.98s
+global_step/sec: 102.4814
+loss = 0.4404546916484833, steps = 123100, cost time = 0.98s
+global_step/sec: 102.4502
+loss = 0.5070716738700867, steps = 123200, cost time = 0.98s
+global_step/sec: 102.3842
+loss = 0.4677514433860779, steps = 123300, cost time = 0.98s
+global_step/sec: 102.9116
+loss = 0.44841331243515015, steps = 123400, cost time = 0.97s
+global_step/sec: 102.6252
+loss = 0.4604349732398987, steps = 123500, cost time = 0.97s
+global_step/sec: 102.8768
+loss = 0.4784983992576599, steps = 123600, cost time = 0.97s
+global_step/sec: 102.8988
+loss = 0.4325571358203888, steps = 123700, cost time = 0.97s
+global_step/sec: 102.1548
+loss = 0.4564554691314697, steps = 123800, cost time = 0.98s
+global_step/sec: 101.7148
+loss = 0.43751147389411926, steps = 123900, cost time = 0.98s
+global_step/sec: 102.1478
+loss = 0.5494199991226196, steps = 124000, cost time = 0.98s
+global_step/sec: 102.4590
+loss = 0.4511756896972656, steps = 124100, cost time = 0.98s
+global_step/sec: 102.7252
+loss = 0.4928171634674072, steps = 124200, cost time = 0.97s
+global_step/sec: 102.5454
+loss = 0.4448363780975342, steps = 124300, cost time = 0.98s
+global_step/sec: 103.0695
+loss = 0.4431856572628021, steps = 124400, cost time = 0.97s
+global_step/sec: 102.5728
+loss = 0.4455892741680145, steps = 124500, cost time = 0.97s
+global_step/sec: 102.4498
+loss = 0.46136993169784546, steps = 124600, cost time = 0.98s
+global_step/sec: 102.7588
+loss = 0.46779632568359375, steps = 124700, cost time = 0.97s
+global_step/sec: 103.3011
+loss = 0.45784831047058105, steps = 124800, cost time = 0.97s
+global_step/sec: 102.7650
+loss = 0.42659473419189453, steps = 124900, cost time = 0.97s
+global_step/sec: 102.7097
+loss = 0.46421778202056885, steps = 125000, cost time = 0.97s
+global_step/sec: 102.6766
+loss = 0.3896390199661255, steps = 125100, cost time = 0.97s
+global_step/sec: 102.9167
+loss = 0.4314555525779724, steps = 125200, cost time = 0.97s
+global_step/sec: 102.0954
+loss = 0.4485427737236023, steps = 125300, cost time = 0.98s
+global_step/sec: 102.8194
+loss = 0.4725532829761505, steps = 125400, cost time = 0.97s
+global_step/sec: 103.4726
+loss = 0.4831353724002838, steps = 125500, cost time = 0.97s
+global_step/sec: 102.7003
+loss = 0.4922665059566498, steps = 125600, cost time = 0.97s
+global_step/sec: 102.4203
+loss = 0.528288722038269, steps = 125700, cost time = 0.98s
+global_step/sec: 102.6037
+loss = 0.48899903893470764, steps = 125800, cost time = 0.97s
+global_step/sec: 102.4539
+loss = 0.4904850423336029, steps = 125900, cost time = 0.98s
+global_step/sec: 102.4342
+loss = 0.4874720573425293, steps = 126000, cost time = 0.98s
+global_step/sec: 102.8297
+loss = 0.46158355474472046, steps = 126100, cost time = 0.97s
+global_step/sec: 102.8357
+loss = 0.5048828125, steps = 126200, cost time = 0.97s
+global_step/sec: 102.9369
+loss = 0.47961318492889404, steps = 126300, cost time = 0.97s
+global_step/sec: 102.9767
+loss = 0.49005651473999023, steps = 126400, cost time = 0.97s
+global_step/sec: 102.9144
+loss = 0.49336332082748413, steps = 126500, cost time = 0.97s
+global_step/sec: 102.8311
+loss = 0.477267861366272, steps = 126600, cost time = 0.97s
+global_step/sec: 102.6400
+loss = 0.4893306493759155, steps = 126700, cost time = 0.97s
+global_step/sec: 103.1275
+loss = 0.4718239903450012, steps = 126800, cost time = 0.97s
+global_step/sec: 103.0492
+loss = 0.41611140966415405, steps = 126900, cost time = 0.97s
+global_step/sec: 103.1007
+loss = 0.4714584946632385, steps = 127000, cost time = 0.97s
+global_step/sec: 101.9143
+loss = 0.4575486183166504, steps = 127100, cost time = 0.98s
+global_step/sec: 102.7657
+loss = 0.48610880970954895, steps = 127200, cost time = 0.97s
+global_step/sec: 101.9303
+loss = 0.4647369086742401, steps = 127300, cost time = 0.98s
+global_step/sec: 102.5186
+loss = 0.43824517726898193, steps = 127400, cost time = 0.98s
+global_step/sec: 102.3410
+loss = 0.4360503852367401, steps = 127500, cost time = 0.98s
+global_step/sec: 102.9381
+loss = 0.48302000761032104, steps = 127600, cost time = 0.97s
+global_step/sec: 102.8137
+loss = 0.4987894594669342, steps = 127700, cost time = 0.97s
+global_step/sec: 103.0885
+loss = 0.48077625036239624, steps = 127800, cost time = 0.97s
+global_step/sec: 102.4115
+loss = 0.42648380994796753, steps = 127900, cost time = 0.98s
+global_step/sec: 102.9032
+loss = 0.48901399970054626, steps = 128000, cost time = 0.97s
+global_step/sec: 102.9782
+loss = 0.4733678102493286, steps = 128100, cost time = 0.97s
+global_step/sec: 103.1205
+loss = 0.44391918182373047, steps = 128200, cost time = 0.97s
+global_step/sec: 103.2439
+loss = 0.44167760014533997, steps = 128300, cost time = 0.97s
+global_step/sec: 102.6978
+loss = 0.5101331472396851, steps = 128400, cost time = 0.97s
+global_step/sec: 102.5784
+loss = 0.5221555829048157, steps = 128500, cost time = 0.97s
+global_step/sec: 102.7477
+loss = 0.4115241765975952, steps = 128600, cost time = 0.97s
+global_step/sec: 103.7146
+loss = 0.44540971517562866, steps = 128700, cost time = 0.96s
+global_step/sec: 102.4756
+loss = 0.46840235590934753, steps = 128800, cost time = 0.98s
+global_step/sec: 102.2690
+loss = 0.46987444162368774, steps = 128900, cost time = 0.98s
+global_step/sec: 102.4478
+loss = 0.46860387921333313, steps = 129000, cost time = 0.98s
+global_step/sec: 103.1307
+loss = 0.475320428609848, steps = 129100, cost time = 0.97s
+global_step/sec: 102.8611
+loss = 0.45718419551849365, steps = 129200, cost time = 0.97s
+global_step/sec: 102.0536
+loss = 0.4181972146034241, steps = 129300, cost time = 0.98s
+global_step/sec: 101.4829
+loss = 0.47542229294776917, steps = 129400, cost time = 0.99s
+global_step/sec: 102.2324
+loss = 0.49345698952674866, steps = 129500, cost time = 0.98s
+global_step/sec: 103.1422
+loss = 0.41363513469696045, steps = 129600, cost time = 0.97s
+global_step/sec: 101.9616
+loss = 0.4825924038887024, steps = 129700, cost time = 0.98s
+global_step/sec: 103.0819
+loss = 0.46519964933395386, steps = 129800, cost time = 0.97s
+global_step/sec: 102.5702
+loss = 0.4398549199104309, steps = 129900, cost time = 0.97s
+global_step/sec: 102.4945
+loss = 0.44590437412261963, steps = 130000, cost time = 0.98s
+global_step/sec: 102.2205
+loss = 0.4817277789115906, steps = 130100, cost time = 0.98s
+global_step/sec: 103.2017
+loss = 0.4214290380477905, steps = 130200, cost time = 0.97s
+global_step/sec: 103.1531
+loss = 0.4796488881111145, steps = 130300, cost time = 0.97s
+global_step/sec: 102.8252
+loss = 0.4819570779800415, steps = 130400, cost time = 0.97s
+global_step/sec: 102.6771
+loss = 0.4381949007511139, steps = 130500, cost time = 0.97s
+global_step/sec: 103.7411
+loss = 0.4707018733024597, steps = 130600, cost time = 0.96s
+global_step/sec: 102.5376
+loss = 0.4925593435764313, steps = 130700, cost time = 0.98s
+global_step/sec: 102.2301
+loss = 0.42527639865875244, steps = 130800, cost time = 0.98s
+global_step/sec: 102.7297
+loss = 0.5047104954719543, steps = 130900, cost time = 0.97s
+global_step/sec: 103.1609
+loss = 0.4617067873477936, steps = 131000, cost time = 0.97s
+global_step/sec: 103.5636
+loss = 0.49651455879211426, steps = 131100, cost time = 0.97s
+global_step/sec: 101.8827
+loss = 0.4913071393966675, steps = 131200, cost time = 0.98s
+global_step/sec: 102.0845
+loss = 0.4301813542842865, steps = 131300, cost time = 0.98s
+global_step/sec: 102.3991
+loss = 0.5060943365097046, steps = 131400, cost time = 0.98s
+global_step/sec: 102.7471
+loss = 0.42122122645378113, steps = 131500, cost time = 0.97s
+global_step/sec: 102.9731
+loss = 0.4547787308692932, steps = 131600, cost time = 0.97s
+global_step/sec: 102.9774
+loss = 0.4480370581150055, steps = 131700, cost time = 0.97s
+global_step/sec: 102.2555
+loss = 0.45783206820487976, steps = 131800, cost time = 0.98s
+global_step/sec: 102.8542
+loss = 0.4574660062789917, steps = 131900, cost time = 0.97s
+global_step/sec: 102.7140
+loss = 0.4671988785266876, steps = 132000, cost time = 0.97s
+global_step/sec: 103.3778
+loss = 0.45006170868873596, steps = 132100, cost time = 0.97s
+global_step/sec: 102.5785
+loss = 0.47938913106918335, steps = 132200, cost time = 0.97s
+global_step/sec: 103.1820
+loss = 0.46567362546920776, steps = 132300, cost time = 0.97s
+global_step/sec: 102.9512
+loss = 0.44952091574668884, steps = 132400, cost time = 0.97s
+global_step/sec: 102.1726
+loss = 0.4318920075893402, steps = 132500, cost time = 0.98s
+global_step/sec: 102.5315
+loss = 0.4672934412956238, steps = 132600, cost time = 0.98s
+global_step/sec: 102.4197
+loss = 0.41755568981170654, steps = 132700, cost time = 0.98s
+global_step/sec: 102.1829
+loss = 0.45460793375968933, steps = 132800, cost time = 0.98s
+global_step/sec: 103.0644
+loss = 0.48801562190055847, steps = 132900, cost time = 0.97s
+global_step/sec: 101.9043
+loss = 0.4448331594467163, steps = 133000, cost time = 0.98s
+global_step/sec: 103.1930
+loss = 0.4504051208496094, steps = 133100, cost time = 0.97s
+global_step/sec: 103.0940
+loss = 0.45526599884033203, steps = 133200, cost time = 0.97s
+global_step/sec: 102.9067
+loss = 0.4529145061969757, steps = 133300, cost time = 0.97s
+global_step/sec: 103.3380
+loss = 0.45342835783958435, steps = 133400, cost time = 0.97s
+global_step/sec: 103.0088
+loss = 0.4541856050491333, steps = 133500, cost time = 0.97s
+global_step/sec: 102.5706
+loss = 0.4459478259086609, steps = 133600, cost time = 0.97s
+global_step/sec: 102.4226
+loss = 0.42368149757385254, steps = 133700, cost time = 0.98s
+global_step/sec: 103.6191
+loss = 0.4265865087509155, steps = 133800, cost time = 0.97s
+global_step/sec: 102.7886
+loss = 0.4474310874938965, steps = 133900, cost time = 0.97s
+global_step/sec: 102.7290
+loss = 0.45409125089645386, steps = 134000, cost time = 0.97s
+global_step/sec: 102.5493
+loss = 0.46021053194999695, steps = 134100, cost time = 0.98s
+global_step/sec: 103.5986
+loss = 0.42185893654823303, steps = 134200, cost time = 0.97s
+global_step/sec: 102.9169
+loss = 0.5332578420639038, steps = 134300, cost time = 0.97s
+global_step/sec: 102.7671
+loss = 0.4365823268890381, steps = 134400, cost time = 0.97s
+global_step/sec: 103.0169
+loss = 0.4343252182006836, steps = 134500, cost time = 0.97s
+global_step/sec: 102.8492
+loss = 0.43655335903167725, steps = 134600, cost time = 0.97s
+global_step/sec: 102.5584
+loss = 0.41891419887542725, steps = 134700, cost time = 0.98s
+global_step/sec: 104.1283
+loss = 0.4837402403354645, steps = 134800, cost time = 0.96s
+global_step/sec: 102.7442
+loss = 0.4651772975921631, steps = 134900, cost time = 0.97s
+global_step/sec: 102.9385
+loss = 0.4503691792488098, steps = 135000, cost time = 0.97s
+global_step/sec: 102.7284
+loss = 0.48341041803359985, steps = 135100, cost time = 0.97s
+global_step/sec: 102.1085
+loss = 0.4369157552719116, steps = 135200, cost time = 0.98s
+global_step/sec: 102.9388
+loss = 0.4508475065231323, steps = 135300, cost time = 0.97s
+global_step/sec: 102.3410
+loss = 0.4454134702682495, steps = 135400, cost time = 0.98s
+global_step/sec: 102.1955
+loss = 0.43944820761680603, steps = 135500, cost time = 0.98s
+global_step/sec: 102.6827
+loss = 0.4670218825340271, steps = 135600, cost time = 0.97s
+global_step/sec: 102.0700
+loss = 0.4729745388031006, steps = 135700, cost time = 0.98s
+global_step/sec: 102.2908
+loss = 0.44785240292549133, steps = 135800, cost time = 0.98s
+global_step/sec: 101.6494
+loss = 0.4868336319923401, steps = 135900, cost time = 0.98s
+global_step/sec: 103.0245
+loss = 0.4490238428115845, steps = 136000, cost time = 0.97s
+global_step/sec: 102.4637
+loss = 0.471559077501297, steps = 136100, cost time = 0.98s
+global_step/sec: 102.5474
+loss = 0.47054508328437805, steps = 136200, cost time = 0.98s
+global_step/sec: 102.8853
+loss = 0.4485810399055481, steps = 136300, cost time = 0.97s
+global_step/sec: 102.8070
+loss = 0.43044474720954895, steps = 136400, cost time = 0.97s
+global_step/sec: 102.6550
+loss = 0.46198800206184387, steps = 136500, cost time = 0.97s
+global_step/sec: 102.8509
+loss = 0.440199077129364, steps = 136600, cost time = 0.97s
+global_step/sec: 103.3978
+loss = 0.44758695363998413, steps = 136700, cost time = 0.97s
+global_step/sec: 102.7132
+loss = 0.42501989006996155, steps = 136800, cost time = 0.97s
+global_step/sec: 102.3667
+loss = 0.43600302934646606, steps = 136900, cost time = 0.98s
+global_step/sec: 102.9630
+loss = 0.44418689608573914, steps = 137000, cost time = 0.97s
+global_step/sec: 102.9226
+loss = 0.4453012943267822, steps = 137100, cost time = 0.97s
+global_step/sec: 103.4942
+loss = 0.4440426528453827, steps = 137200, cost time = 0.97s
+global_step/sec: 103.0074
+loss = 0.4631274342536926, steps = 137300, cost time = 0.97s
+global_step/sec: 102.4013
+loss = 0.41482093930244446, steps = 137400, cost time = 0.98s
+global_step/sec: 102.6162
+loss = 0.44271329045295715, steps = 137500, cost time = 0.97s
+global_step/sec: 102.9920
+loss = 0.4916882812976837, steps = 137600, cost time = 0.97s
+global_step/sec: 102.7151
+loss = 0.40374118089675903, steps = 137700, cost time = 0.97s
+global_step/sec: 102.7716
+loss = 0.40973740816116333, steps = 137800, cost time = 0.97s
+global_step/sec: 102.8477
+loss = 0.45375731587409973, steps = 137900, cost time = 0.97s
+global_step/sec: 103.2443
+loss = 0.4921947717666626, steps = 138000, cost time = 0.97s
+global_step/sec: 102.5715
+loss = 0.4686489701271057, steps = 138100, cost time = 0.97s
+global_step/sec: 102.3108
+loss = 0.45249342918395996, steps = 138200, cost time = 0.98s
+global_step/sec: 102.7512
+loss = 0.45955052971839905, steps = 138300, cost time = 0.97s
+global_step/sec: 102.4767
+loss = 0.5340825915336609, steps = 138400, cost time = 0.98s
+global_step/sec: 102.6043
+loss = 0.43605169653892517, steps = 138500, cost time = 0.97s
+global_step/sec: 103.3258
+loss = 0.46678072214126587, steps = 138600, cost time = 0.97s
+global_step/sec: 103.8296
+loss = 0.48106271028518677, steps = 138700, cost time = 0.96s
+global_step/sec: 118.3389
+loss = 0.47198861837387085, steps = 138800, cost time = 0.85s
+global_step/sec: 118.1062
+loss = 0.44469931721687317, steps = 138900, cost time = 0.85s
+global_step/sec: 99.4648
+loss = 0.4749889373779297, steps = 139000, cost time = 1.01s
+global_step/sec: 98.2612
+loss = 0.4462053179740906, steps = 139100, cost time = 1.02s
+global_step/sec: 98.3105
+loss = 0.42989739775657654, steps = 139200, cost time = 1.02s
+global_step/sec: 98.5174
+loss = 0.44714605808258057, steps = 139300, cost time = 1.02s
+global_step/sec: 98.7940
+loss = 0.47543075680732727, steps = 139400, cost time = 1.01s
+global_step/sec: 98.7790
+loss = 0.45760488510131836, steps = 139500, cost time = 1.01s
+global_step/sec: 99.2211
+loss = 0.4656194746494293, steps = 139600, cost time = 1.01s
+global_step/sec: 98.7711
+loss = 0.4336731731891632, steps = 139700, cost time = 1.01s
+global_step/sec: 98.7757
+loss = 0.4454387426376343, steps = 139800, cost time = 1.01s
+global_step/sec: 98.7888
+loss = 0.4116291403770447, steps = 139900, cost time = 1.01s
+global_step/sec: 98.9888
+loss = 0.4876686930656433, steps = 140000, cost time = 1.01s
+global_step/sec: 98.9341
+loss = 0.45624861121177673, steps = 140100, cost time = 1.01s
+global_step/sec: 98.8217
+loss = 0.4442245364189148, steps = 140200, cost time = 1.01s
+global_step/sec: 98.0835
+loss = 0.42461150884628296, steps = 140300, cost time = 1.02s
+global_step/sec: 99.5310
+loss = 0.45855599641799927, steps = 140400, cost time = 1.00s
+global_step/sec: 98.3032
+loss = 0.4527246356010437, steps = 140500, cost time = 1.02s
+global_step/sec: 99.4420
+loss = 0.4546715021133423, steps = 140600, cost time = 1.01s
+global_step/sec: 98.6605
+loss = 0.3876774311065674, steps = 140700, cost time = 1.01s
+global_step/sec: 99.0157
+loss = 0.41827693581581116, steps = 140800, cost time = 1.01s
+global_step/sec: 98.4202
+loss = 0.4658244252204895, steps = 140900, cost time = 1.02s
+global_step/sec: 98.9876
+loss = 0.46264758706092834, steps = 141000, cost time = 1.01s
+global_step/sec: 98.5791
+loss = 0.46203482151031494, steps = 141100, cost time = 1.01s
+global_step/sec: 109.5617
+loss = 0.4483115077018738, steps = 141200, cost time = 0.91s
+global_step/sec: 117.9120
+loss = 0.4809573292732239, steps = 141300, cost time = 0.85s
+global_step/sec: 118.4744
+loss = 0.48988354206085205, steps = 141400, cost time = 0.84s
+global_step/sec: 115.7424
+loss = 0.481670618057251, steps = 141500, cost time = 0.86s
+global_step/sec: 118.4547
+loss = 0.48043811321258545, steps = 141600, cost time = 0.84s
+global_step/sec: 118.4805
+loss = 0.4832959771156311, steps = 141700, cost time = 0.84s
+global_step/sec: 118.5353
+loss = 0.4437425136566162, steps = 141800, cost time = 0.84s
+global_step/sec: 117.8113
+loss = 0.42851316928863525, steps = 141900, cost time = 0.85s
+global_step/sec: 119.4661
+loss = 0.4531099796295166, steps = 142000, cost time = 0.84s
+global_step/sec: 117.7909
+loss = 0.47300493717193604, steps = 142100, cost time = 0.85s
+global_step/sec: 117.9541
+loss = 0.41067808866500854, steps = 142200, cost time = 0.85s
+global_step/sec: 118.4059
+loss = 0.4574088454246521, steps = 142300, cost time = 0.84s
+global_step/sec: 118.2369
+loss = 0.4393528997898102, steps = 142400, cost time = 0.85s
+global_step/sec: 117.8675
+loss = 0.3997565507888794, steps = 142500, cost time = 0.85s
+global_step/sec: 118.2751
+loss = 0.43978169560432434, steps = 142600, cost time = 0.85s
+global_step/sec: 117.9643
+loss = 0.4037879705429077, steps = 142700, cost time = 0.85s
+global_step/sec: 103.9702
+loss = 0.4857442378997803, steps = 142800, cost time = 0.96s
+global_step/sec: 101.3051
+loss = 0.4599001109600067, steps = 142900, cost time = 0.99s
+global_step/sec: 102.0777
+loss = 0.4432622790336609, steps = 143000, cost time = 0.98s
+global_step/sec: 100.8428
+loss = 0.47621458768844604, steps = 143100, cost time = 0.99s
+global_step/sec: 101.4457
+loss = 0.47110533714294434, steps = 143200, cost time = 0.99s
+global_step/sec: 102.1440
+loss = 0.43931397795677185, steps = 143300, cost time = 0.98s
+global_step/sec: 102.1671
+loss = 0.43717217445373535, steps = 143400, cost time = 0.98s
+global_step/sec: 102.2391
+loss = 0.4570237994194031, steps = 143500, cost time = 0.98s
+global_step/sec: 102.5965
+loss = 0.4527737498283386, steps = 143600, cost time = 0.97s
+global_step/sec: 102.3253
+loss = 0.39614051580429077, steps = 143700, cost time = 0.98s
+global_step/sec: 101.6173
+loss = 0.4857742190361023, steps = 143800, cost time = 0.98s
+global_step/sec: 101.8042
+loss = 0.4088048040866852, steps = 143900, cost time = 0.98s
+global_step/sec: 102.1402
+loss = 0.4368613064289093, steps = 144000, cost time = 0.98s
+global_step/sec: 101.0807
+loss = 0.4528495669364929, steps = 144100, cost time = 0.99s
+global_step/sec: 102.1380
+loss = 0.48217248916625977, steps = 144200, cost time = 0.98s
+global_step/sec: 101.3839
+loss = 0.46277111768722534, steps = 144300, cost time = 0.99s
+global_step/sec: 101.5172
+loss = 0.4149429500102997, steps = 144400, cost time = 0.99s
+global_step/sec: 101.4429
+loss = 0.4547243118286133, steps = 144500, cost time = 0.99s
+global_step/sec: 101.3158
+loss = 0.4701620042324066, steps = 144600, cost time = 0.99s
+global_step/sec: 101.7086
+loss = 0.4231252670288086, steps = 144700, cost time = 0.98s
+global_step/sec: 101.5910
+loss = 0.4823450446128845, steps = 144800, cost time = 0.98s
+global_step/sec: 102.2233
+loss = 0.40911656618118286, steps = 144900, cost time = 0.98s
+global_step/sec: 101.6706
+loss = 0.4401733875274658, steps = 145000, cost time = 0.98s
+global_step/sec: 101.5941
+loss = 0.42318469285964966, steps = 145100, cost time = 0.98s
+global_step/sec: 101.5893
+loss = 0.41845956444740295, steps = 145200, cost time = 0.98s
+global_step/sec: 101.5488
+loss = 0.44155508279800415, steps = 145300, cost time = 0.98s
+global_step/sec: 102.4209
+loss = 0.41776496171951294, steps = 145400, cost time = 0.98s
+global_step/sec: 101.8176
+loss = 0.464009165763855, steps = 145500, cost time = 0.98s
+global_step/sec: 101.4687
+loss = 0.4829660654067993, steps = 145600, cost time = 0.99s
+global_step/sec: 101.2832
+loss = 0.45399683713912964, steps = 145700, cost time = 0.99s
+global_step/sec: 101.1703
+loss = 0.43962907791137695, steps = 145800, cost time = 0.99s
+global_step/sec: 101.9176
+loss = 0.4623151421546936, steps = 145900, cost time = 0.98s
+global_step/sec: 101.1527
+loss = 0.4428165555000305, steps = 146000, cost time = 0.99s
+global_step/sec: 101.7234
+loss = 0.4362822473049164, steps = 146100, cost time = 0.98s
+global_step/sec: 101.5286
+loss = 0.440635621547699, steps = 146200, cost time = 0.98s
+global_step/sec: 102.5281
+loss = 0.4688166081905365, steps = 146300, cost time = 0.98s
+global_step/sec: 101.7583
+loss = 0.46923166513442993, steps = 146400, cost time = 0.98s
+global_step/sec: 101.8306
+loss = 0.4864031970500946, steps = 146500, cost time = 0.98s
+global_step/sec: 100.8180
+loss = 0.4270508885383606, steps = 146600, cost time = 0.99s
+global_step/sec: 102.1401
+loss = 0.44820302724838257, steps = 146700, cost time = 0.98s
+global_step/sec: 102.2662
+loss = 0.46733611822128296, steps = 146800, cost time = 0.98s
+global_step/sec: 102.3343
+loss = 0.4328829050064087, steps = 146900, cost time = 0.98s
+global_step/sec: 101.0019
+loss = 0.40856119990348816, steps = 147000, cost time = 0.99s
+global_step/sec: 101.2618
+loss = 0.41442716121673584, steps = 147100, cost time = 0.99s
+global_step/sec: 102.0954
+loss = 0.42796167731285095, steps = 147200, cost time = 0.98s
+global_step/sec: 102.0587
+loss = 0.46273109316825867, steps = 147300, cost time = 0.98s
+global_step/sec: 101.1043
+loss = 0.4388444125652313, steps = 147400, cost time = 0.99s
+global_step/sec: 100.3369
+loss = 0.4729294180870056, steps = 147500, cost time = 1.00s
+global_step/sec: 102.3526
+loss = 0.49638256430625916, steps = 147600, cost time = 0.98s
+global_step/sec: 102.3492
+loss = 0.462142676115036, steps = 147700, cost time = 0.98s
+global_step/sec: 101.8255
+loss = 0.47448140382766724, steps = 147800, cost time = 0.98s
+global_step/sec: 101.5153
+loss = 0.4416559934616089, steps = 147900, cost time = 0.99s
+global_step/sec: 101.3284
+loss = 0.4672485589981079, steps = 148000, cost time = 0.99s
+global_step/sec: 101.6498
+loss = 0.4437033534049988, steps = 148100, cost time = 0.98s
+global_step/sec: 101.5078
+loss = 0.4088398218154907, steps = 148200, cost time = 0.99s
+global_step/sec: 101.7772
+loss = 0.46990758180618286, steps = 148300, cost time = 0.98s
+global_step/sec: 102.3499
+loss = 0.47768813371658325, steps = 148400, cost time = 0.98s
+global_step/sec: 101.6635
+loss = 0.4324539601802826, steps = 148500, cost time = 0.98s
+global_step/sec: 101.5589
+loss = 0.46389105916023254, steps = 148600, cost time = 0.98s
+global_step/sec: 101.7996
+loss = 0.47725600004196167, steps = 148700, cost time = 0.98s
+global_step/sec: 102.0264
+loss = 0.42494386434555054, steps = 148800, cost time = 0.98s
+global_step/sec: 102.0419
+loss = 0.4561479985713959, steps = 148900, cost time = 0.98s
+global_step/sec: 101.9445
+loss = 0.4565943479537964, steps = 149000, cost time = 0.98s
+global_step/sec: 102.1086
+loss = 0.44812119007110596, steps = 149100, cost time = 0.98s
+global_step/sec: 102.3191
+loss = 0.449457049369812, steps = 149200, cost time = 0.98s
+global_step/sec: 101.5616
+loss = 0.46441105008125305, steps = 149300, cost time = 0.98s
+global_step/sec: 101.5608
+loss = 0.4812285006046295, steps = 149400, cost time = 0.98s
+global_step/sec: 100.9101
+loss = 0.45422595739364624, steps = 149500, cost time = 0.99s
+global_step/sec: 101.8598
+loss = 0.5227901935577393, steps = 149600, cost time = 0.98s
+global_step/sec: 102.2363
+loss = 0.44621357321739197, steps = 149700, cost time = 0.98s
+global_step/sec: 101.8758
+loss = 0.4533512592315674, steps = 149800, cost time = 0.98s
+global_step/sec: 102.2408
+loss = 0.4268394112586975, steps = 149900, cost time = 0.98s
+global_step/sec: 101.5420
+loss = 0.46734750270843506, steps = 150000, cost time = 0.98s
+global_step/sec: 102.0897
+loss = 0.44193705916404724, steps = 150100, cost time = 0.98s
+global_step/sec: 102.0843
+loss = 0.4630037546157837, steps = 150200, cost time = 0.98s
+global_step/sec: 102.5881
+loss = 0.4860649108886719, steps = 150300, cost time = 0.97s
+global_step/sec: 102.2923
+loss = 0.48520627617836, steps = 150400, cost time = 0.98s
+global_step/sec: 101.8201
+loss = 0.4327268600463867, steps = 150500, cost time = 0.98s
+global_step/sec: 101.6088
+loss = 0.4481765031814575, steps = 150600, cost time = 0.98s
+global_step/sec: 102.1634
+loss = 0.4275349974632263, steps = 150700, cost time = 0.98s
+global_step/sec: 101.6418
+loss = 0.4645378887653351, steps = 150800, cost time = 0.98s
+global_step/sec: 101.3127
+loss = 0.488249808549881, steps = 150900, cost time = 0.99s
+global_step/sec: 102.5379
+loss = 0.42366886138916016, steps = 151000, cost time = 0.98s
+global_step/sec: 101.1183
+loss = 0.4460749328136444, steps = 151100, cost time = 0.99s
+global_step/sec: 101.9116
+loss = 0.4629499316215515, steps = 151200, cost time = 0.98s
+global_step/sec: 102.2187
+loss = 0.4890840947628021, steps = 151300, cost time = 0.98s
+global_step/sec: 102.0546
+loss = 0.4430728256702423, steps = 151400, cost time = 0.98s
+global_step/sec: 102.2484
+loss = 0.42060112953186035, steps = 151500, cost time = 0.98s
+global_step/sec: 101.1689
+loss = 0.44220679998397827, steps = 151600, cost time = 0.99s
+global_step/sec: 101.7544
+loss = 0.44277122616767883, steps = 151700, cost time = 0.98s
+global_step/sec: 101.6980
+loss = 0.45739591121673584, steps = 151800, cost time = 0.98s
+global_step/sec: 101.7549
+loss = 0.4450194835662842, steps = 151900, cost time = 0.98s
+global_step/sec: 101.1217
+loss = 0.43745148181915283, steps = 152000, cost time = 0.99s
+global_step/sec: 101.3612
+loss = 0.480552077293396, steps = 152100, cost time = 0.99s
+global_step/sec: 101.6047
+loss = 0.5010066032409668, steps = 152200, cost time = 0.98s
+global_step/sec: 101.3038
+loss = 0.47041162848472595, steps = 152300, cost time = 0.99s
+global_step/sec: 101.7978
+loss = 0.40729090571403503, steps = 152400, cost time = 0.98s
+global_step/sec: 101.2744
+loss = 0.48521944880485535, steps = 152500, cost time = 0.99s
+global_step/sec: 101.4766
+loss = 0.4703602194786072, steps = 152600, cost time = 0.99s
+global_step/sec: 101.8387
+loss = 0.46141141653060913, steps = 152700, cost time = 0.98s
+global_step/sec: 102.4256
+loss = 0.46042078733444214, steps = 152800, cost time = 0.98s
+global_step/sec: 101.7435
+loss = 0.43632012605667114, steps = 152900, cost time = 0.98s
+global_step/sec: 101.2333
+loss = 0.4519546329975128, steps = 153000, cost time = 0.99s
+global_step/sec: 103.1098
+loss = 0.4455678164958954, steps = 153100, cost time = 0.97s
+global_step/sec: 102.1776
+loss = 0.4763053059577942, steps = 153200, cost time = 0.98s
+global_step/sec: 101.0083
+loss = 0.42695504426956177, steps = 153300, cost time = 0.99s
+global_step/sec: 101.2195
+loss = 0.3768594264984131, steps = 153400, cost time = 0.99s
+global_step/sec: 102.3052
+loss = 0.43001440167427063, steps = 153500, cost time = 0.98s
+global_step/sec: 101.3412
+loss = 0.45017915964126587, steps = 153600, cost time = 0.99s
+global_step/sec: 101.1953
+loss = 0.5059058666229248, steps = 153700, cost time = 0.99s
+global_step/sec: 101.8993
+loss = 0.4850797653198242, steps = 153800, cost time = 0.98s
+global_step/sec: 101.2900
+loss = 0.4653388559818268, steps = 153900, cost time = 0.99s
+global_step/sec: 102.3031
+loss = 0.4776676297187805, steps = 154000, cost time = 0.98s
+global_step/sec: 102.4967
+loss = 0.47508615255355835, steps = 154100, cost time = 0.98s
+global_step/sec: 101.9032
+loss = 0.47766202688217163, steps = 154200, cost time = 0.98s
+global_step/sec: 101.5658
+loss = 0.5024634599685669, steps = 154300, cost time = 0.98s
+global_step/sec: 102.0324
+loss = 0.4592856168746948, steps = 154400, cost time = 0.98s
+global_step/sec: 101.8257
+loss = 0.46531760692596436, steps = 154500, cost time = 0.98s
+global_step/sec: 101.6410
+loss = 0.47295427322387695, steps = 154600, cost time = 0.98s
+global_step/sec: 101.7123
+loss = 0.44427305459976196, steps = 154700, cost time = 0.98s
+global_step/sec: 102.0391
+loss = 0.4572761654853821, steps = 154800, cost time = 0.98s
+global_step/sec: 102.2968
+loss = 0.44320422410964966, steps = 154900, cost time = 0.98s
+global_step/sec: 101.3713
+loss = 0.476005882024765, steps = 155000, cost time = 0.99s
+global_step/sec: 102.5336
+loss = 0.4433864653110504, steps = 155100, cost time = 0.98s
+global_step/sec: 101.0996
+loss = 0.4790310263633728, steps = 155200, cost time = 0.99s
+global_step/sec: 101.7144
+loss = 0.44803985953330994, steps = 155300, cost time = 0.98s
+global_step/sec: 101.7753
+loss = 0.43862876296043396, steps = 155400, cost time = 0.98s
+global_step/sec: 101.9637
+loss = 0.43531882762908936, steps = 155500, cost time = 0.98s
+global_step/sec: 102.1710
+loss = 0.4069313406944275, steps = 155600, cost time = 0.98s
+global_step/sec: 101.4619
+loss = 0.48315373063087463, steps = 155700, cost time = 0.99s
+global_step/sec: 101.7876
+loss = 0.4176137447357178, steps = 155800, cost time = 0.98s
+global_step/sec: 101.1507
+loss = 0.4596734642982483, steps = 155900, cost time = 0.99s
+global_step/sec: 100.9705
+loss = 0.461710661649704, steps = 156000, cost time = 0.99s
+global_step/sec: 101.6119
+loss = 0.47217363119125366, steps = 156100, cost time = 0.98s
+global_step/sec: 101.5585
+loss = 0.42007720470428467, steps = 156200, cost time = 0.98s
+global_step/sec: 335235.2008
+loss = 0.4881531000137329, steps = 156249, cost time = 0.47s
+Evaluation complate:[1000/3907]
+Evaluation complate:[2000/3907]
+Evaluation complate:[3000/3907]
+Evaluation complate:[3907/3907]
+ACC = 0.7459949851036072
+AUC = 0.7621605396270752
