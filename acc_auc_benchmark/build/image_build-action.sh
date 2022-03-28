@@ -49,16 +49,16 @@ function runDockerContrainer(){
 		 --rm"
 	sudo docker run \
 	    -v $host_path:/whl_build $optional \
-	    --entrypoint '/bin/bash'
 	    --name $container_name \
 	    $image_repo \
-	    $command $currentTime		 
+	    /bin/bash $command $currentTime		 
     else
 	    sudo docker run \
 	    -v $host_path:/whl_build $optional \
+	    --entrypoint '/bin/bash'
 	    --name $container_name \
 	    $image_repo \
-	    /bin/bash $command $currentTime
+	    $command $currentTime
     fi
     
     if [[ $? != 0 ]];then
