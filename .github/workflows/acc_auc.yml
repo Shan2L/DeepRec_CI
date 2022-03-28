@@ -78,7 +78,7 @@ jobs:
            && sed -i "15c tf_test_image ${{github.event.inputs.tf_test_image}}" $config_file\
            && sed -i "32c cpus ${{github.event.inputs.cpu}}" $config_file
 
-           bash -x ./CI_connection.sh "$model_list" "$deeprec_bf16_param1" "$deeprec_bf16_param2" "$deeprec_fp32_param1" "$deeprec_fp32_param2" "$tf_param1"  "${{github.event.inputs.weekly_tag}}" \
+           bash -x ./CI_connection.sh "$model_list" "$deeprec_bf16_param1" "$deeprec_bf16_param2" "$deeprec_fp32_param1" "$deeprec_fp32_param2" "$tf_param"  "${{github.event.inputs.weekly_tag}}" \
            &&echo "##########################################config.properties############################################" \
            &&cat $config_file\
            &&echo "#######################################################################################################"     
