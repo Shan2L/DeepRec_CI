@@ -47,14 +47,19 @@ function runDockerContrainer(){
 	sudo docker volume create ut_cache
     	optional="-v  $cache_path:/root/.cache \
 		 --rm"
-		 
+	sudo docker run \
+	    -v $host_path:/whl_build $optional \
+	    --entrypoint '/bin/bash'
+	    --name $container_name \
+	    $image_repo \
+	    $command $currentTime		 
+    else
+	    sudo docker run \
+	    -v $host_path:/whl_build $optional \
+	    --name $container_name \
+	    $image_repo \
+	    /bin/bash $command $currentTime
     fi
-    
-    sudo docker run \
-    -v $host_path:/whl_build $optional \
-    --name $container_name \
-    $image_repo \
-    /bin/bash $command $currentTime
     
     if [[ $? != 0 ]];then
         echoColor red "Something wrong happened when run the container..."
