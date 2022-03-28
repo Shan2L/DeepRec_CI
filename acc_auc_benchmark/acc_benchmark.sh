@@ -223,5 +223,6 @@ make_script\
 && runContainers\
 && checkStatus \
 && sudo python ./acc_auc_count.py --log_dir=$gol_dir$currentTime
+push_to_git
 
 
