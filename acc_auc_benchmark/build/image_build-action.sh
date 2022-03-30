@@ -46,15 +46,14 @@ function runDockerContrainer(){
     if [[ $container_name == "whl_build" ]];then
 	sudo docker volume create ut_cache
     	optional="-v  $cache_path:/root/.cache \
-		 --rm"
-		 
+		 --rm
     fi
     
     sudo docker run \
     -v $host_path:/whl_build $optional \
     --name $container_name \
     $image_repo \
-    /bin/bash $command $currentTime $commit_id
+    /bin/bash $command $currentTime
     
     if [[ $? != 0 ]];then
         echoColor red "Something wrong happened when run the container..."
@@ -70,9 +69,8 @@ function runDockerContrainer(){
 function codeReview()
 {
     current_path=$(pwd)
-    if [[ -d $ali_repo_dir ]];then
-        sudo rm -rf $ali_repo_dir
-    fi
+    [[ -d $ali_repo_dir ]] && sudo rm -rf $ali_repo_dir
+    
     cd ./whl_build/repo/ali_DeepRec/
     git clone $code_repo
 
@@ -81,8 +79,16 @@ function codeReview()
 
     git checkout "$branch_name"\
     && git checkout --progress --force "$commit_id"
-    git_info=$(git rev-parse --short HEAD)
+    git_info=$(git rev-parse HEAD)
     echoColor red "the current commit is :$git_info"
+    
+    # 检测commit是否切换成功， 不成功结束进程
+    if [[ $git_info != $commit_id ]];then
+    	echoColor red "[ERROR] Failed to checkout to target commit......"
+	echoColor red "[ERROR] The process will exit now..."
+	exit 1
+    fi
+    
     cd "$current_path"\
     &&echoColor red "current directory is $current_path"
 }
