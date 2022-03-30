@@ -63,15 +63,15 @@ jobs:
           sed -i '11c image_TAG ${{github.event.inputs.image_tag}}' $config_file
 
           if [[ ${{github.event.inputs.deeprec_tag}} == true ]];then
-            sed -i '192c\   build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
+            sed -i '198c\   build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
           else
-            sed -i '192c\   #build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
+            sed -i '199c\   #build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
           fi
           
           if [[ ${{github.event.inputs.deeprec_modelzoo_tag}} == true ]];then
-            sed -i '193c\   build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh' $bash_file
+            sed -i '198c\   build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh' $bash_file
           else
-            sed -i '193c\   #build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh' $bash_file
+            sed -i '199c\   #build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh' $bash_file
           fi
           
           echo --------------------------------------config.properties-------------------------------------------------
