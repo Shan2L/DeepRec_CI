@@ -84,7 +84,7 @@ function codeReview()
     git_info=$(git rev-parse --short HEAD)
     echoColor red "the current commit is :$git_info"
     cd "$current_path"\
-    &&echoColor red "current directory is $current"
+    &&echoColor red "current directory is $current_path"
 }
 
 # 检查当前环境是否有和要启动的容器重名的容器， 如果有就直接删掉
