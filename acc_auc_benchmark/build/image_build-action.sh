@@ -54,7 +54,7 @@ function runDockerContrainer(){
     -v $host_path:/whl_build $optional \
     --name $container_name \
     $image_repo \
-    /bin/bash $command $currentTime
+    /bin/bash $command $currentTime $commit_id
     
     if [[ $? != 0 ]];then
         echoColor red "Something wrong happened when run the container..."
