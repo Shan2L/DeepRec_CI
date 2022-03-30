@@ -45,8 +45,8 @@ function runDockerContrainer(){
     
     if [[ $container_name == "whl_build" ]];then
 	sudo docker volume create ut_cache
-    	optional="-v  $cache_path:/root/.cache \
-		 --rm
+    	optional="-v  $cache_path:/root/.cache\ 
+		 --rm"
     fi
     
     sudo docker run \
@@ -239,7 +239,7 @@ currentTime=
 # commit的hashcode
 commit_id=$( cat $config_file | grep commit_id | awk -F " " '{print $2}')
 # brach的名称
-branch_name=$( cat $config_file | grep branch_name | awk -F " " '{print $2}')
+branch_name=$(cat $config_file | grep branch_name | awk -F " " '{print $2}')
 # 是否需要将此image标记为latest 0不需要 1需要
 latest=0
 
@@ -249,7 +249,6 @@ while getopts ":l" opts;do
     case $opts in
         l)
             latest=1;;
-
     esac
 done
 
