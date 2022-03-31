@@ -76,7 +76,7 @@ jobs:
            &&echo "#######################################################################################################"     
       - name: run the benchmark process
         run: |
-          cd /home/shanlin/DeepRec_CI/gstep_benchmark/
+          cd /home/shanlin/DeepRec_CI/SPR_gstep_benchmark/
           bash -x SPR_gstep_benchmark.sh ${{github.event.inputs.weekly_tag}}
       - name: output the result
         run: |          
