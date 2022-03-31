@@ -1,0 +1,39 @@
+2022-03-31 06:03:36.465772: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3400000000 Hz
+2022-03-31 06:03:36.490393: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x51287c0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-03-31 06:03:36.490451: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Using TensorFlow version 1.15.5
+Validating arguments
+Numbers of training dataset: 50000
+Number of epochs: 10
+Number of train steps: 977
+Numbers of test dataset: 10000
+Numbers of test steps: 20
+Running stand-alone mode training
+Saving model events to ./result/model_SimpleMultiTask_1648706616
+Saving checkpoint to /benchmark_result/checkpoint/2022-03-31-14-03-27/simplemultitask_deeprec_bf16_. Maximum number of saved checkpoints: 1
+global_step/sec: 37.3124
+loss = 0.6977024674415588, steps = 0, cost time = 2.68s
+global_step/sec: 103.2177
+loss = 0.1044672280550003, steps = 100, cost time = 0.97s
+global_step/sec: 114.0002
+loss = 0.08903053402900696, steps = 200, cost time = 0.88s
+global_step/sec: 134.5806
+loss = 0.10020086169242859, steps = 300, cost time = 0.74s
+global_step/sec: 146.2293
+loss = 0.10625548660755157, steps = 400, cost time = 0.68s
+global_step/sec: 117.3655
+loss = 0.11616139113903046, steps = 500, cost time = 0.85s
+global_step/sec: 134.7057
+loss = 0.09416650235652924, steps = 600, cost time = 0.74s
+global_step/sec: 129.2499
+loss = 0.08471827208995819, steps = 700, cost time = 0.77s
+global_step/sec: 142.3258
+loss = 0.10174953937530518, steps = 800, cost time = 0.70s
+global_step/sec: 136.9184
+loss = 0.09897032380104065, steps = 900, cost time = 0.73s
+Save checkpoint to /benchmark_result/checkpoint/2022-03-31-14-03-27/simplemultitask_deeprec_bf16_/smt-checkpoint-976
+global_step/sec: 250.7810
+loss = 0.10884653776884079, steps = 976, cost time = 3.89s
+Evaluation complete:[18/20]
+ACC = 0.9731500148773193
+AUC = 0.7513383626937866

@@ -1,0 +1,41 @@
+INFO:tensorflow:Parsing ./data/taobao_train_data
+INFO:tensorflow:Parsing ./data/taobao_test_data
+2022-03-31 06:04:56.039849: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3400000000 Hz
+2022-03-31 06:04:56.062031: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5565e70 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-03-31 06:04:56.062074: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Using TensorFlow version 1.15.5
+Validating arguments
+Numbers of training dataset: 50000
+Number of epochs: 10
+Number of train steps: 977
+Numbers of test dataset: 10000
+Numbers of test steps: 20
+Running stand-alone mode training
+Saving model events to ./result/model_ESMM_1648706696
+Saving checkpoint to /benchmark_result/checkpoint/2022-03-31-14-03-27/esmm_deeprec_bf16_. Maximum number of saved checkpoints: 1
+global_step/sec: 33.4078
+loss = 0.2864753007888794, steps = 0, cost time = 2.99s
+global_step/sec: 83.7986
+loss = 0.01559948269277811, steps = 100, cost time = 1.19s
+global_step/sec: 79.9058
+loss = 0.0010568981524556875, steps = 200, cost time = 1.25s
+global_step/sec: 96.6204
+loss = 0.0006789693143218756, steps = 300, cost time = 1.03s
+global_step/sec: 105.1835
+loss = 0.0005675125867128372, steps = 400, cost time = 0.95s
+global_step/sec: 105.0913
+loss = 0.0005046852747909725, steps = 500, cost time = 0.95s
+global_step/sec: 92.0563
+loss = 0.016263727098703384, steps = 600, cost time = 1.09s
+global_step/sec: 92.3452
+loss = 0.0005042677512392402, steps = 700, cost time = 1.08s
+global_step/sec: 86.5038
+loss = 0.0004768162907566875, steps = 800, cost time = 1.16s
+global_step/sec: 90.5148
+loss = 0.0004903515800833702, steps = 900, cost time = 1.10s
+Saved checkpoint to /benchmark_result/checkpoint/2022-03-31-14-03-27/esmm_deeprec_bf16_/esmm-checkpoint-976
+global_step/sec: 180.9202
+loss = 0.0004824767238460481, steps = 976, cost time = 5.39s
+Evaluation complete:[20/20]
+ACC = 0.9995887875556946
+AUC = 0.4980461895465851
