@@ -1,0 +1,5 @@
+ACC, ,WDL,WDL,DLRM,DLRM,Deep FM,Deep FM,DSSM,DSSM,DIEN,DIEN,DIN,DIN
+ACC, ,value,percent,value,percent,value,percent,value,percent,value,percent,value,percent
+Commuty TF, ,-,baseline,-,baseline,-,baseline,-,baseline,-,baseline,-,baseline
+DeepRec FP32, ,-,-,-,-,-,-,-,-,-,-,-,-
+DeepRec BF16, ,-,-,-,-,-,-,-,-,-,-,-,-
