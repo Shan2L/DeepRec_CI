@@ -1,0 +1,12 @@
+WARNING:tensorflow:From train.py:13: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From train.py:13: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+WARNING:tensorflow:From train.py:553: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+Using TensorFlow version 1.15.5
+Validating arguments
+Traceback (most recent call last):
+  File "train.py", line 567, in <module>
+    raise ValueError(f'[ERROR] output dir: {args.output_dir} does not exist. '
+ValueError: [ERROR] output dir: ./result does not exist. Please provide valid path
