@@ -74,4 +74,3 @@ cd ./repo/ali_repo/ \
 &&sudo rm -rf ./*
 cd $current_path
 sudo docker volume rm ut_cache
-#push_to_github
