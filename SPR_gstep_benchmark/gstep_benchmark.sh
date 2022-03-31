@@ -27,7 +27,7 @@ function make_single_script()
         echo "cd /home/shanlin/modelzoo/$model_name/" >> $script
       	[[ ! -d  $checkpoint_dir/$currentTime/${model_name,,}_script$$log_tag ]]&& sudo mkdir -p $checkpoint_dir/$currentTime/${model_name,,}_$script$log_tag
         if [[  $weekly != 'true' ]];then
-            newline="LD_PRELOAD=/home/shanlin/modelzoo/libjemalloc.so.2.5.1 numactl -C $cpus -l $command $paras --timeline 1000 --no_eval --steps 3000 $bf16_para --checkpoint $checkpoint_dir/$currentTime/${model_name,,}_$catg$log_tag  >$log_dir/$currentTime/${model_name,,}_$catg$log_tag.log 2>&1"
+            newline="LD_PRELOAD=/home/shanlin/modelzoo/libjemalloc.so.2.5.1 numactl -C $cpus -l $command $paras --no_eval --steps 3000 $bf16_para --checkpoint $checkpoint_dir/$currentTime/${model_name,,}_$catg$log_tag  >$log_dir/$currentTime/${model_name,,}_$catg$log_tag.log 2>&1"
         else
             newline="LD_PRELOAD=/home/shanlin/modelzoo/libjemalloc.so.2.5.1 numactl -C $cpus -l $command --timeline 1000 --no_eval --steps 3000 $bf16_para --checkpoint $checkpoint_dir/$currentTime/${model_name,,}_$catg  >$log_dir/$currentTime/${model_name,,}_$catg.log 2>&1"
         fi
