@@ -137,6 +137,13 @@ function oss_upload()
     sudo cp $whl_dir$currentTime/$whl_file $whl_dir$final_name
 
     ./ossutil64 cp $whl_dir$final_name oss://deeprec-whl/ --proxy-host http://child-prc.intel.com:913 --config-file ~/.ossutilconfig
+    
+    if [[ $? == 0 ]];then
+    	echo '$final_name'
+    else 
+    	echo '[ERROR] Failed to upload $final_name to OSS '
+	exit -1
+    fi    
 }
 
 # 通过编好的包来build镜像并push到镜像仓库
@@ -192,8 +199,9 @@ function run()
     # 运行容器 编译whl包
     runDockerContrainer $build_image_repo whl_build /whl_build/build_whl.sh
     sudo rm -rf $ali_repo_dir
-    checkResult \
-    && oss_upload
+    checkResult
+    whl_name=$(oss_upload)
+    echo 'echo $whl_name' > ./echoWhl.sh
     build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh
     build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh
     
