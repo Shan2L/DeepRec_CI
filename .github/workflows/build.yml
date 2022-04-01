@@ -8,21 +8,21 @@ on:
   workflow_dispatch:
     inputs:
       branch_name:
-        description: 'branch_name'
+        description: 'Branch Name'
         default: 'main'
       commit_id:
-        description: 'commit id'
+        description: 'Commit Id'
       dp_base_image:
-        description: 'the image you want to build based on'
+        description: 'Deeprec Base Image'
         default: 'cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec:tf'
       modelzoo_base_image:
-        description: 'the image you want to build based on'
+        description: 'Deeprec-modelzoo Base Image'
         default: 'cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:tf'
       code_repo:
-        description: 'the repo you wanna to build'
+        description: 'Code Repo'
         default: 'https://github.com/alibaba/DeepRec.git'
       image_tag:
-        description: 'the image tag of the image built just now:'
+        description: 'Tag:'
       deeprec_tag:
         description: 'build deeprec image'
         type: boolean
