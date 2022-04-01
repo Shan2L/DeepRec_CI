@@ -23,7 +23,7 @@ function make_single_script()
     do
         command=$(echo "$line" | awk -F ":" '{print $2}'| awk -F "|" '{print $1}')
         paras=$(echo "$line" | awk -F ":" '{print $2}' | awk -F "|" '{print $2}')
-        log_tag=$(echo $paras| sed 's/ /_/g')
+        log_tag=$(echo $paras| sed 's/--/_/g' | sed 's/ //g')
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
         echo "echo 'testing $model_name of $catg $paras.......'" >> $script
         echo "cd /root/modelzoo/$model_name/" >> $script
@@ -60,7 +60,7 @@ function runSingleContainer()
     script_name=$2
     container_name=$(echo $2 | awk -F "." '{print $1}')
     host_path=$(cd ./benchmark_result && pwd)
-    cpu_item=
+    optional=
     if [[ -n $cpus ]];then
         optional="--cpuset-cpus $cpus"
     fi
@@ -128,25 +128,13 @@ function checkStatus()
         echo "---------------------------------------------------"
         echo ""
 
-        if [[ "$tf_32_status" == *"Exited"* ]]; then
-            echoColor red "Container tf_fp32 has exited..."
-        fi
-
-        if [[ "$deeprec_32_status" == *"Exited"* ]]; then
-            echoColor red "Container deeprec_fp32 has exited..."
-        fi
-
-        if [[ "$deeprec_16_status" == *"Exited"* ]]; then
-            echoColor red "Container deeprec_bf16 has exited..."
-        fi
-
-        echo "sleep for 1 min ......"
-        sleep 1m
+        echo "sleep for 5 min ......"
+        sleep 5m
         
     done
 
     # 如果三个镜像都已经执行完成
-    echo "All of the three have finished the task"
+    echo "All of the three containers have finished the task"
 
 }
 
@@ -187,7 +175,7 @@ tf_fp32_CMD=$(cat $config_file | grep CMD | grep tf_fp32 | awk -F ":" '{print$2}
 
 
 # 从配置文件读取cpu限制
-cpus=$(cat $config_file | grep cpus | awk -F " " '{print $2}')
+cpus=$(cat $config_file | grep cpus | awk -F " "  '{print $2}')
 
 # 从配置文件读取测试环境变量配置
 env_var=$(cat $config_file |grep export)
@@ -205,6 +193,4 @@ make_script\
 && checkEnv\
 && runContainers\
 && checkStatus \
-&& sudo python ./acc_auc_count.py --log_dir=$gol_dir$currentTime
-
-
+&& sudo python3 ./acc_auc_count.py  --log_dir=$gol_dir$currentTime > $gol_dir$currentTime/acc_auc_count.log
