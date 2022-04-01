@@ -1,0 +1,637 @@
+WARNING:tensorflow:From train.py:18: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From train.py:18: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+WARNING:tensorflow:From train.py:522: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+INFO:tensorflow:vocabulary_size = 543060 in UID is inferred from the number of elements in the vocabulary_file ./data/uid_voc.txt.
+INFO:tensorflow:vocabulary_size = 367983 in ITEM is inferred from the number of elements in the vocabulary_file ./data/mid_voc.txt.
+INFO:tensorflow:vocabulary_size = 1601 in CATEGORY is inferred from the number of elements in the vocabulary_file ./data/cat_voc.txt.
+INFO:tensorflow:vocabulary_size = 367983 in HISTORY_ITEM is inferred from the number of elements in the vocabulary_file ./data/mid_voc.txt.
+INFO:tensorflow:vocabulary_size = 1601 in HISTORY_CATEGORY is inferred from the number of elements in the vocabulary_file ./data/cat_voc.txt.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/data/util/random_seed.py:58: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+INFO:tensorflow:Parsing ./data/local_train_splitByUser
+INFO:tensorflow:Parsing ./data/local_test_splitByUser
+WARNING:tensorflow:From train.py:535: The name tf.data.Iterator is deprecated. Please use tf.compat.v1.data.Iterator instead.
+
+WARNING:tensorflow:From train.py:535: DatasetV1.output_types (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.data.get_output_types(dataset)`.
+WARNING:tensorflow:From train.py:536: DatasetV1.output_shapes (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.data.get_output_shapes(dataset)`.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/data/ops/iterator_ops.py:347: Iterator.output_types (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.data.get_output_types(iterator)`.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/data/ops/iterator_ops.py:348: Iterator.output_shapes (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.data.get_output_shapes(iterator)`.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/data/ops/iterator_ops.py:350: Iterator.output_classes (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.data.get_output_classes(iterator)`.
+WARNING:tensorflow:From train.py:362: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From train.py:364: The name tf.AUTO_REUSE is deprecated. Please use tf.compat.v1.AUTO_REUSE instead.
+
+WARNING:tensorflow:From train.py:306: The name tf.feature_column.input_layer is deprecated. Please use tf.compat.v1.feature_column.input_layer instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/feature_column/feature_column.py:206: EmbeddingColumn._get_dense_tensor (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/feature_column/feature_column_v2.py:3182: VocabularyFileCategoricalColumn._get_sparse_tensors (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/feature_column/feature_column.py:2158: VocabularyFileCategoricalColumn._transform_feature (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/feature_column/feature_column_v2.py:3122: VocabularyFileCategoricalColumn._num_buckets (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/feature_column/feature_column.py:207: EmbeddingColumn._variable_shape (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From train.py:310: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From train.py:283: SequenceCategoricalColumn._get_sparse_tensors (from tensorflow.python.feature_column.feature_column_v2) is deprecated and will be removed in a future version.
+Instructions for updating:
+The old _FeatureColumn APIs are being deprecated. Please use the new FeatureColumn APIs instead.
+WARNING:tensorflow:From train.py:46: The name tf.debugging.assert_equal is deprecated. Please use tf.compat.v1.debugging.assert_equal instead.
+
+WARNING:tensorflow:From train.py:206: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.Dense instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/layers/core.py:187: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+WARNING:tensorflow:From train.py:382: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+WARNING:tensorflow:From train.py:347: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.BatchNormalization instead.  In particular, `tf.control_dependencies(tf.GraphKeys.UPDATE_OPS)` should not be used (consult the `tf.keras.layers.batch_normalization` documentation).
+WARNING:tensorflow:From train.py:34: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From train.py:405: The name tf.losses.sigmoid_cross_entropy is deprecated. Please use tf.compat.v1.losses.sigmoid_cross_entropy instead.
+
+WARNING:tensorflow:From train.py:409: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
+
+WARNING:tensorflow:From train.py:412: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+WARNING:tensorflow:From train.py:413: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From train.py:169: The name tf.metrics.accuracy is deprecated. Please use tf.compat.v1.metrics.accuracy instead.
+
+WARNING:tensorflow:From train.py:172: The name tf.metrics.auc is deprecated. Please use tf.compat.v1.metrics.auc instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/metrics_impl.py:808: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From train.py:564: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From train.py:599: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2022-03-31 06:47:51.855483: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2022-03-31 06:47:51.880204: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3400000000 Hz
+2022-03-31 06:47:51.901788: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4a7c630 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-03-31 06:47:51.901828: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+WARNING:tensorflow:From train.py:600: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From train.py:601: The name tf.local_variables_initializer is deprecated. Please use tf.compat.v1.local_variables_initializer instead.
+
+WARNING:tensorflow:From train.py:602: The name tf.tables_initializer is deprecated. Please use tf.compat.v1.tables_initializer instead.
+
+WARNING:tensorflow:From train.py:603: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+WARNING:tensorflow:From train.py:604: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+WARNING:tensorflow:From train.py:605: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+WARNING:tensorflow:From train.py:605: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From train.py:607: The name tf.RunOptions is deprecated. Please use tf.compat.v1.RunOptions instead.
+
+WARNING:tensorflow:From train.py:608: The name tf.RunMetadata is deprecated. Please use tf.compat.v1.RunMetadata instead.
+
+Using TensorFlow version 1.15.5
+Checking dataset
+Numbers of training dataset is 1086120
+Numbers of test dataset is 121216
+Saving model checkpoints to /benchmark_result/checkpoint/2022-03-31-14-47-37/din_tf_fp32
+global_step/sec: 164.6906
+loss = 0.6995416879653931, steps = 0, cost time = 0.61s
+global_step/sec: 31.3750
+loss = 0.6959691047668457, steps = 100, cost time = 3.19s
+global_step/sec: 31.5917
+loss = 0.6905705332756042, steps = 200, cost time = 3.17s
+global_step/sec: 30.2507
+loss = 0.6714383959770203, steps = 300, cost time = 3.31s
+global_step/sec: 29.4734
+loss = 0.6655911207199097, steps = 400, cost time = 3.39s
+global_step/sec: 29.6204
+loss = 0.667839527130127, steps = 500, cost time = 3.38s
+global_step/sec: 28.9077
+loss = 0.6433604955673218, steps = 600, cost time = 3.46s
+global_step/sec: 28.5418
+loss = 0.6367676258087158, steps = 700, cost time = 3.50s
+global_step/sec: 29.6154
+loss = 0.6245954036712646, steps = 800, cost time = 3.38s
+global_step/sec: 27.5005
+loss = 0.6488611698150635, steps = 900, cost time = 3.64s
+global_step/sec: 29.9750
+loss = 0.6613406538963318, steps = 1000, cost time = 3.34s
+global_step/sec: 32.5650
+loss = 0.6904213428497314, steps = 1100, cost time = 3.07s
+global_step/sec: 28.0900
+loss = 0.6358414888381958, steps = 1200, cost time = 3.56s
+global_step/sec: 28.4681
+loss = 0.6024055480957031, steps = 1300, cost time = 3.51s
+global_step/sec: 27.2676
+loss = 0.6612123847007751, steps = 1400, cost time = 3.67s
+global_step/sec: 29.2009
+loss = 0.6670020818710327, steps = 1500, cost time = 3.42s
+global_step/sec: 28.3225
+loss = 0.6364540457725525, steps = 1600, cost time = 3.53s
+global_step/sec: 29.2521
+loss = 0.6460645794868469, steps = 1700, cost time = 3.42s
+global_step/sec: 30.4021
+loss = 0.6132594347000122, steps = 1800, cost time = 3.29s
+global_step/sec: 27.4579
+loss = 0.6385817527770996, steps = 1900, cost time = 3.64s
+global_step/sec: 24.2789
+loss = 0.6738662123680115, steps = 2000, cost time = 4.12s
+global_step/sec: 24.7617
+loss = 0.6396483778953552, steps = 2100, cost time = 4.04s
+global_step/sec: 25.0720
+loss = 0.6078884601593018, steps = 2200, cost time = 3.99s
+global_step/sec: 23.9571
+loss = 0.6308271288871765, steps = 2300, cost time = 4.17s
+global_step/sec: 25.4128
+loss = 0.616041898727417, steps = 2400, cost time = 3.94s
+global_step/sec: 24.6108
+loss = 0.6460883617401123, steps = 2500, cost time = 4.06s
+global_step/sec: 24.8176
+loss = 0.5836215019226074, steps = 2600, cost time = 4.03s
+global_step/sec: 24.3072
+loss = 0.6825923919677734, steps = 2700, cost time = 4.11s
+global_step/sec: 24.3822
+loss = 0.5983253717422485, steps = 2800, cost time = 4.10s
+global_step/sec: 25.6227
+loss = 0.5998584628105164, steps = 2900, cost time = 3.90s
+global_step/sec: 25.7357
+loss = 0.5964800119400024, steps = 3000, cost time = 3.89s
+global_step/sec: 24.8760
+loss = 0.6361870765686035, steps = 3100, cost time = 4.02s
+global_step/sec: 26.8999
+loss = 0.5947076082229614, steps = 3200, cost time = 3.72s
+global_step/sec: 24.9011
+loss = 0.6004889607429504, steps = 3300, cost time = 4.02s
+global_step/sec: 25.9544
+loss = 0.6157020330429077, steps = 3400, cost time = 3.85s
+global_step/sec: 25.2530
+loss = 0.6114852428436279, steps = 3500, cost time = 3.96s
+global_step/sec: 25.0836
+loss = 0.5964833498001099, steps = 3600, cost time = 3.99s
+global_step/sec: 24.5122
+loss = 0.6032770872116089, steps = 3700, cost time = 4.08s
+global_step/sec: 25.9315
+loss = 0.5895002484321594, steps = 3800, cost time = 3.86s
+global_step/sec: 24.8365
+loss = 0.5643669366836548, steps = 3900, cost time = 4.03s
+global_step/sec: 24.8258
+loss = 0.5593594312667847, steps = 4000, cost time = 4.03s
+global_step/sec: 24.3429
+loss = 0.6354705095291138, steps = 4100, cost time = 4.11s
+global_step/sec: 24.3556
+loss = 0.6522519588470459, steps = 4200, cost time = 4.11s
+global_step/sec: 23.6934
+loss = 0.5731474161148071, steps = 4300, cost time = 4.22s
+global_step/sec: 25.6358
+loss = 0.5854809284210205, steps = 4400, cost time = 3.90s
+global_step/sec: 27.6170
+loss = 0.5701040625572205, steps = 4500, cost time = 3.62s
+global_step/sec: 25.4891
+loss = 0.5454152822494507, steps = 4600, cost time = 3.92s
+global_step/sec: 24.3788
+loss = 0.6705358028411865, steps = 4700, cost time = 4.10s
+global_step/sec: 25.3445
+loss = 0.585027813911438, steps = 4800, cost time = 3.95s
+global_step/sec: 26.2439
+loss = 0.5880990624427795, steps = 4900, cost time = 3.81s
+global_step/sec: 24.3734
+loss = 0.5482616424560547, steps = 5000, cost time = 4.10s
+global_step/sec: 24.2015
+loss = 0.6186522841453552, steps = 5100, cost time = 4.13s
+global_step/sec: 22.6155
+loss = 0.5686585903167725, steps = 5200, cost time = 4.42s
+global_step/sec: 23.6572
+loss = 0.5992553234100342, steps = 5300, cost time = 4.23s
+global_step/sec: 23.4844
+loss = 0.546460747718811, steps = 5400, cost time = 4.26s
+global_step/sec: 25.5973
+loss = 0.5551329851150513, steps = 5500, cost time = 3.91s
+global_step/sec: 24.4189
+loss = 0.5345717668533325, steps = 5600, cost time = 4.10s
+global_step/sec: 23.5782
+loss = 0.5724208354949951, steps = 5700, cost time = 4.24s
+global_step/sec: 22.7817
+loss = 0.5215462446212769, steps = 5800, cost time = 4.39s
+global_step/sec: 22.1033
+loss = 0.5413782596588135, steps = 5900, cost time = 4.52s
+global_step/sec: 24.3763
+loss = 0.5949292182922363, steps = 6000, cost time = 4.10s
+global_step/sec: 25.0162
+loss = 0.594144344329834, steps = 6100, cost time = 4.00s
+global_step/sec: 24.2090
+loss = 0.5619098544120789, steps = 6200, cost time = 4.13s
+global_step/sec: 24.6967
+loss = 0.6392866373062134, steps = 6300, cost time = 4.05s
+global_step/sec: 26.0896
+loss = 0.587418794631958, steps = 6400, cost time = 3.83s
+global_step/sec: 24.4215
+loss = 0.6052260398864746, steps = 6500, cost time = 4.09s
+global_step/sec: 24.7515
+loss = 0.6030850410461426, steps = 6600, cost time = 4.04s
+global_step/sec: 25.0354
+loss = 0.5755869150161743, steps = 6700, cost time = 3.99s
+global_step/sec: 23.4191
+loss = 0.57465660572052, steps = 6800, cost time = 4.27s
+global_step/sec: 25.0403
+loss = 0.5443271398544312, steps = 6900, cost time = 3.99s
+global_step/sec: 22.9404
+loss = 0.5360362529754639, steps = 7000, cost time = 4.36s
+global_step/sec: 23.4129
+loss = 0.5635586977005005, steps = 7100, cost time = 4.27s
+global_step/sec: 22.1107
+loss = 0.6540926098823547, steps = 7200, cost time = 4.52s
+global_step/sec: 23.6535
+loss = 0.5634212493896484, steps = 7300, cost time = 4.23s
+global_step/sec: 28.0276
+loss = 0.6446729898452759, steps = 7400, cost time = 3.57s
+global_step/sec: 24.5624
+loss = 0.6030600070953369, steps = 7500, cost time = 4.07s
+global_step/sec: 25.7393
+loss = 0.5649975538253784, steps = 7600, cost time = 3.89s
+global_step/sec: 25.4025
+loss = 0.6246720552444458, steps = 7700, cost time = 3.94s
+global_step/sec: 25.8796
+loss = 0.586645781993866, steps = 7800, cost time = 3.86s
+global_step/sec: 25.8330
+loss = 0.5306010842323303, steps = 7900, cost time = 3.87s
+global_step/sec: 25.9857
+loss = 0.5400834083557129, steps = 8000, cost time = 3.85s
+global_step/sec: 24.6360
+loss = 0.5968079566955566, steps = 8100, cost time = 4.06s
+global_step/sec: 25.1785
+loss = 0.5852361917495728, steps = 8200, cost time = 3.97s
+global_step/sec: 25.3308
+loss = 0.5649480819702148, steps = 8300, cost time = 3.95s
+global_step/sec: 26.0268
+loss = 0.6025967597961426, steps = 8400, cost time = 3.84s
+global_step/sec: 25.1525
+loss = 0.5774189233779907, steps = 8500, cost time = 3.98s
+global_step/sec: 24.7967
+loss = 0.5551120042800903, steps = 8600, cost time = 4.03s
+global_step/sec: 24.8720
+loss = 0.5498173832893372, steps = 8700, cost time = 4.02s
+global_step/sec: 27.0811
+loss = 0.4683133065700531, steps = 8800, cost time = 3.69s
+global_step/sec: 25.2984
+loss = 0.48658737540245056, steps = 8900, cost time = 3.95s
+global_step/sec: 24.5756
+loss = 0.47640132904052734, steps = 9000, cost time = 4.07s
+global_step/sec: 23.6483
+loss = 0.48185259103775024, steps = 9100, cost time = 4.23s
+global_step/sec: 25.0126
+loss = 0.45888322591781616, steps = 9200, cost time = 4.00s
+global_step/sec: 24.3039
+loss = 0.48416370153427124, steps = 9300, cost time = 4.11s
+global_step/sec: 24.7656
+loss = 0.3976304531097412, steps = 9400, cost time = 4.04s
+global_step/sec: 24.9010
+loss = 0.3985787034034729, steps = 9500, cost time = 4.02s
+global_step/sec: 24.1694
+loss = 0.41577768325805664, steps = 9600, cost time = 4.14s
+global_step/sec: 23.3093
+loss = 0.4614967405796051, steps = 9700, cost time = 4.29s
+global_step/sec: 24.7703
+loss = 0.33095574378967285, steps = 9800, cost time = 4.04s
+global_step/sec: 25.3091
+loss = 0.40067028999328613, steps = 9900, cost time = 3.95s
+global_step/sec: 24.8427
+loss = 0.3697549104690552, steps = 10000, cost time = 4.03s
+global_step/sec: 23.4503
+loss = 0.3835710883140564, steps = 10100, cost time = 4.26s
+global_step/sec: 25.1997
+loss = 0.4294392466545105, steps = 10200, cost time = 3.97s
+global_step/sec: 24.5794
+loss = 0.40185651183128357, steps = 10300, cost time = 4.07s
+global_step/sec: 25.7086
+loss = 0.38787391781806946, steps = 10400, cost time = 3.89s
+global_step/sec: 24.2099
+loss = 0.41491758823394775, steps = 10500, cost time = 4.13s
+global_step/sec: 23.6628
+loss = 0.43413370847702026, steps = 10600, cost time = 4.23s
+global_step/sec: 24.1096
+loss = 0.4457548260688782, steps = 10700, cost time = 4.15s
+global_step/sec: 22.8679
+loss = 0.4809796214103699, steps = 10800, cost time = 4.37s
+global_step/sec: 23.5788
+loss = 0.4640142023563385, steps = 10900, cost time = 4.24s
+global_step/sec: 22.6475
+loss = 0.4015747010707855, steps = 11000, cost time = 4.42s
+global_step/sec: 23.2406
+loss = 0.3903483748435974, steps = 11100, cost time = 4.30s
+global_step/sec: 23.7725
+loss = 0.3223404288291931, steps = 11200, cost time = 4.21s
+global_step/sec: 23.9836
+loss = 0.4036334156990051, steps = 11300, cost time = 4.17s
+global_step/sec: 25.7970
+loss = 0.5709999799728394, steps = 11400, cost time = 3.88s
+global_step/sec: 25.4081
+loss = 0.32693159580230713, steps = 11500, cost time = 3.94s
+global_step/sec: 25.5914
+loss = 0.4422542154788971, steps = 11600, cost time = 3.91s
+global_step/sec: 23.9341
+loss = 0.39057865738868713, steps = 11700, cost time = 4.18s
+global_step/sec: 24.1366
+loss = 0.4107232689857483, steps = 11800, cost time = 4.14s
+global_step/sec: 24.2211
+loss = 0.41405075788497925, steps = 11900, cost time = 4.13s
+global_step/sec: 25.5887
+loss = 0.34548720717430115, steps = 12000, cost time = 3.91s
+global_step/sec: 23.9313
+loss = 0.5236539244651794, steps = 12100, cost time = 4.18s
+global_step/sec: 23.8536
+loss = 0.4788060486316681, steps = 12200, cost time = 4.19s
+global_step/sec: 24.7039
+loss = 0.3414662182331085, steps = 12300, cost time = 4.05s
+global_step/sec: 24.6845
+loss = 0.35397714376449585, steps = 12400, cost time = 4.05s
+global_step/sec: 23.3779
+loss = 0.4287233054637909, steps = 12500, cost time = 4.28s
+global_step/sec: 23.8005
+loss = 0.33133983612060547, steps = 12600, cost time = 4.20s
+global_step/sec: 23.2565
+loss = 0.3812483549118042, steps = 12700, cost time = 4.30s
+global_step/sec: 23.7040
+loss = 0.49117305874824524, steps = 12800, cost time = 4.22s
+global_step/sec: 22.6438
+loss = 0.3995705842971802, steps = 12900, cost time = 4.42s
+global_step/sec: 22.4393
+loss = 0.3571871519088745, steps = 13000, cost time = 4.46s
+global_step/sec: 24.9459
+loss = 0.36935821175575256, steps = 13100, cost time = 4.01s
+global_step/sec: 24.1074
+loss = 0.3560446500778198, steps = 13200, cost time = 4.15s
+global_step/sec: 22.5857
+loss = 0.44478046894073486, steps = 13300, cost time = 4.43s
+global_step/sec: 23.5088
+loss = 0.4277734160423279, steps = 13400, cost time = 4.25s
+global_step/sec: 24.3897
+loss = 0.4325543940067291, steps = 13500, cost time = 4.10s
+global_step/sec: 22.4135
+loss = 0.4068971872329712, steps = 13600, cost time = 4.46s
+global_step/sec: 21.2931
+loss = 0.33707746863365173, steps = 13700, cost time = 4.70s
+global_step/sec: 21.8927
+loss = 0.3942680060863495, steps = 13800, cost time = 4.57s
+global_step/sec: 21.5523
+loss = 0.36665475368499756, steps = 13900, cost time = 4.64s
+global_step/sec: 23.9688
+loss = 0.3482060134410858, steps = 14000, cost time = 4.17s
+global_step/sec: 23.8115
+loss = 0.31347519159317017, steps = 14100, cost time = 4.20s
+global_step/sec: 22.6608
+loss = 0.40472692251205444, steps = 14200, cost time = 4.41s
+global_step/sec: 23.1726
+loss = 0.2842554748058319, steps = 14300, cost time = 4.32s
+global_step/sec: 23.6363
+loss = 0.33198797702789307, steps = 14400, cost time = 4.23s
+global_step/sec: 23.2245
+loss = 0.35753631591796875, steps = 14500, cost time = 4.31s
+global_step/sec: 22.8551
+loss = 0.46456754207611084, steps = 14600, cost time = 4.38s
+global_step/sec: 21.7285
+loss = 0.35062772035598755, steps = 14700, cost time = 4.60s
+global_step/sec: 24.5969
+loss = 0.3644835948944092, steps = 14800, cost time = 4.07s
+global_step/sec: 24.4197
+loss = 0.3296598792076111, steps = 14900, cost time = 4.10s
+global_step/sec: 24.3982
+loss = 0.4007723927497864, steps = 15000, cost time = 4.10s
+global_step/sec: 24.0440
+loss = 0.36860114336013794, steps = 15100, cost time = 4.16s
+global_step/sec: 22.1620
+loss = 0.32777512073516846, steps = 15200, cost time = 4.51s
+global_step/sec: 23.1249
+loss = 0.31128084659576416, steps = 15300, cost time = 4.32s
+global_step/sec: 23.1510
+loss = 0.3518916070461273, steps = 15400, cost time = 4.32s
+global_step/sec: 23.0423
+loss = 0.3371013402938843, steps = 15500, cost time = 4.34s
+global_step/sec: 23.4102
+loss = 0.30385807156562805, steps = 15600, cost time = 4.27s
+global_step/sec: 23.2880
+loss = 0.40826037526130676, steps = 15700, cost time = 4.29s
+global_step/sec: 23.7657
+loss = 0.32349327206611633, steps = 15800, cost time = 4.21s
+global_step/sec: 23.3384
+loss = 0.3738177418708801, steps = 15900, cost time = 4.28s
+global_step/sec: 23.6348
+loss = 0.4617360234260559, steps = 16000, cost time = 4.23s
+global_step/sec: 23.3005
+loss = 0.32706090807914734, steps = 16100, cost time = 4.29s
+global_step/sec: 24.9336
+loss = 0.325184166431427, steps = 16200, cost time = 4.01s
+global_step/sec: 24.1934
+loss = 0.3578340709209442, steps = 16300, cost time = 4.13s
+global_step/sec: 24.6160
+loss = 0.34262287616729736, steps = 16400, cost time = 4.06s
+global_step/sec: 23.8037
+loss = 0.3332570493221283, steps = 16500, cost time = 4.20s
+global_step/sec: 23.8796
+loss = 0.33736222982406616, steps = 16600, cost time = 4.19s
+global_step/sec: 24.6663
+loss = 0.37526047229766846, steps = 16700, cost time = 4.05s
+global_step/sec: 23.8116
+loss = 0.33149439096450806, steps = 16800, cost time = 4.20s
+global_step/sec: 24.8085
+loss = 0.4025557041168213, steps = 16900, cost time = 4.03s
+global_step/sec: 23.5793
+loss = 0.3054907023906708, steps = 17000, cost time = 4.24s
+global_step/sec: 23.0703
+loss = 0.3110324442386627, steps = 17100, cost time = 4.33s
+global_step/sec: 23.6702
+loss = 0.4471634030342102, steps = 17200, cost time = 4.22s
+global_step/sec: 24.5907
+loss = 0.276242196559906, steps = 17300, cost time = 4.07s
+global_step/sec: 24.4827
+loss = 0.3479384183883667, steps = 17400, cost time = 4.08s
+global_step/sec: 24.7547
+loss = 0.25598227977752686, steps = 17500, cost time = 4.04s
+global_step/sec: 22.0845
+loss = 0.292119562625885, steps = 17600, cost time = 4.53s
+global_step/sec: 25.0976
+loss = 0.2803399860858917, steps = 17700, cost time = 3.98s
+global_step/sec: 24.7615
+loss = 0.2368571162223816, steps = 17800, cost time = 4.04s
+global_step/sec: 22.9614
+loss = 0.23480048775672913, steps = 17900, cost time = 4.36s
+global_step/sec: 21.1145
+loss = 0.21355858445167542, steps = 18000, cost time = 4.74s
+global_step/sec: 21.4354
+loss = 0.17402774095535278, steps = 18100, cost time = 4.67s
+global_step/sec: 22.3034
+loss = 0.18496373295783997, steps = 18200, cost time = 4.48s
+global_step/sec: 22.2974
+loss = 0.24645818769931793, steps = 18300, cost time = 4.48s
+global_step/sec: 22.6216
+loss = 0.26512137055397034, steps = 18400, cost time = 4.42s
+global_step/sec: 22.7085
+loss = 0.23529799282550812, steps = 18500, cost time = 4.40s
+global_step/sec: 23.2477
+loss = 0.22979968786239624, steps = 18600, cost time = 4.30s
+global_step/sec: 22.4359
+loss = 0.23570258915424347, steps = 18700, cost time = 4.46s
+global_step/sec: 23.0243
+loss = 0.1911456435918808, steps = 18800, cost time = 4.34s
+global_step/sec: 24.0697
+loss = 0.226444810628891, steps = 18900, cost time = 4.15s
+global_step/sec: 23.3265
+loss = 0.18015289306640625, steps = 19000, cost time = 4.29s
+global_step/sec: 23.1644
+loss = 0.2306777983903885, steps = 19100, cost time = 4.32s
+global_step/sec: 23.4248
+loss = 0.11694984883069992, steps = 19200, cost time = 4.27s
+global_step/sec: 23.2801
+loss = 0.18700507283210754, steps = 19300, cost time = 4.30s
+global_step/sec: 23.5569
+loss = 0.22690963745117188, steps = 19400, cost time = 4.25s
+global_step/sec: 22.8405
+loss = 0.32294464111328125, steps = 19500, cost time = 4.38s
+global_step/sec: 24.7230
+loss = 0.2109590321779251, steps = 19600, cost time = 4.04s
+global_step/sec: 25.7284
+loss = 0.15155181288719177, steps = 19700, cost time = 3.89s
+global_step/sec: 24.8929
+loss = 0.2644146680831909, steps = 19800, cost time = 4.02s
+global_step/sec: 24.8064
+loss = 0.18915852904319763, steps = 19900, cost time = 4.03s
+global_step/sec: 22.7275
+loss = 0.21861234307289124, steps = 20000, cost time = 4.40s
+global_step/sec: 22.8692
+loss = 0.27530956268310547, steps = 20100, cost time = 4.37s
+global_step/sec: 25.0225
+loss = 0.17465339601039886, steps = 20200, cost time = 4.00s
+global_step/sec: 24.6818
+loss = 0.3449537754058838, steps = 20300, cost time = 4.05s
+global_step/sec: 22.5770
+loss = 0.14770227670669556, steps = 20400, cost time = 4.43s
+global_step/sec: 23.7975
+loss = 0.17100027203559875, steps = 20500, cost time = 4.20s
+global_step/sec: 22.2159
+loss = 0.2058149129152298, steps = 20600, cost time = 4.50s
+global_step/sec: 24.0467
+loss = 0.18191400170326233, steps = 20700, cost time = 4.16s
+global_step/sec: 24.4798
+loss = 0.17970529198646545, steps = 20800, cost time = 4.09s
+global_step/sec: 25.4946
+loss = 0.1850152611732483, steps = 20900, cost time = 3.92s
+global_step/sec: 25.0795
+loss = 0.13961292803287506, steps = 21000, cost time = 3.99s
+global_step/sec: 25.9824
+loss = 0.17750486731529236, steps = 21100, cost time = 3.85s
+global_step/sec: 24.8993
+loss = 0.31021130084991455, steps = 21200, cost time = 4.02s
+global_step/sec: 26.2817
+loss = 0.21263369917869568, steps = 21300, cost time = 3.80s
+global_step/sec: 23.4179
+loss = 0.1857905387878418, steps = 21400, cost time = 4.27s
+global_step/sec: 23.8383
+loss = 0.14074845612049103, steps = 21500, cost time = 4.19s
+global_step/sec: 23.3012
+loss = 0.10044384747743607, steps = 21600, cost time = 4.29s
+global_step/sec: 24.3619
+loss = 0.24418862164020538, steps = 21700, cost time = 4.10s
+global_step/sec: 25.2280
+loss = 0.1843702793121338, steps = 21800, cost time = 3.96s
+global_step/sec: 26.0553
+loss = 0.13638122379779816, steps = 21900, cost time = 3.84s
+global_step/sec: 29.8006
+loss = 0.17092397809028625, steps = 22000, cost time = 3.36s
+global_step/sec: 28.2400
+loss = 0.24773535132408142, steps = 22100, cost time = 3.54s
+global_step/sec: 28.7750
+loss = 0.17939156293869019, steps = 22200, cost time = 3.48s
+global_step/sec: 28.4053
+loss = 0.17663830518722534, steps = 22300, cost time = 3.52s
+global_step/sec: 30.0781
+loss = 0.12331384420394897, steps = 22400, cost time = 3.32s
+global_step/sec: 31.3480
+loss = 0.21575012803077698, steps = 22500, cost time = 3.19s
+global_step/sec: 27.3790
+loss = 0.18856438994407654, steps = 22600, cost time = 3.65s
+global_step/sec: 28.3822
+loss = 0.16300003230571747, steps = 22700, cost time = 3.52s
+global_step/sec: 27.4974
+loss = 0.20763595402240753, steps = 22800, cost time = 3.64s
+global_step/sec: 27.4399
+loss = 0.1415155977010727, steps = 22900, cost time = 3.64s
+global_step/sec: 26.9012
+loss = 0.11191820353269577, steps = 23000, cost time = 3.72s
+global_step/sec: 28.3855
+loss = 0.11007514595985413, steps = 23100, cost time = 3.52s
+global_step/sec: 27.3773
+loss = 0.16832832992076874, steps = 23200, cost time = 3.65s
+global_step/sec: 25.9053
+loss = 0.2585407495498657, steps = 23300, cost time = 3.86s
+global_step/sec: 26.8717
+loss = 0.18524545431137085, steps = 23400, cost time = 3.72s
+global_step/sec: 28.2156
+loss = 0.13074100017547607, steps = 23500, cost time = 3.54s
+global_step/sec: 27.2210
+loss = 0.13119958341121674, steps = 23600, cost time = 3.67s
+global_step/sec: 27.2223
+loss = 0.12391814589500427, steps = 23700, cost time = 3.67s
+global_step/sec: 27.3637
+loss = 0.09963670372962952, steps = 23800, cost time = 3.65s
+global_step/sec: 26.5429
+loss = 0.1124187707901001, steps = 23900, cost time = 3.77s
+global_step/sec: 27.1686
+loss = 0.160958930850029, steps = 24000, cost time = 3.68s
+global_step/sec: 27.1745
+loss = 0.1497086137533188, steps = 24100, cost time = 3.68s
+global_step/sec: 27.9287
+loss = 0.1339113712310791, steps = 24200, cost time = 3.58s
+global_step/sec: 26.3804
+loss = 0.09096567332744598, steps = 24300, cost time = 3.79s
+global_step/sec: 28.0058
+loss = 0.16815584897994995, steps = 24400, cost time = 3.57s
+global_step/sec: 28.1475
+loss = 0.11125700920820236, steps = 24500, cost time = 3.55s
+global_step/sec: 28.0693
+loss = 0.10662683099508286, steps = 24600, cost time = 3.56s
+global_step/sec: 28.4604
+loss = 0.08376020193099976, steps = 24700, cost time = 3.51s
+global_step/sec: 28.6845
+loss = 0.13808254897594452, steps = 24800, cost time = 3.49s
+global_step/sec: 28.9524
+loss = 0.09525422006845474, steps = 24900, cost time = 3.45s
+global_step/sec: 26.7573
+loss = 0.06826537847518921, steps = 25000, cost time = 3.74s
+global_step/sec: 26.0883
+loss = 0.1231331005692482, steps = 25100, cost time = 3.83s
+global_step/sec: 27.1933
+loss = 0.10071912407875061, steps = 25200, cost time = 3.68s
+global_step/sec: 26.4644
+loss = 0.10422783344984055, steps = 25300, cost time = 3.78s
+global_step/sec: 25.8416
+loss = 0.17938965559005737, steps = 25400, cost time = 3.87s
+global_step/sec: 11774.6423
+loss = 0.15199285745620728, steps = 25455, cost time = 2.16s
+Evaluation complate:[947/947]
+ACC = 0.6792832612991333
+AUC = 0.7437077760696411

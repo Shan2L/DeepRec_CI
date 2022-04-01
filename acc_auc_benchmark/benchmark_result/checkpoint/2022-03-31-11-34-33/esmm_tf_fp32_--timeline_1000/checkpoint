@@ -1,0 +1,2 @@
+model_checkpoint_path: "/benchmark_result/checkpoint/2022-03-31-11-34-33/esmm_tf_fp32_--timeline_1000/esmm-checkpoint-976"
+all_model_checkpoint_paths: "/benchmark_result/checkpoint/2022-03-31-11-34-33/esmm_tf_fp32_--timeline_1000/esmm-checkpoint-976"
