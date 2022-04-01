@@ -12,7 +12,7 @@ on:
         default: 'main'
       commit_id:
         description: 'commit id'
-      base_image:
+      dp_base_image:
         description: 'the image you want to build based on'
         default: 'cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:tf'
       code_repo:
@@ -43,7 +43,16 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
-      # Runs a set of commands using the runners shell
+      - name: List input parameters
+        run: |
+          echo ' branch_name: ${{github.event.inputs.branch_name}}'
+          echo ' commit_id: ${{github.event.inputs.commit_id}}'
+          echo 'deeprec-modelzoo base image: ${{github.event.inputs.base_image}}'
+          echo 'code repo: ${{github.event.inputs.code_repo}}'
+          echo 'image_tag: ${{github.event.inputs.image_tag}}'
+          echo 'Whether build deeprec image: ${{github.event.inputs.deeprec_tag}}'
+          echo 'Whether build deeprec-modelzoo image: ${{github.event.inputs.deeprec_modelzoo_tag}}'
+          echo 'Whether tag the image as the latest: ${{github.event.inputs.latest}}'
       - name: modify the config file by inputs params
         run: |
           currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
@@ -80,8 +89,7 @@ jobs:
           echo -------------------------------------image_build.sh-----------------------------------------------------
           cat $bash_file | tail -n 94 | head -n 23
           echo --------------------------------------------------------------------------------------------------------
-          echo ${{github.event.inputs.deeprec_tag}}
-          echo ${{github.event.inputs.deeprec_modelzoo_tag}}
+
       - name: run the build process
         run: |
           cd /home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/build
@@ -91,9 +99,13 @@ jobs:
               bash image_build-action.sh | tee /home/shanlin/githubCI.log
           fi
           
-          cd ~ && sudo rm  -rf /home/shanlin/image_build_temp_dir
       - name: output the result
         run: |          
           echo "the build process has been executed successfully"
+          bash /home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/build/echoWhl.sh
+      - name: Clean 
+        run: |          
+          sudo rm -rf /home/shanlin/image_build_temp_dir
+
 
 
