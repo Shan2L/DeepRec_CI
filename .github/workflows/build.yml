@@ -14,6 +14,9 @@ on:
         description: 'commit id'
       dp_base_image:
         description: 'the image you want to build based on'
+        default: 'cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec:tf'
+      modelzoo_base_image:
+        description: 'the image you want to build based on'
         default: 'cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:tf'
       code_repo:
         description: 'the repo you wanna to build'
@@ -47,7 +50,8 @@ jobs:
         run: |
           echo 'branch_name: ${{github.event.inputs.branch_name}}'
           echo 'commit_id: ${{github.event.inputs.commit_id}}'
-          echo 'deeprec-modelzoo base image: ${{github.event.inputs.base_image}}'
+          echo 'deeprec-modelzoo base image: ${{github.event.inputs.model_base_image}}'
+          echo 'deeprec-modelzoo base image: ${{github.event.inputs.dp_base_image}}'
           echo 'code repo: ${{github.event.inputs.code_repo}}'
           echo 'image_tag: ${{github.event.inputs.image_tag}}'
           echo 'Whether build deeprec image: ${{github.event.inputs.deeprec_tag}}'
@@ -67,7 +71,8 @@ jobs:
           bash_file='/home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/build/image_build-action.sh'
           sed -i '3c commit_id ${{github.event.inputs.commit_id}}' $config_file
           sed -i '4c branch_name ${{github.event.inputs.branch_name}}' $config_file
-          sed -i '9c base_image_modelzoo ${{github.event.inputs.base_image}}' $config_file
+          sed -i '9c base_image_modelzoo ${{github.event.inputs.modelzoo_base_image}}' $config_file
+          sed -i '10c base_image_modelzoo ${{github.event.inputs.dp_base_image}}' $config_file
           sed -i '19c code_repo ${{github.event.inputs.code_repo}}' $config_file
           sed -i '11c image_TAG ${{github.event.inputs.image_tag}}' $config_file
 
@@ -102,7 +107,10 @@ jobs:
       - name: output the result
         run: |          
           echo "the build process has been executed successfully"
-          bash /home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/build/echoWhl.sh
+          if [[ -e /home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/build/echoWhl.sh]];then
+              bash /home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/build/echoWhl.sh
+          fi
+          echo 'Finish executing the ouput process'
       - name: Clean 
         run: |          
           sudo rm -rf /home/shanlin/image_build_temp_dir
