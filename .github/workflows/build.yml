@@ -72,7 +72,7 @@ jobs:
           sed -i '3c commit_id ${{github.event.inputs.commit_id}}' $config_file
           sed -i '4c branch_name ${{github.event.inputs.branch_name}}' $config_file
           sed -i '9c base_image_modelzoo ${{github.event.inputs.modelzoo_base_image}}' $config_file
-          sed -i '10c base_image_modelzoo ${{github.event.inputs.dp_base_image}}' $config_file
+          sed -i '10c base_image_deepRec ${{github.event.inputs.dp_base_image}}' $config_file
           sed -i '19c code_repo ${{github.event.inputs.code_repo}}' $config_file
           sed -i '11c image_TAG ${{github.event.inputs.image_tag}}' $config_file
 
