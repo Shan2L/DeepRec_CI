@@ -134,9 +134,9 @@ function oss_upload()
     seg2=$(echo $whl_file | awk -F "-" '{print $3"-"$4"-"$5}')
     final_name=$seg1$bd_tag$seg2
 
-    sudo cp $whl_dir$currentTime/$whl_file $whl_dir/$final_name
+    sudo cp $whl_dir$currentTime/$whl_file $whl_dir$final_name
 
-    ./ossutil64 cp $whl_dir/$final_name oss://deeprec-whl/ --proxy-host http://child-prc.intel.com:913 --config-file ~/.ossutilconfig
+    ./ossutil64 cp $whl_dir$final_name oss://deeprec-whl/ --proxy-host http://child-prc.intel.com:913 --config-file ~/.ossutilconfig
 }
 
 # 通过编好的包来build镜像并push到镜像仓库
