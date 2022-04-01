@@ -211,7 +211,7 @@ function run()
     sudo rm -rf $ali_repo_dir
     checkResult
     whl_name=$(oss_upload)
-    
+    transform_name $whl_name
     build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh
     build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh
     
