@@ -1,6 +1,0 @@
-Using TensorFlow version 1.15.5
-Validating arguments
-Traceback (most recent call last):
-  File "train.py", line 567, in <module>
-    raise ValueError(f'[ERROR] output dir: {args.output_dir} does not exist. '
-ValueError: [ERROR] output dir: ./result does not exist. Please provide valid path
