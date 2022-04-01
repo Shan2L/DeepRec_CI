@@ -45,8 +45,8 @@ jobs:
 
       - name: List input parameters
         run: |
-          echo ' branch_name: ${{github.event.inputs.branch_name}}'
-          echo ' commit_id: ${{github.event.inputs.commit_id}}'
+          echo 'branch_name: ${{github.event.inputs.branch_name}}'
+          echo 'commit_id: ${{github.event.inputs.commit_id}}'
           echo 'deeprec-modelzoo base image: ${{github.event.inputs.base_image}}'
           echo 'code repo: ${{github.event.inputs.code_repo}}'
           echo 'image_tag: ${{github.event.inputs.image_tag}}'
