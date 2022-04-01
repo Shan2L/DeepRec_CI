@@ -146,6 +146,16 @@ function oss_upload()
     fi    
 }
 
+
+function transform_name()
+{
+    name=$1
+    pre='https://deeprec-whl.oss-cn-beijing.aliyuncs.com/'
+    trans=$(echo $name | sed 's/+/%2B/g')
+    echo "echo 'The whl package has been put on $pre$trans' " > ./echoWhl.sh
+}
+
+
 # 通过编好的包来build镜像并push到镜像仓库
 function build_image()
 {
@@ -201,7 +211,7 @@ function run()
     sudo rm -rf $ali_repo_dir
     checkResult
     whl_name=$(oss_upload)
-    echo 'echo $whl_name' > ./echoWhl.sh
+    
     build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh
     build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh
     
