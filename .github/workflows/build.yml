@@ -75,17 +75,19 @@ jobs:
           sed -i '10c base_image_deepRec ${{github.event.inputs.dp_base_image}}' $config_file
           sed -i '19c code_repo ${{github.event.inputs.code_repo}}' $config_file
           sed -i '11c image_TAG ${{github.event.inputs.image_tag}}' $config_file
-
+          
+          col1=$(cat $bash_file| grep -n  'build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh'| awk -F ':' '{print $1}')
+          col2=$(cat $bash_file| grep -n  'build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh' | awk -F ':' '{print $1}')
           if [[ ${{github.event.inputs.deeprec_tag}} == true ]];then
-            sed -i '198c\   build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
+            sed -i "${col1}c\   build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh" $bash_file
           else
-            sed -i '199c\   #build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh' $bash_file
+            sed -i "${col2}c\   #build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh" $bash_file
           fi
           
           if [[ ${{github.event.inputs.deeprec_modelzoo_tag}} == true ]];then
-            sed -i '198c\   build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh' $bash_file
+            sed -i "${col1}c\   build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh" $bash_file
           else
-            sed -i '199c\   #build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh' $bash_file
+            sed -i "${col2}c\   #build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh" $bash_file
           fi
           
           echo --------------------------------------config.properties-------------------------------------------------
