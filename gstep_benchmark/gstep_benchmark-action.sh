@@ -18,6 +18,7 @@ function make_single_script()
     [[ ! -d $(dirname $script) ]] && mkdir -p $(dirname $script)
     cp ./benchmark_result/record/tool/template $script
     model_list=$(cat $config_file | grep CMD | grep $catg | awk -F ':' '{print $1}' | awk -F ' ' '{print $2}' | awk -F '_' '{print $1}')
+    echo $model_list
     sed -i "1c test_list=$model_list" $script
     [[ $catg != "tf_fp32" ]] &&echo " " >> script &&  echo "$env_var" >> $script && echo " " >> $script
     [[ $catg == "deeprec_bf16" ]] && bf16_para="--bf16"
