@@ -106,6 +106,9 @@ jobs:
               bash image_build-action.sh | tee /home/shanlin/githubCI.log
           fi
           
+          if [[ $? != 0 ]];then
+              exit -1
+          fi      
       - name: output the result
         run: |          
           echo "the build process has been executed successfully"
