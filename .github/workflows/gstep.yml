@@ -52,7 +52,7 @@ jobs:
            echo 'DeepRec BF16 param1: ${{github.event.inputs.deeprec_bf16_param1}}'
            echo 'DeepRec BF16 param2: ${{github.event.inputs.deeprec_bf16_param2}}'
            echo 'DeepRec FP32 param1: ${{github.event.inputs.deeprec_fp32_param1}}'
-           echo 'DeepRec FP32 param2: ${{github.event.inputs.deeprec_fp32_param1}}'
+           echo 'DeepRec FP32 param2: ${{github.event.inputs.deeprec_fp32_param2}}'
            echo 'TF_Fp32 param      : ${{github.event.inputs.tf_param}}'
            echo 'CPU : ${{github.event.inputs.cpu}}'
            echo 'Is Regression Benchamrk? : ${{github.event.inputs.weekly_tag}}'
