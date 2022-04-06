@@ -65,8 +65,9 @@ function runSingleContainer()
     container_name=$(echo $2 | awk -F "." '{print $1}')
     [[ -z $cpus ]] && optional=""
     [[ -n $cpus ]] && optional="--cpuset-cpus $cpus"
-
+    model_list=$(cat $config_file | grep CMD | grep $container_name | awk -F ':' '{print $1}' | awk -F ' ' '{print $2}' | awk -F '_' '{print $1}')
     host_path=$(cd benchmark_result && pwd) 
+    
     sudo docker run --name $container_name\
                     $optional  \
 	            --rm \
@@ -133,9 +134,6 @@ tf_fp32_script="./benchmark_result/record/script/$currentTime/tf_fp32.sh"
 
 deeprec_test_image=$(cat $config_file |grep deeprec_test_image | awk -F " " '{print$2}' )
 tf_test_image=$(cat $config_file |grep tf_test_image | awk -F " " '{print$2}' )
-
-model_list=$(cat $config_file | grep CMD | grep $catg | awk -F ':' '{print $1}' | awk -F ' ' '{print $2}' | awk -F '_' '{print $1}')
-
 
 sudo docker pull $deeprec_test_image
 sudo docker pull $tf_test_image
