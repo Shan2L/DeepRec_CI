@@ -5,17 +5,7 @@ abs_path=$script_path/$0
 for model in $test_list
 do
         if [[ -z $(echo $exist_list | grep $model) ]];then
-                echo "[ERROR] Modle $model does not exists, related commands will not be implemented."
-                num1=$(cat $abs_path| grep -n 'testing $model'|awk -F ':' '{print $1}')
-		line1=$(cat $abs_path | grep -n 'testing $model'|awk -F ':' '{print $2})
-		num2=$(cat $abs_path | grep -n 'cd /root/modelzoo/$model'| awk -F ':' '{print $1}')
-		line2=$(cat $abs_path| grep -n 'cd /root/modelzoo/$model'| awk -F ':' '{print $2}')
-		declare -i num3=$num2+1
-	   	line3=$(cat $abs_path| sed -n ${line3}p)
-		
-		sed -i "${num1}c #$line1" $abs_path
-		sed -i "${num2}c #$line2" $abs_path
-		sed -i "${num3}c #$line3" $abs_path	
+                echo "[ERROR] Modle $model does not exists"
         fi
 done
 
