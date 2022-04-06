@@ -112,9 +112,7 @@ jobs:
       - name: output the result
         run: |          
           echo "the build process has been executed successfully"
-          if [[ -e /home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/build/echoWhl.sh]];then
               bash /home/shanlin/image_build_temp_dir/DeepRec_CI/acc_auc_benchmark/build/echoWhl.sh
-          fi
           echo 'Finish executing the ouput process'
       - name: Clean 
         run: |          
