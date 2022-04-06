@@ -17,9 +17,6 @@ function make_single_script()
     bf16_para=
     [[ ! -d $(dirname $script) ]] && mkdir -p $(dirname $script)
     cp ./benchmark_result/record/tool/template $script
-    model_list=$(cat $config_file | grep CMD | grep $catg | awk -F ':' '{print $1}' | awk -F ' ' '{print $2}' | awk -F '_' '{print $1}')
-    echo $model_list
-    sed -i "1c test_list=$model_list" $script
     [[ $catg != "tf_fp32" ]] &&echo " " >> script &&  echo "$env_var" >> $script && echo " " >> $script
     [[ $catg == "deeprec_bf16" ]] && bf16_para="--bf16"
     
@@ -74,7 +71,7 @@ function runSingleContainer()
                     $optional  \
 	            --rm \
                     -v $host_path:/benchmark_result/\
-                    $image_repo /bin/bash /benchmark_result/record/script/$currentTime/$script_name  
+                    $image_repo /bin/bash /benchmark_result/record/script/$currentTime/$script_name $model_list
 }
 
 function runContainers()
@@ -136,6 +133,9 @@ tf_fp32_script="./benchmark_result/record/script/$currentTime/tf_fp32.sh"
 
 deeprec_test_image=$(cat $config_file |grep deeprec_test_image | awk -F " " '{print$2}' )
 tf_test_image=$(cat $config_file |grep tf_test_image | awk -F " " '{print$2}' )
+
+model_list=$(cat $config_file | grep CMD | grep $catg | awk -F ':' '{print $1}' | awk -F ' ' '{print $2}' | awk -F '_' '{print $1}')
+
 
 sudo docker pull $deeprec_test_image
 sudo docker pull $tf_test_image
