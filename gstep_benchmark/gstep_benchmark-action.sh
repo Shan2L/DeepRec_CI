@@ -16,8 +16,12 @@ function make_single_script()
     # 记录运行的命令脚本
     bf16_para=
     [[ ! -d $(dirname $script) ]] && mkdir -p $(dirname $script)
-    [[ $catg != "tf_fp32" ]] && echo "$env_var" > $script && echo " " >> $script
+    cp ./benchmark_result/record/tool/template $script
+    model_list=$(cat $config_file | grep CMD | grep $catg | awk -F ':' '{print $1}' | awk -F ' ' '{print $2}' | awk -F '_' '{print $1}')
+    sed -i "1c test_list=$model_list" $script
+    [[ $catg != "tf_fp32" ]] &&echo " " >> script &&  echo "$env_var" >> $script && echo " " >> $script
     [[ $catg == "deeprec_bf16" ]] && bf16_para="--bf16"
+    
         
     for line in $(cat $config_file | grep CMD | grep $catg )
     do
