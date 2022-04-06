@@ -120,6 +120,16 @@ function checkResult()
     fi
 }
 
+function change_whl_name()
+{
+    bd_tag=-$part_date+$part_commit_id-
+    whl_file=$(ls $whl_dir$currentTime)
+    seg1=$(echo $whl_file | awk -F "-" '{print $1"-"$2}')
+    seg2=$(echo $whl_file | awk -F "-" '{print $3"-"$4"-"$5}')
+    final_name=$seg1$bd_tag$seg2
+    echo $final_name
+}
+
 
 function oss_upload()
 {
@@ -127,22 +137,13 @@ function oss_upload()
         wget https://deeprec-whl.oss-cn-beijing.aliyuncs.com/ossutil64
         chmod 755 ossutil64
     fi
-    
-    bd_tag=-$part_date+$part_commit_id-
-    whl_file=$(ls $whl_dir$currentTime)
-    seg1=$(echo $whl_file | awk -F "-" '{print $1"-"$2}')
-    seg2=$(echo $whl_file | awk -F "-" '{print $3"-"$4"-"$5}')
-    final_name=$seg1$bd_tag$seg2
-
+    final_name=$(change_whl_name)
     sudo cp $whl_dir$currentTime/$whl_file $whl_dir$final_name
 
     ./ossutil64 cp $whl_dir$final_name oss://deeprec-whl/ --proxy-host http://child-prc.intel.com:913 --config-file ~/.ossutilconfig
     
     if [[ $? == 0 ]];then
-    	echo '$final_name'
-    else 
     	echo '[ERROR] Failed to upload $final_name to OSS '
-	exit -1
     fi    
 }
 
@@ -210,7 +211,7 @@ function run()
     runDockerContrainer $build_image_repo whl_build /whl_build/build_whl.sh
     sudo rm -rf $ali_repo_dir
     checkResult
-    whl_name=$(oss_upload)
+    whl_name=$(change_whl_name)
     transform_name $whl_name
     build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh
     build_image deeprec-modelzoo12138 $base_image_modelzoo_repo /whl_build/whl_package/whl_install.sh
