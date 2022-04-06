@@ -211,6 +211,7 @@ function run()
     runDockerContrainer $build_image_repo whl_build /whl_build/build_whl.sh
     sudo rm -rf $ali_repo_dir
     checkResult
+    oss_upload
     whl_name=$(change_whl_name)
     transform_name $whl_name
     build_image deeprec12138 $base_image_deepRec_repo /whl_build/whl_package/whl_install.sh
