@@ -154,4 +154,3 @@ make_script\
 && checkEnv\
 && runContainers\
 && python3 ./gstep_count.py --log_dir=$gol_dir/$currentTime \
-&& push_to_git
