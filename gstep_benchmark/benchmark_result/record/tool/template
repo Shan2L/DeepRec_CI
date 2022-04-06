@@ -1,4 +1,4 @@
-test_list="DIEN DIN ING DEEPFM WDL DSSS DLRM"
+test_list=$1
 exist_list=$(ls -F /root/modelzoo | grep '/'|sed 's/\///g')
 script_path=$(cd $(dirname $0)&& pwd)
 abs_path=$script_path/$0
