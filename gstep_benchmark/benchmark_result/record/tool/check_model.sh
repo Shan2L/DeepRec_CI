@@ -1,7 +1,6 @@
 # modify the shell command line to comments, by given column id or regexp
 function modify_text()
 {       
-
         col_id=$(cat $src_file | grep -n $regex | awk -F ':' '{print$1}')
         content=$(cat $src_file | grep -n $regex | awk -F ':' '{print$2}')
         sed -i '${col_id}c # $content' $scr_file
