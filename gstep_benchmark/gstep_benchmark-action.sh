@@ -16,8 +16,10 @@ function make_single_script()
     # 记录运行的命令脚本
     bf16_para=
     [[ ! -d $(dirname $script) ]] && mkdir -p $(dirname $script)
-    cp ./benchmark_result/record/tool/template $script
-    [[ $catg != "tf_fp32" ]] &&echo " " >> script &&  echo "$env_var" >> $script && echo " " >> $script
+    
+    echo "model_list=\$1" >>$script
+    [[ $catg != "tf_fp32" ]] &&echo " " >> $script &&  echo "$env_var" >> $script 
+    echo " " >> $script && echo "bash /benchmark_result/record/tool/check_model.sh $catg $currentTime \$model_list" >>$script
     [[ $catg == "deeprec_bf16" ]] && bf16_para="--bf16"
     
         
@@ -72,7 +74,7 @@ function runSingleContainer()
                     $optional  \
 	            --rm \
                     -v $host_path:/benchmark_result/\
-                    $image_repo /bin/bash /benchmark_result/record/script/$currentTime/$script_name $model_list
+                    $image_repo /bin/bash /benchmark_result/record/script/$currentTime/$script_name 
 }
 
 function runContainers()
