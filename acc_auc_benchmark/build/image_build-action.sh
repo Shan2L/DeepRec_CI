@@ -138,7 +138,7 @@ function oss_upload()
         chmod 755 ossutil64
     fi
     final_name=$(change_whl_name)
-    sudo cp $whl_dir$currentTime/$whl_file $whl_dir$final_name
+    sudo cp $whl_dir$currentTime/*  $whl_dir$final_name
 
     ./ossutil64 cp $whl_dir$final_name oss://deeprec-whl/ --proxy-host http://child-prc.intel.com:913 --config-file ~/.ossutilconfig
     
