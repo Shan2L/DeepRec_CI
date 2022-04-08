@@ -3,12 +3,12 @@ function modify_text()
 {
         regex1=$1
         regex2=$2
+        model_name=$3
         col_id=($(cat $src_file | grep -n $regex1 | grep $regex2  |awk -F ':' '{print $1}'))
-        content=($(cat $src_file | grep -n $regex1 | grep $regex2 | awk -F ':' '{print $2}'))
         count=${#col_id[@]}
         for i in $(seq 1 $count)
         do
-                sed -i "${col_id[i-1]}c # ${content[i-1]}" $src_file
+                sed -i "${col_id[i-1]}c # [Error] No model named ${model_name}, related command line has been deleted..." $src_file
         done
 }
 
@@ -26,8 +26,8 @@ for model in $test_list
 do
         if [[ -z $(echo $exist_list | grep $model) ]];then
                 echo "[ERROR] Modle $model does not exists"
-                modify_text  "echo" $model
-                modify_text  "cd" "/root/modelzoo/$model"
-                modify_text  "timeline" "${model,,}"
+                modify_text  "echo" $model $model
+                modify_text  "cd" "/root/modelzoo/$model" $model
+                modify_text  "timeline" "${model,,}" $model
         fi
 done
