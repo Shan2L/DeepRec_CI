@@ -3,9 +3,13 @@ function modify_text()
 {
         regex1=$1
         regex2=$2
-        col_id=$(cat $src_file | grep -n $regex1 | grep $regex2  |awk -F ':' '{print $1}')
-        content=$(cat $src_file | grep -n $regex1 | grep $regex2 | awk -F ':' '{print $2}')
-        sed -i "${col_id}c # $content" $src_file
+        col_id=($(cat $src_file | grep -n $regex1 | grep $regex2  |awk -F ':' '{print $1}'))
+        content=($(cat $src_file | grep -n $regex1 | grep $regex2 | awk -F ':' '{print $2}'))
+        count=${#col_id[@]}
+        for i in $(seq 1 $count)
+        do
+                sed -i "${col_id[i-1]}c # ${content[i-1]}" $src_file
+        done
 }
 
 
@@ -27,5 +31,3 @@ do
                 modify_text  "timeline" "${model,,}"
         fi
 done
-
-
