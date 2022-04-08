@@ -25,7 +25,7 @@ src_file=/benchmark_result/record/script/$currentTime/${catg}.sh
 for model in $test_list
 do
         if [[ -z $(echo $exist_list | grep $model) ]];then
-                echo "[ERROR] Modle $model does not exists"
+                echo "echo \"[ERROR] Modle $model does not exists, related command will be skipped\"" >/benchmark_result/record/runtime/error.log
                 modify_text  "echo" $model $model
                 modify_text  "cd" "/root/modelzoo/$model" $model
                 modify_text  "train.py" "${model,,}" $model
