@@ -42,12 +42,23 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-
+      - name: list input params
+        run: |
+           echo 'DeepRec image: ${{github.event.inputs.deeprec_test_image}}'
+           echo 'Stock TF image: ${{github.event.inputs.tf_test_image}}'
+           echo 'Model list: ${{github.event.inputs.model_list}}'
+           echo 'DeepRec BF16 param1: ${{github.event.inputs.deeprec_bf16_param1}}'
+           echo 'DeepRec BF16 param2: ${{github.event.inputs.deeprec_bf16_param2}}'
+           echo 'DeepRec FP32 param1: ${{github.event.inputs.deeprec_fp32_param1}}'
+           echo 'DeepRec FP32 param2: ${{github.event.inputs.deeprec_fp32_param2}}'
+           echo 'TF_Fp32 param      : ${{github.event.inputs.tf_param}}'
+           echo 'CPU : ${{github.event.inputs.cpu}}'
+           echo 'Is Regression Benchamrk? : ${{github.event.inputs.weekly_tag}}'
       # Runs a set of commands using the runners shell
       - name: modify the config file by inputs params
         run: |
            [[ ${{github.event.inputs.weekly_tag}} == 'true' ]] \
-           && model_list="WDL DSSM DeepFM DLRM DIEN DIN" \
+           && model_list="${{github.event.inputs.model_list}}" \
            && deeprec_bf16_param1="" \
            && deeprec_bf16_param2="/" \
            && deeprec_fp32_param1="" \
@@ -88,4 +99,9 @@ jobs:
           bash -x acc_benchmark.sh ${{github.event.inputs.weekly_tag}}
       - name: output the result
         run: |          
-          echo "the build process has been executed successfully"
+          echo "the build process has ben accomplished."
+          file_path="/home/shanlin/DeepRec_CI/acc_auc_benchmark/benchmark_result/result/runtime/model_name_error.log"
+          if [[ -f $file_path ]];then
+              bash $file_path
+              rm -f $file
+          fi
