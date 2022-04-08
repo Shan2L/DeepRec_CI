@@ -67,10 +67,7 @@ function runSingleContainer()
     container_name=$(echo $2 | awk -F "." '{print $1}')
     [[ -z $cpus ]] && optional=""
     [[ -n $cpus ]] && optional="--cpuset-cpus $cpus"
-    model_list=$(cat $config_file | grep CMD | grep $container_name | awk -F ':' '{print $1}' | awk -F ' ' '{print $2}' | awk -F '_' '{print $1}')
-    model_list=($model_list)
-    echo ${model_list[0]}
-    echo ${model_list[*]}
+    model_list=($(cat $config_file | grep CMD | grep $container_name | awk -F ':' '{print $1}' | awk -F ' ' '{print $2}' | awk -F '_' '{print $1}'))
     host_path=$(cd benchmark_result && pwd)
 
     sudo docker run --name $container_name\
