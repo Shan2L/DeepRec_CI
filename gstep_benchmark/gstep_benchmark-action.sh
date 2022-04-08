@@ -19,7 +19,7 @@ function make_single_script()
 
     echo "model_list=\$1" >>$script
     [[ $catg != "tf_fp32" ]] &&echo " " >> $script &&  echo "$env_var" >> $script
-    echo " " >> $script && echo "bash /benchmark_result/record/tool/check_model.sh $catg $currentTime \"\${model_list[*]}\"" >>$script
+    echo " " >> $script && echo "bash -x /benchmark_result/record/tool/check_model.sh $catg $currentTime \"\${model_list[*]}\"" >>$script
     [[ $catg == "deeprec_bf16" ]] && bf16_para="--bf16"
 
 
