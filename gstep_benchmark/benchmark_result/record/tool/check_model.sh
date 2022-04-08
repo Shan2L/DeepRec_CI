@@ -28,6 +28,6 @@ do
                 echo "[ERROR] Modle $model does not exists"
                 modify_text  "echo" $model $model
                 modify_text  "cd" "/root/modelzoo/$model" $model
-                modify_text  "timeline" "${model,,}" $model
+                modify_text  "train.py" "${model,,}" $model
         fi
 done
