@@ -100,5 +100,11 @@ jobs:
           bash  gstep_benchmark-action.sh ${{github.event.inputs.weekly_tag}}
       - name: output the result
         run: |          
+          file_path=""/home/shanlin/DeepRec_CI/gstep_benchamrk/benchmark_result/record/runtime/model_name_error.log
+          if [[ -f $file_path ]];then
+            cat $file_path
+            sudo rm -f $file_path
+          fi
+          echo 'The proecess has been accompished'
           echo "the build process has been executed successfully"
 
