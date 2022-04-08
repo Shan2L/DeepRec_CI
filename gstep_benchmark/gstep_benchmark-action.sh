@@ -35,9 +35,9 @@ function make_single_script()
                 sudo mkdir -p $checkpoint_dir$currentTime/${model_name,,}_$script$log_tag
         fi
         if [[  $weekly != 'true' ]];then
-            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command $paras --no_eval  $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg$log_tag  >$log_dir$currentTime/${model_name,,}_$catg$log_tag.log 2>&1"
+            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command $paras --steps 3000 --no_eval  $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg$log_tag  >$log_dir$currentTime/${model_name,,}_$catg$log_tag.log 2>&1"
         else
-            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command --timeline 1000 --no_eval  $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg  >$log_dir$currentTime/${model_name,,}_$catg.log 2>&1"
+            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command --timeline 1000 --steps 3000 --no_eval  $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg  >$log_dir$currentTime/${model_name,,}_$catg.log 2>&1"
         fi
         echo $newline >> $script
     done
