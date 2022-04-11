@@ -142,8 +142,9 @@ function oss_upload()
 
     ./ossutil64 cp $whl_dir$final_name oss://deeprec-whl/ --proxy-host http://child-prc.intel.com:913 --config-file ~/.ossutilconfig
     
-    if [[ $? == 0 ]];then
+    if [[ $? != 0 ]];then
     	echo '[ERROR] Failed to upload $final_name to OSS '
+	exit -1
     fi    
 }
 
