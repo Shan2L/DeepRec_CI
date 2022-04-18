@@ -50,8 +50,8 @@ jobs:
         run: |
           echo 'branch_name: ${{github.event.inputs.branch_name}}'
           echo 'commit_id: ${{github.event.inputs.commit_id}}'
-          echo 'deeprec-modelzoo base image: ${{github.event.inputs.model_base_image}}'
-          echo 'deeprec-modelzoo base image: ${{github.event.inputs.dp_base_image}}'
+          echo 'deeprec base image: ${{github.event.inputs.dp_base_image}}'
+          echo 'deeprec-modelzoo base image: ${{github.event.inputs.modelzoo_base_image}}'
           echo 'code repo: ${{github.event.inputs.code_repo}}'
           echo 'image_tag: ${{github.event.inputs.image_tag}}'
           echo 'Whether build deeprec image: ${{github.event.inputs.deeprec_tag}}'
