@@ -150,6 +150,27 @@ function checkStatus()
 
 }
 
+function upOss()
+{
+	test_image=$( cat $config_file |grep deeprec_test_image | awk -F " " '{print $2}' | awk -F ":" '{print $2}' )
+	cd $gol_dir$currentTime
+	cur_Time=$( echo "$currentTime" | awk -F "-" '{print$1$2$3}' )
+	echo "cur-Time:$cur_Time"
+	zipName="timeline-$test_image-$cur_Time.zip"
+	echo "zipName:$zipName"
+	sudo zip -r $zipName ./*
+	cd ..
+	echo "connecting ossutil64"
+	wget https://deeprec-whl.oss-cn-beijing.aliyuncs.com/ossutil64
+	chmod 755 ossutil64
+	if [[ -f ossutil64 ]];then
+		./ossutil64 cp ./$currentTime/$zipName oss://deeprec-log/ --proxy-host http://child-prc.intel.com:913 --config-file /home/zekun/.ossutilconfig
+		OssHtml="https://deeprec-log.oss-cn-beijing.aliyuncs.com/$zipName"
+		echo "OSS successful:$OssHtml"	
+	fi
+
+}
+
 # set -x
 # 获取当前时间戳
 currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
@@ -205,6 +226,7 @@ make_script\
 && checkEnv\
 && runContainers\
 && checkStatus \
-&& sudo python ./acc_auc_count.py --log_dir=$gol_dir$currentTime
+&& sudo python ./acc_auc_count.py --log_dir=$gol_dir$currentTime \
+&& upOss
 
 

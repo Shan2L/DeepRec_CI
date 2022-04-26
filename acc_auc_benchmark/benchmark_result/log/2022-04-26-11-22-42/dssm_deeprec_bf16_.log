@@ -1,0 +1,309 @@
+INFO:tensorflow:Parsing ./data/taobao_train_data
+INFO:tensorflow:Parsing ./data/taobao_test_data
+2022-04-26 03:22:48.743385: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:48.745880: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:48.760078: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:48.760236: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:48.874069: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:48.874397: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:48.894681: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:48.894866: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:48.939488: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:48.939693: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:48.947592: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:48.947982: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.285112: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.293130: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.300637: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.308144: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.316101: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.321423: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.328033: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.335484: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.342037: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.348171: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.356010: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.364037: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.372250: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.379130: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.385895: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.393476: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:49.399254: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:50.025771: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3400000000 Hz
+2022-04-26 03:22:50.053316: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5790910 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-04-26 03:22:50.053372: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-04-26 03:22:51.177516: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:51.223463: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:51.421231: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:51.421550: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:52.206139: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:52.206930: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:52.239722: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:55.963982: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:55.982141: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:55.993432: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:22:56.020641: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+Using TensorFlow version 1.15.5
+Checking dataset
+Numbers of training dataset is 50000
+Numbers of test dataset is 10000
+Saving model checkpoints to /benchmark_result/checkpoint/2022-04-26-11-22-42/dssm_deeprec_bf16_
+global_step/sec: 25.6161
+loss = 1913.905517578125, steps = 0, cost time = 3.90s
+global_step/sec: 26.4549
+loss = 1213.771484375, steps = 100, cost time = 3.78s
+global_step/sec: 27.1855
+loss = 1090.60107421875, steps = 200, cost time = 3.68s
+global_step/sec: 28.7100
+loss = 1213.2578125, steps = 300, cost time = 3.48s
+global_step/sec: 28.8850
+loss = 990.8560791015625, steps = 400, cost time = 3.46s
+global_step/sec: 29.5466
+loss = 1265.974853515625, steps = 500, cost time = 3.38s
+global_step/sec: 29.0964
+loss = 1116.92822265625, steps = 600, cost time = 3.44s
+global_step/sec: 29.2844
+loss = 965.002685546875, steps = 700, cost time = 3.41s
+global_step/sec: 29.4696
+loss = 1184.7174072265625, steps = 800, cost time = 3.39s
+global_step/sec: 28.9625
+loss = 1190.43017578125, steps = 900, cost time = 3.45s
+global_step/sec: 29.9256
+loss = 1100.9208984375, steps = 1000, cost time = 3.34s
+global_step/sec: 29.3789
+loss = 1195.957275390625, steps = 1100, cost time = 3.40s
+global_step/sec: 29.6119
+loss = 1259.845458984375, steps = 1200, cost time = 3.38s
+global_step/sec: 29.7258
+loss = 1093.623291015625, steps = 1300, cost time = 3.36s
+global_step/sec: 28.9448
+loss = 986.6619262695312, steps = 1400, cost time = 3.45s
+global_step/sec: 28.8334
+loss = 1220.646728515625, steps = 1500, cost time = 3.47s
+global_step/sec: 29.4485
+loss = 1246.1961669921875, steps = 1600, cost time = 3.40s
+global_step/sec: 29.3473
+loss = 1175.570556640625, steps = 1700, cost time = 3.41s
+global_step/sec: 29.6535
+loss = 1011.0833740234375, steps = 1800, cost time = 3.37s
+global_step/sec: 29.6608
+loss = 1278.08837890625, steps = 1900, cost time = 3.37s
+global_step/sec: 29.5835
+loss = 1156.1490478515625, steps = 2000, cost time = 3.38s
+global_step/sec: 29.2191
+loss = 1323.21630859375, steps = 2100, cost time = 3.42s
+global_step/sec: 29.4182
+loss = 1105.19091796875, steps = 2200, cost time = 3.40s
+global_step/sec: 29.5813
+loss = 1232.71826171875, steps = 2300, cost time = 3.38s
+global_step/sec: 29.4247
+loss = 1258.3988037109375, steps = 2400, cost time = 3.40s
+global_step/sec: 29.9904
+loss = 1004.3510131835938, steps = 2500, cost time = 3.33s
+global_step/sec: 28.7688
+loss = 1168.550537109375, steps = 2600, cost time = 3.48s
+global_step/sec: 30.1772
+loss = 1168.510498046875, steps = 2700, cost time = 3.31s
+global_step/sec: 30.3257
+loss = 1187.635498046875, steps = 2800, cost time = 3.30s
+global_step/sec: 29.5567
+loss = 1123.896240234375, steps = 2900, cost time = 3.38s
+global_step/sec: 28.9383
+loss = 1123.86669921875, steps = 3000, cost time = 3.46s
+global_step/sec: 27.6775
+loss = 1130.18505859375, steps = 3100, cost time = 3.61s
+global_step/sec: 27.9041
+loss = 1117.463623046875, steps = 3200, cost time = 3.58s
+global_step/sec: 28.7940
+loss = 1117.438232421875, steps = 3300, cost time = 3.47s
+global_step/sec: 29.0319
+loss = 1296.79443359375, steps = 3400, cost time = 3.44s
+global_step/sec: 29.3964
+loss = 1187.45166015625, steps = 3500, cost time = 3.40s
+global_step/sec: 29.4476
+loss = 1174.644287109375, steps = 3600, cost time = 3.40s
+global_step/sec: 29.8032
+loss = 1174.623046875, steps = 3700, cost time = 3.36s
+global_step/sec: 30.2238
+loss = 979.0108642578125, steps = 3800, cost time = 3.31s
+global_step/sec: 29.9098
+loss = 1168.2080078125, steps = 3900, cost time = 3.34s
+global_step/sec: 29.0933
+loss = 1245.07666015625, steps = 4000, cost time = 3.44s
+global_step/sec: 29.0688
+loss = 1054.113037109375, steps = 4100, cost time = 3.44s
+global_step/sec: 29.4218
+loss = 1066.695068359375, steps = 4200, cost time = 3.40s
+global_step/sec: 28.8088
+loss = 966.484619140625, steps = 4300, cost time = 3.47s
+global_step/sec: 29.0228
+loss = 1322.5369873046875, steps = 4400, cost time = 3.45s
+global_step/sec: 29.5903
+loss = 1329.010498046875, steps = 4500, cost time = 3.38s
+global_step/sec: 29.2977
+loss = 1142.6361083984375, steps = 4600, cost time = 3.41s
+global_step/sec: 29.6999
+loss = 1110.876220703125, steps = 4700, cost time = 3.37s
+global_step/sec: 29.1661
+loss = 1072.9295654296875, steps = 4800, cost time = 3.43s
+global_step/sec: 28.8913
+loss = 1168.086181640625, steps = 4900, cost time = 3.46s
+global_step/sec: 29.7156
+loss = 972.6333618164062, steps = 5000, cost time = 3.37s
+global_step/sec: 29.0883
+loss = 1129.87109375, steps = 5100, cost time = 3.44s
+global_step/sec: 29.1309
+loss = 1148.939453125, steps = 5200, cost time = 3.43s
+global_step/sec: 29.8509
+loss = 1180.8194580078125, steps = 5300, cost time = 3.35s
+global_step/sec: 29.2896
+loss = 1219.2274169921875, steps = 5400, cost time = 3.41s
+global_step/sec: 29.0154
+loss = 1315.9468994140625, steps = 5500, cost time = 3.45s
+global_step/sec: 29.6330
+loss = 1219.211669921875, steps = 5600, cost time = 3.37s
+global_step/sec: 29.4000
+loss = 1028.822998046875, steps = 5700, cost time = 3.40s
+global_step/sec: 29.3105
+loss = 1187.17529296875, steps = 5800, cost time = 3.41s
+global_step/sec: 29.8410
+loss = 1136.1689453125, steps = 5900, cost time = 3.35s
+global_step/sec: 29.2312
+loss = 1142.521484375, steps = 6000, cost time = 3.42s
+global_step/sec: 28.8319
+loss = 1199.9552001953125, steps = 6100, cost time = 3.47s
+global_step/sec: 29.7830
+loss = 1110.7635498046875, steps = 6200, cost time = 3.36s
+global_step/sec: 28.8039
+loss = 1009.9913940429688, steps = 6300, cost time = 3.47s
+global_step/sec: 29.5524
+loss = 1104.418701171875, steps = 6400, cost time = 3.38s
+global_step/sec: 29.0435
+loss = 1098.082763671875, steps = 6500, cost time = 3.44s
+global_step/sec: 29.3411
+loss = 1187.1318359375, steps = 6600, cost time = 3.41s
+global_step/sec: 30.1598
+loss = 1283.5347900390625, steps = 6700, cost time = 3.32s
+global_step/sec: 29.3534
+loss = 1167.962646484375, steps = 6800, cost time = 3.41s
+global_step/sec: 29.1492
+loss = 1167.9620361328125, steps = 6900, cost time = 3.43s
+global_step/sec: 29.5713
+loss = 1212.72509765625, steps = 7000, cost time = 3.38s
+global_step/sec: 29.3503
+loss = 1199.907470703125, steps = 7100, cost time = 3.41s
+global_step/sec: 29.0779
+loss = 1129.75244140625, steps = 7200, cost time = 3.44s
+global_step/sec: 29.8643
+loss = 1091.725830078125, steps = 7300, cost time = 3.35s
+global_step/sec: 29.3276
+loss = 1129.74462890625, steps = 7400, cost time = 3.41s
+global_step/sec: 29.6044
+loss = 1016.2018432617188, steps = 7500, cost time = 3.38s
+global_step/sec: 30.2284
+loss = 1136.093994140625, steps = 7600, cost time = 3.31s
+global_step/sec: 28.8490
+loss = 1193.48681640625, steps = 7700, cost time = 3.47s
+global_step/sec: 29.5802
+loss = 1167.928955078125, steps = 7800, cost time = 3.38s
+global_step/sec: 29.6675
+loss = 1085.384765625, steps = 7900, cost time = 3.37s
+global_step/sec: 29.4636
+loss = 1193.4775390625, steps = 8000, cost time = 3.39s
+global_step/sec: 29.8281
+loss = 1041.27587890625, steps = 8100, cost time = 3.35s
+global_step/sec: 29.2337
+loss = 1206.2781982421875, steps = 8200, cost time = 3.42s
+global_step/sec: 28.7888
+loss = 1354.7838134765625, steps = 8300, cost time = 3.47s
+global_step/sec: 29.7754
+loss = 997.4144287109375, steps = 8400, cost time = 3.36s
+global_step/sec: 28.8067
+loss = 1136.069580078125, steps = 8500, cost time = 3.47s
+global_step/sec: 29.5867
+loss = 1174.2880859375, steps = 8600, cost time = 3.38s
+global_step/sec: 29.8764
+loss = 1219.088134765625, steps = 8700, cost time = 3.35s
+global_step/sec: 29.0682
+loss = 1219.0882568359375, steps = 8800, cost time = 3.44s
+global_step/sec: 29.1588
+loss = 1110.67138671875, steps = 8900, cost time = 3.43s
+global_step/sec: 29.7219
+loss = 960.0111694335938, steps = 9000, cost time = 3.36s
+global_step/sec: 28.4742
+loss = 1206.257080078125, steps = 9100, cost time = 3.51s
+global_step/sec: 28.1948
+loss = 1296.384521484375, steps = 9200, cost time = 3.55s
+global_step/sec: 28.4359
+loss = 1091.673095703125, steps = 9300, cost time = 3.52s
+global_step/sec: 27.8109
+loss = 1167.8905029296875, steps = 9400, cost time = 3.60s
+global_step/sec: 29.1832
+loss = 1276.993896484375, steps = 9500, cost time = 3.43s
+global_step/sec: 29.9672
+loss = 1257.6470947265625, steps = 9600, cost time = 3.34s2022-04-26 03:29:53.354377: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:29:53.354958: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:29:53.388155: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:29:53.581305: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:29:53.581755: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:29:55.329449: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:29:55.342538: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+2022-04-26 03:29:57.552133: I ./tensorflow/core/common_runtime/kernel_stat.h:74] User collect node stats, start_step is 100, stop_step is 200
+
+global_step/sec: 29.1306
+loss = 1296.37744140625, steps = 9700, cost time = 3.43s
+global_step/sec: 29.1310
+loss = 1072.716796875, steps = 9800, cost time = 3.43s
+global_step/sec: 29.3562
+loss = 1110.653564453125, steps = 9900, cost time = 3.41s
+global_step/sec: 29.0069
+loss = 1136.03955078125, steps = 10000, cost time = 3.45s
+global_step/sec: 29.5393
+loss = 1433.111328125, steps = 10100, cost time = 3.39s
+global_step/sec: 29.7179
+loss = 1123.33203125, steps = 10200, cost time = 3.36s
+global_step/sec: 29.2718
+loss = 1104.312255859375, steps = 10300, cost time = 3.42s
+global_step/sec: 29.5672
+loss = 1212.6474609375, steps = 10400, cost time = 3.38s
+global_step/sec: 29.2361
+loss = 1034.950439453125, steps = 10500, cost time = 3.42s
+global_step/sec: 29.7032
+loss = 1148.753173828125, steps = 10600, cost time = 3.37s
+global_step/sec: 29.7759
+loss = 1110.6431884765625, steps = 10700, cost time = 3.36s
+global_step/sec: 29.5640
+loss = 1060.0975341796875, steps = 10800, cost time = 3.38s
+global_step/sec: 28.4611
+loss = 1187.0284423828125, steps = 10900, cost time = 3.51s
+global_step/sec: 30.1854
+loss = 1097.973388671875, steps = 11000, cost time = 3.31s
+global_step/sec: 29.6950
+loss = 1034.941650390625, steps = 11100, cost time = 3.37s
+global_step/sec: 29.0044
+loss = 1148.7470703125, steps = 11200, cost time = 3.45s
+global_step/sec: 29.0716
+loss = 1079.0091552734375, steps = 11300, cost time = 3.44s
+global_step/sec: 28.9265
+loss = 1148.7451171875, steps = 11400, cost time = 3.46s
+global_step/sec: 29.7643
+loss = 1180.6300048828125, steps = 11500, cost time = 3.36s
+global_step/sec: 28.8966
+loss = 1193.416015625, steps = 11600, cost time = 3.46s
+global_step/sec: 28.8761
+loss = 1116.9710693359375, steps = 11700, cost time = 3.46s
+global_step/sec: 29.2808
+loss = 1167.8592529296875, steps = 11800, cost time = 3.42s
+global_step/sec: 28.7271
+loss = 1155.10693359375, steps = 11900, cost time = 3.48s
+global_step/sec: 29.0512
+loss = 1174.238525390625, steps = 12000, cost time = 3.44s
+global_step/sec: 29.5405
+loss = 1174.2384033203125, steps = 12100, cost time = 3.39s
+global_step/sec: 29.8206
+loss = 1193.410888671875, steps = 12200, cost time = 3.35s
+global_step/sec: 56129.0290
+loss = 23.090652465820312, steps = 12207, cost time = 0.22s
+Evaluation complate:[3/3]
+ACC = 0.9334999918937683
+AUC = 0.49125009775161743
