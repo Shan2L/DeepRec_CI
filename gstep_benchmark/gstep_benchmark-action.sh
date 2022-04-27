@@ -16,10 +16,14 @@ function make_single_script()
     # 记录运行的命令脚本
     bf16_para=
     [[ ! -d $(dirname $script) ]] && mkdir -p $(dirname $script)
-    [[ $catg != "tf_fp32" ]] && echo "$env_var" > $script && echo " " >> $script
+
+    echo "model_list=\$1" >>$script
+    [[ $catg != "tf_fp32" ]] &&echo " " >> $script &&  echo "$env_var" >> $script
+    echo " " >> $script && echo "bash  /benchmark_result/record/tool/check_model.sh $catg $currentTime \"\${model_list[*]}\"" >>$script
     [[ $catg == "deeprec_bf16" ]] && bf16_para="--bf16"
-        
-    for line in $(cat $config_file | grep CMD | grep $catg )
+
+
+    for line in $(cat $config_file | grep CMD | grep $cat] )
     do
         command=$(echo "$line" | awk -F ":" '{print $2}'| awk -F "|" '{print $1}')
         paras=$(echo "$line" | awk -F ":" '{print $2}' | awk -F "|" '{print $2}')
@@ -27,13 +31,13 @@ function make_single_script()
         model_name=$(echo "${line}" | awk -F ":" '{print $1}' | awk -F " " '{print $2}' | awk -F "_" '{print $1}')
         echo "echo 'testing $model_name of $catg $paras.......'" >> $script
         echo "cd /root/modelzoo/$model_name/" >> $script
-      	if [[ ! -d  $checkpoint_dir$currentTime/${model_name,,}_script$$log_tag ]];then
-      		sudo mkdir -p $checkpoint_dir$currentTime/${model_name,,}_$script$log_tag
-      	fi
+        if [[ ! -d  $checkpoint_dir$currentTime/${model_name,,}_script$$log_tag ]];then
+                sudo mkdir -p $checkpoint_dir$currentTime/${model_name,,}_$script$log_tag
+        fi
         if [[  $weekly != 'true' ]];then
-            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command $paras --no_eval --steps 3000 $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg$log_tag  >$log_dir$currentTime/${model_name,,}_$catg$log_tag.log 2>&1"
+            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command $paras --steps 3000 --no_eval  $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg$log_tag  >$log_dir$currentTime/${model_name,,}_$catg$log_tag.log 2>&1"
         else
-            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command --timeline 1000 --no_eval --steps 3000 $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg  >$log_dir$currentTime/${model_name,,}_$catg.log 2>&1"
+            newline="LD_PRELOAD=/root/modelzoo/libjemalloc.so.2.5.1 $command --timeline 1000 --steps 3000 --no_eval  $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg  >$log_dir$currentTime/${model_name,,}_$catg.log 2>&1"
         fi
         echo $newline >> $script
     done
@@ -57,20 +61,22 @@ function echoColor() {
 
 
 function runSingleContainer()
-{ 
+{
     image_repo=$1
     script_name=$2
     container_name=$(echo $2 | awk -F "." '{print $1}')
     [[ -z $cpus ]] && optional=""
     [[ -n $cpus ]] && optional="--cpuset-cpus $cpus"
+    model_list=($(cat $config_file | grep CMD | grep $container_name | awk -F ':' '{print $1}' | awk -F ' ' '{print $2}' | awk -F '_' '{print $1}'))
+    host_path=$(cd benchmark_result && pwd)
 
-    host_path=$(cd benchmark_result && pwd) 
     sudo docker run --name $container_name\
                     $optional  \
-	            --rm \
+                    --rm \
                     -v $host_path:/benchmark_result/\
-                    $image_repo /bin/bash /benchmark_result/record/script/$currentTime/$script_name  
+                    $image_repo /bin/bash /benchmark_result/record/script/$currentTime/$script_name "${model_list[*]}"
 }
+
 
 function runContainers()
 {  
@@ -111,6 +117,40 @@ function push_to_git()
 	git push
 }	
 
+function upOss()
+{
+	pwd
+	test_image=$( cat $config_file |grep deeprec_test_image | awk -F " " '{print $2}' | awk -F ":" '{print $2}' )
+	cd $gol_dir/$currentTime
+	pwd
+	cur_Time=$( echo "$currentTime" | awk -F "-" '{print$1$2$3}' )
+	echo "cur-Time:$cur_Time"
+	zipName="log-$test_image-$cur_Time.zip"
+	echo "zipName:$zipName"
+	sudo zip -r $zipName ./*
+	cd ..
+	cd ..
+	pwd
+	cd $pointcheck_dir/$currentTime
+        zipNameT="timeline-$test_image-$cur_Time.zip"
+        sudo zip -r $zipNameT ./*
+	cd ..
+	cd ..
+	echo "connecting ossutil64"
+	if [[ ! -f ossutil64 ]];then
+	wget https://deeprec-whl.oss-cn-beijing.aliyuncs.com/ossutil64
+	chmod 755 ossutil64
+        fi
+	if [[ -f ossutil64 ]];then
+		./ossutil64 cp $gol_dir/$currentTime/$zipName oss://deeprec-log/ --config-file /home/zekun/.ossutilconfig
+		OssHtml="https://deeprec-log.oss-cn-beijing.aliyuncs.com/$zipName"
+		echo "Log OSS successful:$OssHtml"
+		./ossutil64 cp $pointcheck_dir/$currentTime/$zipNameT oss://deeprec-log/timeline/ --config-file /home/zekun/.ossutilconfig
+		OssHtml="https://deeprec-log.oss-cn-beijing.aliyuncs.com/$zipNameT"
+		echo "Timeline OSS successful:$OssHtml"	
+	fi
+
+}
 
 currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
 weekly=$1
@@ -150,4 +190,4 @@ make_script\
 && checkEnv\
 && runContainers\
 && python3 ./gstep_count.py --log_dir=$gol_dir/$currentTime \
-&& push_to_git
+&& upOss \
