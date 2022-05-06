@@ -1,0 +1,2 @@
+Output template: perf,%engine%,%impl%,%name%,%prb%,%Gops%,%Gfreq%,%-time%,%-Gflops%,%0time%,%0Gflops%
+perf,cpu,brg:avx512_core_vnni,,--matmul --mode=P --cfg=u8s8s8 16x256:256x256,0.00209715,0,0.00341797,613.567,0.0043296,484.375
