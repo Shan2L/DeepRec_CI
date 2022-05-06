@@ -20,6 +20,7 @@ function make_single_script()
     [[ $catg != "tf_fp32" ]] &&echo " " >> $script &&  echo "$env_var" >> $script
     echo " " >> $script && echo "bash  /benchmark_result/record/tool/check_model.sh $catg $currentTime \"\${model_list[*]}\"" >>$script
     [[ $catg == "deeprec_bf16" ]] && bf16_para="--bf16"
+    [[ $catg == "tf_fp32" ]] && tf_para="--tf"
 
         
     for line in $(cat $config_file | grep CMD | grep $catg )
@@ -34,9 +35,9 @@ function make_single_script()
       		sudo mkdir -p $checkpoint_dir$currentTime/${model_name,,}_$script$log_tag
       	fi
         if [[  $weekly != 'true' ]];then
-            newline="$command $paras  $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg$log_tag  >$log_dir$currentTime/${model_name,,}_$catg$log_tag.log 2>&1"
+            newline="$command $paras $tf_para $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg$log_tag  >$log_dir$currentTime/${model_name,,}_$catg$log_tag.log 2>&1"
         else
-            newline="$command  $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg  >$log_dir$currentTime/${model_name,,}_$catg.log 2>&1"
+            newline="$command $tf_para $bf16_para --checkpoint $checkpoint_dir$currentTime/${model_name,,}_$catg  >$log_dir$currentTime/${model_name,,}_$catg.log 2>&1"
         fi
         echo $newline >> $script
     done
