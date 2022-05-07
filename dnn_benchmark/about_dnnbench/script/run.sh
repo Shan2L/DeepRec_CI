@@ -38,21 +38,24 @@ function benchdnn()
     for num in $core_num
     do 
         OMP_NUM_THREADS=$num oneDNN_MAX_CPU_ISA=$ISA DNNL_MAX_CPU_ISA=$ISA numactl -C $numa ./benchdnn --matmul\
-                             --mode=P --cfg=$data_type --batch=/dnn_benchmark/about_dnnbench/script/test_case | \
-                             tee /dnn_benchmark/about_dnnbench/benchmark_result/$currentTime/$ISA.log
+                             --mode=P --cfg=$data_type --batch=/dnn_benchmark/about_dnnbench/script/test_case 
     done
 
+}
+
+function go()
+{
+    for i in `seq 1 ${#ISA_set[@]}`
+    do 
+        benchdnn ${ISA_set[i-1]} ${data_type[i-1]}
+    done
 }
 
 function main(){
     code_review
     make_code
     mkdir -p  /dnn_benchmark/about_dnnbench/benchmark_result/$currentTime/
-
-    for i in `seq 1 ${#ISA_set[@]}`
-    do 
-        benchdnn ${ISA_set[i-1]} ${data_type[i-1]}
-    done
+    go | tee /dnn_benchmark/about_dnnbench/benchmark_result/$currentTime/dnn_benchmark.log
 }
 
 

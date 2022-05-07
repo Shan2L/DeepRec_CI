@@ -5,6 +5,6 @@ bench_image: "cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec:dnnb
 
 # 测试相关
 thread_num: [1, 2, 4, 8]
-ISA_set: ["AVX512_CORE_BF16", "AVX_512_COREAMX"]
-data_type: ["u8s8s8,f32", "u8s8s8,f32"]
+ISA_set: ["AVX512_CORE_BF16"]
+data_type: ["u8s8s8,f32"]
 numa: "56-71"
