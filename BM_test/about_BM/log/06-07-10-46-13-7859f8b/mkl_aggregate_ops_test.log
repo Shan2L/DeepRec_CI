@@ -1,0 +1,7 @@
+==================== Test output for //tensorflow/core/kernels:mkl_aggregate_ops_test:
+/bin/bash: numactl: command not found
+================================================================================
+//tensorflow/core/kernels:mkl_aggregate_ops_test                         [0m[31m[1mFAILED[0m in 0.0s
+  /root/.cache/bazel/_bazel_root/35e4a563d8d022421e7c53a7646fe840/execroot/org_tensorflow/bazel-out/k8-opt/testlogs/tensorflow/core/kernels/mkl_aggregate_ops_test/test.log
+
+Executed 1 out of 1 test: [0m[31m[1m1 fails locally[0m.
