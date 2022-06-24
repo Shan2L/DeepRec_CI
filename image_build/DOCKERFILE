@@ -1,7 +1,7 @@
 FROM ${base_image}
 
-ENV  http_proxy http://child-prc.intel.com:913
-ENV  https_proxy http://child-prc.intel.com:913
+ARG http_proxy=http://child-prc.intel.com:913
+ARG https_proxy=http://child-prc.intel.com:913
 
 RUN mkdir /home/build
 WORKDIR /home/build
@@ -9,7 +9,7 @@ RUN apt-get install wget -y
 RUN wget ${whl_address}
 RUN pip install ${whl_file} --force-reinstall
 
-RUN unset http_proxy
-RUN unset https_proxy
+
+
 
 

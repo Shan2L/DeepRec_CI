@@ -23,7 +23,8 @@ function build_image_by_dockerfile()
     prefix=$2
     catg=$(echo $dockerfile | awk -F "-" '{print $1}')
     cd $record_dir/$currentTime/
-    sudo docker build -t  $2:$whl_date_tag-$whl_hash_tag  -f $dockerfile .
+    sudo docker build -t  $2:$whl_date_tag-$whl_hash_tag-$image_tag  -f $dockerfile .
+    sudo docker push  $2:$whl_date_tag-$whl_hash_tag-$image_tag
 }
 
 
@@ -32,10 +33,12 @@ function main()
     mkdir -p $record_dir/$currentTime
     choose_task
     build_image_by_dockerfile deeprec_DOCKERFILE $deeprec_img_prefix
+    build_image_by_dockerfile deeprec-modelzoo_DOCKERFILE $modelzoo_img_prefix
 }
 
-deeprec=$1
-modelzoo=$2
+image_tag=$1
+deeprec=$2
+modelzoo=$3
 
 currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
 config_file='./config.yml'
