@@ -1,0 +1,62 @@
+# This is a basic workflow to help you get started with Actions
+
+name: acc_auc_benchmark
+
+# Controls when the workflow will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      whl_address:
+        description: 'The OSS address of whl package'
+      deeprec_modelzoo:
+        description: 'whether or not build deeprec-modelzoo image'
+        type: boolean
+        default: 'false'
+      deeprec_modelzoo_base_image:
+        description: 'DeepRec-Modelzoo Base Image'
+        default: 'cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:tf'
+      deeprec:
+        description: 'whether or not build deeprec image'
+        type: boolean
+        default: 'false'
+      deeprec_base_image:
+        description: 'DeepRec Base Image'
+        default: 'cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec:tf'
+      image_tag:
+        description: 'Additional tag of the image'
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  Build image By whl:
+    # The type of runner that the job will run on
+    runs-on: acc
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: list input params
+        run: |
+           echo 'whl_address        :${{github.event.inputs.whl_address}}'
+           echo 'deeprec_modelzoo   :${{github.event.inputs.deeprec_modelzoo}}'
+           echo 'deeprec_modelzoo_base_image: ${{github.event.inputs.deeprec_modelzoo_base_image}}'
+           echo 'deeprec_base_image : ${{github.event.inputs.deeprec_base_image}}'
+           echo 'deeprec            : ${{github.event.inputs.deeprec}}'
+           echo 'image_tag          : ${{github.event.inputs.image_tag}}'
+      # Runs a set of commands using the runners shell
+      - name: modify the config file by inputs params
+        run: |
+           config_file="/home/shanlin/DeepRec_CI/image_build/config.yml"
+           cd /home/shanlin/DeepRec_CI/image_build/
+           bash -x ./CI_connection.sh ${{github.event.inputs.whl_address}}  ${{github.event.inputs.deeprec_base_image}} ${{github.event.inputs.deeprec_modelzoo_base_image}} ${{github.event.inputs.image_tag}} \ 
+           &&echo "##########################################config.properties############################################" \
+           &&cat $config_file\
+           &&echo "#######################################################################################################"     
+      - name: run the build process
+        run: |
+          cd /home/shanlin/DeepRec_CI/image_build/
+          bash -x image_build.sh ${{github.event.inputs.deeprec_modelzoo}} ${{github.event.inputs.deeprec}}
+      - name: output the result
+        run: |          
+          echo "the build process has ben accomplished."
