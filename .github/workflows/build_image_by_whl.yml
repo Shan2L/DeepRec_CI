@@ -10,14 +10,14 @@ on:
       whl_address:
         description: 'The OSS address of whl package'
       deeprec_modelzoo:
-        description: 'whether or not build deeprec-modelzoo image'
+        description: 'build deeprec-modelzoo image'
         type: boolean
         default: 'false'
       deeprec_modelzoo_base_image:
         description: 'DeepRec-Modelzoo Base Image'
         default: 'cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:tf'
       deeprec:
-        description: 'whether or not build deeprec image'
+        description: 'build deeprec image'
         type: boolean
         default: 'false'
       deeprec_base_image:
