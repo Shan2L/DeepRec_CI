@@ -8,6 +8,7 @@ WORKDIR /home/build
 RUN apt-get install wget -y
 RUN wget ${whl_address}
 RUN pip install ${whl_file} --force-reinstall
+RUN rm -f ./${whl_address}
 
 
 
