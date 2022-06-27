@@ -49,10 +49,10 @@ jobs:
         run: |
            config_file="/home/shanlin/DeepRec_CI/image_build/config.yml"
            cd /home/shanlin/DeepRec_CI/image_build/
-           bash -x ./CI_connection.sh ${{github.event.inputs.whl_address}}  ${{github.event.inputs.deeprec_base_image}} ${{github.event.inputs.deeprec_modelzoo_base_image}} ${{github.event.inputs.image_tag}} \ 
-           &&echo "##########################################config.properties############################################" \
-           &&cat $config_file\
-           &&echo "#######################################################################################################"     
+           bash -x ./CI_connection.sh ${{github.event.inputs.whl_address}}  ${{github.event.inputs.deeprec_base_image}} ${{github.event.inputs.deeprec_modelzoo_base_image}} ${{github.event.inputs.image_tag}}  
+           echo "##########################################config.properties############################################" \
+           cat $config_file\
+           echo "#######################################################################################################"     
       - name: run the build process
         run: |
           cd /home/shanlin/DeepRec_CI/image_build/
