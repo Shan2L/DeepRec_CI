@@ -47,9 +47,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: modify the config file by inputs params
         run: |
-           git pull
            config_file="/home/shanlin/DeepRec_CI/image_build/config.yml"
            cd /home/shanlin/DeepRec_CI/image_build/
+           git pull
            bash -x ./CI_connection.sh ${{github.event.inputs.whl_address}}  ${{github.event.inputs.deeprec_base_image}} ${{github.event.inputs.deeprec_modelzoo_base_image}} ${{github.event.inputs.image_tag}}  
            echo "##########################################config.properties############################################" 
            cat $config_file
