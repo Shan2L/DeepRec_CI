@@ -198,7 +198,7 @@ function run()
 {
     part_date=$(echo `date "+%Y%m%d"` | cut -c 3-8)
     part_commit_id=$(echo $commit_id | cut -c 1-7)
-    image_tag=$(cat $config_file| grep image_TAG | awk -F " " '{print $2}')
+    image_tag=$(cat $config_file| shyaml get-value image_TAG )
     if [[ -z $image_tag ]];then
     	image_tag=$part_date-$part_commit_id
     fi
@@ -222,14 +222,14 @@ function run()
 
 set -x
 # 配置文件地址
-config_file="./../config.properties"
+config_file="./../config.yaml"
 echo "the config file is :$config_file"
 # 读编包镜像的repo
-build_image_repo=$( cat $config_file | grep build_image_repo | awk -F " " '{print $2}')
+build_image_repo=$( cat $config_file | shyaml get-value build_image_repo)
 # 读deepRec_modelzoo的base镜像repo
-base_image_modelzoo_repo=$( cat $config_file | grep base_image_modelzoo | awk -F " " '{print $2}')
+base_image_modelzoo_repo=$( cat $config_file | shyaml get-value base_image_modelzoo)
 # 读deepRec的base镜像的repo
-base_image_deepRec_repo=$( cat $config_file | grep base_image_deepRec | awk -F " " '{print $2}')
+base_image_deepRec_repo=$( cat $config_file | shyaml get-value base_image_deepRec)
 
 
 echoColor green "the buid image repo is :$build_image_repo"
@@ -242,7 +242,7 @@ cache_path=$(cd $cache_path && pwd)
 
 # 阿里git code地址
 ali_repo_dir="./whl_build/repo/ali_DeepRec/DeepRec/"
-code_repo=$(cat $config_file | grep code_repo | awk -F " " '{print $2}')
+code_repo=$(cat $config_file | shyaml get-value code_repo)
 if [[ -z $code_repo ]];then
 	exit 1
 fi
@@ -257,9 +257,9 @@ echoLogo
 # 当前时间
 currentTime=
 # commit的hashcode
-commit_id=$( cat $config_file | grep commit_id | awk -F " " '{print $2}')
+commit_id=$( cat $config_file | shyaml get-value commit_id)
 # brach的名称
-branch_name=$(cat $config_file | grep branch_name | awk -F " " '{print $2}')
+branch_name=$(cat $config_file | shyaml get-value branch_name )
 # 是否需要将此image标记为latest 0不需要 1需要
 latest=0
 

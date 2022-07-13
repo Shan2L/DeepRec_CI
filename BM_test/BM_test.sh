@@ -1,19 +1,19 @@
 #!/bin/bash
 
-function codeReview()
-{
-    current_path=$(pwd)
-    if [[ -d $repo_dir/DeepRec ]];then
-        cd $repo_dir \
-        && sudo rm -rf DeepRec
-    fi
-    cd $repo_dir \
-    && git clone $code_repo \
-    && cd $repo_dir/DeepRec\
-    &&git checkout $branch_name\
-    &&git checkout --progress --force $commit_id\
-    &&cd $current_path
-}
+#function codeReview()
+#{
+#    current_path=$(pwd)
+#    if [[ -d $repo_dir/DeepRec ]];then
+#        cd $repo_dir \
+#        && sudo rm -rf DeepRec
+#    fi
+#    cd $repo_dir \
+#    && git clone $code_repo \
+#    && cd $repo_dir/DeepRec\
+#    &&git checkout $branch_name\
+#    &&git checkout --progress --force $commit_id\
+#    &&cd $current_path
+#}
 
 
 function runContainer()
@@ -59,15 +59,7 @@ cache_path=$(cd $cache_path && pwd)
 
 file_path=$(cd ./about_BM/log/$log_title && pwd)
 
-codeReview \
-&& runContainer
+#codeReview 
+runContainer
 
-current_path=$(pwd)
-cd ./repo/ali_repo/ \
-&&sudo rm -rf ./*
-cd $current_path
 
-git add ./about_BM/log/$log_title/*\
-&& git commit -m "add new log file: $log_title"\
-&& git push\
-&& echo "the files generated is in the directory : $file_path"
