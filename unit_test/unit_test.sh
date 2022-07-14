@@ -48,10 +48,10 @@ set -x
 currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
 repo_dir="./repo/ali_repo"
 repo_dir=$(cd $repo_dir && pwd)
-code_repo=$(cat ./config.properties | grep code_repo | awk -F " " '{print$2}')
-branch_name=$(cat ./config.properties | grep branch| awk -F " " '{print $2}' )
-commit_id=$(cat ./config.properties | grep commit| awk -F " " '{print $2}' )
-test_image_repo=$(cat ./config.properties | grep test_image| awk -F " " '{print $2}' )
+code_repo=$(cat ./config.properties | shyaml get-value code_repo )
+branch_name=$(cat ./config.properties | shyaml get-value branch)
+commit_id=$(cat ./config.properties | shyaml get-value commit )
+test_image_repo=$(cat ./config.properties | gshyaml get-valuerep test_image)
 log_dir="./about_ut/log/$currentTime"
 if [[ ! -d $log_dir ]];then
     mkdir -p $log_dir

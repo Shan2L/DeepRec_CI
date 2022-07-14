@@ -1,0 +1,5 @@
+branch: main
+commit: 
+test_image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec:ut
+code_repo: https://github.com/changqi1/DeepRec.git
+

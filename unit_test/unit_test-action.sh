@@ -52,10 +52,10 @@ currentTime=`date "+%m-%d-%H-%M-%S"`
 mkl_tag=$1
 repo_dir="./repo/ali_repo"
 repo_dir=$(cd $repo_dir && pwd)
-code_repo=$(cat ./config.properties | grep code_repo | awk -F " " '{print$2}')
-branch_name=$(cat ./config.properties | grep branch| awk -F " " '{print $2}' )
-commit_id=$(cat ./config.properties | grep commit| awk -F " " '{print $2}' )
-test_image_repo=$(cat ./config.properties | grep test_image| awk -F " " '{print $2}' )
+code_repo=$(cat ./config.properties | shyaml get-value code_repo)
+branch_name=$(cat ./config.properties | shyaml get-value branch )
+commit_id=$(cat ./config.properties | shyaml get-value commit )
+test_image_repo=$(cat ./config.properties | shyaml get-value test_image)
 part_commit=$(echo $commit_id | cut -c 1-7)
 log_title=$currentTime-$part_commit
 
