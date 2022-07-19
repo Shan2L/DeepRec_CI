@@ -43,7 +43,7 @@ Patterns:
     target: "//tensorflow/core/kernels:mkl_relu_op_test"
     with_suffix: suffix_items
     patterns:
-      - "BM_{test_case}_{kind}_{T}_{A}_{B}_{C}_{D}_{device}_{num_threads}"
+      - "BM_{test_case}_{kind}_{T}_{A}_{B}_{device}_{num_threads}"
 
   mkl_reshape_op_test:
     target: "//tensorflow/core/kernels:mkl_reshape_op_test"
@@ -85,5 +85,25 @@ Patterns:
     target: "//tensorflow/core/kernels:mkl_cwise_ops_test"
     with_suffix: suffix_items
     patterns:
-      - "BM_{kind}_{test_case}_{device}_{size1}*{size2}_{T}_{num_threads}"
+      - "BM_{kind}_{test_case}_{device}_{size1}_{size2}_{T}_{num_threads}"
+
+  mkl_lrn_op_test:
+    arget: "//tensorflow/core/kernels:mkl_lrn_op_test"
+    with_suffix: suffix_items
+    patterns:
+      - "BM_{test_case}_{kind}_{A}_{size}_{T}_{device}_{num_threads}"
+
+  mkl_identity_op_test:
+    arget: "//tensorflow/core/kernels:mkl_identity_op_test"
+    with_suffix: suffix_items
+    patterns:
+      - "BM_{test_case}_{kind}_{T}_{D}_{size}_{device}_{num_threads}"
+
+  mkl_fused_batch_norm_op_test:
+    arget: "//tensorflow/core/kernels:mkl_fused_batch_norm_op_test"
+    with_suffix: suffix_items
+    patterns:
+      - "BM_NAME({kind}, {test_case}, {A}, {B}, {C}, {D}, {T}, {X}, {Y}, {device}, {num_thread}"
+
+
 
