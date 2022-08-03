@@ -11,16 +11,15 @@ image_TAG: 220708-077f3e1
 #test model:
 test_model: 
         - DLRM
-          # - WDL
-          #- DeepFM
-          #- DSSM
-          #- DIEN
-          #- DIN
-          #- ESMM
-          #- DBMTL
-          #- MMoE
-          #- SimpleMultiTask
-          # - BST
+        - WDL
+        - DSSM
+        - DIEN
+        - DIN
+        - ESMM
+        - DBMTL
+        - MMoE
+        - SimpleMultiTask
+        # - BST
 
 #test images
 deeprec_test_image: cesg-prc-registry.cn-beijing.cr.aliyuncs.com/cesg-ali/deeprec-modelzoo:220707-9a747e4

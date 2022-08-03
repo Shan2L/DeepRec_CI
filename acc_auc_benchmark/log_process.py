@@ -42,7 +42,9 @@ if __name__ == "__main__":
     parser = get_arg_parser()
     args = parser.parse_args()
     log_dir = args.log_dir
-
+    print(log_dir)
+    acc_result_path = os.path.join(log_dir, "acc_result.csv")
+    auc_result_path = os.path.join(log_dir, "auc_result.csv")
     log_list = []
     result={}
     for root, dirs, files in os.walk(log_dir, topdown=False):
@@ -91,23 +93,23 @@ if __name__ == "__main__":
 
     upgrade_dic = {}
     
-    f1 = open('./acc.csv', 'w',encoding='utf-8')
+    f1 = open(acc_result_path, 'w',encoding='utf-8')
     f1_writer = csv.writer(f1)
     f1_writer.writerow(["ACC"])
     f1_writer.writerow(["Community TF"])
     f1_writer.writerow(["DeepRec FP32"])
     f1_writer.writerow(["DeepRec BF16"])
     f1.close()
-    f2 = open('./auc.csv', 'w',encoding='utf-8')
+    f2 = open(auc_result_path, 'w',encoding='utf-8')
     f2_writer = csv.writer(f2)
     f2_writer.writerow(["AUC"])
     f2_writer.writerow(["Community TF"])
     f2_writer.writerow(["DeepRec FP32"])
     f2_writer.writerow(["DeepRec BF16"])
     f2.close()
-    csvPD=pd.read_csv('./acc.csv')
+    csvPD=pd.read_csv(acc_result_path)
 
-    csvPD_auc=pd.read_csv("./auc.csv")
+    csvPD_auc=pd.read_csv(auc_result_path)
     # 
     # csvPD['acc'] = 'Community TF'
     # csvPD['acc']='DeepRec FP32'
@@ -147,9 +149,9 @@ if __name__ == "__main__":
             insert_auc_pre = [upgrade_dic[model]['tf_fp32'], upgrade_dic[model]['auc_deeprec_fp32']*100, upgrade_dic[model]['auc_deeprec_fp32']*100]
             csvPD_auc[model+'_percent']=insert_auc_pre
            
-            csvPD.to_csv("./acc.csv", index =False, sep=',' )
+            csvPD.to_csv(acc_result_path, index =False, sep=',' )
             
-            csvPD_auc.to_csv("./auc.csv", index =False, sep=',' )
+            csvPD_auc.to_csv(auc_result_path, index =False, sep=',' )
 
 
     else:
